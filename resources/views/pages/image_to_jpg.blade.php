@@ -1,23 +1,26 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Image cropper</title>
-    <meta name="description" content="Main Image cropper Description" />
+    <title>Image Converter</title>
 
-    <meta property="og:title" content="Image cropper">
-    <meta property="og:description" content="Main Image cropper Description">
+    <meta name="description" content="Convert images to PNG, JPG, JPEG, WebP or PDF online quickly and easily." />
 
-    <meta property="twitter:title" content="Image cropper">
-    <meta property="twitter:description" content="Main Image cropper Description">
+    <meta property="og:title" content="Image Converter">
+    <meta property="og:description" content="Convert images to PNG, JPG, JPEG, WebP or PDF online.">
+
+    <meta property="twitter:title" content="Image Converter">
+    <meta property="twitter:description" content="Convert images to PNG, JPG, JPEG, WebP or PDF online.">
 @endsection
+
 
 @section('content')
     <main class="crop-page">
 
-        <!-- =========================================================
-             BREADCRUMB
-        ========================================================== -->
+        {{-- =========================================================
+         BREADCRUMB
+    ========================================================== --}}
         <section class="crop-breadcrumb-section">
+
             <div class="container">
 
                 <div class="crop-breadcrumb">
@@ -31,71 +34,94 @@
                         <i class="fas fa-chevron-right"></i>
                     </span>
 
-                    <span>Convert to JPG</span>
+                    <span>Image Converter</span>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================================================
-             HERO / UPLOAD SECTION
-        ========================================================== -->
-        <section class="crop-hero-section" id="jpgUploadSection">
+        {{-- =========================================================
+         HERO / UPLOAD SECTION
+    ========================================================== --}}
+        <section class="crop-hero-section" id="imageUploadSection">
 
             <div class="container">
 
                 <div class="crop-heading">
 
                     <span class="crop-small-badge">
+
                         <i class="fas fa-file-image"></i>
-                        Image Tool
+
+                        Image Converter
+
                     </span>
 
+
                     <h1>
+
                         Convert Images<br>
-                        <span>To JPG.</span>
+
+                        <span>To Any Format.</span>
+
                     </h1>
 
+
                     <p>
-                        Convert PNG, GIF, SVG and WebP images to JPG quickly.
-                        Simple, fast and completely online.
+
+                        Convert your images to PNG, JPG, JPEG, WebP or PDF
+                        quickly and easily. No software required.
+
                     </p>
 
                 </div>
 
 
-                <!-- =================================================
-                     UPLOAD BOX
-                ================================================== -->
-                <div class="crop-upload-box" id="jpgUploadBox">
+                {{-- =================================================
+                 UPLOAD BOX
+            ================================================== --}}
+                <div class="crop-upload-box" id="imageUploadBox">
 
                     <div class="crop-upload-icon">
+
                         <i class="fas fa-cloud-upload-alt"></i>
+
                     </div>
 
+
                     <h3>
+
                         Upload your image
+
                     </h3>
 
+
                     <p class="crop-upload-text">
+
                         Drag & drop your image here or
+
                     </p>
 
-                    <label for="jpgImageInput" class="crop-upload-btn">
+
+                    <label for="imageInput" class="crop-upload-btn">
 
                         <i class="fas fa-upload"></i>
+
                         Choose File
 
                     </label>
 
-                    <input type="file" id="jpgImageInput"
-                        accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml" hidden>
+
+                    <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"
+                        hidden>
+
 
                     <p class="crop-upload-info">
 
-                        Supports JPG, PNG, WebP, GIF, SVG
+                        Supports JPG, JPEG, PNG, WebP, GIF, SVG
 
                         <span>|</span>
 
@@ -110,10 +136,9 @@
         </section>
 
 
-
-        <!-- =========================================================
-             CONVERTER SECTION
-        ========================================================== -->
+        {{-- =========================================================
+         CONVERTER SECTION
+    ========================================================== --}}
         <section class="crop-info-section">
 
             <div class="container">
@@ -121,43 +146,59 @@
                 <div class="crop-info-card">
 
 
-                    <!-- =================================================
-                         LEFT CONTENT
-                    ================================================== -->
+                    {{-- =================================================
+                     LEFT CONTENT
+                ================================================== --}}
                     <div class="crop-info-content">
 
                         <span class="crop-info-badge">
-                            ABOUT
+
+                            CONVERTER
+
                         </span>
 
+
                         <h2>
+
                             Convert Images<br>
-                            <span>to JPG Easily</span>
+
+                            <span>Simply & Easily</span>
+
                         </h2>
 
+
                         <p class="crop-info-description">
-                            Convert your images into JPG format directly
-                            in your browser. No complicated software or
-                            installation is required.
+
+                            Upload your image, choose the format you want
+                            and convert it instantly in your browser.
+
                         </p>
 
 
-                        <!-- Feature 01 -->
+                        {{-- Feature 01 --}}
                         <div class="crop-feature-item">
 
                             <div class="crop-feature-icon crop-icon-blue">
+
                                 <i class="fas fa-exchange-alt"></i>
+
                             </div>
+
 
                             <div>
 
                                 <h4>
-                                    Easy Conversion
+
+                                    Multiple Formats
+
                                 </h4>
 
+
                                 <p>
-                                    Convert supported image formats to JPG
-                                    with just one click.
+
+                                    Convert your image to PNG, JPG, JPEG,
+                                    WebP or PDF.
+
                                 </p>
 
                             </div>
@@ -165,22 +206,30 @@
                         </div>
 
 
-                        <!-- Feature 02 -->
+                        {{-- Feature 02 --}}
                         <div class="crop-feature-item">
 
                             <div class="crop-feature-icon crop-icon-purple">
-                                <i class="fas fa-images"></i>
+
+                                <i class="fas fa-bolt"></i>
+
                             </div>
+
 
                             <div>
 
                                 <h4>
-                                    High Quality
+
+                                    Fast Conversion
+
                                 </h4>
 
+
                                 <p>
-                                    Your image dimensions are preserved during
-                                    the JPG conversion.
+
+                                    Process your image directly in your
+                                    browser without unnecessary uploads.
+
                                 </p>
 
                             </div>
@@ -188,22 +237,30 @@
                         </div>
 
 
-                        <!-- Feature 03 -->
+                        {{-- Feature 03 --}}
                         <div class="crop-feature-item">
 
                             <div class="crop-feature-icon crop-icon-green">
+
                                 <i class="fas fa-shield-alt"></i>
+
                             </div>
+
 
                             <div>
 
                                 <h4>
+
                                     Secure & Private
+
                                 </h4>
 
+
                                 <p>
-                                    Images are processed directly in your browser
-                                    without uploading them to a server.
+
+                                    Your image stays on your device while
+                                    the conversion is performed.
+
                                 </p>
 
                             </div>
@@ -213,38 +270,41 @@
                     </div>
 
 
-
-                    <!-- =================================================
-                         RIGHT CONVERTER
-                    ================================================== -->
+                    {{-- =================================================
+                     RIGHT CONVERTER
+                ================================================== --}}
                     <div class="crop-preview-wrapper">
 
 
-                        <!-- =================================================
-                             IMAGE PREVIEW
-                        ================================================== -->
+                        {{-- =================================================
+                         IMAGE PREVIEW
+                    ================================================== --}}
                         <div class="crop-preview-card">
 
                             <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
-                                alt="JPG Converter Preview" class="crop-preview-image" id="jpgImagePreview">
+                                alt="Image Converter Preview" class="crop-preview-image" id="imagePreview">
 
                         </div>
 
 
-
-                        <!-- =================================================
-                             DEFAULT STATE
-                        ================================================== -->
-                        <div id="jpgNormalState">
+                        {{-- =================================================
+                         DEFAULT STATE
+                    ================================================== --}}
+                        <div id="normalState">
 
                             <div class="crop-ratio-panel">
 
                                 <span class="crop-ratio-title">
-                                    JPG Converter
+
+                                    Image Converter
+
                                 </span>
 
+
                                 <p class="mb-0">
+
                                     Upload an image above to start converting.
+
                                 </p>
 
                             </div>
@@ -252,73 +312,78 @@
                         </div>
 
 
+                        {{-- =================================================
+                         CONVERTER STATE
+                    ================================================== --}}
+                        <div id="converterState" style="display:none;">
 
-                        <!-- =================================================
-                             PROCESSING STATE
-                        ================================================== -->
-                        <div id="jpgProcessing" style="display:none;">
 
-
-                            <!-- =================================================
-                                 FILE INFORMATION
-                            ================================================== -->
+                            {{-- =================================================
+                             FILE INFORMATION
+                        ================================================== --}}
                             <div class="crop-ratio-panel mt-3">
 
                                 <span class="crop-ratio-title">
+
                                     Image Information
+
                                 </span>
 
 
                                 <div class="row g-3">
 
-                                    <!-- File Name -->
+
+                                    {{-- File Name --}}
                                     <div class="col-lg-4 col-md-4 col-sm-12">
 
-                                        <div>
+                                        <strong>
 
-                                            <strong>
-                                                File
-                                            </strong>
+                                            File
 
-                                            <div id="jpgFileName" class="text-break">
-                                                -
-                                            </div>
+                                        </strong>
+
+
+                                        <div id="fileName" class="text-break">
+
+                                            -
 
                                         </div>
 
                                     </div>
 
 
-                                    <!-- Dimensions -->
+                                    {{-- Dimensions --}}
                                     <div class="col-lg-4 col-md-4 col-sm-12">
 
-                                        <div>
+                                        <strong>
 
-                                            <strong>
-                                                Dimensions
-                                            </strong>
+                                            Dimensions
 
-                                            <div id="jpgDimensions">
-                                                -
-                                            </div>
+                                        </strong>
+
+
+                                        <div id="imageDimensions">
+
+                                            -
 
                                         </div>
 
                                     </div>
 
 
-                                    <!-- File Size -->
+                                    {{-- File Size --}}
                                     <div class="col-lg-4 col-md-4 col-sm-12">
 
-                                        <div>
+                                        <strong>
 
-                                            <strong>
-                                                File Size
-                                            </strong>
+                                            File Size
 
-                                            <div id="jpgFileSize">
-                                                -
-                                            </div>
+                                        </strong>
+
+
+                                        <div id="fileSize">
+
+                                            -
 
                                         </div>
 
@@ -329,42 +394,60 @@
                             </div>
 
 
-
-                            <!-- =================================================
-                                 CONVERSION OPTIONS
-                            ================================================== -->
+                            {{-- =================================================
+                             OUTPUT FORMAT
+                        ================================================== --}}
                             <div class="crop-ratio-panel mt-3">
 
                                 <span class="crop-ratio-title">
+
                                     Conversion Options
+
                                 </span>
 
 
                                 <div class="row g-3 align-items-end">
 
-                                    <!-- Quality -->
+
                                     <div class="col-lg-6 col-md-6 col-sm-12">
 
-                                        <label class="form-label">
-                                            JPG Quality
+                                        <label for="outputFormat" class="form-label">
+
+                                            Convert To
+
                                         </label>
 
-                                        <select id="jpgQuality" class="form-select">
 
-                                            <option value="1">
-                                                High Quality
+                                        <select id="outputFormat" class="form-select">
+
+                                            <option value="jpg" selected>
+
+                                                JPG
+
                                             </option>
 
-                                            <option value="0.9" selected>
-                                                Very Good
+                                            <option value="jpeg">
+
+                                                JPEG
+
                                             </option>
 
-                                            <option value="0.8">
-                                                Good
+                                            <option value="png">
+
+                                                PNG
+
                                             </option>
 
-                                            <option value="0.7">
-                                                Medium
+                                            <option value="webp">
+
+                                                WebP
+
+                                            </option>
+
+                                            <option value="pdf">
+
+                                                PDF
+
                                             </option>
 
                                         </select>
@@ -372,21 +455,113 @@
                                     </div>
 
 
-                                    <!-- Background -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                    {{-- Quality --}}
+                                    <div class="col-lg-6 col-md-6 col-sm-12" id="qualityWrapper">
 
-                                        <label class="form-label">
-                                            Background
+                                        <label for="imageQuality" class="form-label">
+
+                                            Quality
+
                                         </label>
 
-                                        <select id="jpgBackground" class="form-select">
 
-                                            <option value="#ffffff" selected>
-                                                White
+                                        <select id="imageQuality" class="form-select">
+
+                                            <option value="1">
+
+                                                High Quality
+
                                             </option>
 
-                                            <option value="#000000">
-                                                Black
+                                            <option value="0.9" selected>
+
+                                                Very Good
+
+                                            </option>
+
+                                            <option value="0.8">
+
+                                                Good
+
+                                            </option>
+
+                                            <option value="0.7">
+
+                                                Medium
+
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+                                {{-- PDF options --}}
+                                <div id="pdfOptions" class="row g-3 mt-1" style="display:none;">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+
+                                        <label for="pdfPageSize" class="form-label">
+
+                                            PDF Page Size
+
+                                        </label>
+
+
+                                        <select id="pdfPageSize" class="form-select">
+
+                                            <option value="a4" selected>
+
+                                                A4
+
+                                            </option>
+
+                                            <option value="letter">
+
+                                                Letter
+
+                                            </option>
+
+                                            <option value="image">
+
+                                                Image Size
+
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+
+                                        <label for="pdfOrientation" class="form-label">
+
+                                            Orientation
+
+                                        </label>
+
+
+                                        <select id="pdfOrientation" class="form-select">
+
+                                            <option value="auto" selected>
+
+                                                Auto
+
+                                            </option>
+
+                                            <option value="portrait">
+
+                                                Portrait
+
+                                            </option>
+
+                                            <option value="landscape">
+
+                                                Landscape
+
                                             </option>
 
                                         </select>
@@ -398,55 +573,75 @@
                             </div>
 
 
-
-                            <!-- =================================================
-                                 RESULT
-                            ================================================== -->
-                            <div id="jpgResult" style="display:none;">
+                            {{-- =================================================
+                             RESULT
+                        ================================================== --}}
+                            <div id="conversionResult" style="display:none;">
 
                                 <div class="crop-ratio-panel mt-3">
 
                                     <span class="crop-ratio-title">
+
                                         Conversion Complete
+
                                     </span>
 
 
                                     <div class="row g-3">
 
+
+                                        {{-- Format --}}
                                         <div class="col-lg-4 col-md-4 col-sm-12">
 
                                             <span>
+
                                                 Format
+
                                             </span>
 
-                                            <strong class="d-block">
-                                                JPG
+
+                                            <strong id="resultFormat" class="d-block">
+
+                                                -
+
                                             </strong>
 
                                         </div>
 
 
+                                        {{-- Dimensions --}}
                                         <div class="col-lg-4 col-md-4 col-sm-12">
 
                                             <span>
+
                                                 Dimensions
+
                                             </span>
 
-                                            <strong id="jpgResultDimensions" class="d-block">
+
+                                            <strong id="resultDimensions" class="d-block">
+
                                                 -
+
                                             </strong>
 
                                         </div>
 
 
+                                        {{-- Size --}}
                                         <div class="col-lg-4 col-md-4 col-sm-12">
 
                                             <span>
+
                                                 File Size
+
                                             </span>
 
-                                            <strong id="jpgResultSize" class="d-block">
+
+                                            <strong id="resultSize" class="d-block">
+
                                                 -
+
                                             </strong>
 
                                         </div>
@@ -458,36 +653,35 @@
                             </div>
 
 
-
-                            <!-- =================================================
-                                 ACTION BUTTONS
-                            ================================================== -->
+                            {{-- =================================================
+                             ACTION BUTTONS
+                        ================================================== --}}
                             <div class="crop-action-buttons mt-3">
 
 
-                                <!-- Convert -->
-                                <button type="button" id="jpgConvertButton" class="crop-download-btn">
+                                {{-- Convert --}}
+                                <button type="button" id="convertButton" class="crop-download-btn">
 
                                     <i class="fas fa-sync-alt"></i>
 
-                                    Convert to JPG
+                                    Convert Image
 
                                 </button>
 
 
-                                <!-- Download -->
-                                <button type="button" id="jpgDownloadButton" class="crop-download-btn"
+                                {{-- Download --}}
+                                <button type="button" id="downloadButton" class="crop-download-btn"
                                     style="display:none;">
 
                                     <i class="fas fa-download"></i>
 
-                                    Download JPG
+                                    Download
 
                                 </button>
 
 
-                                <!-- Convert Another -->
-                                <button type="button" id="jpgAnotherButton" style="display:none;">
+                                {{-- Another --}}
+                                <button type="button" id="anotherButton" style="display:none;">
 
                                     <i class="fas fa-plus"></i>
 
@@ -496,8 +690,8 @@
                                 </button>
 
 
-                                <!-- Remove -->
-                                <button type="button" id="jpgRemoveButton">
+                                {{-- Remove --}}
+                                <button type="button" id="removeButton">
 
                                     <i class="fas fa-trash"></i>
 
@@ -506,7 +700,6 @@
                                 </button>
 
                             </div>
-
 
                         </div>
 
@@ -519,10 +712,9 @@
         </section>
 
 
-
-        <!-- =========================================================
-             BENEFITS
-        ========================================================== -->
+        {{-- =========================================================
+         BENEFITS
+    ========================================================== --}}
         <section class="crop-benefits-section">
 
             <div class="container">
@@ -530,16 +722,25 @@
                 <div class="crop-benefits-heading">
 
                     <span>
+
                         WHY USE PIXELFLOW
+
                     </span>
 
+
                     <h2>
-                        Simple. Fast. <strong>Reliable.</strong>
+
+                        Simple. Fast.
+                        <strong>Reliable.</strong>
+
                     </h2>
 
+
                     <p>
-                        Convert your images to JPG without complicated
-                        software or unnecessary steps.
+
+                        Convert your images to the format you need
+                        without complicated software.
+
                     </p>
 
                 </div>
@@ -548,7 +749,7 @@
                 <div class="row g-4">
 
 
-                    <!-- Benefit 01 -->
+                    {{-- Benefit 01 --}}
                     <div class="col-lg-4 col-md-6">
 
                         <div class="crop-benefit-card">
@@ -559,15 +760,21 @@
 
                             </div>
 
+
                             <div>
 
                                 <h4>
+
                                     Fast Processing
+
                                 </h4>
 
+
                                 <p>
-                                    Convert images quickly directly in your
-                                    browser.
+
+                                    Convert images directly in your browser
+                                    in just a few seconds.
+
                                 </p>
 
                             </div>
@@ -577,8 +784,7 @@
                     </div>
 
 
-
-                    <!-- Benefit 02 -->
+                    {{-- Benefit 02 --}}
                     <div class="col-lg-4 col-md-6">
 
                         <div class="crop-benefit-card">
@@ -589,15 +795,21 @@
 
                             </div>
 
+
                             <div>
 
                                 <h4>
-                                    JPG Format
+
+                                    Multiple Formats
+
                                 </h4>
 
+
                                 <p>
-                                    Create widely compatible JPG images for
-                                    websites, documents and sharing.
+
+                                    Convert images to JPG, JPEG, PNG,
+                                    WebP or PDF.
+
                                 </p>
 
                             </div>
@@ -607,8 +819,7 @@
                     </div>
 
 
-
-                    <!-- Benefit 03 -->
+                    {{-- Benefit 03 --}}
                     <div class="col-lg-4 col-md-6">
 
                         <div class="crop-benefit-card">
@@ -619,15 +830,21 @@
 
                             </div>
 
+
                             <div>
 
                                 <h4>
+
                                     Secure & Private
+
                                 </h4>
 
+
                                 <p>
-                                    Your image stays on your device during
-                                    the conversion process.
+
+                                    Your images remain on your device
+                                    during conversion.
+
                                 </p>
 
                             </div>
@@ -645,149 +862,380 @@
     </main>
 @endsection
 
+
 @section('scripts')
+    {{-- =========================================================
+     jsPDF
+     Required for Image → PDF conversion
+========================================================== --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
     <script>
         $(document).ready(function() {
 
+
+            /* =========================================================
+               VARIABLES
+            ========================================================== */
+
             let selectedFile = null;
-            let convertedBlob = null;
+
+            let originalImage = null;
+
             let originalObjectURL = null;
+
+            let convertedBlob = null;
+
             let convertedURL = null;
 
-            const MAX_SIZE = 50 * 1024 * 1024;
+
+            const MAX_SIZE =
+                50 * 1024 * 1024;
+
+
+            /* =========================================================
+               DEFAULT PREVIEW
+            ========================================================== */
+
+            const defaultPreview =
+                'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85';
 
 
             /* =========================================================
                FORMAT FILE SIZE
             ========================================================== */
+
             function formatFileSize(bytes) {
 
                 if (bytes < 1024) {
+
                     return bytes + ' B';
+
                 }
+
 
                 if (bytes < 1024 * 1024) {
-                    return (bytes / 1024).toFixed(1) + ' KB';
+
+                    return (
+                        bytes / 1024
+                    ).toFixed(1) + ' KB';
+
                 }
 
-                return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+
+                return (
+                    bytes /
+                    (1024 * 1024)
+                ).toFixed(2) + ' MB';
+
             }
 
 
             /* =========================================================
-               RESET TOOL
+               RESET RESULT
             ========================================================== */
-            function resetJPGTool() {
 
-                selectedFile = null;
+            function resetResult() {
+
                 convertedBlob = null;
 
-                if (originalObjectURL) {
-                    URL.revokeObjectURL(originalObjectURL);
-                    originalObjectURL = null;
-                }
 
                 if (convertedURL) {
-                    URL.revokeObjectURL(convertedURL);
+
+                    URL.revokeObjectURL(
+                        convertedURL
+                    );
+
                     convertedURL = null;
+
                 }
 
-                $('#jpgImageInput').val('');
 
-                $('#jpgProcessing').hide();
-                $('#jpgResult').hide();
+                $('#conversionResult').hide();
 
-                $('#jpgDownloadButton').hide();
-                $('#jpgAnotherButton').hide();
 
-                $('#jpgConvertButton')
+                $('#downloadButton').hide();
+
+
+                $('#anotherButton').hide();
+
+
+                $('#convertButton')
                     .show()
                     .prop('disabled', false)
-                    .html('<i class="fas fa-sync-alt"></i> Convert to JPG');
+                    .html(
+                        '<i class="fas fa-sync-alt"></i> Convert Image'
+                    );
 
-                $('#jpgRemoveButton').show();
 
-                $('#jpgNormalState').show();
+                if (originalObjectURL) {
 
-                $('#jpgFileName').text('-');
-                $('#jpgDimensions').text('-');
-                $('#jpgFileSize').text('-');
+                    $('#imagePreview').attr(
+                        'src',
+                        originalObjectURL
+                    );
 
-                $('#jpgResultDimensions').text('-');
-                $('#jpgResultSize').text('-');
+                }
 
-                $('#jpgImagePreview').attr(
+            }
+
+
+            /* =========================================================
+               RESET EVERYTHING
+            ========================================================== */
+
+            function resetTool() {
+
+                selectedFile = null;
+
+                originalImage = null;
+
+
+                if (originalObjectURL) {
+
+                    URL.revokeObjectURL(
+                        originalObjectURL
+                    );
+
+                    originalObjectURL = null;
+
+                }
+
+
+                if (convertedURL) {
+
+                    URL.revokeObjectURL(
+                        convertedURL
+                    );
+
+                    convertedURL = null;
+
+                }
+
+
+                convertedBlob = null;
+
+
+                $('#imageInput').val('');
+
+
+                $('#converterState').hide();
+
+
+                $('#normalState').show();
+
+
+                $('#imagePreview').attr(
                     'src',
-                    'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85'
+                    defaultPreview
                 );
 
+
+                $('#fileName').text('-');
+
+
+                $('#imageDimensions').text('-');
+
+
+                $('#fileSize').text('-');
+
+
+                $('#resultFormat').text('-');
+
+
+                $('#resultDimensions').text('-');
+
+
+                $('#resultSize').text('-');
+
+
+                $('#conversionResult').hide();
+
+
+                $('#downloadButton').hide();
+
+
+                $('#anotherButton').hide();
+
+
+                $('#convertButton')
+                    .show()
+                    .prop('disabled', false)
+                    .html(
+                        '<i class="fas fa-sync-alt"></i> Convert Image'
+                    );
+
+
+                /*
+                 * Return to upload section.
+                 */
+
                 $('html, body').animate({
-                    scrollTop: $('#jpgUploadSection').offset().top - 20
+
+                    scrollTop: $('#imageUploadSection').offset().top - 20
+
                 }, 500);
+
+            }
+
+
+            /* =========================================================
+               LOAD IMAGE
+            ========================================================== */
+
+            function loadImage(file) {
+
+                return new Promise(function(
+                    resolve,
+                    reject
+                ) {
+
+                    /*
+                     * FileReader ensures that the uploaded image
+                     * is loaded locally and avoids cross-origin
+                     * canvas problems.
+                     */
+
+                    const reader =
+                        new FileReader();
+
+
+                    reader.onload =
+                        function(event) {
+
+                            const img =
+                                new Image();
+
+
+                            img.onload =
+                                function() {
+
+                                    resolve(img);
+
+                                };
+
+
+                            img.onerror =
+                                function() {
+
+                                    reject(
+                                        new Error(
+                                            'Unable to read this image.'
+                                        )
+                                    );
+
+                                };
+
+
+                            img.src =
+                                event.target.result;
+
+                        };
+
+
+                    reader.onerror =
+                        function() {
+
+                            reject(
+                                new Error(
+                                    'Unable to read the selected file.'
+                                )
+                            );
+
+                        };
+
+
+                    reader.readAsDataURL(file);
+
+                });
+
             }
 
 
             /* =========================================================
                SHOW CONVERTER
             ========================================================== */
-            function showConverter(file) {
+
+            async function showConverter(file) {
 
                 selectedFile = file;
 
+
                 if (originalObjectURL) {
-                    URL.revokeObjectURL(originalObjectURL);
+
+                    URL.revokeObjectURL(
+                        originalObjectURL
+                    );
+
                 }
 
-                originalObjectURL = URL.createObjectURL(file);
 
-                $('#jpgImagePreview').attr(
+                originalObjectURL =
+                    URL.createObjectURL(file);
+
+
+                $('#imagePreview').attr(
                     'src',
                     originalObjectURL
                 );
 
-                $('#jpgFileName').text(file.name);
-                $('#jpgFileSize').text(formatFileSize(file.size));
 
-                $('#jpgNormalState').hide();
-                $('#jpgProcessing').show();
+                $('#fileName').text(
+                    file.name
+                );
 
-                $('#jpgResult').hide();
 
-                $('#jpgDownloadButton').hide();
-                $('#jpgAnotherButton').hide();
+                $('#fileSize').text(
+                    formatFileSize(file.size)
+                );
 
-                $('#jpgConvertButton')
-                    .show()
-                    .prop('disabled', false)
-                    .html('<i class="fas fa-sync-alt"></i> Convert to JPG');
 
-                $('#jpgRemoveButton').show();
+                $('#normalState').hide();
 
-                const img = new Image();
 
-                img.onload = function() {
+                $('#converterState').show();
 
-                    $('#jpgDimensions').text(
-                        img.naturalWidth + ' × ' + img.naturalHeight + ' px'
+
+                resetResult();
+
+
+                try {
+
+                    originalImage =
+                        await loadImage(file);
+
+
+                    $('#imageDimensions').text(
+
+                        originalImage.naturalWidth +
+                        ' × ' +
+                        originalImage.naturalHeight +
+                        ' px'
+
                     );
 
-                };
+                } catch (error) {
 
-                img.onerror = function() {
+                    $('#imageDimensions')
+                        .text(
+                            'Unable to read dimensions'
+                        );
 
-                    $('#jpgDimensions').text('Unable to read dimensions');
-
-                };
-
-                img.src = originalObjectURL;
+                }
 
 
-                /* Move user smoothly to the tool */
+                /*
+                 * Smoothly move user to converter.
+                 */
+
                 setTimeout(function() {
 
                     $('html, body').animate({
-                        scrollTop: $('#jpgProcessing').offset().top - 30
-                    }, 500);
+
+                        scrollTop: $('#converterState').offset().top - 30
+
+                    }, 600);
 
                 }, 150);
 
@@ -795,380 +1243,1282 @@
 
 
             /* =========================================================
-               FILE VALIDATION
+               VALIDATE FILE
             ========================================================== */
+
             function handleFile(file) {
 
                 if (!file) {
+
                     return;
+
                 }
 
 
                 if (file.size > MAX_SIZE) {
 
-                    alert('The selected image is larger than 50MB.');
+                    alert(
+                        'The selected image is larger than 50MB.'
+                    );
+
                     return;
 
                 }
 
 
                 const allowedTypes = [
+
                     'image/jpeg',
+
                     'image/png',
+
                     'image/webp',
+
                     'image/gif',
+
                     'image/svg+xml'
+
                 ];
 
 
-                if (!allowedTypes.includes(file.type)) {
+                const extension =
+                    file.name
+                    .split('.')
+                    .pop()
+                    .toLowerCase();
+
+
+                const allowedExtensions = [
+
+                    'jpg',
+
+                    'jpeg',
+
+                    'png',
+
+                    'webp',
+
+                    'gif',
+
+                    'svg'
+
+                ];
+
+
+                if (
+
+                    !allowedTypes.includes(file.type) &&
+
+                    !allowedExtensions.includes(extension)
+
+                ) {
 
                     alert(
-                        'Please select a JPG, PNG, WebP, GIF or SVG image.'
+                        'Please select a JPG, JPEG, PNG, WebP, GIF or SVG image.'
                     );
 
                     return;
+
                 }
 
 
                 showConverter(file);
+
             }
 
 
             /* =========================================================
                FILE INPUT
             ========================================================== */
-            $('#jpgImageInput').on('change', function() {
 
-                const file = this.files[0];
+            $('#imageInput').on(
+                'change',
+                function() {
 
-                handleFile(file);
+                    handleFile(
+                        this.files[0]
+                    );
 
-            });
+                }
+            );
 
 
             /* =========================================================
                DRAG & DROP
             ========================================================== */
-            $('#jpgUploadBox')
-                .on('dragover', function(e) {
 
-                    e.preventDefault();
+            $('#imageUploadBox')
 
-                    $(this).addClass('dragging');
+                .on(
+                    'dragover',
+                    function(e) {
 
-                })
-                .on('dragleave', function() {
+                        e.preventDefault();
 
-                    $(this).removeClass('dragging');
+                        $(this).addClass(
+                            'dragging'
+                        );
 
-                })
-                .on('drop', function(e) {
-
-                    e.preventDefault();
-
-                    $(this).removeClass('dragging');
-
-                    const files = e.originalEvent.dataTransfer.files;
-
-                    if (files.length) {
-                        handleFile(files[0]);
                     }
+                )
 
-                });
+                .on(
+                    'dragleave',
+                    function() {
+
+                        $(this).removeClass(
+                            'dragging'
+                        );
+
+                    }
+                )
+
+                .on(
+                    'drop',
+                    function(e) {
+
+                        e.preventDefault();
+
+                        $(this).removeClass(
+                            'dragging'
+                        );
+
+
+                        const files =
+                            e.originalEvent
+                            .dataTransfer
+                            .files;
+
+
+                        if (files.length) {
+
+                            handleFile(
+                                files[0]
+                            );
+
+                        }
+
+                    }
+                );
 
 
             /* =========================================================
-               CONVERT TO JPG
+               OUTPUT FORMAT CHANGE
             ========================================================== */
-            $('#jpgConvertButton').on('click', function() {
 
-                if (!selectedFile) {
-                    return;
+            $('#outputFormat').on(
+                'change',
+                function() {
+
+                    const format =
+                        $(this).val();
+
+
+                    /*
+                     * PDF does not use JPG/WebP quality.
+                     */
+
+                    if (format === 'pdf') {
+
+                        $('#qualityWrapper')
+                            .hide();
+
+
+                        $('#pdfOptions')
+                            .slideDown(150);
+
+                    } else {
+
+                        $('#qualityWrapper')
+                            .show();
+
+
+                        $('#pdfOptions')
+                            .slideUp(150);
+
+                    }
+
+
+                    /*
+                     * If already converted,
+                     * reset result because output format changed.
+                     */
+
+                    if (convertedBlob) {
+
+                        resetResult();
+
+                    }
+
                 }
+            );
 
 
-                const button = $(this);
+            /* =========================================================
+               CREATE CANVAS
+            ========================================================== */
 
-                button
-                    .prop('disabled', true)
-                    .html(
-                        '<i class="fas fa-spinner fa-spin"></i> Converting...'
+            function createCanvas(
+                width,
+                height
+            ) {
+
+                const canvas =
+                    document.createElement(
+                        'canvas'
                     );
 
 
-                const imageURL = URL.createObjectURL(selectedFile);
+                canvas.width =
+                    Math.max(
+                        1,
+                        Math.round(width)
+                    );
 
-                const img = new Image();
 
-                img.onload = function() {
+                canvas.height =
+                    Math.max(
+                        1,
+                        Math.round(height)
+                    );
+
+
+                return canvas;
+
+            }
+
+
+            /* =========================================================
+               CANVAS TO BLOB
+            ========================================================== */
+
+            function canvasToBlob(
+                canvas,
+                mimeType,
+                quality
+            ) {
+
+                return new Promise(
+                    function(resolve) {
+
+                        canvas.toBlob(
+
+                            function(blob) {
+
+                                resolve(blob);
+
+                            },
+
+                            mimeType,
+
+                            quality
+
+                        );
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               DRAW IMAGE
+            ========================================================== */
+
+            function drawImage(
+                image,
+                canvas,
+                background
+            ) {
+
+                const ctx =
+                    canvas.getContext(
+                        '2d'
+                    );
+
+
+                /*
+                 * Fill background first.
+                 *
+                 * This is particularly important for JPG/JPEG
+                 * because JPG does not support transparency.
+                 */
+
+                if (background) {
+
+                    ctx.fillStyle =
+                        background;
+
+
+                    ctx.fillRect(
+
+                        0,
+                        0,
+                        canvas.width,
+                        canvas.height
+
+                    );
+
+                }
+
+
+                ctx.imageSmoothingEnabled =
+                    true;
+
+
+                ctx.imageSmoothingQuality =
+                    'high';
+
+
+                ctx.drawImage(
+
+                    image,
+
+                    0,
+                    0,
+
+                    canvas.width,
+                    canvas.height
+
+                );
+
+            }
+
+
+            /* =========================================================
+               CONVERT TO IMAGE FORMAT
+            ========================================================== */
+
+            async function convertToImageFormat(
+                format
+            ) {
+
+                if (!originalImage) {
+
+                    throw new Error(
+                        'Image is not ready.'
+                    );
+
+                }
+
+
+                let mimeType;
+
+                let extension;
+
+                let quality =
+                    parseFloat(
+                        $('#imageQuality').val()
+                    );
+
+
+                switch (format) {
+
+                    case 'jpg':
+
+                        mimeType =
+                            'image/jpeg';
+
+                        extension =
+                            'jpg';
+
+                        break;
+
+
+                    case 'jpeg':
+
+                        mimeType =
+                            'image/jpeg';
+
+                        extension =
+                            'jpeg';
+
+                        break;
+
+
+                    case 'png':
+
+                        mimeType =
+                            'image/png';
+
+                        extension =
+                            'png';
+
+                        break;
+
+
+                    case 'webp':
+
+                        mimeType =
+                            'image/webp';
+
+                        extension =
+                            'webp';
+
+                        break;
+
+
+                    default:
+
+                        throw new Error(
+                            'Unsupported output format.'
+                        );
+
+                }
+
+
+                /*
+                 * Use the original dimensions.
+                 */
+
+                const canvas =
+                    createCanvas(
+
+                        originalImage.naturalWidth,
+
+                        originalImage.naturalHeight
+
+                    );
+
+
+                /*
+                 * JPG/JPEG need a white background.
+                 *
+                 * PNG and WebP retain transparency where
+                 * supported.
+                 */
+
+                if (
+                    format === 'jpg' ||
+                    format === 'jpeg'
+                ) {
+
+                    drawImage(
+                        originalImage,
+                        canvas,
+                        '#ffffff'
+                    );
+
+                } else {
+
+                    drawImage(
+                        originalImage,
+                        canvas,
+                        null
+                    );
+
+                }
+
+
+                /*
+                 * PNG does not need a quality value.
+                 */
+
+                if (format === 'png') {
+
+                    quality = undefined;
+
+                }
+
+
+                const blob =
+                    await canvasToBlob(
+
+                        canvas,
+
+                        mimeType,
+
+                        quality
+
+                    );
+
+
+                if (!blob) {
+
+                    throw new Error(
+                        'Unable to convert the image.'
+                    );
+
+                }
+
+
+                return {
+
+                    blob: blob,
+
+                    extension: extension,
+
+                    format: format.toUpperCase(),
+
+                    width: canvas.width,
+
+                    height: canvas.height
+
+                };
+
+            }
+
+
+            /* =========================================================
+               CONVERT TO PDF
+            ========================================================== */
+
+            async function convertToPDF() {
+
+                if (!originalImage) {
+
+                    throw new Error(
+                        'Image is not ready.'
+                    );
+
+                }
+
+
+                if (
+                    typeof window.jspdf ===
+                    'undefined'
+                ) {
+
+                    throw new Error(
+                        'PDF converter could not be loaded.'
+                    );
+
+                }
+
+
+                const {
+                    jsPDF
+                } = window.jspdf;
+
+
+                const pageSize =
+                    $('#pdfPageSize').val();
+
+
+                let orientation =
+                    $('#pdfOrientation').val();
+
+
+                /*
+                 * Auto orientation.
+                 */
+
+                if (
+                    orientation ===
+                    'auto'
+                ) {
+
+                    orientation =
+
+                        originalImage.naturalWidth >
+                        originalImage.naturalHeight
+
+                        ?
+                        'landscape'
+
+                        :
+                        'portrait';
+
+                }
+
+
+                let pdf;
+
+
+                /*
+                 * IMAGE SIZE PDF
+                 */
+
+                if (
+                    pageSize ===
+                    'image'
+                ) {
+
+
+                    /*
+                     * Convert pixels to points.
+                     */
+
+                    const width =
+                        originalImage.naturalWidth *
+                        0.75;
+
+
+                    const height =
+                        originalImage.naturalHeight *
+                        0.75;
+
+
+                    pdf =
+                        new jsPDF({
+
+                            orientation: orientation,
+
+                            unit: 'pt',
+
+                            format: [
+
+                                width,
+
+                                height
+
+                            ]
+
+                        });
+
+                }
+
+
+                /*
+                 * A4 / LETTER
+                 */
+                else {
+
+                    pdf =
+                        new jsPDF({
+
+                            orientation: orientation,
+
+                            unit: 'mm',
+
+                            format: pageSize
+
+                        });
+
+                }
+
+
+                /*
+                 * Create local canvas.
+                 *
+                 * We convert the image to JPEG data first
+                 * so JPG/PNG/WebP/SVG all work consistently
+                 * inside the PDF.
+                 */
+
+                const canvas =
+                    createCanvas(
+
+                        originalImage.naturalWidth,
+
+                        originalImage.naturalHeight
+
+                    );
+
+
+                drawImage(
+
+                    originalImage,
+
+                    canvas,
+
+                    '#ffffff'
+
+                );
+
+
+                const imageData =
+                    canvas.toDataURL(
+
+                        'image/jpeg',
+
+                        0.92
+
+                    );
+
+
+                /*
+                 * IMAGE SIZE
+                 */
+
+                if (
+                    pageSize ===
+                    'image'
+                ) {
+
+                    const width =
+                        originalImage.naturalWidth *
+                        0.75;
+
+
+                    const height =
+                        originalImage.naturalHeight *
+                        0.75;
+
+
+                    pdf.addImage(
+
+                        imageData,
+
+                        'JPEG',
+
+                        0,
+                        0,
+
+                        width,
+                        height
+
+                    );
+
+                }
+
+
+                /*
+                 * A4 / LETTER
+                 */
+                else {
+
+                    const pageWidth =
+                        pdf.internal.pageSize
+                        .getWidth();
+
+
+                    const pageHeight =
+                        pdf.internal.pageSize
+                        .getHeight();
+
+
+                    const imageRatio =
+                        originalImage.naturalWidth /
+                        originalImage.naturalHeight;
+
+
+                    const pageRatio =
+                        pageWidth /
+                        pageHeight;
+
+
+                    let imageWidth;
+
+                    let imageHeight;
+
+
+                    /*
+                     * Fit image inside page.
+                     */
+
+                    if (
+                        imageRatio >
+                        pageRatio
+                    ) {
+
+                        imageWidth =
+                            pageWidth;
+
+
+                        imageHeight =
+                            pageWidth /
+                            imageRatio;
+
+                    } else {
+
+                        imageHeight =
+                            pageHeight;
+
+
+                        imageWidth =
+                            pageHeight *
+                            imageRatio;
+
+                    }
+
+
+                    /*
+                     * Center image.
+                     */
+
+                    const x =
+                        (
+                            pageWidth -
+                            imageWidth
+                        ) / 2;
+
+
+                    const y =
+                        (
+                            pageHeight -
+                            imageHeight
+                        ) / 2;
+
+
+                    pdf.addImage(
+
+                        imageData,
+
+                        'JPEG',
+
+                        x,
+                        y,
+
+                        imageWidth,
+                        imageHeight
+
+                    );
+
+                }
+
+
+                const blob =
+                    pdf.output(
+                        'blob'
+                    );
+
+
+                if (!blob) {
+
+                    throw new Error(
+                        'Unable to create PDF.'
+                    );
+
+                }
+
+
+                return {
+
+                    blob: blob,
+
+                    extension: 'pdf',
+
+                    format: 'PDF',
+
+                    width: originalImage.naturalWidth,
+
+                    height: originalImage.naturalHeight
+
+                };
+
+            }
+
+
+            /* =========================================================
+               MAIN CONVERSION
+            ========================================================== */
+
+            $('#convertButton').on(
+                'click',
+                async function() {
+
+
+                    if (
+                        !selectedFile ||
+                        !originalImage
+                    ) {
+
+                        alert(
+                            'Please upload an image first.'
+                        );
+
+                        return;
+
+                    }
+
+
+                    const button =
+                        $(this);
+
+
+                    const format =
+                        $('#outputFormat')
+                        .val();
+
+
+                    /*
+                     * Prevent converting an image into
+                     * the same format unnecessarily.
+                     */
+
+                    const originalExtension =
+                        selectedFile.name
+                        .split('.')
+                        .pop()
+                        .toLowerCase();
+
+
+                    if (
+
+                        (
+                            format === 'jpg' ||
+                            format === 'jpeg'
+                        ) &&
+
+                        (
+                            originalExtension === 'jpg' ||
+                            originalExtension === 'jpeg'
+                        )
+
+                    ) {
+
+                        /*
+                         * We still allow the conversion because
+                         * the user explicitly selected it.
+                         */
+
+                    }
+
+
+                    button
+
+                        .prop(
+                            'disabled',
+                            true
+                        )
+
+                        .html(
+
+                            '<i class="fas fa-spinner fa-spin"></i> Converting...'
+
+                        );
+
 
                     try {
 
-                        const canvas = document.createElement('canvas');
-
-                        canvas.width = img.naturalWidth;
-                        canvas.height = img.naturalHeight;
-
-                        const ctx = canvas.getContext('2d');
+                        let result;
 
 
-                        /* White background for transparent images */
-                        ctx.fillStyle = $('#jpgBackground').val();
+                        /*
+                         * ---------------------------------------------
+                         * IMAGE FORMAT
+                         * ---------------------------------------------
+                         */
 
-                        ctx.fillRect(
-                            0,
-                            0,
-                            canvas.width,
-                            canvas.height
-                        );
+                        if (
+                            format !== 'pdf'
+                        ) {
 
+                            result =
+                                await convertToImageFormat(
+                                    format
+                                );
 
-                        ctx.drawImage(
-                            img,
-                            0,
-                            0,
-                            canvas.width,
-                            canvas.height
-                        );
+                        }
 
 
-                        const quality = parseFloat(
-                            $('#jpgQuality').val()
-                        );
+                        /*
+                         * ---------------------------------------------
+                         * PDF
+                         * ---------------------------------------------
+                         */
+                        else {
+
+                            result =
+                                await convertToPDF();
+
+                        }
 
 
-                        canvas.toBlob(
-                            function(blob) {
+                        /*
+                         * ---------------------------------------------
+                         * SAVE RESULT
+                         * ---------------------------------------------
+                         */
 
-                                URL.revokeObjectURL(imageURL);
-
-                                if (!blob) {
-
-                                    button
-                                        .prop('disabled', false)
-                                        .html(
-                                            '<i class="fas fa-sync-alt"></i> Convert to JPG'
-                                        );
-
-                                    alert(
-                                        'Unable to convert this image. Please try another file.'
-                                    );
-
-                                    return;
-                                }
+                        convertedBlob =
+                            result.blob;
 
 
-                                convertedBlob = blob;
+                        if (convertedURL) {
+
+                            URL.revokeObjectURL(
+                                convertedURL
+                            );
+
+                        }
 
 
-                                if (convertedURL) {
-                                    URL.revokeObjectURL(convertedURL);
-                                }
+                        convertedURL =
+                            URL.createObjectURL(
+                                convertedBlob
+                            );
 
-                                convertedURL = URL.createObjectURL(blob);
 
+                        /*
+                         * ---------------------------------------------
+                         * IMAGE PREVIEW
+                         * ---------------------------------------------
+                         */
 
-                                /* Show converted preview */
-                                $('#jpgImagePreview').attr(
+                        if (
+                            format !== 'pdf'
+                        ) {
+
+                            $('#imagePreview')
+                                .attr(
                                     'src',
                                     convertedURL
                                 );
 
-
-                                $('#jpgResultDimensions').text(
-                                    canvas.width +
-                                    ' × ' +
-                                    canvas.height +
-                                    ' px'
-                                );
+                        }
 
 
-                                $('#jpgResultSize').text(
-                                    formatFileSize(blob.size)
-                                );
+                        /*
+                         * ---------------------------------------------
+                         * RESULT INFORMATION
+                         * ---------------------------------------------
+                         */
+
+                        $('#resultFormat')
+                            .text(
+                                result.format
+                            );
 
 
-                                $('#jpgResult').fadeIn(250);
+                        $('#resultDimensions')
+                            .text(
+
+                                result.width +
+                                ' × ' +
+                                result.height +
+                                ' px'
+
+                            );
 
 
-                                /* Button states */
-                                $('#jpgConvertButton').hide();
+                        $('#resultSize')
+                            .text(
 
-                                $('#jpgDownloadButton').fadeIn(250);
+                                formatFileSize(
+                                    convertedBlob.size
+                                )
 
-                                $('#jpgAnotherButton').fadeIn(250);
-
-                                $('#jpgRemoveButton').show();
+                            );
 
 
-                                /* Scroll slightly to result */
-                                setTimeout(function() {
+                        /*
+                         * ---------------------------------------------
+                         * SHOW RESULT
+                         * ---------------------------------------------
+                         */
 
-                                    $('html, body').animate({
-                                        scrollTop: $('#jpgResult').offset().top - 40
-                                    }, 400);
+                        $('#conversionResult')
+                            .fadeIn(250);
 
-                                }, 150);
+
+                        /*
+                         * ---------------------------------------------
+                         * BUTTON STATES
+                         * ---------------------------------------------
+                         */
+
+                        button.hide();
+
+
+                        $('#downloadButton')
+                            .fadeIn(250);
+
+
+                        $('#anotherButton')
+                            .fadeIn(250);
+
+
+                        /*
+                         * ---------------------------------------------
+                         * SMOOTH SCROLL
+                         * ---------------------------------------------
+                         */
+
+                        setTimeout(
+                            function() {
+
+                                $('html, body')
+                                    .animate({
+
+                                        scrollTop:
+
+                                            $('#conversionResult')
+                                            .offset()
+                                            .top - 40
+
+                                    }, 500);
 
                             },
-                            'image/jpeg',
-                            quality
+                            150
                         );
 
 
                     } catch (error) {
 
-                        URL.revokeObjectURL(imageURL);
+                        console.error(
+                            error
+                        );
 
-                        button
-                            .prop('disabled', false)
-                            .html(
-                                '<i class="fas fa-sync-alt"></i> Convert to JPG'
-                            );
 
                         alert(
+
+                            error.message ||
                             'Something went wrong while converting the image.'
+
                         );
+
+
+                        button
+
+                            .prop(
+                                'disabled',
+                                false
+                            )
+
+                            .html(
+
+                                '<i class="fas fa-sync-alt"></i> Convert Image'
+
+                            );
 
                     }
 
-                };
-
-
-                img.onerror = function() {
-
-                    URL.revokeObjectURL(imageURL);
-
-                    button
-                        .prop('disabled', false)
-                        .html(
-                            '<i class="fas fa-sync-alt"></i> Convert to JPG'
-                        );
-
-                    alert(
-                        'This image format could not be processed by your browser.'
-                    );
-
-                };
-
-
-                img.src = imageURL;
-
-            });
+                }
+            );
 
 
             /* =========================================================
-               DOWNLOAD JPG
+               DOWNLOAD RESULT
             ========================================================== */
-            $('#jpgDownloadButton').on('click', function() {
 
-                if (!convertedBlob) {
-                    return;
+            $('#downloadButton').on(
+                'click',
+                function() {
+
+
+                    if (!convertedBlob) {
+
+                        alert(
+                            'No converted file is available.'
+                        );
+
+                        return;
+
+                    }
+
+
+                    const format =
+                        $('#outputFormat')
+                        .val();
+
+
+                    const originalName =
+                        selectedFile.name
+                        .replace(
+                            /\.[^/.]+$/,
+                            ''
+                        );
+
+
+                    let extension;
+
+
+                    if (
+                        format === 'jpg'
+                    ) {
+
+                        extension =
+                            'jpg';
+
+                    } else if (
+                        format === 'jpeg'
+                    ) {
+
+                        extension =
+                            'jpeg';
+
+                    } else if (
+                        format === 'png'
+                    ) {
+
+                        extension =
+                            'png';
+
+                    } else if (
+                        format === 'webp'
+                    ) {
+
+                        extension =
+                            'webp';
+
+                    } else {
+
+                        extension =
+                            'pdf';
+
+                    }
+
+
+                    const downloadURL =
+                        URL.createObjectURL(
+                            convertedBlob
+                        );
+
+
+                    const link =
+                        document.createElement(
+                            'a'
+                        );
+
+
+                    link.href =
+                        downloadURL;
+
+
+                    link.download =
+
+                        originalName +
+                        '-converted.' +
+                        extension;
+
+
+                    document.body.appendChild(
+                        link
+                    );
+
+
+                    link.click();
+
+
+                    document.body.removeChild(
+                        link
+                    );
+
+
+                    setTimeout(
+                        function() {
+
+                            URL.revokeObjectURL(
+                                downloadURL
+                            );
+
+                        },
+                        1000
+                    );
+
                 }
-
-
-                const downloadURL = URL.createObjectURL(
-                    convertedBlob
-                );
-
-
-                const link = document.createElement('a');
-
-                link.href = downloadURL;
-
-                link.download =
-                    selectedFile.name.replace(/\.[^/.]+$/, '') +
-                    '.jpg';
-
-
-                document.body.appendChild(link);
-
-                link.click();
-
-                document.body.removeChild(link);
-
-
-                setTimeout(function() {
-                    URL.revokeObjectURL(downloadURL);
-                }, 1000);
-
-            });
+            );
 
 
             /* =========================================================
                CONVERT ANOTHER
             ========================================================== */
-            $('#jpgAnotherButton').on('click', function() {
 
-                resetJPGTool();
+            $('#anotherButton').on(
+                'click',
+                function() {
 
-            });
+                    resetTool();
+
+                }
+            );
 
 
             /* =========================================================
-               REMOVE IMAGE
+               REMOVE
             ========================================================== */
-            $('#jpgRemoveButton').on('click', function() {
 
-                resetJPGTool();
+            $('#removeButton').on(
+                'click',
+                function() {
 
-            });
-
-
-            /* =========================================================
-               QUALITY / BACKGROUND CHANGE
-               If user changes an option after conversion,
-               show Convert button again.
-            ========================================================== */
-            $('#jpgQuality, #jpgBackground').on('change', function() {
-
-                if (!selectedFile) {
-                    return;
-                }
-
-
-                if (convertedBlob) {
-
-                    convertedBlob = null;
-
-                    if (convertedURL) {
-
-                        URL.revokeObjectURL(convertedURL);
-
-                        convertedURL = null;
-
-                    }
-
-
-                    /* Restore original preview */
-                    if (originalObjectURL) {
-
-                        $('#jpgImagePreview').attr(
-                            'src',
-                            originalObjectURL
-                        );
-
-                    }
-
-
-                    $('#jpgResult').hide();
-
-                    $('#jpgDownloadButton').hide();
-
-                    $('#jpgAnotherButton').hide();
-
-
-                    $('#jpgConvertButton')
-                        .show()
-                        .prop('disabled', false)
-                        .html(
-                            '<i class="fas fa-sync-alt"></i> Convert to JPG'
-                        );
+                    resetTool();
 
                 }
+            );
 
-            });
 
         });
     </script>
