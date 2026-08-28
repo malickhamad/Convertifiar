@@ -138,6 +138,8 @@
 
             <!-- Tool 8 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                                <a target="_blank" href="{{ route('image.background_remover') }}" class="text-decoration-none">
+
                 <div class="tool-card anim-border">
                     <span class="badge-new">New!</span>
                     <div class="icon-box bg-red"><i class="fas fa-eraser"></i></div>
@@ -145,6 +147,8 @@
                     <p>Quickly remove image backgrounds with high accuracy. Instantly detect objects and cut out
                         backgrounds.</p>
                 </div>
+                                </a>
+
             </div>
 
             <!-- Tool 9 -->

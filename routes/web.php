@@ -21,3 +21,5 @@ Route::get('/sitemap.xml', [PageController::class, 'sitemap'])
     Route::get('/image-resizer', [PageController::class, 'imageResizer'])->name('image.resizer');
     
     Route::get('/image-to-jpg', [PageController::class, 'imageToJpg'])->name('image.to.jpg');
+
+    Route::get('/background-remover', [PageController::class, 'backgroundRemover'])->name('image.background_remover');

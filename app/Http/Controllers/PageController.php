@@ -45,4 +45,8 @@ class PageController extends Controller
 {
     return view('pages.image_to_jpg');
 }
+public function backgroundRemover()
+{
+    return view('pages.background_remover');
+}
 }

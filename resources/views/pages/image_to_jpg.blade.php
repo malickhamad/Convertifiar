@@ -1,705 +1,621 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Image Converter</title>
 
-    <meta name="description" content="Convert images to PNG, JPG, JPEG, WebP or PDF online quickly and easily." />
+<title>Image Converter</title>
 
-    <meta property="og:title" content="Image Converter">
-    <meta property="og:description" content="Convert images to PNG, JPG, JPEG, WebP or PDF online.">
+<meta name="description"
+    content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online quickly and easily." />
 
-    <meta property="twitter:title" content="Image Converter">
-    <meta property="twitter:description" content="Convert images to PNG, JPG, JPEG, WebP or PDF online.">
+<meta property="og:title" content="Image Converter">
+<meta property="og:description"
+    content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
+
+<meta property="twitter:title" content="Image Converter">
+<meta property="twitter:description"
+    content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
+
 @endsection
 
-
 @section('content')
-    <main class="crop-page">
 
-        {{-- =========================================================
-         BREADCRUMB
-    ========================================================== --}}
-        <section class="crop-breadcrumb-section">
+<main class="crop-page">
 
-            <div class="container">
+<section class="crop-breadcrumb-section">
+    <div class="container">
 
-                <div class="crop-breadcrumb">
+        <div class="crop-breadcrumb">
 
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Home
-                    </a>
+            <a href="#">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
 
-                    <span>
-                        <i class="fas fa-chevron-right"></i>
-                    </span>
+            <span>
+                <i class="fas fa-chevron-right"></i>
+            </span>
 
-                    <span>Image Converter</span>
+            <span>Image Converter</span>
 
+        </div>
+
+    </div>
+</section>
+
+
+<section class="crop-hero-section" id="imageUploadSection">
+
+    <div class="container">
+
+        <div class="crop-heading">
+
+            <span class="crop-small-badge">
+                <i class="fas fa-file-image"></i>
+                Image Converter
+            </span>
+
+            <h1>
+                Convert Images<br>
+                <span>To Any Format.</span>
+            </h1>
+
+            <p>
+                Convert one or multiple images to JPG, JPEG, PNG,
+                WebP or PDF quickly and easily.
+            </p>
+
+        </div>
+
+
+        <div class="crop-upload-box" id="imageUploadBox">
+
+            <div class="crop-upload-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+
+            <h3>
+                Upload your images
+            </h3>
+
+            <p class="crop-upload-text">
+                Drag & drop your images here or
+            </p>
+
+            <label
+                for="imageInput"
+                class="crop-upload-btn"
+            >
+                <i class="fas fa-upload"></i>
+                Choose Images
+            </label>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"
+                multiple
+                hidden
+            >
+
+            <p class="crop-upload-info">
+                Supports JPG, JPEG, PNG, WebP, GIF, SVG
+                <span>|</span>
+                Max size: 50MB per image
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section
+    class="multi-converter-section"
+    id="converterSection"
+    style="display:none;"
+>
+
+    <div class="container">
+
+
+        <div class="modern-converter-header">
+
+            <div class="modern-header-content">
+
+                <span class="modern-section-label">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    Image Converter
+                </span>
+
+                <h2>
+                    Ready to
+                    <span>Convert?</span>
+                </h2>
+
+                <p>
+                    Review your images, choose an output format,
+                    and convert everything in seconds.
+                </p>
+
+            </div>
+
+
+            <div class="modern-image-counter">
+
+                <div class="counter-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+
+                <div class="counter-content">
+                    <strong id="imageCount">0</strong>
+                    <span>Images selected</span>
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
 
-        {{-- =========================================================
-         HERO / UPLOAD SECTION
-    ========================================================== --}}
-        <section class="crop-hero-section" id="imageUploadSection">
 
-            <div class="container">
-
-                <div class="crop-heading">
-
-                    <span class="crop-small-badge">
-
-                        <i class="fas fa-file-image"></i>
-
-                        Image Converter
-
-                    </span>
+        <div class="modern-converter-workspace">
 
 
-                    <h1>
+            <div class="modern-workspace-header">
 
-                        Convert Images<br>
+                <div class="workspace-title">
 
-                        <span>To Any Format.</span>
-
-                    </h1>
-
-
-                    <p>
-
-                        Convert your images to PNG, JPG, JPEG, WebP or PDF
-                        quickly and easily. No software required.
-
-                    </p>
-
-                </div>
-
-
-                {{-- =================================================
-                 UPLOAD BOX
-            ================================================== --}}
-                <div class="crop-upload-box" id="imageUploadBox">
-
-                    <div class="crop-upload-icon">
-
-                        <i class="fas fa-cloud-upload-alt"></i>
-
+                    <div class="workspace-title-icon">
+                        <i class="fas fa-photo-film"></i>
                     </div>
 
+                    <div>
+                        <h3>Your Images</h3>
 
-                    <h3>
-
-                        Upload your image
-
-                    </h3>
-
-
-                    <p class="crop-upload-text">
-
-                        Drag & drop your image here or
-
-                    </p>
-
-
-                    <label for="imageInput" class="crop-upload-btn">
-
-                        <i class="fas fa-upload"></i>
-
-                        Choose File
-
-                    </label>
-
-
-                    <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"
-                        hidden>
-
-
-                    <p class="crop-upload-info">
-
-                        Supports JPG, JPEG, PNG, WebP, GIF, SVG
-
-                        <span>|</span>
-
-                        Max size: 50MB
-
-                    </p>
+                        <p>
+                            Review and manage your selected files
+                        </p>
+                    </div>
 
                 </div>
 
+
+                <button
+                    type="button"
+                    id="addImagesButton"
+                    class="modern-add-button"
+                >
+                    <span class="add-button-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+
+                    <span>Add More Images</span>
+                </button>
+
             </div>
 
-        </section>
 
 
-        {{-- =========================================================
-         CONVERTER SECTION
-    ========================================================== --}}
-        <section class="crop-info-section">
-
-            <div class="container">
-
-                <div class="crop-info-card">
+            <div
+                class="modern-image-grid"
+                id="imageGrid"
+            >
+            </div>
 
 
-                    {{-- =================================================
-                     LEFT CONTENT
-                ================================================== --}}
-                    <div class="crop-info-content">
 
-                        <span class="crop-info-badge">
+            <div
+                id="emptyImagesMessage"
+                class="modern-empty-state"
+                style="display:none;"
+            >
 
-                            CONVERTER
+                <div class="empty-state-icon">
+                    <i class="fas fa-images"></i>
+                </div>
 
-                        </span>
+                <h4>No images selected</h4>
+
+                <p>
+                    Add images to begin your conversion.
+                </p>
+
+                <button
+                    type="button"
+                    id="emptyAddButton"
+                    class="modern-add-button"
+                >
+                    <span class="add-button-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+
+                    <span>Add Images</span>
+                </button>
+
+            </div>
 
 
-                        <h2>
 
-                            Convert Images<br>
-
-                            <span>Simply & Easily</span>
-
-                        </h2>
+            <div class="modern-settings-section">
 
 
-                        <p class="crop-info-description">
+                <div class="modern-settings-header">
 
-                            Upload your image, choose the format you want
-                            and convert it instantly in your browser.
+                    <div class="settings-heading-icon">
+                        <i class="fas fa-sliders"></i>
+                    </div>
 
+                    <div>
+
+                        <h3>Conversion Settings</h3>
+
+                        <p>
+                            Choose how your images should be converted
                         </p>
 
+                    </div>
 
-                        {{-- Feature 01 --}}
-                        <div class="crop-feature-item">
-
-                            <div class="crop-feature-icon crop-icon-blue">
-
-                                <i class="fas fa-exchange-alt"></i>
-
-                            </div>
+                </div>
 
 
-                            <div>
 
-                                <h4>
+                <div class="modern-setting-group">
 
-                                    Multiple Formats
+                    <div class="modern-setting-label">
 
-                                </h4>
+                        <div>
 
+                            <span class="setting-title">
+                                Output Format
+                            </span>
 
-                                <p>
-
-                                    Convert your image to PNG, JPG, JPEG,
-                                    WebP or PDF.
-
-                                </p>
-
-                            </div>
+                            <span class="setting-description">
+                                Select the format for your converted images
+                            </span>
 
                         </div>
 
+                        <span class="selected-format-badge">
+                            <i class="fas fa-check"></i>
+                            <span id="selectedFormatText">JPG</span>
+                        </span>
 
-                        {{-- Feature 02 --}}
-                        <div class="crop-feature-item">
+                    </div>
 
-                            <div class="crop-feature-icon crop-icon-purple">
 
+                    <div class="format-selector-grid">
+
+                        <button
+                            type="button"
+                            class="format-card active"
+                            data-format="jpg"
+                        >
+                            <span class="format-icon jpg-icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+
+                            <span class="format-card-content">
+                                <strong>JPG</strong>
+                                <small>Best for photos</small>
+                            </span>
+
+                            <span class="format-check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="format-card"
+                            data-format="jpeg"
+                        >
+                            <span class="format-icon jpeg-icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+
+                            <span class="format-card-content">
+                                <strong>JPEG</strong>
+                                <small>Photo format</small>
+                            </span>
+
+                            <span class="format-check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="format-card"
+                            data-format="png"
+                        >
+                            <span class="format-icon png-icon">
+                                <i class="fas fa-file-image"></i>
+                            </span>
+
+                            <span class="format-card-content">
+                                <strong>PNG</strong>
+                                <small>Transparent images</small>
+                            </span>
+
+                            <span class="format-check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="format-card"
+                            data-format="webp"
+                        >
+                            <span class="format-icon webp-icon">
                                 <i class="fas fa-bolt"></i>
+                            </span>
 
-                            </div>
+                            <span class="format-card-content">
+                                <strong>WebP</strong>
+                                <small>Smaller file size</small>
+                            </span>
 
-
-                            <div>
-
-                                <h4>
-
-                                    Fast Conversion
-
-                                </h4>
-
-
-                                <p>
-
-                                    Process your image directly in your
-                                    browser without unnecessary uploads.
-
-                                </p>
-
-                            </div>
-
-                        </div>
+                            <span class="format-check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </button>
 
 
-                        {{-- Feature 03 --}}
-                        <div class="crop-feature-item">
+                        <button
+                            type="button"
+                            class="format-card"
+                            data-format="pdf"
+                        >
+                            <span class="format-icon pdf-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
 
-                            <div class="crop-feature-icon crop-icon-green">
+                            <span class="format-card-content">
+                                <strong>PDF</strong>
+                                <small>One PDF per image</small>
+                            </span>
 
-                                <i class="fas fa-shield-alt"></i>
+                            <span class="format-check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </button>
 
-                            </div>
-
-
-                            <div>
-
-                                <h4>
-
-                                    Secure & Private
-
-                                </h4>
+                    </div>
 
 
-                                <p>
+                    <select
+                        id="outputFormat"
+                        class="modern-hidden-select"
+                    >
+                        <option value="jpg" selected>JPG</option>
+                        <option value="jpeg">JPEG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WebP</option>
+                        <option value="pdf">PDF</option>
+                    </select>
 
-                                    Your image stays on your device while
-                                    the conversion is performed.
+                </div>
 
-                                </p>
 
-                            </div>
+
+                <div
+                    class="modern-setting-group quality-setting"
+                    id="qualityWrapper"
+                >
+
+                    <div class="modern-setting-label">
+
+                        <div>
+
+                            <span class="setting-title">
+                                Image Quality
+                            </span>
+
+                            <span class="setting-description">
+                                Higher quality produces larger files
+                            </span>
 
                         </div>
 
                     </div>
 
 
-                    {{-- =================================================
-                     RIGHT CONVERTER
-                ================================================== --}}
-                    <div class="crop-preview-wrapper">
+                    <div class="quality-selector">
+
+                        <label class="quality-option">
+
+                            <input
+                                type="radio"
+                                name="qualityOption"
+                                value="1"
+                            >
+
+                            <span class="quality-option-content">
+                                <strong>High</strong>
+                                <small>Maximum quality</small>
+                            </span>
+
+                        </label>
 
 
-                        {{-- =================================================
-                         IMAGE PREVIEW
-                    ================================================== --}}
-                        <div class="crop-preview-card">
+                        <label class="quality-option active">
 
-                            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
-                                alt="Image Converter Preview" class="crop-preview-image" id="imagePreview">
+                            <input
+                                type="radio"
+                                name="qualityOption"
+                                value="0.9"
+                                checked
+                            >
+
+                            <span class="quality-option-content">
+                                <strong>Very Good</strong>
+                                <small>Recommended</small>
+                            </span>
+
+                            <span class="recommended-label">
+                                Recommended
+                            </span>
+
+                        </label>
+
+
+                        <label class="quality-option">
+
+                            <input
+                                type="radio"
+                                name="qualityOption"
+                                value="0.8"
+                            >
+
+                            <span class="quality-option-content">
+                                <strong>Good</strong>
+                                <small>Balanced</small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="quality-option">
+
+                            <input
+                                type="radio"
+                                name="qualityOption"
+                                value="0.7"
+                            >
+
+                            <span class="quality-option-content">
+                                <strong>Medium</strong>
+                                <small>Smaller files</small>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <select
+                        id="imageQuality"
+                        class="modern-hidden-select"
+                    >
+                        <option value="1">
+                            High Quality
+                        </option>
+
+                        <option
+                            value="0.9"
+                            selected
+                        >
+                            Very Good
+                        </option>
+
+                        <option value="0.8">
+                            Good
+                        </option>
+
+                        <option value="0.7">
+                            Medium
+                        </option>
+                    </select>
+
+                </div>
+
+
+
+                <div
+                    id="pdfOptions"
+                    class="modern-pdf-options"
+                    style="display:none;"
+                >
+
+                    <div class="pdf-options-heading">
+
+                        <div class="pdf-heading-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+                            <strong>PDF Settings</strong>
+                            <span>
+                                Each image will be saved as a separate PDF
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-3">
+
+                        <div class="col-lg-6 col-md-6 col-12">
+
+                            <label
+                                for="pdfPageSize"
+                                class="modern-form-label"
+                            >
+                                <i class="fas fa-file"></i>
+                                Page Size
+                            </label>
+
+                            <select
+                                id="pdfPageSize"
+                                class="modern-form-select"
+                            >
+
+                                <option
+                                    value="a4"
+                                    selected
+                                >
+                                    A4
+                                </option>
+
+                                <option value="letter">
+                                    Letter
+                                </option>
+
+                                <option value="image">
+                                    Image Size
+                                </option>
+
+                            </select>
 
                         </div>
 
 
-                        {{-- =================================================
-                         DEFAULT STATE
-                    ================================================== --}}
-                        <div id="normalState">
-
-                            <div class="crop-ratio-panel">
-
-                                <span class="crop-ratio-title">
-
-                                    Image Converter
-
-                                </span>
-
-
-                                <p class="mb-0">
-
-                                    Upload an image above to start converting.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        {{-- =================================================
-                         CONVERTER STATE
-                    ================================================== --}}
-                        <div id="converterState" style="display:none;">
-
-
-                            {{-- =================================================
-                             FILE INFORMATION
-                        ================================================== --}}
-                            <div class="crop-ratio-panel mt-3">
-
-                                <span class="crop-ratio-title">
-
-                                    Image Information
-
-                                </span>
-
-
-                                <div class="row g-3">
-
-
-                                    {{-- File Name --}}
-                                    <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                        <strong>
-
-                                            File
-
-                                        </strong>
-
-
-                                        <div id="fileName" class="text-break">
-
-                                            -
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Dimensions --}}
-                                    <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                        <strong>
-
-                                            Dimensions
-
-                                        </strong>
-
-
-                                        <div id="imageDimensions">
-
-                                            -
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- File Size --}}
-                                    <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                        <strong>
-
-                                            File Size
-
-                                        </strong>
-
-
-                                        <div id="fileSize">
-
-                                            -
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            {{-- =================================================
-                             OUTPUT FORMAT
-                        ================================================== --}}
-                            <div class="crop-ratio-panel mt-3">
-
-                                <span class="crop-ratio-title">
-
-                                    Conversion Options
-
-                                </span>
-
-
-                                <div class="row g-3 align-items-end">
-
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                        <label for="outputFormat" class="form-label">
-
-                                            Convert To
-
-                                        </label>
-
-
-                                        <select id="outputFormat" class="form-select">
-
-                                            <option value="jpg" selected>
-
-                                                JPG
-
-                                            </option>
-
-                                            <option value="jpeg">
-
-                                                JPEG
-
-                                            </option>
-
-                                            <option value="png">
-
-                                                PNG
-
-                                            </option>
-
-                                            <option value="webp">
-
-                                                WebP
-
-                                            </option>
-
-                                            <option value="pdf">
-
-                                                PDF
-
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-
-                                    {{-- Quality --}}
-                                    <div class="col-lg-6 col-md-6 col-sm-12" id="qualityWrapper">
-
-                                        <label for="imageQuality" class="form-label">
-
-                                            Quality
-
-                                        </label>
-
-
-                                        <select id="imageQuality" class="form-select">
-
-                                            <option value="1">
-
-                                                High Quality
-
-                                            </option>
-
-                                            <option value="0.9" selected>
-
-                                                Very Good
-
-                                            </option>
-
-                                            <option value="0.8">
-
-                                                Good
-
-                                            </option>
-
-                                            <option value="0.7">
-
-                                                Medium
-
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-                                </div>
-
-
-                                {{-- PDF options --}}
-                                <div id="pdfOptions" class="row g-3 mt-1" style="display:none;">
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                        <label for="pdfPageSize" class="form-label">
-
-                                            PDF Page Size
-
-                                        </label>
-
-
-                                        <select id="pdfPageSize" class="form-select">
-
-                                            <option value="a4" selected>
-
-                                                A4
-
-                                            </option>
-
-                                            <option value="letter">
-
-                                                Letter
-
-                                            </option>
-
-                                            <option value="image">
-
-                                                Image Size
-
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                        <label for="pdfOrientation" class="form-label">
-
-                                            Orientation
-
-                                        </label>
-
-
-                                        <select id="pdfOrientation" class="form-select">
-
-                                            <option value="auto" selected>
-
-                                                Auto
-
-                                            </option>
-
-                                            <option value="portrait">
-
-                                                Portrait
-
-                                            </option>
-
-                                            <option value="landscape">
-
-                                                Landscape
-
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            {{-- =================================================
-                             RESULT
-                        ================================================== --}}
-                            <div id="conversionResult" style="display:none;">
-
-                                <div class="crop-ratio-panel mt-3">
-
-                                    <span class="crop-ratio-title">
-
-                                        Conversion Complete
-
-                                    </span>
-
-
-                                    <div class="row g-3">
-
-
-                                        {{-- Format --}}
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                            <span>
-
-                                                Format
-
-                                            </span>
-
-
-                                            <strong id="resultFormat" class="d-block">
-
-                                                -
-
-                                            </strong>
-
-                                        </div>
-
-
-                                        {{-- Dimensions --}}
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                            <span>
-
-                                                Dimensions
-
-                                            </span>
-
-
-                                            <strong id="resultDimensions" class="d-block">
-
-                                                -
-
-                                            </strong>
-
-                                        </div>
-
-
-                                        {{-- Size --}}
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                            <span>
-
-                                                File Size
-
-                                            </span>
-
-
-                                            <strong id="resultSize" class="d-block">
-
-                                                -
-
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            {{-- =================================================
-                             ACTION BUTTONS
-                        ================================================== --}}
-                            <div class="crop-action-buttons mt-3">
-
-
-                                {{-- Convert --}}
-                                <button type="button" id="convertButton" class="crop-download-btn">
-
-                                    <i class="fas fa-sync-alt"></i>
-
-                                    Convert Image
-
-                                </button>
-
-
-                                {{-- Download --}}
-                                <button type="button" id="downloadButton" class="crop-download-btn"
-                                    style="display:none;">
-
-                                    <i class="fas fa-download"></i>
-
-                                    Download
-
-                                </button>
-
-
-                                {{-- Another --}}
-                                <button type="button" id="anotherButton" style="display:none;">
-
-                                    <i class="fas fa-plus"></i>
-
-                                    Convert Another
-
-                                </button>
-
-
-                                {{-- Remove --}}
-                                <button type="button" id="removeButton">
-
-                                    <i class="fas fa-trash"></i>
-
-                                    Remove
-
-                                </button>
-
-                            </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+
+                            <label
+                                for="pdfOrientation"
+                                class="modern-form-label"
+                            >
+                                <i class="fas fa-arrows-left-right"></i>
+                                Orientation
+                            </label>
+
+                            <select
+                                id="pdfOrientation"
+                                class="modern-form-select"
+                            >
+
+                                <option
+                                    value="auto"
+                                    selected
+                                >
+                                    Auto
+                                </option>
+
+                                <option value="portrait">
+                                    Portrait
+                                </option>
+
+                                <option value="landscape">
+                                    Landscape
+                                </option>
+
+                            </select>
 
                         </div>
 
@@ -709,147 +625,222 @@
 
             </div>
 
-        </section>
 
 
-        {{-- =========================================================
-         BENEFITS
-    ========================================================== --}}
-        <section class="crop-benefits-section">
+            <div
+                id="conversionProgress"
+                class="modern-progress"
+                style="display:none;"
+            >
 
-            <div class="container">
+                <div class="modern-progress-header">
 
-                <div class="crop-benefits-heading">
+                    <div class="progress-status">
 
-                    <span>
+                        <div class="progress-status-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
 
-                        WHY USE PIXELFLOW
+                        <div>
 
-                    </span>
+                            <strong id="progressTitle">
+                                Preparing conversion...
+                            </strong>
+
+                            <span id="progressText">
+                                0 / 0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <strong class="progress-percent">
+                        <span id="progressPercentage">
+                            0
+                        </span>%
+                    </strong>
+
+                </div>
 
 
-                    <h2>
+                <div class="modern-progress-track">
 
-                        Simple. Fast.
-                        <strong>Reliable.</strong>
+                    <div
+                        id="progressBar"
+                        class="modern-progress-bar"
+                        style="width:0%;"
+                    ></div>
 
-                    </h2>
+                </div>
+
+            </div>
 
 
-                    <p>
 
-                        Convert your images to the format you need
-                        without complicated software.
+            <div
+                id="conversionResult"
+                class="modern-success-box"
+                style="display:none;"
+            >
 
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+
+                <div class="success-content">
+
+                    <strong>
+                        Conversion Complete
+                    </strong>
+
+                    <p id="resultMessage">
+                        Your images have been converted successfully.
                     </p>
 
                 </div>
 
+                <div class="success-badge">
+                    <i class="fas fa-circle-check"></i>
+                    Ready
+                </div>
 
-                <div class="row g-4">
-
-
-                    {{-- Benefit 01 --}}
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="crop-benefit-card">
-
-                            <div class="crop-benefit-icon">
-
-                                <i class="fas fa-bolt"></i>
-
-                            </div>
+            </div>
 
 
-                            <div>
 
-                                <h4>
+            <div class="modern-action-area">
 
-                                    Fast Processing
+                <button
+                    type="button"
+                    id="convertButton"
+                    class="modern-primary-action main-convert-btn"
+                >
 
-                                </h4>
+                    <span class="action-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    <span class="action-text">
+                        <strong>Convert Images</strong>
+                        <small>Start conversion</small>
+                    </span>
+
+                    <i class="fas fa-arrow-right action-arrow"></i>
+
+                </button>
 
 
-                                <p>
+                <button
+                    type="button"
+                    id="downloadButton"
+                    class="modern-download-action"
+                    style="display:none;"
+                >
 
-                                    Convert images directly in your browser
-                                    in just a few seconds.
+                    <span class="action-icon">
+                        <i class="fas fa-download"></i>
+                    </span>
 
-                                </p>
+                    <span class="action-text">
+                        <strong>Download All</strong>
+                        <small>Save converted files</small>
+                    </span>
 
-                            </div>
+                    <i class="fas fa-arrow-down action-arrow"></i>
 
-                        </div>
+                </button>
 
+
+                <button
+                    type="button"
+                    id="newConversionButton"
+                    class="modern-new-action"
+                >
+
+                    <i class="fas fa-plus"></i>
+
+                    New Conversion
+
+                </button>
+
+            </div>
+
+
+
+            <div class="modern-security-note">
+
+                <div class="security-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Your files stay private
+                    </strong>
+
+                    <span>
+                        Images are processed directly in your browser
+                        and are never uploaded to our server.
+                    </span>
+
+                </div>
+
+                <i class="fas fa-check-circle security-check"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="crop-benefits-section">
+
+    <div class="container">
+
+        <div class="crop-benefits-heading">
+
+            <span>
+                WHY USE PIXELFLOW
+            </span>
+
+            <h2>
+                Simple. Fast.
+                <strong>Reliable.</strong>
+            </h2>
+
+            <p>
+                Convert multiple images without complicated software.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="crop-benefit-card">
+
+                    <div class="crop-benefit-icon">
+                        <i class="fas fa-layer-group"></i>
                     </div>
 
+                    <div>
 
-                    {{-- Benefit 02 --}}
-                    <div class="col-lg-4 col-md-6">
+                        <h4>
+                            Bulk Conversion
+                        </h4>
 
-                        <div class="crop-benefit-card">
-
-                            <div class="crop-benefit-icon">
-
-                                <i class="fas fa-file-image"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <h4>
-
-                                    Multiple Formats
-
-                                </h4>
-
-
-                                <p>
-
-                                    Convert images to JPG, JPEG, PNG,
-                                    WebP or PDF.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- Benefit 03 --}}
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="crop-benefit-card">
-
-                            <div class="crop-benefit-icon">
-
-                                <i class="fas fa-shield-alt"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <h4>
-
-                                    Secure & Private
-
-                                </h4>
-
-
-                                <p>
-
-                                    Your images remain on your device
-                                    during conversion.
-
-                                </p>
-
-                            </div>
-
-                        </div>
+                        <p>
+                            Upload multiple images and convert
+                            them all at once.
+                        </p>
 
                     </div>
 
@@ -857,1669 +848,3343 @@
 
             </div>
 
-        </section>
 
-    </main>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="crop-benefit-card">
+
+                    <div class="crop-benefit-icon">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Multiple Formats
+                        </h4>
+
+                        <p>
+                            Convert images to JPG, JPEG, PNG,
+                            WebP or PDF.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="crop-benefit-card">
+
+                    <div class="crop-benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Secure & Private
+                        </h4>
+
+                        <p>
+                            Your images remain on your device
+                            during conversion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
 @endsection
 
 
 @section('scripts')
-    {{-- =========================================================
-     jsPDF
-     Required for Image → PDF conversion
-========================================================== --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
+{{-- ZIP LIBRARY --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
 
-            /* =========================================================
-               VARIABLES
-            ========================================================== */
+<script>
 
-            let selectedFile = null;
+$(document).ready(function () {
 
-            let originalImage = null;
+    let selectedFiles = [];
+    let convertedFiles = [];
 
-            let originalObjectURL = null;
+    const MAX_SIZE = 50 * 1024 * 1024;
 
-            let convertedBlob = null;
 
-            let convertedURL = null;
+    /*
+    |--------------------------------------------------------------------------
+    | HELPERS
+    |--------------------------------------------------------------------------
+    */
 
+    function formatFileSize(bytes) {
 
-            const MAX_SIZE =
-                50 * 1024 * 1024;
+        if (bytes < 1024) {
+            return bytes + ' B';
+        }
 
+        if (bytes < 1024 * 1024) {
+            return (bytes / 1024).toFixed(1) + ' KB';
+        }
 
-            /* =========================================================
-               DEFAULT PREVIEW
-            ========================================================== */
+        return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+    }
 
-            const defaultPreview =
-                'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85';
 
+    /*
+     * Remove original extension only.
+     *
+     * Example:
+     * photo.jpg -> photo
+     * my.image.png -> my.image
+     */
+    function cleanFileName(name) {
 
-            /* =========================================================
-               FORMAT FILE SIZE
-            ========================================================== */
+        return name.replace(/\.[^/.]+$/, '');
 
-            function formatFileSize(bytes) {
+    }
 
-                if (bytes < 1024) {
 
-                    return bytes + ' B';
+    /*
+     * Make safe file name.
+     */
+    function safeFileName(name) {
 
-                }
+        return name
+            .replace(/[<>:"/\\|?*\x00-\x1F]/g, '_')
+            .trim();
 
+    }
 
-                if (bytes < 1024 * 1024) {
 
-                    return (
-                        bytes / 1024
-                    ).toFixed(1) + ' KB';
+    /*
+    |--------------------------------------------------------------------------
+    | IMAGE DIMENSIONS
+    |--------------------------------------------------------------------------
+    */
 
-                }
+    function getImageDimensions(file) {
 
+        return new Promise(function (resolve) {
 
-                return (
-                    bytes /
-                    (1024 * 1024)
-                ).toFixed(2) + ' MB';
+            const reader = new FileReader();
 
-            }
+            reader.onload = function (event) {
 
+                const img = new Image();
 
-            /* =========================================================
-               RESET RESULT
-            ========================================================== */
+                img.onload = function () {
 
-            function resetResult() {
+                    resolve({
+                        width: img.naturalWidth,
+                        height: img.naturalHeight,
+                        image: img
+                    });
 
-                convertedBlob = null;
+                };
 
+                img.onerror = function () {
 
-                if (convertedURL) {
+                    resolve({
+                        width: 0,
+                        height: 0,
+                        image: null
+                    });
 
-                    URL.revokeObjectURL(
-                        convertedURL
-                    );
+                };
 
-                    convertedURL = null;
+                img.src = event.target.result;
 
-                }
+            };
 
+            reader.onerror = function () {
 
-                $('#conversionResult').hide();
-
-
-                $('#downloadButton').hide();
-
-
-                $('#anotherButton').hide();
-
-
-                $('#convertButton')
-                    .show()
-                    .prop('disabled', false)
-                    .html(
-                        '<i class="fas fa-sync-alt"></i> Convert Image'
-                    );
-
-
-                if (originalObjectURL) {
-
-                    $('#imagePreview').attr(
-                        'src',
-                        originalObjectURL
-                    );
-
-                }
-
-            }
-
-
-            /* =========================================================
-               RESET EVERYTHING
-            ========================================================== */
-
-            function resetTool() {
-
-                selectedFile = null;
-
-                originalImage = null;
-
-
-                if (originalObjectURL) {
-
-                    URL.revokeObjectURL(
-                        originalObjectURL
-                    );
-
-                    originalObjectURL = null;
-
-                }
-
-
-                if (convertedURL) {
-
-                    URL.revokeObjectURL(
-                        convertedURL
-                    );
-
-                    convertedURL = null;
-
-                }
-
-
-                convertedBlob = null;
-
-
-                $('#imageInput').val('');
-
-
-                $('#converterState').hide();
-
-
-                $('#normalState').show();
-
-
-                $('#imagePreview').attr(
-                    'src',
-                    defaultPreview
-                );
-
-
-                $('#fileName').text('-');
-
-
-                $('#imageDimensions').text('-');
-
-
-                $('#fileSize').text('-');
-
-
-                $('#resultFormat').text('-');
-
-
-                $('#resultDimensions').text('-');
-
-
-                $('#resultSize').text('-');
-
-
-                $('#conversionResult').hide();
-
-
-                $('#downloadButton').hide();
-
-
-                $('#anotherButton').hide();
-
-
-                $('#convertButton')
-                    .show()
-                    .prop('disabled', false)
-                    .html(
-                        '<i class="fas fa-sync-alt"></i> Convert Image'
-                    );
-
-
-                /*
-                 * Return to upload section.
-                 */
-
-                $('html, body').animate({
-
-                    scrollTop: $('#imageUploadSection').offset().top - 20
-
-                }, 500);
-
-            }
-
-
-            /* =========================================================
-               LOAD IMAGE
-            ========================================================== */
-
-            function loadImage(file) {
-
-                return new Promise(function(
-                    resolve,
-                    reject
-                ) {
-
-                    /*
-                     * FileReader ensures that the uploaded image
-                     * is loaded locally and avoids cross-origin
-                     * canvas problems.
-                     */
-
-                    const reader =
-                        new FileReader();
-
-
-                    reader.onload =
-                        function(event) {
-
-                            const img =
-                                new Image();
-
-
-                            img.onload =
-                                function() {
-
-                                    resolve(img);
-
-                                };
-
-
-                            img.onerror =
-                                function() {
-
-                                    reject(
-                                        new Error(
-                                            'Unable to read this image.'
-                                        )
-                                    );
-
-                                };
-
-
-                            img.src =
-                                event.target.result;
-
-                        };
-
-
-                    reader.onerror =
-                        function() {
-
-                            reject(
-                                new Error(
-                                    'Unable to read the selected file.'
-                                )
-                            );
-
-                        };
-
-
-                    reader.readAsDataURL(file);
-
+                resolve({
+                    width: 0,
+                    height: 0,
+                    image: null
                 });
 
+            };
+
+            reader.readAsDataURL(file);
+
+        });
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | VALIDATE FILE
+    |--------------------------------------------------------------------------
+    */
+
+    function isValidImage(file) {
+
+        if (file.size > MAX_SIZE) {
+
+            alert(
+                file.name +
+                ' is larger than 50MB and was skipped.'
+            );
+
+            return false;
+        }
+
+
+        const allowedTypes = [
+            'image/jpeg',
+            'image/png',
+            'image/webp',
+            'image/gif',
+            'image/svg+xml'
+        ];
+
+
+        const extension = file.name
+            .split('.')
+            .pop()
+            .toLowerCase();
+
+
+        const allowedExtensions = [
+            'jpg',
+            'jpeg',
+            'png',
+            'webp',
+            'gif',
+            'svg'
+        ];
+
+
+        if (
+            !allowedTypes.includes(file.type) &&
+            !allowedExtensions.includes(extension)
+        ) {
+
+            alert(
+                file.name +
+                ' is not a supported image.'
+            );
+
+            return false;
+        }
+
+
+        return true;
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | ADD FILES
+    |--------------------------------------------------------------------------
+    */
+
+    async function addFiles(files) {
+
+        if (!files || !files.length) {
+            return;
+        }
+
+
+        const newFiles = Array.from(files);
+
+
+        for (const file of newFiles) {
+
+            if (!isValidImage(file)) {
+                continue;
             }
 
 
-            /* =========================================================
-               SHOW CONVERTER
-            ========================================================== */
+            const duplicate = selectedFiles.some(function (existing) {
 
-            async function showConverter(file) {
+                return (
+                    existing.name === file.name &&
+                    existing.size === file.size &&
+                    existing.lastModified === file.lastModified
+                );
 
-                selectedFile = file;
-
-
-                if (originalObjectURL) {
-
-                    URL.revokeObjectURL(
-                        originalObjectURL
-                    );
-
-                }
+            });
 
 
-                originalObjectURL =
-                    URL.createObjectURL(file);
+            if (!duplicate) {
+                selectedFiles.push(file);
+            }
+
+        }
 
 
-                $('#imagePreview').attr(
-                    'src',
-                    originalObjectURL
+        if (!selectedFiles.length) {
+            return;
+        }
+
+
+        renderImageGrid();
+
+
+        $('#imageUploadSection')
+            .stop(true, true)
+            .slideUp(350);
+
+
+        $('#converterSection')
+            .stop(true, true)
+            .slideDown(450);
+
+
+        setTimeout(function () {
+
+            $('html, body').animate({
+
+                scrollTop:
+                    $('#converterSection').offset().top - 25
+
+            }, 550);
+
+        }, 150);
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | RENDER IMAGE GRID
+    |--------------------------------------------------------------------------
+    */
+
+    async function renderImageGrid() {
+
+        const grid = $('#imageGrid');
+
+        grid.empty();
+
+
+        $('#imageCount').text(
+            selectedFiles.length
+        );
+
+
+        if (!selectedFiles.length) {
+
+            $('#emptyImagesMessage').show();
+
+            return;
+        }
+
+
+        $('#emptyImagesMessage').hide();
+
+
+        for (
+            let index = 0;
+            index < selectedFiles.length;
+            index++
+        ) {
+
+            const file = selectedFiles[index];
+
+            const imageInfo =
+                await getImageDimensions(file);
+
+
+            const objectURL =
+                URL.createObjectURL(file);
+
+
+            const card = $(`
+                <div class="modern-image-card">
+
+                    <div class="modern-image-preview">
+
+                        <img
+                            src="${objectURL}"
+                            alt="${file.name}"
+                        >
+
+                        <span class="modern-image-number">
+                            ${index + 1}
+                        </span>
+
+                        <button
+                            type="button"
+                            class="modern-remove-image"
+                            data-index="${index}"
+                            title="Remove image"
+                        >
+                            <i class="fas fa-times"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="modern-image-info">
+
+                        <div class="modern-file-name">
+
+                            <span class="file-type-dot"></span>
+
+                            <strong title="${file.name}">
+                                ${file.name}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modern-file-meta">
+
+                            <span>
+                                <i class="fas fa-expand"></i>
+                                ${
+                                    imageInfo.width
+                                    ? imageInfo.width + ' × ' +
+                                      imageInfo.height + ' px'
+                                    : 'Image'
+                                }
+                            </span>
+
+                            <span>
+                                <i class="fas fa-database"></i>
+                                ${formatFileSize(file.size)}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            `);
+
+
+            grid.append(card);
+
+
+            card.find('img').on('load', function () {
+
+                URL.revokeObjectURL(objectURL);
+
+            });
+
+        }
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | INPUT
+    |--------------------------------------------------------------------------
+    */
+
+    $('#imageInput').on('change', function () {
+
+        addFiles(this.files);
+
+        $(this).val('');
+
+    });
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | DRAG & DROP
+    |--------------------------------------------------------------------------
+    */
+
+    $('#imageUploadBox')
+
+        .on('dragover', function (e) {
+
+            e.preventDefault();
+
+            $(this).addClass('dragging');
+
+        })
+
+        .on('dragleave', function () {
+
+            $(this).removeClass('dragging');
+
+        })
+
+        .on('drop', function (e) {
+
+            e.preventDefault();
+
+            $(this).removeClass('dragging');
+
+            const files =
+                e.originalEvent
+                    .dataTransfer
+                    .files;
+
+            addFiles(files);
+
+        });
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | ADD MORE
+    |--------------------------------------------------------------------------
+    */
+
+    $('#addImagesButton, #emptyAddButton').on(
+        'click',
+        function () {
+
+            $('html, body').animate({
+
+                scrollTop:
+                    $('#imageUploadSection').offset().top - 20
+
+            }, 550);
+
+
+            setTimeout(function () {
+
+                $('#imageUploadSection')
+                    .stop(true, true)
+                    .slideDown(450);
+
+            }, 150);
+
+
+            setTimeout(function () {
+
+                $('#imageInput').trigger('click');
+
+            }, 500);
+
+        }
+    );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | REMOVE IMAGE
+    |--------------------------------------------------------------------------
+    */
+
+    $(document).on(
+        'click',
+        '.modern-remove-image',
+        function () {
+
+            const index =
+                parseInt(
+                    $(this).data('index')
                 );
 
 
-                $('#fileName').text(
-                    file.name
-                );
+            selectedFiles.splice(index, 1);
+
+            convertedFiles = [];
 
 
-                $('#fileSize').text(
-                    formatFileSize(file.size)
-                );
+            $('#conversionResult').hide();
+
+            $('#downloadButton').hide();
 
 
-                $('#normalState').hide();
+            $('#convertButton')
+                .show()
+                .prop('disabled', false)
+                .html(`
+                    <span class="action-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    <span class="action-text">
+                        <strong>Convert Images</strong>
+                        <small>Start conversion</small>
+                    </span>
+
+                    <i class="fas fa-arrow-right action-arrow"></i>
+                `);
 
 
-                $('#converterState').show();
+            renderImageGrid();
 
 
-                resetResult();
+            if (!selectedFiles.length) {
+
+                $('#converterSection')
+                    .stop(true, true)
+                    .slideUp(300);
 
 
-                try {
+                setTimeout(function () {
 
-                    originalImage =
-                        await loadImage(file);
+                    $('#imageUploadSection')
+                        .stop(true, true)
+                        .slideDown(400);
 
-
-                    $('#imageDimensions').text(
-
-                        originalImage.naturalWidth +
-                        ' × ' +
-                        originalImage.naturalHeight +
-                        ' px'
-
-                    );
-
-                } catch (error) {
-
-                    $('#imageDimensions')
-                        .text(
-                            'Unable to read dimensions'
-                        );
-
-                }
-
-
-                /*
-                 * Smoothly move user to converter.
-                 */
-
-                setTimeout(function() {
-
-                    $('html, body').animate({
-
-                        scrollTop: $('#converterState').offset().top - 30
-
-                    }, 600);
-
-                }, 150);
+                }, 300);
 
             }
 
-
-            /* =========================================================
-               VALIDATE FILE
-            ========================================================== */
-
-            function handleFile(file) {
-
-                if (!file) {
-
-                    return;
-
-                }
+        }
+    );
 
 
-                if (file.size > MAX_SIZE) {
+    /*
+    |--------------------------------------------------------------------------
+    | FORMAT CARDS
+    |--------------------------------------------------------------------------
+    */
 
-                    alert(
-                        'The selected image is larger than 50MB.'
-                    );
+    $('.format-card').on('click', function () {
 
-                    return;
-
-                }
-
-
-                const allowedTypes = [
-
-                    'image/jpeg',
-
-                    'image/png',
-
-                    'image/webp',
-
-                    'image/gif',
-
-                    'image/svg+xml'
-
-                ];
+        const format = $(this).data('format');
 
 
-                const extension =
-                    file.name
-                    .split('.')
-                    .pop()
-                    .toLowerCase();
+        $('.format-card')
+            .removeClass('active');
 
 
-                const allowedExtensions = [
-
-                    'jpg',
-
-                    'jpeg',
-
-                    'png',
-
-                    'webp',
-
-                    'gif',
-
-                    'svg'
-
-                ];
+        $(this)
+            .addClass('active');
 
 
-                if (
-
-                    !allowedTypes.includes(file.type) &&
-
-                    !allowedExtensions.includes(extension)
-
-                ) {
-
-                    alert(
-                        'Please select a JPG, JPEG, PNG, WebP, GIF or SVG image.'
-                    );
-
-                    return;
-
-                }
+        $('#outputFormat')
+            .val(format)
+            .trigger('change');
 
 
-                showConverter(file);
+        $('#selectedFormatText')
+            .text(format.toUpperCase());
 
-            }
+    });
 
 
-            /* =========================================================
-               FILE INPUT
-            ========================================================== */
+    /*
+    |--------------------------------------------------------------------------
+    | QUALITY CARDS
+    |--------------------------------------------------------------------------
+    */
 
-            $('#imageInput').on(
-                'change',
-                function() {
+    $('.quality-option').on('click', function () {
 
-                    handleFile(
-                        this.files[0]
-                    );
+        const value =
+            $(this)
+                .find('input')
+                .val();
 
-                }
+
+        $('.quality-option')
+            .removeClass('active');
+
+
+        $(this)
+            .addClass('active');
+
+
+        $('#imageQuality')
+            .val(value)
+            .trigger('change');
+
+    });
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | OUTPUT FORMAT
+    |--------------------------------------------------------------------------
+    */
+
+    $('#outputFormat').on('change', function () {
+
+        const format = $(this).val();
+
+
+        $('.format-card')
+            .removeClass('active');
+
+
+        $('.format-card[data-format="' + format + '"]')
+            .addClass('active');
+
+
+        $('#selectedFormatText')
+            .text(format.toUpperCase());
+
+
+        if (format === 'pdf') {
+
+            $('#qualityWrapper')
+                .stop(true, true)
+                .slideUp(150);
+
+
+            $('#pdfOptions')
+                .stop(true, true)
+                .slideDown(200);
+
+        } else {
+
+            $('#qualityWrapper')
+                .stop(true, true)
+                .slideDown(150);
+
+
+            $('#pdfOptions')
+                .stop(true, true)
+                .slideUp(200);
+
+        }
+
+
+        convertedFiles = [];
+
+
+        $('#conversionResult').hide();
+
+        $('#downloadButton').hide();
+
+
+        $('#convertButton')
+            .show()
+            .prop('disabled', false)
+            .html(`
+                <span class="action-icon">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                </span>
+
+                <span class="action-text">
+                    <strong>Convert Images</strong>
+                    <small>Start conversion</small>
+                </span>
+
+                <i class="fas fa-arrow-right action-arrow"></i>
+            `);
+
+    });
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CANVAS
+    |--------------------------------------------------------------------------
+    */
+
+    function createCanvas(width, height) {
+
+        const canvas =
+            document.createElement('canvas');
+
+
+        canvas.width =
+            Math.max(
+                1,
+                Math.round(width)
             );
 
 
-            /* =========================================================
-               DRAG & DROP
-            ========================================================== */
-
-            $('#imageUploadBox')
-
-                .on(
-                    'dragover',
-                    function(e) {
-
-                        e.preventDefault();
-
-                        $(this).addClass(
-                            'dragging'
-                        );
-
-                    }
-                )
-
-                .on(
-                    'dragleave',
-                    function() {
-
-                        $(this).removeClass(
-                            'dragging'
-                        );
-
-                    }
-                )
-
-                .on(
-                    'drop',
-                    function(e) {
-
-                        e.preventDefault();
-
-                        $(this).removeClass(
-                            'dragging'
-                        );
-
-
-                        const files =
-                            e.originalEvent
-                            .dataTransfer
-                            .files;
-
-
-                        if (files.length) {
-
-                            handleFile(
-                                files[0]
-                            );
-
-                        }
-
-                    }
-                );
-
-
-            /* =========================================================
-               OUTPUT FORMAT CHANGE
-            ========================================================== */
-
-            $('#outputFormat').on(
-                'change',
-                function() {
-
-                    const format =
-                        $(this).val();
-
-
-                    /*
-                     * PDF does not use JPG/WebP quality.
-                     */
-
-                    if (format === 'pdf') {
-
-                        $('#qualityWrapper')
-                            .hide();
-
-
-                        $('#pdfOptions')
-                            .slideDown(150);
-
-                    } else {
-
-                        $('#qualityWrapper')
-                            .show();
-
-
-                        $('#pdfOptions')
-                            .slideUp(150);
-
-                    }
-
-
-                    /*
-                     * If already converted,
-                     * reset result because output format changed.
-                     */
-
-                    if (convertedBlob) {
-
-                        resetResult();
-
-                    }
-
-                }
+        canvas.height =
+            Math.max(
+                1,
+                Math.round(height)
             );
 
 
-            /* =========================================================
-               CREATE CANVAS
-            ========================================================== */
+        return canvas;
 
-            function createCanvas(
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | LOAD IMAGE
+    |--------------------------------------------------------------------------
+    */
+
+    function loadImage(file) {
+
+        return new Promise(function (resolve, reject) {
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload = function (event) {
+
+                const img =
+                    new Image();
+
+
+                img.onload = function () {
+
+                    resolve(img);
+
+                };
+
+
+                img.onerror = function () {
+
+                    reject(
+                        new Error(
+                            'Unable to read ' +
+                            file.name
+                        )
+                    );
+
+                };
+
+
+                img.src =
+                    event.target.result;
+
+            };
+
+
+            reader.onerror = function () {
+
+                reject(
+                    new Error(
+                        'Unable to read ' +
+                        file.name
+                    )
+                );
+
+            };
+
+
+            reader.readAsDataURL(file);
+
+        });
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | DRAW IMAGE
+    |--------------------------------------------------------------------------
+    */
+
+    function drawImage(
+        image,
+        canvas,
+        background = null
+    ) {
+
+        const ctx =
+            canvas.getContext('2d');
+
+
+        if (background) {
+
+            ctx.fillStyle =
+                background;
+
+
+            ctx.fillRect(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+        }
+
+
+        ctx.imageSmoothingEnabled =
+            true;
+
+
+        ctx.imageSmoothingQuality =
+            'high';
+
+
+        ctx.drawImage(
+            image,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CANVAS TO BLOB
+    |--------------------------------------------------------------------------
+    */
+
+    function canvasToBlob(
+        canvas,
+        mimeType,
+        quality
+    ) {
+
+        return new Promise(function (resolve) {
+
+            canvas.toBlob(
+                function (blob) {
+                    resolve(blob);
+                },
+                mimeType,
+                quality
+            );
+
+        });
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CONVERT SINGLE IMAGE
+    |--------------------------------------------------------------------------
+    */
+
+    async function convertSingleImage(
+        file,
+        format
+    ) {
+
+        const image =
+            await loadImage(file);
+
+
+        const width =
+            image.naturalWidth;
+
+
+        const height =
+            image.naturalHeight;
+
+
+        const canvas =
+            createCanvas(
                 width,
                 height
-            ) {
-
-                const canvas =
-                    document.createElement(
-                        'canvas'
-                    );
+            );
 
 
-                canvas.width =
-                    Math.max(
-                        1,
-                        Math.round(width)
-                    );
+        let mimeType;
+
+        let extension;
+
+        let quality =
+            parseFloat(
+                $('#imageQuality').val()
+            );
 
 
-                canvas.height =
-                    Math.max(
-                        1,
-                        Math.round(height)
-                    );
+        switch (format) {
+
+            case 'jpg':
+
+                mimeType =
+                    'image/jpeg';
+
+                extension =
+                    'jpg';
+
+                break;
 
 
-                return canvas;
+            case 'jpeg':
 
-            }
+                mimeType =
+                    'image/jpeg';
+
+                extension =
+                    'jpeg';
+
+                break;
 
 
-            /* =========================================================
-               CANVAS TO BLOB
-            ========================================================== */
+            case 'png':
 
-            function canvasToBlob(
+                mimeType =
+                    'image/png';
+
+                extension =
+                    'png';
+
+                quality =
+                    undefined;
+
+                break;
+
+
+            case 'webp':
+
+                mimeType =
+                    'image/webp';
+
+                extension =
+                    'webp';
+
+                break;
+
+
+            default:
+
+                throw new Error(
+                    'Unsupported image format.'
+                );
+
+        }
+
+
+        /*
+         * JPG/JPEG does not support transparency.
+         * White background is therefore used.
+         */
+
+        if (
+            format === 'jpg' ||
+            format === 'jpeg'
+        ) {
+
+            drawImage(
+                image,
+                canvas,
+                '#ffffff'
+            );
+
+        } else {
+
+            drawImage(
+                image,
+                canvas,
+                null
+            );
+
+        }
+
+
+        const blob =
+            await canvasToBlob(
                 canvas,
                 mimeType,
                 quality
-            ) {
+            );
 
-                return new Promise(
-                    function(resolve) {
 
-                        canvas.toBlob(
+        if (!blob) {
 
-                            function(blob) {
+            throw new Error(
+                'Unable to convert ' +
+                file.name
+            );
 
-                                resolve(blob);
+        }
 
-                            },
 
-                            mimeType,
+        /*
+         * IMPORTANT:
+         *
+         * Keep the ORIGINAL filename.
+         *
+         * photo.png -> photo.jpg
+         * image.webp -> image.png
+         */
 
-                            quality
+        const originalName =
+            cleanFileName(file.name);
 
-                        );
 
-                    }
-                );
+        return {
 
-            }
+            blob: blob,
 
+            name:
+                safeFileName(
+                    originalName +
+                    '.' +
+                    extension
+                )
 
-            /* =========================================================
-               DRAW IMAGE
-            ========================================================== */
+        };
 
-            function drawImage(
-                image,
-                canvas,
-                background
-            ) {
+    }
 
-                const ctx =
-                    canvas.getContext(
-                        '2d'
-                    );
 
+    /*
+    |--------------------------------------------------------------------------
+    | CONVERT ONE IMAGE TO ONE PDF
+    |--------------------------------------------------------------------------
+    |
+    | IMPORTANT:
+    | Every image gets its OWN PDF.
+    |
+    | image1.jpg -> image1.pdf
+    | image2.png -> image2.pdf
+    | image3.webp -> image3.pdf
+    |
+    */
 
-                /*
-                 * Fill background first.
-                 *
-                 * This is particularly important for JPG/JPEG
-                 * because JPG does not support transparency.
-                 */
+    async function convertSingleImageToPDF(file) {
 
-                if (background) {
+        if (
+            typeof window.jspdf ===
+            'undefined'
+        ) {
 
-                    ctx.fillStyle =
-                        background;
+            throw new Error(
+                'PDF converter could not be loaded.'
+            );
 
+        }
 
-                    ctx.fillRect(
 
-                        0,
-                        0,
-                        canvas.width,
-                        canvas.height
+        const { jsPDF } =
+            window.jspdf;
 
-                    );
 
-                }
+        const pageSize =
+            $('#pdfPageSize').val();
 
 
-                ctx.imageSmoothingEnabled =
-                    true;
+        let orientation =
+            $('#pdfOrientation').val();
 
 
-                ctx.imageSmoothingQuality =
-                    'high';
+        const image =
+            await loadImage(file);
 
 
-                ctx.drawImage(
+        /*
+         * Auto orientation is based on
+         * THIS image, not the first image.
+         */
 
-                    image,
+        if (
+            orientation ===
+            'auto'
+        ) {
 
-                    0,
-                    0,
+            orientation =
+                image.naturalWidth >
+                image.naturalHeight
+                    ? 'landscape'
+                    : 'portrait';
 
-                    canvas.width,
-                    canvas.height
+        }
 
-                );
 
-            }
+        let pdf;
 
 
-            /* =========================================================
-               CONVERT TO IMAGE FORMAT
-            ========================================================== */
+        /*
+         * IMAGE SIZE
+         */
 
-            async function convertToImageFormat(
-                format
-            ) {
+        if (
+            pageSize ===
+            'image'
+        ) {
 
-                if (!originalImage) {
+            const width =
+                image.naturalWidth *
+                0.75;
 
-                    throw new Error(
-                        'Image is not ready.'
-                    );
 
-                }
+            const height =
+                image.naturalHeight *
+                0.75;
 
 
-                let mimeType;
+            pdf =
+                new jsPDF({
 
-                let extension;
+                    orientation:
+                        orientation,
 
-                let quality =
-                    parseFloat(
-                        $('#imageQuality').val()
-                    );
+                    unit:
+                        'pt',
 
-
-                switch (format) {
-
-                    case 'jpg':
-
-                        mimeType =
-                            'image/jpeg';
-
-                        extension =
-                            'jpg';
-
-                        break;
-
-
-                    case 'jpeg':
-
-                        mimeType =
-                            'image/jpeg';
-
-                        extension =
-                            'jpeg';
-
-                        break;
-
-
-                    case 'png':
-
-                        mimeType =
-                            'image/png';
-
-                        extension =
-                            'png';
-
-                        break;
-
-
-                    case 'webp':
-
-                        mimeType =
-                            'image/webp';
-
-                        extension =
-                            'webp';
-
-                        break;
-
-
-                    default:
-
-                        throw new Error(
-                            'Unsupported output format.'
-                        );
-
-                }
-
-
-                /*
-                 * Use the original dimensions.
-                 */
-
-                const canvas =
-                    createCanvas(
-
-                        originalImage.naturalWidth,
-
-                        originalImage.naturalHeight
-
-                    );
-
-
-                /*
-                 * JPG/JPEG need a white background.
-                 *
-                 * PNG and WebP retain transparency where
-                 * supported.
-                 */
-
-                if (
-                    format === 'jpg' ||
-                    format === 'jpeg'
-                ) {
-
-                    drawImage(
-                        originalImage,
-                        canvas,
-                        '#ffffff'
-                    );
-
-                } else {
-
-                    drawImage(
-                        originalImage,
-                        canvas,
-                        null
-                    );
-
-                }
-
-
-                /*
-                 * PNG does not need a quality value.
-                 */
-
-                if (format === 'png') {
-
-                    quality = undefined;
-
-                }
-
-
-                const blob =
-                    await canvasToBlob(
-
-                        canvas,
-
-                        mimeType,
-
-                        quality
-
-                    );
-
-
-                if (!blob) {
-
-                    throw new Error(
-                        'Unable to convert the image.'
-                    );
-
-                }
-
-
-                return {
-
-                    blob: blob,
-
-                    extension: extension,
-
-                    format: format.toUpperCase(),
-
-                    width: canvas.width,
-
-                    height: canvas.height
-
-                };
-
-            }
-
-
-            /* =========================================================
-               CONVERT TO PDF
-            ========================================================== */
-
-            async function convertToPDF() {
-
-                if (!originalImage) {
-
-                    throw new Error(
-                        'Image is not ready.'
-                    );
-
-                }
-
-
-                if (
-                    typeof window.jspdf ===
-                    'undefined'
-                ) {
-
-                    throw new Error(
-                        'PDF converter could not be loaded.'
-                    );
-
-                }
-
-
-                const {
-                    jsPDF
-                } = window.jspdf;
-
-
-                const pageSize =
-                    $('#pdfPageSize').val();
-
-
-                let orientation =
-                    $('#pdfOrientation').val();
-
-
-                /*
-                 * Auto orientation.
-                 */
-
-                if (
-                    orientation ===
-                    'auto'
-                ) {
-
-                    orientation =
-
-                        originalImage.naturalWidth >
-                        originalImage.naturalHeight
-
-                        ?
-                        'landscape'
-
-                        :
-                        'portrait';
-
-                }
-
-
-                let pdf;
-
-
-                /*
-                 * IMAGE SIZE PDF
-                 */
-
-                if (
-                    pageSize ===
-                    'image'
-                ) {
-
-
-                    /*
-                     * Convert pixels to points.
-                     */
-
-                    const width =
-                        originalImage.naturalWidth *
-                        0.75;
-
-
-                    const height =
-                        originalImage.naturalHeight *
-                        0.75;
-
-
-                    pdf =
-                        new jsPDF({
-
-                            orientation: orientation,
-
-                            unit: 'pt',
-
-                            format: [
-
-                                width,
-
-                                height
-
-                            ]
-
-                        });
-
-                }
-
-
-                /*
-                 * A4 / LETTER
-                 */
-                else {
-
-                    pdf =
-                        new jsPDF({
-
-                            orientation: orientation,
-
-                            unit: 'mm',
-
-                            format: pageSize
-
-                        });
-
-                }
-
-
-                /*
-                 * Create local canvas.
-                 *
-                 * We convert the image to JPEG data first
-                 * so JPG/PNG/WebP/SVG all work consistently
-                 * inside the PDF.
-                 */
-
-                const canvas =
-                    createCanvas(
-
-                        originalImage.naturalWidth,
-
-                        originalImage.naturalHeight
-
-                    );
-
-
-                drawImage(
-
-                    originalImage,
-
-                    canvas,
-
-                    '#ffffff'
-
-                );
-
-
-                const imageData =
-                    canvas.toDataURL(
-
-                        'image/jpeg',
-
-                        0.92
-
-                    );
-
-
-                /*
-                 * IMAGE SIZE
-                 */
-
-                if (
-                    pageSize ===
-                    'image'
-                ) {
-
-                    const width =
-                        originalImage.naturalWidth *
-                        0.75;
-
-
-                    const height =
-                        originalImage.naturalHeight *
-                        0.75;
-
-
-                    pdf.addImage(
-
-                        imageData,
-
-                        'JPEG',
-
-                        0,
-                        0,
-
+                    format: [
                         width,
                         height
+                    ]
 
+                });
+
+        }
+
+        /*
+         * A4 / LETTER
+         */
+
+        else {
+
+            pdf =
+                new jsPDF({
+
+                    orientation:
+                        orientation,
+
+                    unit:
+                        'mm',
+
+                    format:
+                        pageSize
+
+                });
+
+        }
+
+
+        /*
+         * Create canvas.
+         */
+
+        const canvas =
+            createCanvas(
+                image.naturalWidth,
+                image.naturalHeight
+            );
+
+
+        /*
+         * PDF uses white background.
+         */
+
+        drawImage(
+            image,
+            canvas,
+            '#ffffff'
+        );
+
+
+        /*
+         * Convert image to JPEG
+         * before placing into PDF.
+         */
+
+        const imageData =
+            canvas.toDataURL(
+                'image/jpeg',
+                0.92
+            );
+
+
+        const pageWidth =
+            pdf.internal.pageSize
+                .getWidth();
+
+
+        const pageHeight =
+            pdf.internal.pageSize
+                .getHeight();
+
+
+        /*
+         * IMAGE SIZE PDF
+         */
+
+        if (
+            pageSize ===
+            'image'
+        ) {
+
+            const width =
+                image.naturalWidth *
+                0.75;
+
+
+            const height =
+                image.naturalHeight *
+                0.75;
+
+
+            pdf.addImage(
+                imageData,
+                'JPEG',
+                0,
+                0,
+                width,
+                height
+            );
+
+        }
+
+        /*
+         * A4 / LETTER
+         */
+
+        else {
+
+            const imageRatio =
+                image.naturalWidth /
+                image.naturalHeight;
+
+
+            const pageRatio =
+                pageWidth /
+                pageHeight;
+
+
+            let imageWidth;
+
+            let imageHeight;
+
+
+            /*
+             * Fit image inside PDF page.
+             */
+
+            if (
+                imageRatio >
+                pageRatio
+            ) {
+
+                imageWidth =
+                    pageWidth;
+
+                imageHeight =
+                    pageWidth /
+                    imageRatio;
+
+            } else {
+
+                imageHeight =
+                    pageHeight;
+
+                imageWidth =
+                    pageHeight *
+                    imageRatio;
+
+            }
+
+
+            /*
+             * Center image.
+             */
+
+            const x =
+                (
+                    pageWidth -
+                    imageWidth
+                ) / 2;
+
+
+            const y =
+                (
+                    pageHeight -
+                    imageHeight
+                ) / 2;
+
+
+            pdf.addImage(
+                imageData,
+                'JPEG',
+                x,
+                y,
+                imageWidth,
+                imageHeight
+            );
+
+        }
+
+
+        /*
+         * ORIGINAL FILE NAME
+         *
+         * invoice.jpg -> invoice.pdf
+         */
+
+        const originalName =
+            cleanFileName(file.name);
+
+
+        return {
+
+            blob:
+                pdf.output('blob'),
+
+            name:
+                safeFileName(
+                    originalName +
+                    '.pdf'
+                )
+
+        };
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | PROGRESS
+    |--------------------------------------------------------------------------
+    */
+
+    function updateProgress(
+        current,
+        total
+    ) {
+
+        const percentage =
+            Math.round(
+                (current / total) *
+                100
+            );
+
+
+        $('#progressText').text(
+            current + ' / ' + total
+        );
+
+
+        $('#progressBar')
+            .css(
+                'width',
+                percentage + '%'
+            );
+
+
+        $('#progressPercentage')
+            .text(percentage);
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CONVERT BUTTON
+    |--------------------------------------------------------------------------
+    */
+
+    $('#convertButton').on(
+        'click',
+        async function () {
+
+            if (!selectedFiles.length) {
+
+                alert(
+                    'Please add at least one image.'
+                );
+
+                return;
+
+            }
+
+
+            const button =
+                $(this);
+
+
+            const format =
+                $('#outputFormat').val();
+
+
+            convertedFiles = [];
+
+
+            $('#conversionResult').hide();
+
+            $('#downloadButton').hide();
+
+
+            button
+                .prop('disabled', true)
+                .html(`
+                    <span class="action-icon">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+
+                    <span class="action-text">
+                        <strong>Converting...</strong>
+                        <small>Please wait</small>
+                    </span>
+                `);
+
+
+            $('#addImagesButton')
+                .prop('disabled', true);
+
+
+            $('#conversionProgress')
+                .stop(true, true)
+                .slideDown(250);
+
+
+            $('#progressBar')
+                .css('width', '0%');
+
+
+            $('#progressPercentage')
+                .text('0');
+
+
+            $('#progressText')
+                .text(
+                    '0 / ' +
+                    selectedFiles.length
+                );
+
+
+            $('#progressTitle')
+                .text(
+                    'Converting images...'
+                );
+
+
+            try {
+
+                /*
+                 * ======================================================
+                 * PDF
+                 * ======================================================
+                 *
+                 * Each image becomes a separate PDF.
+                 */
+
+                if (format === 'pdf') {
+
+                    for (
+                        let i = 0;
+                        i < selectedFiles.length;
+                        i++
+                    ) {
+
+                        const result =
+                            await convertSingleImageToPDF(
+                                selectedFiles[i]
+                            );
+
+
+                        convertedFiles.push(
+                            result
+                        );
+
+
+                        updateProgress(
+                            i + 1,
+                            selectedFiles.length
+                        );
+
+
+                        await new Promise(
+                            function (resolve) {
+
+                                setTimeout(
+                                    resolve,
+                                    80
+                                );
+
+                            }
+                        );
+
+                    }
+
+                }
+
+                /*
+                 * ======================================================
+                 * JPG / JPEG / PNG / WEBP
+                 * ======================================================
+                 */
+
+                else {
+
+                    for (
+                        let i = 0;
+                        i < selectedFiles.length;
+                        i++
+                    ) {
+
+                        const result =
+                            await convertSingleImage(
+                                selectedFiles[i],
+                                format
+                            );
+
+
+                        convertedFiles.push(
+                            result
+                        );
+
+
+                        updateProgress(
+                            i + 1,
+                            selectedFiles.length
+                        );
+
+
+                        await new Promise(
+                            function (resolve) {
+
+                                setTimeout(
+                                    resolve,
+                                    80
+                                );
+
+                            }
+                        );
+
+                    }
+
+                }
+
+
+                /*
+                 * COMPLETE
+                 */
+
+                $('#progressTitle')
+                    .text(
+                        'Conversion complete'
+                    );
+
+
+                $('#conversionResult')
+                    .stop(true, true)
+                    .fadeIn(300);
+
+
+                $('#resultMessage')
+                    .text(
+                        selectedFiles.length +
+                        ' image' +
+                        (
+                            selectedFiles.length > 1
+                                ? 's have'
+                                : ' has'
+                        ) +
+                        ' been converted to ' +
+                        format.toUpperCase() +
+                        '.'
+                    );
+
+
+                button.hide();
+
+
+                /*
+                 * SHOW DOWNLOAD
+                 */
+
+                $('#downloadButton')
+                    .stop(true, true)
+                    .fadeIn(300);
+
+
+            } catch (error) {
+
+                console.error(error);
+
+
+                alert(
+                    error.message ||
+                    'Something went wrong while converting the images.'
+                );
+
+
+                button
+                    .prop('disabled', false)
+                    .html(`
+                        <span class="action-icon">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </span>
+
+                        <span class="action-text">
+                            <strong>Convert Images</strong>
+                            <small>Start conversion</small>
+                        </span>
+
+                        <i class="fas fa-arrow-right action-arrow"></i>
+                    `);
+
+            } finally {
+
+                $('#addImagesButton')
+                    .prop('disabled', false);
+
+            }
+
+        }
+    );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | DOWNLOAD ALL AS ZIP
+    |--------------------------------------------------------------------------
+    |
+    | Browser security prevents JavaScript from creating an arbitrary
+    | folder on the user's computer and placing multiple downloads
+    | inside it.
+    |
+    | Therefore:
+    |
+    | converted-images.zip
+    |
+    | contains:
+    |
+    | converted-images/
+    |     photo1.jpg
+    |     photo2.jpg
+    |     photo3.jpg
+    |
+    | This is the reliable cross-browser solution.
+    |--------------------------------------------------------------------------
+    */
+
+    $('#downloadButton').on(
+        'click',
+        async function () {
+
+            if (!convertedFiles.length) {
+
+                alert(
+                    'No converted files are available.'
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Check JSZip.
+             */
+
+            if (
+                typeof JSZip ===
+                'undefined'
+            ) {
+
+                alert(
+                    'Download library could not be loaded. Please refresh the page and try again.'
+                );
+
+                return;
+
+            }
+
+
+            const button =
+                $(this);
+
+
+            const originalHTML =
+                button.html();
+
+
+            button
+                .prop('disabled', true)
+                .html(`
+                    <span class="action-icon">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+
+                    <span class="action-text">
+                        <strong>Preparing...</strong>
+                        <small>Creating folder</small>
+                    </span>
+                `);
+
+
+            try {
+
+                /*
+                 * Create ZIP.
+                 */
+
+                const zip =
+                    new JSZip();
+
+
+                /*
+                 * Create folder.
+                 *
+                 * The folder name is:
+                 *
+                 * converted-images
+                 */
+
+                const folder =
+                    zip.folder(
+                        'converted-images'
+                    );
+
+
+                /*
+                 * Prevent duplicate filenames.
+                 *
+                 * Example:
+                 *
+                 * photo.jpg
+                 * photo.jpg
+                 *
+                 * becomes:
+                 *
+                 * photo.jpg
+                 * photo (2).jpg
+                 */
+
+                const usedNames = {};
+
+
+                /*
+                 * Add every converted file.
+                 */
+
+                for (
+                    let i = 0;
+                    i < convertedFiles.length;
+                    i++
+                ) {
+
+                    const result =
+                        convertedFiles[i];
+
+
+                    let fileName =
+                        safeFileName(
+                            result.name
+                        );
+
+
+                    /*
+                     * Handle duplicate names.
+                     */
+
+                    if (
+                        usedNames[fileName]
+                    ) {
+
+                        usedNames[fileName]++;
+
+                        const dotIndex =
+                            fileName.lastIndexOf('.');
+
+
+                        if (
+                            dotIndex !== -1
+                        ) {
+
+                            const base =
+                                fileName.substring(
+                                    0,
+                                    dotIndex
+                                );
+
+
+                            const extension =
+                                fileName.substring(
+                                    dotIndex
+                                );
+
+
+                            fileName =
+                                base +
+                                ' (' +
+                                usedNames[
+                                    result.name
+                                ] +
+                                ')' +
+                                extension;
+
+                        } else {
+
+                            fileName =
+                                fileName +
+                                ' (' +
+                                usedNames[
+                                    result.name
+                                ] +
+                                ')';
+
+                        }
+
+                    } else {
+
+                        usedNames[fileName] = 1;
+
+                    }
+
+
+                    /*
+                     * Add blob to ZIP.
+                     */
+
+                    folder.file(
+                        fileName,
+                        result.blob
+                    );
+
+
+                    /*
+                     * Update button progress.
+                     */
+
+                    button.find(
+                        '.action-text strong'
+                    ).text(
+                        'Preparing ' +
+                        (i + 1) +
+                        ' / ' +
+                        convertedFiles.length
                     );
 
                 }
 
 
                 /*
-                 * A4 / LETTER
+                 * Generate ZIP.
                  */
-                else {
 
-                    const pageWidth =
-                        pdf.internal.pageSize
-                        .getWidth();
+                const zipBlob =
+                    await zip.generateAsync({
 
+                        type: 'blob',
 
-                    const pageHeight =
-                        pdf.internal.pageSize
-                        .getHeight();
+                        compression: 'DEFLATE',
 
+                        compressionOptions: {
+                            level: 6
+                        }
 
-                    const imageRatio =
-                        originalImage.naturalWidth /
-                        originalImage.naturalHeight;
+                    });
 
 
-                    const pageRatio =
-                        pageWidth /
-                        pageHeight;
+                /*
+                 * Download ZIP.
+                 */
 
-
-                    let imageWidth;
-
-                    let imageHeight;
-
-
-                    /*
-                     * Fit image inside page.
-                     */
-
-                    if (
-                        imageRatio >
-                        pageRatio
-                    ) {
-
-                        imageWidth =
-                            pageWidth;
-
-
-                        imageHeight =
-                            pageWidth /
-                            imageRatio;
-
-                    } else {
-
-                        imageHeight =
-                            pageHeight;
-
-
-                        imageWidth =
-                            pageHeight *
-                            imageRatio;
-
-                    }
-
-
-                    /*
-                     * Center image.
-                     */
-
-                    const x =
-                        (
-                            pageWidth -
-                            imageWidth
-                        ) / 2;
-
-
-                    const y =
-                        (
-                            pageHeight -
-                            imageHeight
-                        ) / 2;
-
-
-                    pdf.addImage(
-
-                        imageData,
-
-                        'JPEG',
-
-                        x,
-                        y,
-
-                        imageWidth,
-                        imageHeight
-
-                    );
-
-                }
-
-
-                const blob =
-                    pdf.output(
-                        'blob'
+                const url =
+                    URL.createObjectURL(
+                        zipBlob
                     );
 
 
-                if (!blob) {
-
-                    throw new Error(
-                        'Unable to create PDF.'
-                    );
-
-                }
+                const link =
+                    document.createElement('a');
 
 
-                return {
+                link.href =
+                    url;
 
-                    blob: blob,
 
-                    extension: 'pdf',
+                link.download =
+                    'converted-images.zip';
 
-                    format: 'PDF',
 
-                    width: originalImage.naturalWidth,
+                document.body.appendChild(
+                    link
+                );
 
-                    height: originalImage.naturalHeight
 
-                };
+                link.click();
+
+
+                document.body.removeChild(
+                    link
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        URL.revokeObjectURL(
+                            url
+                        );
+
+                    },
+                    3000
+                );
+
+
+                /*
+                 * Success state.
+                 */
+
+                button.html(`
+                    <span class="action-icon">
+                        <i class="fas fa-check"></i>
+                    </span>
+
+                    <span class="action-text">
+                        <strong>Downloaded</strong>
+                        <small>Folder saved successfully</small>
+                    </span>
+                `);
+
+
+                setTimeout(
+                    function () {
+
+                        button.html(
+                            originalHTML
+                        );
+
+                        button.prop(
+                            'disabled',
+                            false
+                        );
+
+                    },
+                    2200
+                );
+
+
+            } catch (error) {
+
+                console.error(error);
+
+
+                alert(
+                    'Unable to create the download folder.'
+                );
+
+
+                button
+                    .prop('disabled', false)
+                    .html(originalHTML);
 
             }
 
+        }
+    );
 
-            /* =========================================================
-               MAIN CONVERSION
-            ========================================================== */
 
-            $('#convertButton').on(
-                'click',
-                async function() {
+    /*
+    |--------------------------------------------------------------------------
+    | NEW CONVERSION
+    |--------------------------------------------------------------------------
+    */
 
+    $('#newConversionButton').on(
+        'click',
+        function () {
 
-                    if (
-                        !selectedFile ||
-                        !originalImage
-                    ) {
+            selectedFiles = [];
 
-                        alert(
-                            'Please upload an image first.'
-                        );
+            convertedFiles = [];
 
-                        return;
 
-                    }
+            $('#imageGrid').empty();
 
+            $('#imageCount').text('0');
 
-                    const button =
-                        $(this);
 
+            $('#conversionResult').hide();
 
-                    const format =
-                        $('#outputFormat')
-                        .val();
+            $('#conversionProgress').hide();
 
 
-                    /*
-                     * Prevent converting an image into
-                     * the same format unnecessarily.
-                     */
+            $('#downloadButton').hide();
 
-                    const originalExtension =
-                        selectedFile.name
-                        .split('.')
-                        .pop()
-                        .toLowerCase();
 
+            $('#convertButton')
+                .show()
+                .prop('disabled', false)
+                .html(`
+                    <span class="action-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </span>
 
-                    if (
+                    <span class="action-text">
+                        <strong>Convert Images</strong>
+                        <small>Start conversion</small>
+                    </span>
 
-                        (
-                            format === 'jpg' ||
-                            format === 'jpeg'
-                        ) &&
+                    <i class="fas fa-arrow-right action-arrow"></i>
+                `);
 
-                        (
-                            originalExtension === 'jpg' ||
-                            originalExtension === 'jpeg'
-                        )
 
-                    ) {
+            $('#outputFormat')
+                .val('jpg')
+                .trigger('change');
 
-                        /*
-                         * We still allow the conversion because
-                         * the user explicitly selected it.
-                         */
 
-                    }
+            $('.format-card')
+                .removeClass('active');
 
 
-                    button
+            $('.format-card[data-format="jpg"]')
+                .addClass('active');
 
-                        .prop(
-                            'disabled',
-                            true
-                        )
 
-                        .html(
+            $('#imageInput').val('');
 
-                            '<i class="fas fa-spinner fa-spin"></i> Converting...'
 
-                        );
+            $('#converterSection')
+                .stop(true, true)
+                .slideUp(350);
 
 
-                    try {
+            setTimeout(function () {
 
-                        let result;
+                $('#imageUploadSection')
+                    .stop(true, true)
+                    .slideDown(450);
 
 
-                        /*
-                         * ---------------------------------------------
-                         * IMAGE FORMAT
-                         * ---------------------------------------------
-                         */
+                $('html, body').animate({
 
-                        if (
-                            format !== 'pdf'
-                        ) {
+                    scrollTop:
+                        $('#imageUploadSection')
+                            .offset()
+                            .top - 20
 
-                            result =
-                                await convertToImageFormat(
-                                    format
-                                );
+                }, 550);
 
-                        }
+            }, 250);
 
+        }
+    );
 
-                        /*
-                         * ---------------------------------------------
-                         * PDF
-                         * ---------------------------------------------
-                         */
-                        else {
 
-                            result =
-                                await convertToPDF();
+    /*
+    |--------------------------------------------------------------------------
+    | CLEAR MEMORY
+    |--------------------------------------------------------------------------
+    */
 
-                        }
+    $(window).on(
+        'beforeunload',
+        function () {
+
+            selectedFiles = [];
+
+            convertedFiles = [];
+
+        }
+    );
+
+});
+
+</script>
+
+
+{{-- =========================================================
+SECOND SECTION DESIGN
+========================================================== --}}
+
+<style>
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.multi-converter-section {
+    padding: 85px 0 95px;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc 0%,
+            #ffffff 100%
+        );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.modern-converter-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 32px;
+}
+
+.modern-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: #ecfdf5;
+    color: #14532d;
+    border: 1px solid #d1fae5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.modern-converter-header h2 {
+    margin: 14px 0 7px;
+    font-size: 43px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -1.2px;
+}
+
+.modern-converter-header h2 span {
+    color: #14532d;
+}
+
+.modern-header-content p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+    max-width: 580px;
+}
+
+.modern-image-counter {
+    min-width: 205px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 14px 17px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, .05);
+}
+
+.counter-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #f0fdf4;
+    color: #14532d;
+    font-size: 17px;
+}
+
+.counter-content strong {
+    display: block;
+    color: #111827;
+    font-size: 23px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.counter-content span {
+    display: block;
+    margin-top: 4px;
+    color: #8a929c;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MAIN WORKSPACE
+========================================================= */
+
+.modern-converter-workspace {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    box-shadow: 0 18px 55px rgba(15, 23, 42, .07);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   WORKSPACE HEADER
+========================================================= */
+
+.modern-workspace-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 23px 27px;
+    border-bottom: 1px solid #eef0f2;
+}
+
+.workspace-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.workspace-title-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #f0fdf4;
+    color: #14532d;
+    font-size: 17px;
+}
+
+.workspace-title h3 {
+    margin: 0 0 3px;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.workspace-title p {
+    margin: 0;
+    color: #8a929c;
+    font-size: 12px;
+}
+
+.modern-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #14532d;
+    background: #ffffff;
+    color: #14532d;
+    border-radius: 11px;
+    padding: 9px 14px 9px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all .22s ease;
+}
+
+.modern-add-button:hover {
+    background: #14532d;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(20, 83, 45, .18);
+}
+
+.modern-add-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.add-button-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: #ecfdf5;
+    color: #14532d;
+    transition: all .2s ease;
+}
+
+.modern-add-button:hover .add-button-icon {
+    background: rgba(255,255,255,.15);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   IMAGE GRID
+========================================================= */
+
+.modern-image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 24px 27px 27px;
+}
+
+.modern-image-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e6e9ed;
+    border-radius: 15px;
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+.modern-image-card:hover {
+    transform: translateY(-3px);
+    border-color: #d1d5db;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, .09);
+}
+
+.modern-image-preview {
+    position: relative;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            45deg,
+            #f8fafc 25%,
+            #f1f5f9 25%,
+            #f1f5f9 50%,
+            #f8fafc 50%,
+            #f8fafc 75%,
+            #f1f5f9 75%
+        );
+    background-size: 18px 18px;
+}
+
+.modern-image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.modern-image-number {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    min-width: 27px;
+    height: 27px;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(17, 24, 39, .78);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.modern-remove-image {
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 8px;
+    background: rgba(255,255,255,.95);
+    color: #64748b;
+    box-shadow: 0 4px 13px rgba(15,23,42,.12);
+    transition: all .2s ease;
+}
+
+.modern-remove-image:hover {
+    background: #dc3545;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.modern-image-info {
+    padding: 12px 13px 13px;
+}
+
+.modern-file-name {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.file-type-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+.modern-file-name strong {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #27303b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.modern-file-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.modern-file-meta span {
+    color: #8a929c;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.modern-file-meta i {
+    margin-right: 3px;
+    color: #a0a8b2;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.modern-empty-state {
+    padding: 55px 20px;
+    text-align: center;
+    border-top: 1px solid #eef0f2;
+}
+
+.empty-state-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #f0fdf4;
+    color: #14532d;
+    font-size: 22px;
+}
+
+.modern-empty-state h4 {
+    margin: 0 0 6px;
+    color: #374151;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.modern-empty-state p {
+    margin: 0 0 18px;
+    color: #8a929c;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.modern-settings-section {
+    margin: 0 27px 27px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #f8fafc;
+}
+
+.modern-settings-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.settings-heading-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #14532d;
+    border: 1px solid #dcefe2;
+    box-shadow: 0 4px 12px rgba(15,23,42,.04);
+}
+
+.modern-settings-header h3 {
+    margin: 0 0 3px;
+    color: #1f2937;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.modern-settings-header p {
+    margin: 0;
+    color: #8a929c;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SETTING LABEL
+========================================================= */
+
+.modern-setting-group {
+    margin-top: 22px;
+}
+
+.modern-setting-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.setting-title {
+    display: block;
+    color: #27303b;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.setting-description {
+    display: block;
+    margin-top: 3px;
+    color: #8a929c;
+    font-size: 11px;
+}
+
+.selected-format-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border-radius: 8px;
+    background: #ecfdf5;
+    color: #14532d;
+    border: 1px solid #d1fae5;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FORMAT CARDS
+========================================================= */
+
+.format-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.format-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #27303b;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.format-card:hover {
+    border-color: #a7cbb4;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(15,23,42,.05);
+}
+
+.format-card.active {
+    border-color: #14532d;
+    background: #f4fbf6;
+    box-shadow:
+        0 0 0 2px rgba(20,83,45,.07),
+        0 6px 18px rgba(20,83,45,.08);
+}
+
+.format-icon {
+    width: 37px;
+    height: 37px;
+    flex: 0 0 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.jpg-icon {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.jpeg-icon {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.png-icon {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.webp-icon {
+    background: #fefce8;
+    color: #ca8a04;
+}
+
+.pdf-icon {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.format-card-content {
+    min-width: 0;
+}
+
+.format-card-content strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.format-card-content small {
+    display: block;
+    overflow: hidden;
+    margin-top: 2px;
+    color: #8a929c;
+    font-size: 9px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.format-check {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #14532d;
+    color: #ffffff;
+    font-size: 8px;
+    opacity: 0;
+    transform: scale(.6);
+    transition: all .2s ease;
+}
+
+.format-card.active .format-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modern-hidden-select {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   QUALITY
+========================================================= */
+
+.quality-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.quality-option {
+    position: relative;
+    display: block;
+    padding: 13px;
+    border: 1px solid #e1e5e9;
+    border-radius: 11px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.quality-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quality-option:hover {
+    border-color: #a7cbb4;
+}
+
+.quality-option.active {
+    border-color: #14532d;
+    background: #f4fbf6;
+}
+
+.quality-option-content strong {
+    display: block;
+    color: #27303b;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.quality-option-content small {
+    display: block;
+    margin-top: 3px;
+    color: #8a929c;
+    font-size: 9px;
+}
+
+.recommended-label {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 7px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PDF SETTINGS
+========================================================= */
+
+.modern-pdf-options {
+    margin-top: 18px;
+    padding: 17px;
+    border: 1px solid #dbe7df;
+    border-radius: 13px;
+    background: #ffffff;
+}
+
+.pdf-options-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+}
+
+.pdf-heading-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.pdf-options-heading strong {
+    display: block;
+    color: #27303b;
+    font-size: 12px;
+}
+
+.pdf-options-heading span {
+    display: block;
+    margin-top: 2px;
+    color: #8a929c;
+    font-size: 10px;
+}
+
+.modern-form-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.modern-form-label i {
+    margin-right: 5px;
+    color: #14532d;
+}
+
+.modern-form-select {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    border: 1px solid #dfe4e8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 12px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.modern-form-select:focus {
+    border-color: #14532d;
+    box-shadow: 0 0 0 3px rgba(20,83,45,.08);
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.modern-progress {
+    margin: 0 27px 20px;
+    padding: 17px 19px;
+    border: 1px solid #ccebd6;
+    border-radius: 14px;
+    background: #f4fbf6;
+}
+
+.modern-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 11px;
+}
+
+.progress-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-status-icon {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #14532d;
+}
+
+.progress-status strong {
+    display: block;
+    color: #14532d;
+    font-size: 12px;
+}
+
+.progress-status span {
+    display: block;
+    margin-top: 2px;
+    color: #7b8490;
+    font-size: 10px;
+}
+
+.progress-percent {
+    color: #14532d;
+    font-size: 13px;
+}
+
+.modern-progress-track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #dcefe2;
+}
+
+.modern-progress-bar {
+    height: 100%;
+    border-radius: inherit;
+    background: #14532d;
+    transition: width .25s ease;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.modern-success-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 27px 20px;
+    padding: 15px 17px;
+    border: 1px solid #bbf7d0;
+    border-radius: 13px;
+    background: #f0fdf4;
+}
+
+.success-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #14532d;
+    color: #ffffff;
+}
+
+.success-content {
+    min-width: 0;
+}
+
+.success-content strong {
+    display: block;
+    color: #14532d;
+    font-size: 13px;
+}
+
+.success-content p {
+    margin: 3px 0 0;
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.success-badge {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+    border-radius: 7px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 9px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   ACTION AREA
+========================================================= */
+
+.modern-action-area {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 11px;
+    padding: 0 27px 22px;
+}
+
+.modern-primary-action,
+.modern-download-action {
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 13px;
+    border: 0;
+    border-radius: 12px;
+    color: #ffffff;
+    text-align: left;
+    transition: all .22s ease;
+}
+
+.modern-primary-action {
+    background: #14532d;
+    box-shadow: 0 8px 20px rgba(20,83,45,.18);
+}
+
+.modern-primary-action:hover {
+    background: #0f4525;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(20,83,45,.23);
+}
+
+.modern-download-action {
+    background: #166534;
+    box-shadow: 0 8px 20px rgba(22,101,52,.18);
+}
+
+.modern-download-action:hover {
+    background: #14532d;
+    transform: translateY(-2px);
+}
+
+.modern-primary-action:disabled,
+.modern-download-action:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.action-icon {
+    width: 37px;
+    height: 37px;
+    flex: 0 0 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(255,255,255,.13);
+    font-size: 13px;
+}
+
+.action-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.action-text strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.action-text small {
+    display: block;
+    margin-top: 2px;
+    color: rgba(255,255,255,.7);
+    font-size: 9px;
+}
+
+.action-arrow {
+    font-size: 11px;
+    opacity: .75;
+}
+
+.modern-new-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 145px;
+    padding: 10px 15px;
+    border: 1px solid #d8dde2;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 11px;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.modern-new-action:hover {
+    color: #14532d;
+    border-color: #a7cbb4;
+    background: #f8fcf9;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.modern-security-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 27px 25px;
+    padding: 12px 14px;
+    border: 1px solid #eef0f2;
+    border-radius: 11px;
+    background: #fafafa;
+}
+
+.security-icon {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #f0fdf4;
+    color: #14532d;
+    font-size: 13px;
+}
+
+.modern-security-note strong {
+    display: block;
+    color: #374151;
+    font-size: 10px;
+}
+
+.modern-security-note span {
+    display: block;
+    margin-top: 2px;
+    color: #8a929c;
+    font-size: 9px;
+}
+
+.security-check {
+    margin-left: auto;
+    color: #22c55e;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .format-selector-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modern-image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .modern-converter-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .modern-image-counter {
+        width: 100%;
+    }
+
+    .modern-converter-header h2 {
+        font-size: 36px;
+    }
+
+    .quality-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modern-action-area {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .multi-converter-section {
+        padding: 55px 0 65px;
+    }
+
+    .modern-converter-header h2 {
+        font-size: 31px;
+    }
+
+    .modern-header-content p {
+        font-size: 13px;
+    }
+
+    .modern-converter-workspace {
+        border-radius: 18px;
+    }
+
+    .modern-workspace-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 19px;
+    }
+
+    .modern-add-button {
+        width: 100%;
+    }
+
+    .modern-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 17px;
+        gap: 11px;
+    }
+
+    .modern-image-preview {
+        height: 125px;
+    }
+
+    .modern-settings-section {
+        margin: 0 17px 17px;
+        padding: 17px;
+    }
+
+    .format-selector-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modern-progress,
+    .modern-success-box {
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+
+    .modern-action-area {
+        flex-direction: column;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .modern-primary-action,
+    .modern-download-action,
+    .modern-new-action {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .modern-security-note {
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .modern-converter-header h2 {
+        font-size: 28px;
+    }
+
+    .modern-image-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modern-image-preview {
+        height: 105px;
+    }
+
+    .modern-image-info {
+        padding: 10px;
+    }
+
+    .modern-file-meta {
+        display: block;
+    }
+
+    .modern-file-meta span {
+        display: block;
+        margin-top: 3px;
+    }
+
+    .format-selector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-selector {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modern-setting-label {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .selected-format-badge {
+        align-self: flex-start;
+    }
+
+    .success-badge {
+        display: none;
+    }
+
+}
+
+</style>
 
-
-                        /*
-                         * ---------------------------------------------
-                         * SAVE RESULT
-                         * ---------------------------------------------
-                         */
-
-                        convertedBlob =
-                            result.blob;
-
-
-                        if (convertedURL) {
-
-                            URL.revokeObjectURL(
-                                convertedURL
-                            );
-
-                        }
-
-
-                        convertedURL =
-                            URL.createObjectURL(
-                                convertedBlob
-                            );
-
-
-                        /*
-                         * ---------------------------------------------
-                         * IMAGE PREVIEW
-                         * ---------------------------------------------
-                         */
-
-                        if (
-                            format !== 'pdf'
-                        ) {
-
-                            $('#imagePreview')
-                                .attr(
-                                    'src',
-                                    convertedURL
-                                );
-
-                        }
-
-
-                        /*
-                         * ---------------------------------------------
-                         * RESULT INFORMATION
-                         * ---------------------------------------------
-                         */
-
-                        $('#resultFormat')
-                            .text(
-                                result.format
-                            );
-
-
-                        $('#resultDimensions')
-                            .text(
-
-                                result.width +
-                                ' × ' +
-                                result.height +
-                                ' px'
-
-                            );
-
-
-                        $('#resultSize')
-                            .text(
-
-                                formatFileSize(
-                                    convertedBlob.size
-                                )
-
-                            );
-
-
-                        /*
-                         * ---------------------------------------------
-                         * SHOW RESULT
-                         * ---------------------------------------------
-                         */
-
-                        $('#conversionResult')
-                            .fadeIn(250);
-
-
-                        /*
-                         * ---------------------------------------------
-                         * BUTTON STATES
-                         * ---------------------------------------------
-                         */
-
-                        button.hide();
-
-
-                        $('#downloadButton')
-                            .fadeIn(250);
-
-
-                        $('#anotherButton')
-                            .fadeIn(250);
-
-
-                        /*
-                         * ---------------------------------------------
-                         * SMOOTH SCROLL
-                         * ---------------------------------------------
-                         */
-
-                        setTimeout(
-                            function() {
-
-                                $('html, body')
-                                    .animate({
-
-                                        scrollTop:
-
-                                            $('#conversionResult')
-                                            .offset()
-                                            .top - 40
-
-                                    }, 500);
-
-                            },
-                            150
-                        );
-
-
-                    } catch (error) {
-
-                        console.error(
-                            error
-                        );
-
-
-                        alert(
-
-                            error.message ||
-                            'Something went wrong while converting the image.'
-
-                        );
-
-
-                        button
-
-                            .prop(
-                                'disabled',
-                                false
-                            )
-
-                            .html(
-
-                                '<i class="fas fa-sync-alt"></i> Convert Image'
-
-                            );
-
-                    }
-
-                }
-            );
-
-
-            /* =========================================================
-               DOWNLOAD RESULT
-            ========================================================== */
-
-            $('#downloadButton').on(
-                'click',
-                function() {
-
-
-                    if (!convertedBlob) {
-
-                        alert(
-                            'No converted file is available.'
-                        );
-
-                        return;
-
-                    }
-
-
-                    const format =
-                        $('#outputFormat')
-                        .val();
-
-
-                    const originalName =
-                        selectedFile.name
-                        .replace(
-                            /\.[^/.]+$/,
-                            ''
-                        );
-
-
-                    let extension;
-
-
-                    if (
-                        format === 'jpg'
-                    ) {
-
-                        extension =
-                            'jpg';
-
-                    } else if (
-                        format === 'jpeg'
-                    ) {
-
-                        extension =
-                            'jpeg';
-
-                    } else if (
-                        format === 'png'
-                    ) {
-
-                        extension =
-                            'png';
-
-                    } else if (
-                        format === 'webp'
-                    ) {
-
-                        extension =
-                            'webp';
-
-                    } else {
-
-                        extension =
-                            'pdf';
-
-                    }
-
-
-                    const downloadURL =
-                        URL.createObjectURL(
-                            convertedBlob
-                        );
-
-
-                    const link =
-                        document.createElement(
-                            'a'
-                        );
-
-
-                    link.href =
-                        downloadURL;
-
-
-                    link.download =
-
-                        originalName +
-                        '-converted.' +
-                        extension;
-
-
-                    document.body.appendChild(
-                        link
-                    );
-
-
-                    link.click();
-
-
-                    document.body.removeChild(
-                        link
-                    );
-
-
-                    setTimeout(
-                        function() {
-
-                            URL.revokeObjectURL(
-                                downloadURL
-                            );
-
-                        },
-                        1000
-                    );
-
-                }
-            );
-
-
-            /* =========================================================
-               CONVERT ANOTHER
-            ========================================================== */
-
-            $('#anotherButton').on(
-                'click',
-                function() {
-
-                    resetTool();
-
-                }
-            );
-
-
-            /* =========================================================
-               REMOVE
-            ========================================================== */
-
-            $('#removeButton').on(
-                'click',
-                function() {
-
-                    resetTool();
-
-                }
-            );
-
-
-        });
-    </script>
 @endsection
