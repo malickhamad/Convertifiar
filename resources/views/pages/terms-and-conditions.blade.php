@@ -1,4 +1,4 @@
-@extends('app')
+@extends('components.app')
 
 @section('meta')
     <title>Terms and conditions</title>
