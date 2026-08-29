@@ -97,7 +97,7 @@
 
             <!-- Tool 4 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                <a target="_blank" href="{{ route('image.to.jpg') }}" class="text-decoration-none">
+                <a target="_blank" href="{{ route('image.converter') }}" class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
                         <h5>Convert to JPG</h5>

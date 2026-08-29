@@ -1,2498 +1,612 @@
 @extends('components.app')
 
+
 @section('meta')
     <title>Background Remover</title>
     <meta name="description" content="Remove image backgrounds online quickly and easily.">
 @endsection
 
 @section('content')
-
-<main class="crop-page">
-
-    {{-- =====================================================
-         UPLOAD SECTION
-    ====================================================== --}}
-    <section class="crop-breadcrumb-section">
-        <div class="container">
-
-            <div class="crop-breadcrumb">
-                <a href="#">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
-
-                <span>
-                    <i class="fas fa-chevron-right"></i>
-                </span>
-
-                <span>Background Remover</span>
-            </div>
-
-        </div>
-    </section>
+  {{-- <link rel="stylesheet" href="{{ asset('css/image-bg-remover.css') }}">\ --}}
 
 
-    <section class="crop-hero-section" id="uploadStep">
-        <div class="container">
 
-            <div class="crop-heading">
-
-                <span class="crop-small-badge">
-                    <i class="fas fa-wand-magic-sparkles"></i>
-                    Background Remover
-                </span>
-
-                <h1>
-                    Remove Image<br>
-                    <span>Background.</span>
-                </h1>
-
-                <p>
-                    Upload an image and remove its background instantly.
-                </p>
-
-            </div>
+  <style>
 
 
-            <div class="crop-upload-box" id="uploadBox">
+/* PixelFlow AI Background Remover — black theme */
+.bg-remover-page{min-height:100vh;background:#080808;color:#f4f4f5}.bg-hero{padding:115px 0 65px}.editor-heading{text-align:center;margin:0 auto 28px;max-width:850px}.bg-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border:1px solid #262626;border-radius:30px;background:#111;color:#bdbdbd;font-size:.68rem;font-weight:800;letter-spacing:1px}.bg-badge i{color:#60a5fa}.editor-heading h1{font-size:3.25rem;font-weight:800;letter-spacing:-1.8px;margin:17px 0 10px;background:linear-gradient(90deg,#fff,#858585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.editor-heading h1 span{background:linear-gradient(90deg,#fff,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.editor-heading p{color:#737373;font-size:.9rem;margin:0}.design-editor{max-width:1280px;margin:auto;background:#111;border:1px solid #272727;border-radius:22px;box-shadow:0 30px 100px rgba(0,0,0,.5);overflow:hidden}.editor-tabs{height:66px;border-bottom:1px solid #262626;display:flex;align-items:center;padding:0 14px;gap:3px;background:#111}.editor-tab{height:44px;border:0;border-radius:22px;background:transparent;color:#999;padding:0 15px;display:flex;align-items:center;gap:9px;font-size:.75rem;font-weight:650;transition:.2s}.editor-tab i{color:#777}.editor-tab:hover{color:#eee;background:#181818}.editor-tab.active{color:#fff;background:#20252a}.editor-tab.active i{color:#60a5fa}.tab-divider{height:25px;width:1px;background:#2a2a2a;margin:0 10px}.top-icon-btn{width:38px;height:38px;border:0;background:transparent;color:#777;border-radius:10px}.top-icon-btn:hover{background:#1b1b1b;color:#fff}.download-top{margin-left:auto;border:0;border-radius:22px;background:#3b82f6;color:#fff;height:42px;padding:0 18px;font-size:.75rem;font-weight:750;display:flex;align-items:center;gap:10px}.download-top:hover{background:#2563eb}.editor-body{display:grid;grid-template-columns:minmax(0,1fr) 325px;min-height:650px}.stage-column{min-width:0;display:flex;flex-direction:column}.stage-topline{height:48px;border-bottom:1px solid #222;padding:0 16px;display:flex;align-items:center;justify-content:space-between;color:#777;font-size:.66rem}.online-dot{width:6px;height:6px;background:#4ade80;display:inline-block;border-radius:50%;box-shadow:0 0 8px #4ade80;margin-right:7px}.zoom-controls{display:flex;align-items:center;gap:7px}.zoom-controls button{width:27px;height:27px;border:1px solid #2b2b2b;background:#161616;color:#888;border-radius:7px}.zoom-controls button:hover{color:#fff}.zoom-controls span{min-width:38px;text-align:center}.stage-wrap{position:relative;flex:1;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:auto;background:#0b0b0b}.stage-checker,.mini-checker{background-color:#141414;background-image:linear-gradient(45deg,#1d1d1d 25%,transparent 25%),linear-gradient(-45deg,#1d1d1d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#1d1d1d 75%),linear-gradient(-45deg,transparent 75%,#1d1d1d 75%);background-size:22px 22px;background-position:0 0,0 11px,11px -11px,-11px 0}.stage-checker{position:absolute;inset:0}.stage-wrap:has(#editCanvas:not([width="0"])):after{content:""}.stage-wrap[style]{background:var(--custom-bg)}#editCanvas{position:relative;z-index:3;max-width:calc(100% - 80px);max-height:calc(100% - 80px);cursor:crosshair;touch-action:none;box-shadow:0 25px 60px rgba(0,0,0,.4);transition:filter .15s}.stage-wrap.solid-bg .stage-checker{opacity:0}.stage-wrap.solid-bg{background:var(--custom-bg)}#editCanvas.flipped{transform:scaleX(-1)}#compareCanvas{display:none;position:absolute;z-index:8;max-width:90%;max-height:90%;object-fit:contain;box-shadow:0 20px 50px #000}.compare-close{display:none;position:absolute;right:18px;top:18px;z-index:9;width:34px;height:34px;border:1px solid #444;background:#111;color:#fff;border-radius:50%;align-items:center;justify-content:center}.stage-tip{position:absolute;z-index:5;bottom:12px;left:50%;transform:translateX(-50%);padding:7px 12px;border:1px solid #2b2b2b;background:rgba(12,12,12,.85);color:#777;border-radius:20px;font-size:.6rem;white-space:nowrap}.empty-editor{position:relative;z-index:6;text-align:center}.empty-editor>i{width:62px;height:62px;border:1px solid #2b2b2b;background:#141414;color:#60a5fa;border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem}.empty-editor h3{font-size:1.1rem;margin:0 0 6px}.empty-editor p{font-size:.7rem;color:#666;margin-bottom:17px}.empty-editor button{border:0;background:#3b82f6;color:#fff;border-radius:10px;padding:11px 17px;font-size:.72rem;font-weight:700}.empty-editor.hidden{display:none}.editor-footer{height:70px;border-top:1px solid #242424;padding:0 16px;display:flex;align-items:center;justify-content:space-between}.current-file{display:flex;align-items:center;gap:9px;min-width:0}.file-icon{width:34px;height:34px;border-radius:9px;background:#171717;color:#60a5fa;display:flex;align-items:center;justify-content:center}.current-file strong,.current-file small{display:block;max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.current-file strong{font-size:.68rem}.current-file small{font-size:.6rem;color:#666;margin-top:3px}.new-image-btn{border:1px solid #292929;background:#151515;color:#aaa;border-radius:9px;padding:9px 12px;font-size:.66rem}.new-image-btn:hover{color:#fff;border-color:#444}.settings-panel{border-left:1px solid #262626;background:#101010;min-width:0}.settings-scroll{height:100%;overflow:auto;padding:20px}.panel-view{display:none}.panel-view.active{display:block}.panel-hero-card{height:100px;background:#171717;border:1px solid #272727;border-radius:11px;display:flex;align-items:center;gap:11px;padding:9px;margin-bottom:14px}.hero-thumb{width:86px;height:80px;border-radius:7px;background:#202020 center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:#555;background-image:linear-gradient(45deg,#282828 25%,transparent 25%),linear-gradient(-45deg,#282828 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#282828 75%),linear-gradient(-45deg,transparent 75%,#282828 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}.panel-hero-card strong{font-size:.72rem}.panel-hero-card p{color:#777;font-size:.7rem;line-height:1.55;margin:5px 0}.tool-pair{display:grid;grid-template-columns:1fr 1fr;gap:9px}.brush-tool{height:73px;border:1px solid #333;background:#151515;border-radius:8px;color:#888;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}.brush-tool i{font-size:1.3rem}.brush-tool strong{font-size:.68rem}.brush-tool.active{border:2px solid #3b82f6;color:#fff;background:#111c2a}.brush-tool.active i{color:#3b82f6}.range-row{margin:20px 0}.range-row>div,.adjust-control>div{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.range-row label,.adjust-control label{font-size:.7rem;color:#999}.range-row output,.adjust-control output{font-size:.67rem;color:#fff}.range-row input,.adjust-control input{width:100%;accent-color:#3b82f6}.toggle-row{display:flex;align-items:center;justify-content:space-between;color:#999;font-size:.7rem;padding-bottom:20px}.toggle-row input{display:none}.toggle-row i{width:38px;height:22px;border-radius:15px;background:#333;position:relative}.toggle-row i:after{content:"";position:absolute;width:16px;height:16px;border-radius:50%;background:#aaa;top:3px;left:3px;transition:.2s}.toggle-row input:checked+i{background:#3b82f6}.toggle-row input:checked+i:after{left:19px;background:#fff}.panel-divider{height:1px;background:#252525;margin-bottom:7px}.feature-row,.design-option{width:100%;border:0;border-bottom:1px solid #222;background:transparent;color:#aaa;padding:14px 3px;display:flex;align-items:center;gap:11px;text-align:left}.feature-row>i,.design-option>i{color:#777;width:22px}.feature-row span,.design-option span{flex:1}.feature-row strong,.feature-row small,.design-option b,.design-option small{display:block}.feature-row strong,.design-option b{font-size:.67rem;color:#ccc}.feature-row small,.design-option small{font-size:.58rem;color:#666;margin-top:4px}.feature-row>b{font-size:.56rem;color:#60a5fa}.panel-title{font-size:1rem;font-weight:750;margin-bottom:5px}.panel-subtitle{color:#666;font-size:.67rem;line-height:1.5;margin-bottom:20px}.background-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.bg-choice{border:1px solid #292929;background:#151515;border-radius:9px;padding:8px;color:#888;font-size:.58rem}.bg-choice span{display:block;width:100%;height:45px;border-radius:6px;margin-bottom:7px}.bg-choice.active{border-color:#3b82f6;color:#fff}.transparent-preview{background-color:#161616;background-image:linear-gradient(45deg,#222 25%,transparent 25%),linear-gradient(-45deg,#222 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#222 75%),linear-gradient(-45deg,transparent 75%,#222 75%);background-size:12px 12px;background-position:0 0,0 6px,6px -6px,-6px 0}.gradient-preview{background:linear-gradient(135deg,#2563eb,#111827)}.color-input-row{margin-top:20px;display:flex;justify-content:space-between;align-items:center;color:#888;font-size:.68rem}.color-input-row input{width:43px;height:27px;border:1px solid #333;background:#111;border-radius:6px}.effect-card{display:flex;align-items:center;gap:11px;border:1px solid #292929;background:#151515;border-radius:10px;padding:13px;margin-bottom:9px}.effect-card>i{color:#60a5fa;width:22px}.effect-card span{flex:1}.effect-card b,.effect-card small{display:block}.effect-card b{font-size:.68rem;color:#ccc}.effect-card small{font-size:.58rem;color:#666;margin-top:4px}.effect-card input{accent-color:#3b82f6}.adjust-control{margin:22px 0}.reset-adjust{width:100%;border:1px solid #2b2b2b;background:#151515;color:#999;padding:10px;border-radius:8px;font-size:.65rem}.thumb-strip{display:flex;align-items:center;gap:10px;max-width:1280px;margin:15px auto 0;padding:0 8px}.add-thumb{width:55px;height:55px;border:1px solid #292929;background:#141414;color:#777;border-radius:10px;font-size:1rem}.thumb{width:55px;height:55px;padding:3px;border-radius:10px;border:2px solid #3b82f6;background:#151515}.mini-checker{width:100%;height:100%;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}.mini-checker canvas{max-width:100%;max-height:100%}.processing-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.68);backdrop-filter:blur(18px);opacity:0;visibility:hidden;transition:.25s}.processing-overlay.show{opacity:1;visibility:visible}.processing-card{width:min(410px,calc(100% - 30px));background:#111;border:1px solid #333;border-radius:20px;padding:34px;text-align:center;box-shadow:0 35px 100px #000}.ai-loader{width:68px;height:68px;border-radius:50%;border:2px solid #222;position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:#60a5fa}.ai-loader span{position:absolute;inset:-3px;border-radius:50%;border:2px solid transparent;border-top-color:#3b82f6;border-right-color:#60a5fa;animation:spin .8s linear infinite}.ai-loader i{font-size:1.25rem}.processing-label{font-size:.59rem;font-weight:800;letter-spacing:1.5px;color:#60a5fa}.processing-card h3{font-size:1.15rem;margin:8px 0}.processing-card p{font-size:.7rem;color:#666;margin-bottom:20px}.progress-track{height:6px;background:#242424;border-radius:10px;overflow:hidden}.progress-bar{height:100%;width:0;background:#3b82f6;transition:width .2s}.progress-meta{display:flex;justify-content:space-between;margin-top:9px;font-size:.6rem;color:#666}.progress-meta strong{color:#60a5fa}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.editor-tabs{overflow-x:auto}.editor-tab{white-space:nowrap}.editor-body{grid-template-columns:1fr}.settings-panel{border-left:0;border-top:1px solid #262626;max-height:420px}.settings-scroll{max-height:420px}.stage-wrap{min-height:500px}.editor-heading h1{font-size:2.6rem}}
+@media(max-width:600px){.bg-hero{padding-top:100px}.editor-heading h1{font-size:2.15rem}.editor-heading p{font-size:.78rem}.design-editor{border-radius:15px}.editor-tabs{height:58px;padding:0 8px}.editor-tab{padding:0 11px;font-size:.65rem}.tab-divider,.top-icon-btn{display:none}.download-top{height:36px;padding:0 12px;font-size:.62rem}.editor-body{min-height:0}.stage-wrap{min-height:400px}.stage-tip{font-size:.5rem}.editor-footer{height:62px}.new-image-btn{padding:8px}.settings-panel{max-height:none}.settings-scroll{max-height:none}.background-options{grid-template-columns:repeat(3,1fr)}}
 
-                <div class="crop-upload-icon">
-                    <i class="fas fa-cloud-upload-alt"></i>
+  </style>
+
+
+
+<main class="bg-remover-page">
+        <section class="bg-hero">
+            <div class="container-fluid px-lg-4">
+                <div class="editor-heading"><span class="bg-badge"><i class="fas fa-wand-magic-sparkles"></i> AI
+                        BACKGROUND REMOVER</span>
+                    <h1>Make your images
+                        <span>stand out.</span>
+                    </h1>
+                    <p>Remove backgrounds
+                        with AI, then refine every edge with professional
+                        editing tools.</p>
                 </div>
-
-                <h3>Upload your image</h3>
-
-                <p class="crop-upload-text">
-                    Drag & drop your image here or
-                </p>
-
-                <label
-                    for="imageInput"
-                    class="crop-upload-btn"
-                >
-                    <i class="fas fa-upload"></i>
-                    Choose Image
-                </label>
-
-                <input
-                    type="file"
-                    id="imageInput"
-                    accept="image/png,image/jpeg,image/webp"
-                    hidden
-                >
-
-                <p class="crop-upload-info">
-                    JPG, PNG, WebP
-                    <span>|</span>
-                    Max 50MB
-                </p>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    {{-- =====================================================
-         EDITOR SECTION
-    ====================================================== --}}
-    <section
-        class="background-editor-section"
-        id="editorStep"
-        style="display:none;"
-    >
-
-        <div class="container">
-
-            <div class="background-editor">
-
-                <div class="editor-heading">
-
-                    <div>
-                        <span>
-                            <i class="fas fa-wand-magic-sparkles"></i>
-                            Background Remover
-                        </span>
-
-                        <h2>Edit your image</h2>
+                <div class="upload-shell" id="uploadShell">
+                    <div class="upload-card">
+                        <div class="upload-orb"><i class="fas fa-wand-magic-sparkles"></i></div><span
+                            class="upload-kicker">AI POWERED
+                            CUTOUT</span>
+                        <h2>Remove your
+                            background</h2>
+                        <p>Upload a photo and PixelFlow
+                            will automatically create a clean transparent
+                            cutout.</p><label class="main-upload-btn"><i class="fas fa-cloud-arrow-up"></i> Upload
+                            Image<input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp,image/gif"
+                                hidden></label>
+                        <div class="upload-formats"><span>JPG</span><span>PNG</span><span>WEBP</span><span>GIF</span><b><i
+                                    class="fas fa-lock"></i> Private &
+                                secure</b></div>
                     </div>
-
-                    <small id="statusText">
-                        Ready
-                    </small>
-
                 </div>
-
-
-                <div class="editor-card">
-
-                    {{-- =================================================
-                         PREVIEW
-                    ================================================== --}}
-                    <div class="preview">
-
-                        <div class="preview-top">
-
-                            <strong>
-                                <i class="fas fa-image"></i>
-                                Image Preview
-                            </strong>
-
-                            <span>
-                                Transparent PNG
-                            </span>
-
+                <div class="design-editor" id="designEditor" style="display:none">
+                    <div class="editor-tabs"><button class="editor-tab active" data-panel="cutout"><i
+                                class="fas fa-wand-magic-sparkles"></i><span>Cutout</span></button><button
+                            class="editor-tab" data-panel="background"><i
+                                class="fas fa-image"></i><span>Background</span></button><button class="editor-tab"
+                            data-panel="effects"><i class="fas fa-sparkles"></i><span>Effects</span></button><button
+                            class="editor-tab" data-panel="adjust"><i
+                                class="fas fa-sliders"></i><span>Adjust</span></button><button class="editor-tab"
+                            data-panel="design"><i class="fas fa-shapes"></i><span>Design</span></button><span
+                            class="tab-divider"></span><button class="top-icon-btn" id="compareBtn" title="Compare"><i
+                                class="fas fa-columns"></i></button><button class="top-icon-btn" id="undoBtn"
+                            title="Undo"><i class="fas fa-rotate-left"></i></button><button class="top-icon-btn"
+                            id="redoBtn" title="Redo"><i class="fas fa-rotate-right"></i></button><button
+                            class="download-top" id="downloadTop">Download
+                            <i class="fas fa-chevron-down"></i></button></div>
+                    <div class="editor-body">
+                        <div class="stage-column">
+                            <div class="stage-topline">
+                                <div><span class="online-dot"></span><span id="stageStatus">Ready to remove
+                                        background</span></div>
+                                <div class="zoom-controls"><button id="zoomOut"><i class="fas fa-minus"></i></button><span
+                                        id="zoomLabel">100%</span><button id="zoomIn"><i
+                                            class="fas fa-plus"></i></button></div>
+                            </div>
+                            <div class="stage-wrap" id="stageWrap">
+                                <div class="stage-checker"></div><canvas id="editCanvas"></canvas>
+                                <div class="brush-cursor" id="brushCursor"></div><canvas id="compareCanvas"></canvas><button
+                                    class="compare-close" id="compareClose"><i class="fas fa-xmark"></i></button>
+                                <div class="empty-editor" id="emptyEditor"><i class="fas fa-cloud-arrow-up"></i>
+                                    <h3>Upload
+                                        an image</h3>
+                                    <p>Drop your image here
+                                        or choose a file to start</p><button id="uploadBtn"><i class="fas fa-plus"></i>
+                                        Upload
+                                        Image</button>
+                                </div>
+                                <div class="stage-tip"><i class="fas fa-circle-info"></i>
+                                    Paint over the image to erase or
+                                    restore</div>
+                            </div>
+                            <div class="editor-footer">
+                                <div class="current-file"><span class="file-icon"><i class="fas fa-image"></i></span>
+                                    <div><strong id="fileName">No image
+                                            selected</strong><small id="fileInfo">PNG, JPG or
+                                            WEBP</small></div>
+                                </div><button class="new-image-btn" id="newImageBtn"><i class="fas fa-plus"></i> New
+                                    Image</button>
+                            </div>
                         </div>
-
-
-                        <div class="preview-area">
-
-                            <img
-                                id="originalPreview"
-                                alt="Image preview"
-                            >
-
-                            <canvas id="editorCanvas"></canvas>
-
-                        </div>
-
+                        <aside class="settings-panel">
+                            <div class="settings-scroll">
+                                <div class="panel-view active" id="panel-cutout">
+                                    <div class="panel-hero-card">
+                                        <div class="hero-thumb" id="heroThumb"><i class="fas fa-image"></i></div>
+                                        <div><strong>Magic
+                                                Brush</strong>
+                                            <p>Easily
+                                                Erase or<br>Restore
+                                                Anything</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-pair"><button class="brush-tool active" data-tool="erase"><i
+                                                class="fas fa-minus-circle"></i><strong>Erase</strong></button><button
+                                            class="brush-tool" data-tool="restore"><i
+                                                class="fas fa-plus-circle"></i><strong>Restore</strong></button></div>
+                                    <div class="range-row">
+                                        <div><label>Brush
+                                                Size</label><output id="brushValue">30</output></div><input id="brushSize"
+                                            type="range" min="5" max="100" value="30">
+                                    </div><label class="toggle-row"><span>Magic
+                                            Brush</span><input type="checkbox" id="magicToggle" checked><i></i></label>
+                                    <div class="panel-divider"></div><button class="feature-row"
+                                        id="eraseDistractions"><i
+                                            class="fas fa-wand-magic-sparkles"></i><span><strong>Erase
+                                                distractions</strong><small>Clean
+                                                small unwanted
+                                                areas</small></span><b>Open</b></button><button class="feature-row"
+                                        id="resetCutout"><i class="fas fa-rotate-left"></i><span><strong>Reset
+                                                cutout</strong><small>Restore
+                                                the AI
+                                                result</small></span></button>
+                                </div>
+                                <div class="panel-view" id="panel-background">
+                                    <div class="panel-title">Background</div>
+                                    <p class="panel-subtitle">Choose a new
+                                        background for your cutout.</p>
+                                    <div class="background-options"><button class="bg-choice active"
+                                            data-bg="transparent"><span
+                                                class="transparent-preview"></span><b>Transparent</b></button><button
+                                            class="bg-choice" data-bg="#fff"><span
+                                                style="background:#fff"></span><b>White</b></button><button
+                                            class="bg-choice" data-bg="#111827"><span
+                                                style="background:#111827"></span><b>Dark</b></button><button
+                                            class="bg-choice" data-bg="#3b82f6"><span
+                                                style="background:#3b82f6"></span><b>Blue</b></button><button
+                                            class="bg-choice" data-bg="#f4f4f5"><span
+                                                style="background:#f4f4f5"></span><b>Light</b></button><button
+                                            class="bg-choice" data-bg="gradient"><span
+                                                class="gradient-preview"></span><b>Gradient</b></button></div>
+                                    <div class="color-input-row"><label>Custom
+                                            color</label><input type="color" id="bgColor" value="#ffffff"></div>
+                                </div>
+                                <div class="panel-view" id="panel-effects">
+                                    <div class="panel-title">Effects</div>
+                                    <p class="panel-subtitle">Add a subtle
+                                        finish to your cutout.</p><label class="effect-card"><i
+                                            class="fas fa-cloud"></i><span><b>Drop
+                                                Shadow</b><small>Soft
+                                                realistic
+                                                shadow</small></span><input type="checkbox"
+                                            id="shadowToggle"></label><label class="effect-card"><i
+                                            class="fas fa-circle"></i><span><b>Outline</b><small>Clean
+                                                subject
+                                                border</small></span><input type="checkbox" id="outlineToggle"></label>
+                                </div>
+                                <div class="panel-view" id="panel-adjust">
+                                    <div class="panel-title">Adjust</div>
+                                    <p class="panel-subtitle">Fine-tune the
+                                        image appearance.</p>
+                                    <div class="adjust-control">
+                                        <div><label>Brightness</label><output id="brightnessVal">0</output></div><input
+                                            type="range" min="-100" max="100" value="0"
+                                            id="brightness">
+                                    </div>
+                                    <div class="adjust-control">
+                                        <div><label>Contrast</label><output id="contrastVal">0</output></div><input
+                                            type="range" min="-100" max="100" value="0" id="contrast">
+                                    </div>
+                                    <div class="adjust-control">
+                                        <div><label>Saturation</label><output id="saturationVal">0</output></div><input
+                                            type="range" min="-100" max="100" value="0"
+                                            id="saturation">
+                                    </div><button class="reset-adjust" id="resetAdjust">Reset
+                                        Adjustments</button>
+                                </div>
+                                <div class="panel-view" id="panel-design">
+                                    <div class="panel-title">Design</div>
+                                    <p class="panel-subtitle">Prepare your
+                                        cutout for different
+                                        uses.</p><button class="design-option" id="fitSubject"><i
+                                            class="fas fa-expand"></i><span><b>Fit
+                                                subject</b><small>Fit the
+                                                cutout inside the
+                                                canvas</small></span></button><button class="design-option"
+                                        id="flipHorizontal"><i class="fas fa-arrows-left-right"></i><span><b>Flip
+                                                horizontal</b><small>Mirror
+                                                the
+                                                image</small></span></button><button class="design-option"
+                                        id="centerSubject"><i class="fas fa-crosshairs"></i><span><b>Center
+                                                subject</b><small>Reset the
+                                                workspace
+                                                view</small></span></button>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
-
-
-                    {{-- =================================================
-                         FILE INFORMATION
-                    ================================================== --}}
-                    <div class="file-info">
-
-                        <div class="file-name">
-
-                            <i class="fas fa-file-image"></i>
-
-                            <section>
-                                <small>FILE</small>
-                                <strong id="fileName">-</strong>
-                            </section>
-
-                        </div>
-
-
-                        <div>
-                            <small>SIZE</small>
-                            <strong id="imageSize">-</strong>
-                        </div>
-
-
-                        <div>
-                            <small>OUTPUT</small>
-                            <strong>PNG</strong>
-                        </div>
-
-                    </div>
-
-
-                    {{-- =================================================
-                         TOOLS
-                    ================================================== --}}
-                    <div class="tools">
-
-                        <div class="tool-group">
-
-                            <button
-                                type="button"
-                                class="tool active"
-                                id="removeTool"
-                            >
-                                <i class="fas fa-eraser"></i>
-                                Remove
-                            </button>
-
-                            <button
-                                type="button"
-                                class="tool"
-                                id="restoreTool"
-                            >
-                                <i class="fas fa-paintbrush"></i>
-                                Restore
-                            </button>
-
-                        </div>
-
-
-                        <div class="history">
-
-                            <button
-                                type="button"
-                                id="undoBtn"
-                                disabled
-                                title="Undo"
-                            >
-                                <i class="fas fa-rotate-left"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                id="redoBtn"
-                                disabled
-                                title="Redo"
-                            >
-                                <i class="fas fa-rotate-right"></i>
-                            </button>
-
-                        </div>
-
-
-                        <div class="brush">
-
-                            <span>Brush Size</span>
-
-                            <input
-                                type="range"
-                                id="brushSize"
-                                min="5"
-                                max="120"
-                                value="40"
-                            >
-
-                            <strong id="brushValue">
-                                40px
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =================================================
-                         REMOVE BUTTON
-                    ================================================== --}}
-                    <button
-                        type="button"
-                        id="removeBackgroundBtn"
-                        class="main-action"
-                    >
-
-                        <i class="fas fa-wand-magic-sparkles"></i>
-
-                        <span>
-                            <strong>
-                                Remove Background
-                            </strong>
-
-                            <small>
-                                Automatically remove the image background
-                            </small>
-                        </span>
-
-                        <i class="fas fa-arrow-right"></i>
-
-                    </button>
-
-
-                    {{-- =================================================
-                         DOWNLOAD BUTTON
-                    ================================================== --}}
-                    <button
-                        type="button"
-                        id="downloadBtn"
-                        class="main-action"
-                        style="display:none;"
-                    >
-
-                        <i class="fas fa-download"></i>
-
-                        <span>
-                            <strong>
-                                Download PNG
-                            </strong>
-
-                            <small>
-                                Save your transparent image
-                            </small>
-                        </span>
-
-                        <i class="fas fa-arrow-down"></i>
-
-                    </button>
-
-
-                    {{-- =================================================
-                         SECONDARY BUTTONS
-                    ================================================== --}}
-                    <div class="secondary">
-
-                        <button
-                            type="button"
-                            id="resetBtn"
-                        >
-                            <i class="fas fa-rotate-left"></i>
-                            Reset
-                        </button>
-
-                        <button
-                            type="button"
-                            id="changeBtn"
-                        >
-                            <i class="fas fa-images"></i>
-                            Add Another Image
-                        </button>
-
-                    </div>
-
                 </div>
-
+                <div class="thumb-strip"><button class="add-thumb" id="addThumb"><i class="fas fa-plus"></i></button>
+                    <div class="thumb active">
+                        <div class="mini-checker"><canvas id="thumbCanvas"></canvas></div>
+                    </div>
+                </div>
             </div>
-
+        </section>
+    </main>
+    <div class="processing-overlay" id="processingOverlay">
+        <div class="processing-card">
+            <div class="ai-loader"><span></span><i class="fas fa-wand-magic-sparkles"></i></div><span
+                class="processing-label">AI BACKGROUND REMOVAL</span>
+            <h3 id="processingTitle">Analyzing your image</h3>
+            <p id="processingText">Loading AI model and preparing the
+                image...</p>
+            <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-meta"><strong id="progressPercent">0%</strong><span>Processing
+                    locally</span></div>
         </div>
-
-    </section>
-
-</main>
-
-
-{{-- =========================================================
-     FULL SCREEN LOADER
-========================================================= --}}
-<div
-    id="pageLoader"
-    class="page-loader"
->
-
-    <div class="loader-card">
-
-        <div class="loader-icon">
-
-            <div class="loader-ring"></div>
-
-            <i
-                id="loaderIcon"
-                class="fas fa-wand-magic-sparkles"
-            ></i>
-
-        </div>
-
-
-        <h3 id="loaderTitle">
-            Removing Background
-        </h3>
-
-
-        <p id="loaderMessage">
-            Preparing your image...
-        </p>
-
-
-        <div class="loader-progress">
-            <span id="loaderProgress"></span>
-        </div>
-
-
-        <div class="loader-bottom">
-
-            <strong id="loaderPercent">
-                0%
-            </strong>
-
-            <span>
-                Please wait
-            </span>
-
-        </div>
-
     </div>
-
-</div>
-
-
-{{-- =========================================================
-     BACKGROUND REMOVAL LIBRARY
-========================================================= --}}
-<script type="module">
-
-import {
-    removeBackground,
-    preload
-} from "https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.7.0/+esm";
-
-
-$(function () {
-
-    /* =====================================================
-       ELEMENTS
-    ====================================================== */
-
-    const canvas = document.getElementById('editorCanvas');
-
-    const ctx = canvas.getContext('2d', {
-        willReadFrequently: true
-    });
-
-
-    /* =====================================================
-       VARIABLES
-    ====================================================== */
-
-    let image = new Image();
-
-    let file = null;
-
-    let originalData = null;
-
-    let originalWidth = 0;
-
-    let originalHeight = 0;
-
-    let undo = [];
-
-    let redo = [];
-
-    let tool = 'remove';
-
-    let brushSize = 40;
-
-    let drawing = false;
-
-    let processed = false;
-
-    let loaderCurrent = 0;
-
-    let loaderTarget = 0;
-
-    let loaderAnimation = null;
-
-    let originalObjectUrl = null;
-
-
-    /* =====================================================
-       AI CONFIG
-    ====================================================== */
-
-    const aiConfig = {
-
-        model: 'isnet_quint8',
-
-        device: 'gpu',
-
-        proxyToWorker: true,
-
-        output: {
-            format: 'image/png',
-            quality: 1
-        }
-
-    };
-
-
-    /*
-     * Preload model immediately.
-     * This allows the model to download before
-     * the user starts processing.
-     */
-    preload(aiConfig).catch(function () {});
-
-
-    /* =====================================================
-       FILE INPUT
-    ====================================================== */
-
-    $('#imageInput').on('change', function () {
-
-        if (this.files[0]) {
-            loadImage(this.files[0]);
-        }
-
-        this.value = '';
-
-    });
-
-
-    /* =====================================================
-       DRAG & DROP
-    ====================================================== */
-
-    $('#uploadBox')
-
-        .on('dragover', function (e) {
-
-            e.preventDefault();
-
-            $(this).addClass('drag-active');
-
-        })
-
-        .on('dragleave drop', function (e) {
-
-            e.preventDefault();
-
-            $(this).removeClass('drag-active');
-
-        })
-
-        .on('drop', function (e) {
-
-            const dropped =
-                e.originalEvent.dataTransfer.files[0];
-
-            if (dropped) {
-                loadImage(dropped);
-            }
-
+    <script type="module">
+        import {
+            removeBackground
+        } from 'https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.7.0/+esm';
+        const $ = s => document.querySelector(s),
+            $$ = s => document.querySelectorAll(s);
+        const input = $('#imageInput'),
+            uploadShell = $('#uploadShell'),
+            editor = $('#designEditor'),
+            overlay = $('#processingOverlay'),
+            progress = $('#progressBar'),
+            percent = $('#progressPercent'),
+            ptext = $('#processingText'),
+            ptitle = $('#processingTitle'),
+            canvas = $('#editCanvas'),
+            ctx = canvas.getContext('2d'),
+            compare = $('#compareCanvas'),
+            cctx = compare.getContext('2d'),
+            thumb = $('#thumbCanvas'),
+            tctx = thumb.getContext('2d'),
+            cursor = $('#brushCursor');
+        let originalImage = null,
+            originalCanvas = null,
+            resultImage = null,
+            resultBlob = null,
+            history = [],
+            future = [],
+            tool = 'erase',
+            drawing = false,
+            zoom = 1,
+            background = 'transparent',
+            brightness = 0,
+            contrast = 0,
+            saturation = 0,
+            shadow = false,
+            outline = false;
+        const API = window.PIXELFLOW_BG_API || '';
+        const loadImage = src => new Promise((resolve, reject) => {
+            const i = new Image();
+            i.onload = () => resolve(i);
+            i.onerror = reject;
+            i.src = src
         });
 
-
-    /* =====================================================
-       LOAD IMAGE
-    ====================================================== */
-
-    function loadImage(selectedFile) {
-
-        if (
-            !selectedFile.type ||
-            !selectedFile.type.startsWith('image/')
-        ) {
-
-            alert('Please select a valid image.');
-
-            return;
+        function prog(v, msg, title = 'Removing background') {
+            progress.style.width = v + '%';
+            percent.textContent = Math.round(v) + '%';
+            ptext.textContent = msg;
+            ptitle.textContent = title
         }
 
-
-        if (selectedFile.size > 50 * 1024 * 1024) {
-
-            alert('Maximum file size is 50MB.');
-
-            return;
+        function save() {
+            history.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+            if (history.length > 30) history.shift();
+            future = []
         }
 
-
-        file = selectedFile;
-
-        processed = false;
-
-        undo = [];
-
-        redo = [];
-
-
-        const reader = new FileReader();
-
-
-        reader.onload = function (e) {
-
-            image.onload = function () {
-
-                originalWidth = image.naturalWidth;
-
-                originalHeight = image.naturalHeight;
-
-
-                /*
-                 * IMPORTANT:
-                 * Canvas remains exactly the same size
-                 * as the original image.
-                 */
-                canvas.width = originalWidth;
-
-                canvas.height = originalHeight;
-
-
-                ctx.globalCompositeOperation =
-                    'source-over';
-
-
-                ctx.clearRect(
-                    0,
-                    0,
-                    canvas.width,
-                    canvas.height
-                );
-
-
-                ctx.drawImage(
-                    image,
-                    0,
-                    0,
-                    originalWidth,
-                    originalHeight
-                );
-
-
-                /*
-                 * Keep the ORIGINAL pixels.
-                 * Restore uses this data.
-                 */
-                originalData = ctx.getImageData(
-                    0,
-                    0,
-                    originalWidth,
-                    originalHeight
-                );
-
-
-                $('#originalPreview')
-                    .attr('src', e.target.result);
-
-
-                $('#fileName')
-                    .text(file.name);
-
-
-                $('#imageSize')
-                    .text(
-                        originalWidth +
-                        ' × ' +
-                        originalHeight
-                    );
-
-
-                updateHistory();
-
-
-                $('#removeBackgroundBtn')
-                    .show()
-                    .prop('disabled', false);
-
-
-                $('#downloadBtn')
-                    .hide();
-
-
-                $('#statusText')
-                    .text('Ready');
-
-
-                $('#uploadStep')
-                    .stop(true, true)
-                    .slideUp(250);
-
-
-                $('#editorStep')
-                    .stop(true, true)
-                    .slideDown(350);
-
-
-                setTimeout(function () {
-
-                    $('html,body').animate({
-
-                        scrollTop:
-                            $('#editorStep')
-                                .offset()
-                                .top - 15
-
-                    }, 350);
-
-                }, 100);
-
-            };
-
-
-            image.src = e.target.result;
-
-        };
-
-
-        reader.readAsDataURL(selectedFile);
-
-    }
-
-
-    /* =====================================================
-       REMOVE BACKGROUND
-    ====================================================== */
-
-    $('#removeBackgroundBtn').on(
-        'click',
-        async function () {
-
-            if (!file) return;
-
-
-            const button = $(this);
-
-
-            button.prop('disabled', true);
-
-
-            $('#statusText')
-                .text('Processing');
-
-
-            startLoader(
-                'Removing Background',
-                'Preparing your image...',
-                2
-            );
-
-
-            try {
-
-                /*
-                 * AI working size.
-                 *
-                 * This is ONLY used by the AI model.
-                 * The final canvas remains original resolution.
-                 */
-                const maxAI = 2000;
-
-
-                const scale = Math.min(
-                    1,
-                    maxAI /
-                    Math.max(
-                        originalWidth,
-                        originalHeight
-                    )
-                );
-
-
-                const aiWidth = Math.max(
-                    1,
-                    Math.round(originalWidth * scale)
-                );
-
-
-                const aiHeight = Math.max(
-                    1,
-                    Math.round(originalHeight * scale)
-                );
-
-
-                const aiCanvas =
-                    document.createElement('canvas');
-
-
-                aiCanvas.width = aiWidth;
-
-                aiCanvas.height = aiHeight;
-
-
-                const aiCtx =
-                    aiCanvas.getContext('2d');
-
-
-                aiCtx.drawImage(
-                    image,
-                    0,
-                    0,
-                    aiWidth,
-                    aiHeight
-                );
-
-
-                updateLoader(
-                    6,
-                    'Preparing AI model...'
-                );
-
-
-                /*
-                 * PNG is used instead of JPEG.
-                 *
-                 * JPEG introduces compression artifacts
-                 * around edges and can make background
-                 * removal look worse.
-                 */
-                const aiBlob =
-                    await new Promise(function (resolve) {
-
-                        aiCanvas.toBlob(
-                            resolve,
-                            'image/png'
-                        );
-
-                    });
-
-
-                if (!aiBlob) {
-                    throw new Error(
-                        'Unable to prepare image.'
-                    );
-                }
-
-
-                updateLoader(
-                    9,
-                    'Analyzing image...'
-                );
-
-
-                /*
-                 * ACTUAL BACKGROUND REMOVAL
-                 */
-                const result =
-                    await removeBackground(
-                        aiBlob,
-                        {
-
-                            ...aiConfig,
-
-                            progress:
-                                function (
-                                    name,
-                                    current,
-                                    total
-                                ) {
-
-                                    if (
-                                        !total ||
-                                        total <= 0
-                                    ) {
-                                        return;
-                                    }
-
-
-                                    const raw =
-                                        Math.max(
-                                            0,
-                                            Math.min(
-                                                1,
-                                                current /
-                                                total
-                                            )
-                                        );
-
-
-                                    /*
-                                     * Real AI progress:
-                                     *
-                                     * 9% -> 92%
-                                     */
-                                    const percent =
-                                        9 +
-                                        raw * 83;
-
-
-                                    updateLoader(
-                                        percent,
-                                        getProgressMessage(
-                                            percent
-                                        )
-                                    );
-
-                                }
-
-                        }
-                    );
-
-
-                updateLoader(
-                    93,
-                    'Creating transparent image...'
-                );
-
-
-                const resultUrl =
-                    URL.createObjectURL(result);
-
-
-                const resultImage =
-                    new Image();
-
-
-                resultImage.onload = function () {
-
-                    updateLoader(
-                        95,
-                        'Applying transparent mask...'
-                    );
-
-
-                    /*
-                     * IMPORTANT:
-                     *
-                     * We DON'T replace the original image
-                     * with the reduced AI image.
-                     *
-                     * Instead:
-                     *
-                     * 1. Original canvas remains original size.
-                     * 2. AI result is drawn over it.
-                     * 3. This avoids enlarging a low-resolution
-                     *    JPEG result.
-                     */
-                    ctx.globalCompositeOperation =
-                        'source-over';
-
-
-                    ctx.clearRect(
-                        0,
-                        0,
-                        originalWidth,
-                        originalHeight
-                    );
-
-
-                    /*
-                     * Draw the processed transparent result
-                     * at the original dimensions.
-                     */
-                    ctx.drawImage(
-                        resultImage,
-                        0,
-                        0,
-                        originalWidth,
-                        originalHeight
-                    );
-
-
-                    URL.revokeObjectURL(resultUrl);
-
-
-                    updateLoader(
-                        98,
-                        'Finalizing transparent PNG...'
-                    );
-
-
-                    processed = true;
-
-
-                    setTimeout(function () {
-
-                        updateLoader(
-                            100,
-                            'Background removed successfully.'
-                        );
-
-
-                        $('#loaderTitle')
-                            .text(
-                                'Background Removed'
-                            );
-
-
-                        $('#loaderIcon')
-                            .removeClass()
-                            .addClass(
-                                'fas fa-check'
-                            );
-
-
-                        $('#statusText')
-                            .text(
-                                'Ready to edit'
-                            );
-
-
-                        $('#removeBackgroundBtn')
-                            .hide();
-
-
-                        $('#downloadBtn')
-                            .stop(true, true)
-                            .fadeIn(200);
-
-
-                        button.prop(
-                            'disabled',
-                            false
-                        );
-
-
-                        setTimeout(
-                            hideLoader,
-                            650
-                        );
-
-
-                    }, 180);
-
-                };
-
-
-                resultImage.onerror =
-                    function () {
-
-                        URL.revokeObjectURL(
-                            resultUrl
-                        );
-
-                        throw new Error(
-                            'Processed image could not be loaded.'
-                        );
-
-                    };
-
-
-                resultImage.src = resultUrl;
-
-
-            } catch (error) {
-
-                console.error(error);
-
-
-                hideLoader();
-
-
-                button.prop(
-                    'disabled',
-                    false
-                );
-
-
-                $('#statusText')
-                    .text(
-                        'Processing failed'
-                    );
-
-
-                alert(
-                    'Background removal failed. Please try another image.'
-                );
-
-            }
-
-        }
-    );
-
-
-    /* =====================================================
-       PROGRESS MESSAGE
-    ====================================================== */
-
-    function getProgressMessage(percent) {
-
-        if (percent < 15) {
-            return 'Preparing AI engine...';
+        function thumbDraw() {
+            if (!canvas.width) return;
+            const s = Math.min(92 / canvas.width, 120 / canvas.height);
+            thumb.width = canvas.width * s;
+            thumb.height = canvas.height * s;
+            tctx.clearRect(0, 0, thumb.width, thumb.height);
+            tctx.drawImage(canvas, 0, 0, thumb.width, thumb.height)
         }
 
-        if (percent < 30) {
-            return 'Analyzing your image...';
+        function view() {
+            if (!canvas.width) return;
+            const sw = $('#stageWrap'),
+                scale = Math.min((sw.clientWidth - 90) / canvas.width, (sw.clientHeight - 90) / canvas.height, 1) * zoom;
+            canvas.style.width = canvas.width * scale + 'px';
+            canvas.style.height = canvas.height * scale + 'px';
+            thumbDraw();
         }
-
-        if (percent < 50) {
-            return 'Detecting the main subject...';
-        }
-
-        if (percent < 70) {
-            return 'Removing background...';
-        }
-
-        if (percent < 90) {
-            return 'Refining image edges...';
-        }
-
-        return 'Finishing your image...';
-
-    }
-
-
-    /* =====================================================
-       REMOVE TOOL
-    ====================================================== */
-
-    $('#removeTool').on('click', function () {
-
-        tool = 'remove';
-
-        $('.tool').removeClass('active');
-
-        $(this).addClass('active');
-
-    });
-
-
-    /* =====================================================
-       RESTORE TOOL
-    ====================================================== */
-
-    $('#restoreTool').on('click', function () {
-
-        tool = 'restore';
-
-        $('.tool').removeClass('active');
-
-        $(this).addClass('active');
-
-    });
-
-
-    /* =====================================================
-       BRUSH SIZE
-    ====================================================== */
-
-    $('#brushSize').on('input', function () {
-
-        brushSize = Number(this.value);
-
-        $('#brushValue')
-            .text(brushSize + 'px');
-
-    });
-
-
-    /* =====================================================
-       CANVAS POSITION
-    ====================================================== */
-
-    function getPosition(e) {
-
-        const rect =
-            canvas.getBoundingClientRect();
-
-
-        return {
-
-            x:
-                (e.clientX - rect.left) *
-                canvas.width /
-                rect.width,
-
-            y:
-                (e.clientY - rect.top) *
-                canvas.height /
-                rect.height
-
-        };
-
-    }
-
-
-    /* =====================================================
-       PAINT
-    ====================================================== */
-
-    function paint(e) {
-
-        if (!processed) return;
-
-
-        const point = getPosition(e);
-
-
-        /*
-         * Brush size is scaled according to
-         * the displayed canvas size.
-         */
-        const scaleX =
-            canvas.width /
-            canvas.getBoundingClientRect().width;
-
-
-        const radius =
-            (brushSize * scaleX) / 2;
-
-
-        ctx.save();
-
-
-        ctx.beginPath();
-
-
-        ctx.arc(
-            point.x,
-            point.y,
-            radius,
-            0,
-            Math.PI * 2
-        );
-
-
-        if (tool === 'remove') {
-
-            ctx.globalCompositeOperation =
-                'destination-out';
-
-            ctx.fill();
-
-        } else {
-
-            /*
-             * Restore original image only
-             * inside brush area.
-             */
-            ctx.clip();
-
-            ctx.globalCompositeOperation =
-                'source-over';
-
-
-            ctx.drawImage(
-                image,
-                0,
-                0,
-                originalWidth,
-                originalHeight
-            );
-
-        }
-
-
-        ctx.restore();
-
-    }
-
-
-    /* =====================================================
-       POINTER DOWN
-    ====================================================== */
-
-    canvas.addEventListener(
-        'pointerdown',
-        function (e) {
-
-            if (!processed) return;
-
-
-            drawing = true;
-
-
-            saveState();
-
-
-            canvas.setPointerCapture(
-                e.pointerId
-            );
-
-
-            paint(e);
-
-        }
-    );
-
-
-    /* =====================================================
-       POINTER MOVE
-    ====================================================== */
-
-    canvas.addEventListener(
-        'pointermove',
-        function (e) {
-
-            if (drawing) {
-                paint(e);
-            }
-
-        }
-    );
-
-
-    /* =====================================================
-       POINTER UP
-    ====================================================== */
-
-    canvas.addEventListener(
-        'pointerup',
-        function (e) {
-
-            drawing = false;
-
-
-            if (
-                canvas.hasPointerCapture(
-                    e.pointerId
-                )
-            ) {
-
-                canvas.releasePointerCapture(
-                    e.pointerId
-                );
-
-            }
-
-        }
-    );
-
-
-    canvas.addEventListener(
-        'pointercancel',
-        function () {
-
-            drawing = false;
-
-        }
-    );
-
-
-    /* =====================================================
-       SAVE STATE
-    ====================================================== */
-
-    function saveState() {
-
-        undo.push(
-            ctx.getImageData(
-                0,
-                0,
-                canvas.width,
-                canvas.height
-            )
-        );
-
-
-        /*
-         * Keep memory under control.
-         */
-        if (undo.length > 10) {
-            undo.shift();
-        }
-
-
-        redo = [];
-
-
-        updateHistory();
-
-    }
-
-
-    /* =====================================================
-       UNDO
-    ====================================================== */
-
-    $('#undoBtn').on('click', function () {
-
-        if (!undo.length) return;
-
-
-        redo.push(
-            ctx.getImageData(
-                0,
-                0,
-                canvas.width,
-                canvas.height
-            )
-        );
-
-
-        ctx.putImageData(
-            undo.pop(),
-            0,
-            0
-        );
-
-
-        updateHistory();
-
-    });
-
-
-    /* =====================================================
-       REDO
-    ====================================================== */
-
-    $('#redoBtn').on('click', function () {
-
-        if (!redo.length) return;
-
-
-        undo.push(
-            ctx.getImageData(
-                0,
-                0,
-                canvas.width,
-                canvas.height
-            )
-        );
-
-
-        ctx.putImageData(
-            redo.pop(),
-            0,
-            0
-        );
-
-
-        updateHistory();
-
-    });
-
-
-    /* =====================================================
-       HISTORY
-    ====================================================== */
-
-    function updateHistory() {
-
-        $('#undoBtn')
-            .prop(
-                'disabled',
-                !undo.length
-            );
-
-
-        $('#redoBtn')
-            .prop(
-                'disabled',
-                !redo.length
-            );
-
-    }
-
-
-    /* =====================================================
-       RESET
-    ====================================================== */
-
-    $('#resetBtn').on('click', function () {
-
-        if (!originalData) return;
-
-
-        saveState();
-
-
-        ctx.globalCompositeOperation =
-            'source-over';
-
-
-        ctx.putImageData(
-            originalData,
-            0,
-            0
-        );
-
-
-        processed = false;
-
-
-        $('#removeBackgroundBtn')
-            .show()
-            .prop(
-                'disabled',
-                false
-            );
-
-
-        $('#downloadBtn')
-            .hide();
-
-
-        $('#statusText')
-            .text('Ready');
-
-    });
-
-
-    /* =====================================================
-       DOWNLOAD
-    ====================================================== */
-
-    $('#downloadBtn').on('click', function () {
-
-        if (!processed) return;
-
-
-        const button = $(this);
-
-
-        button.prop(
-            'disabled',
-            true
-        );
-
-
-        startLoader(
-            'Preparing Download',
-            'Preparing your transparent PNG...',
-            5
-        );
-
-
-        /*
-         * Let browser render loader first.
-         */
-        requestAnimationFrame(function () {
-
-            updateLoader(
-                20,
-                'Preparing image data...'
-            );
-
-
-            /*
-             * PNG export preserves transparency.
-             */
-            canvas.toBlob(
-                function (blob) {
-
-                    if (!blob) {
-
-                        hideLoader();
-
-                        button.prop(
-                            'disabled',
-                            false
-                        );
-
-                        return;
-                    }
-
-
-                    updateLoader(
-                        75,
-                        'Creating high-quality PNG...'
-                    );
-
-
-                    const url =
-                        URL.createObjectURL(blob);
-
-
-                    const link =
-                        document.createElement('a');
-
-
-                    link.href = url;
-
-
-                    const cleanName =
-                        file.name.replace(
-                            /\.[^/.]+$/,
-                            ''
-                        );
-
-
-                    link.download =
-                        cleanName +
-                        '-background-removed.png';
-
-
-                    document.body.appendChild(link);
-
-
-                    updateLoader(
-                        92,
-                        'Starting download...'
-                    );
-
-
-                    link.click();
-
-
-                    link.remove();
-
-
-                    updateLoader(
-                        100,
-                        'Download started successfully.'
-                    );
-
-
-                    $('#loaderTitle')
-                        .text('Download Ready');
-
-
-                    $('#loaderIcon')
-                        .removeClass()
-                        .addClass(
-                            'fas fa-check'
-                        );
-
-
-                    setTimeout(function () {
-
-                        URL.revokeObjectURL(url);
-
-                        hideLoader();
-
-
-                        button.prop(
-                            'disabled',
-                            false
-                        );
-
-
-                        $('#statusText')
-                            .text(
-                                'Download complete'
-                            );
-
-                    }, 650);
-
+        async function localRemove(file) {
+            return await removeBackground(file, {
+                model: 'isnet',
+                output: {
+                    format: 'image/png',
+                    quality: 1
                 },
-
-                'image/png'
-            );
-
-        });
-
-    });
-
-
-    /* =====================================================
-       ADD ANOTHER IMAGE
-    ====================================================== */
-
-    $('#changeBtn').on('click', function () {
-
-        /*
-         * Hide editor.
-         */
-        $('#editorStep')
-            .stop(true, true)
-            .slideUp(250);
-
-
-        /*
-         * Show original upload section.
-         */
-        $('#uploadStep')
-            .stop(true, true)
-            .slideDown(350);
-
-
-        /*
-         * Scroll smoothly to upload section.
-         */
-        setTimeout(function () {
-
-            $('html,body').animate({
-
-                scrollTop:
-                    $('#uploadStep')
-                        .offset()
-                        .top
-
-            }, 400);
-
-        }, 100);
-
-
-        /*
-         * Reset input so same image can
-         * also be selected again.
-         */
-        $('#imageInput').val('');
-
-
-        /*
-         * Reset editor state.
-         */
-        file = null;
-
-        processed = false;
-
-        originalData = null;
-
-        undo = [];
-
-        redo = [];
-
-        updateHistory();
-
-
-        $('#downloadBtn').hide();
-
-
-        $('#removeBackgroundBtn')
-            .show()
-            .prop(
-                'disabled',
-                false
-            );
-
-
-        $('#statusText')
-            .text('Ready');
-
-    });
-
-
-    /* =====================================================
-       START LOADER
-    ====================================================== */
-
-    function startLoader(
-        title,
-        message,
-        percent = 0
-    ) {
-
-        cancelLoaderAnimation();
-
-
-        loaderCurrent =
-            Math.max(
-                0,
-                Math.min(
-                    100,
-                    percent
-                )
-            );
-
-
-        loaderTarget =
-            loaderCurrent;
-
-
-        $('#loaderTitle')
-            .text(title);
-
-
-        $('#loaderMessage')
-            .text(message);
-
-
-        $('#loaderIcon')
-            .removeClass()
-            .addClass(
-                'fas fa-wand-magic-sparkles'
-            );
-
-
-        setLoaderDisplay(
-            loaderCurrent
-        );
-
-
-        /*
-         * display:flex is important.
-         * It guarantees true page-center positioning.
-         */
-        $('#pageLoader')
-            .stop(true, true)
-            .css('display', 'flex')
-            .hide()
-            .fadeIn(180);
-
-
-        animateLoader();
-
-    }
-
-
-    /* =====================================================
-       UPDATE LOADER
-    ====================================================== */
-
-    function updateLoader(
-        percent,
-        message
-    ) {
-
-        percent =
-            Math.max(
-                0,
-                Math.min(
-                    100,
-                    Number(percent)
-                )
-            );
-
-
-        /*
-         * Never move backwards.
-         */
-        if (percent < loaderTarget) {
-            return;
-        }
-
-
-        loaderTarget = percent;
-
-
-        if (message) {
-
-            $('#loaderMessage')
-                .text(message);
-
-        }
-
-
-        animateLoader();
-
-    }
-
-
-    /* =====================================================
-       SMOOTH LOADER
-    ====================================================== */
-
-    function animateLoader() {
-
-        if (loaderAnimation) return;
-
-
-        function step() {
-
-            const difference =
-                loaderTarget -
-                loaderCurrent;
-
-
-            if (
-                Math.abs(difference) < 0.05
-            ) {
-
-                loaderCurrent =
-                    loaderTarget;
-
-
-                setLoaderDisplay(
-                    loaderCurrent
-                );
-
-
-                loaderAnimation = null;
-
-                return;
-            }
-
-
-            /*
-             * Smooth interpolation.
-             */
-            loaderCurrent +=
-                difference * 0.12;
-
-
-            setLoaderDisplay(
-                loaderCurrent
-            );
-
-
-            loaderAnimation =
-                requestAnimationFrame(step);
-
-        }
-
-
-        loaderAnimation =
-            requestAnimationFrame(step);
-
-    }
-
-
-    /* =====================================================
-       DISPLAY LOADER
-    ====================================================== */
-
-    function setLoaderDisplay(value) {
-
-        const percent =
-            Math.round(
-                Math.max(
-                    0,
-                    Math.min(
-                        100,
-                        value
-                    )
-                )
-            );
-
-
-        /*
-         * SAME percentage is used for:
-         *
-         * Number
-         * Progress bar
-         */
-        $('#loaderProgress')
-            .css(
-                'width',
-                percent + '%'
-            );
-
-
-        $('#loaderPercent')
-            .text(
-                percent + '%'
-            );
-
-    }
-
-
-    /* =====================================================
-       HIDE LOADER
-    ====================================================== */
-
-    function hideLoader() {
-
-        cancelLoaderAnimation();
-
-
-        $('#pageLoader')
-            .stop(true, true)
-            .fadeOut(
-                220,
-                function () {
-
-                    loaderCurrent = 0;
-
-                    loaderTarget = 0;
-
-                    setLoaderDisplay(0);
-
+                progress: (key, current, total) => {
+                    if (total) {
+                        const v = 8 + current / total * 86;
+                        const msg = key.includes('inference') ? 'Detecting subject and fine edges...' : key
+                            .includes('mask') ? 'Refining the transparency mask...' : key.includes(
+                            'encode') ? 'Creating transparent PNG...' : 'Loading AI segmentation model...';
+                        prog(v, msg)
+                    }
                 }
-            );
-
-    }
-
-
-    /* =====================================================
-       CANCEL LOADER
-    ====================================================== */
-
-    function cancelLoaderAnimation() {
-
-        if (loaderAnimation) {
-
-            cancelAnimationFrame(
-                loaderAnimation
-            );
-
-            loaderAnimation = null;
-
+            })
         }
-
-    }
-
-});
-
-</script>
-
-
-<style>
-
-/* =========================================================
-   EDITOR
-========================================================= */
-
-.background-editor-section {
-    padding: 15px 0 60px;
-}
-
-.background-editor {
-    max-width: 900px;
-    margin: auto;
-}
-
-.editor-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.editor-heading span {
-    color: #2563eb;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.editor-heading h2 {
-    margin: 3px 0 0;
-    color: #172033;
-    font-size: 22px;
-}
-
-.editor-heading > small {
-    padding: 7px 13px;
-    border-radius: 20px;
-    background: #eff6ff;
-    color: #2563eb;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   CARD
-========================================================= */
-
-.editor-card {
-    padding: 10px;
-    border: 1px solid #dce7f7;
-    border-radius: 15px;
-    background: #f7faff;
-    box-shadow: 0 12px 35px rgba(37,99,235,.08);
-}
-
-
-/* =========================================================
-   PREVIEW
-========================================================= */
-
-.preview {
-    overflow: hidden;
-    border: 1px solid #dce7f7;
-    border-radius: 11px;
-    background: #fff;
-}
-
-.preview-top {
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-    border-bottom: 1px solid #e7eef8;
-}
-
-.preview-top strong {
-    color: #334155;
-    font-size: 13px;
-}
-
-.preview-top strong i {
-    margin-right: 5px;
-    color: #2563eb;
-}
-
-.preview-top span {
-    color: #64748b;
-    font-size: 10px;
-    font-weight: 600;
-}
-
-.preview-area {
-    position: relative;
-    min-height: 470px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #fff;
-    background-image:
-        linear-gradient(45deg,#e9eef7 25%,transparent 25%),
-        linear-gradient(-45deg,#e9eef7 25%,transparent 25%),
-        linear-gradient(45deg,transparent 75%,#e9eef7 75%),
-        linear-gradient(-45deg,transparent 75%,#e9eef7 75%);
-    background-size: 26px 26px;
-    background-position:
-        0 0,
-        0 13px,
-        13px -13px,
-        -13px 0;
-}
-
-#originalPreview,
-#editorCanvas {
-    max-width: 94%;
-    max-height: 455px;
-    object-fit: contain;
-}
-
-#editorCanvas {
-    position: absolute;
-    cursor: crosshair;
-    touch-action: none;
-}
-
-
-/* =========================================================
-   FILE INFO
-========================================================= */
-
-.file-info {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.file-info > div {
-    min-width: 0;
-    padding: 12px;
-    border: 1px solid #dce7f7;
-    border-radius: 8px;
-    background: #fff;
-}
-
-.file-name {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-}
-
-.file-name > i {
-    color: #2563eb;
-}
-
-.file-info small {
-    display: block;
-    margin-bottom: 3px;
-    color: #94a3b8;
-    font-size: 8px;
-    font-weight: 700;
-}
-
-.file-info strong {
-    display: block;
-    overflow: hidden;
-    color: #334155;
-    font-size: 11px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-
-/* =========================================================
-   TOOLS
-========================================================= */
-
-.tools {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-top: 8px;
-    padding: 9px;
-    border: 1px solid #dce7f7;
-    border-radius: 9px;
-    background: #fff;
-}
-
-.tool-group,
-.history {
-    display: flex;
-    gap: 5px;
-}
-
-.tool,
-.history button {
-    height: 42px;
-    border: 1px solid #d8e3f3;
-    border-radius: 8px;
-    background: #f8fbff;
-    color: #475569;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    transition: .2s;
-}
-
-.tool {
-    min-width: 110px;
-    padding: 0 16px;
-}
-
-.history button {
-    width: 42px;
-}
-
-.tool:hover,
-.tool.active,
-.history button:hover:not(:disabled) {
-    border-color: #93c5fd;
-    background: #eff6ff;
-    color: #2563eb;
-}
-
-.tool.active {
-    box-shadow: 0 4px 12px rgba(37,99,235,.10);
-}
-
-.history button:disabled {
-    opacity: .35;
-    cursor: not-allowed;
-}
-
-.brush {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-left: auto;
-}
-
-.brush span {
-    color: #64748b;
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.brush input {
-    width: 110px;
-    accent-color: #2563eb;
-}
-
-.brush strong {
-    color: #475569;
-    font-size: 11px;
-}
-
-
-/* =========================================================
-   MAIN ACTION
-========================================================= */
-
-.main-action {
-    width: 100%;
-    min-height: 62px;
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    margin-top: 9px;
-    padding: 9px 14px;
-    border: 0;
-    border-radius: 10px;
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #4f46e5
-    );
-    color: #fff;
-    cursor: pointer;
-    text-align: left;
-    box-shadow: 0 8px 20px rgba(37,99,235,.20);
-    transition: .2s;
-}
-
-.main-action:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 28px rgba(37,99,235,.27);
-}
-
-.main-action:disabled {
-    opacity: .6;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.main-action > i:first-child {
-    width: 42px;
-    height: 42px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    background: rgba(255,255,255,.15);
-    font-size: 16px;
-}
-
-.main-action span {
-    flex: 1;
-}
-
-.main-action strong {
-    display: block;
-    font-size: 15px;
-    font-weight: 800;
-}
-
-.main-action small {
-    display: block;
-    margin-top: 3px;
-    color: rgba(255,255,255,.82);
-    font-size: 10px;
-}
-
-.main-action > i:last-child {
-    margin-right: 4px;
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   SECONDARY BUTTONS
-========================================================= */
-
-.secondary {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 6px;
-}
-
-.secondary button {
-    padding: 9px 14px;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    background: transparent;
-    color: #64748b;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 700;
-    transition: .2s;
-}
-
-.secondary button:hover {
-    border-color: #dbeafe;
-    background: #eff6ff;
-    color: #2563eb;
-}
-
-
-/* =========================================================
-   FULL PAGE LOADER
-========================================================= */
-
-.page-loader {
-    position: fixed;
-    inset: 0;
-    z-index: 999999;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    padding: 20px;
-    background: rgba(15,23,42,.58);
-    backdrop-filter: blur(8px);
-}
-
-.loader-card {
-    width: min(360px,100%);
-    padding: 30px 28px 25px;
-    border: 1px solid rgba(255,255,255,.9);
-    border-radius: 18px;
-    background: rgba(255,255,255,.98);
-    box-shadow: 0 25px 70px rgba(15,23,42,.30);
-    text-align: center;
-}
-
-.loader-icon {
-    position: relative;
-    width: 64px;
-    height: 64px;
-    display: grid;
-    place-items: center;
-    margin: 0 auto 17px;
-    border-radius: 50%;
-    background: linear-gradient(
-        135deg,
-        #eff6ff,
-        #eef2ff
-    );
-    color: #2563eb;
-}
-
-.loader-ring {
-    position: absolute;
-    inset: -3px;
-    border: 4px solid #dbeafe;
-    border-top-color: #2563eb;
-    border-right-color: #4f46e5;
-    border-radius: 50%;
-    animation: loaderSpin .8s linear infinite;
-}
-
-.loader-icon i {
-    font-size: 20px;
-}
-
-.loader-card h3 {
-    margin: 0;
-    color: #172033;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.loader-card p {
-    min-height: 17px;
-    margin: 6px 0 0;
-    color: #64748b;
-    font-size: 11px;
-}
-
-.loader-progress {
-    height: 9px;
-    margin-top: 20px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: #e7edf7;
-}
-
-.loader-progress span {
-    display: block;
-    width: 0;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(
-        90deg,
-        #2563eb,
-        #4f46e5
-    );
-    transition: width .08s linear;
-}
-
-.loader-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 8px;
-}
-
-.loader-bottom strong {
-    color: #2563eb;
-    font-size: 13px;
-}
-
-.loader-bottom span {
-    color: #94a3b8;
-    font-size: 9px;
-}
-
-
-@keyframes loaderSpin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-/* =========================================================
-   DRAG
-========================================================= */
-
-#uploadBox.drag-active {
-    border-color: #2563eb;
-    background: #eff6ff;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:767px) {
-
-    .editor-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 7px;
-    }
-
-    .preview-area {
-        min-height: 320px;
-    }
-
-    .file-info {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .file-name {
-        grid-column: 1 / -1;
-    }
-
-    .tools {
-        flex-wrap: wrap;
-    }
-
-    .tool-group {
-        flex: 1;
-    }
-
-    .tool {
-        flex: 1;
-        min-width: 0;
-        padding: 0 10px;
-    }
-
-    .brush {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .brush input {
-        flex: 1;
-        width: auto;
-    }
-
-    .secondary {
-        flex-wrap: wrap;
-    }
-
-    .secondary button {
-        font-size: 12px;
-    }
-
-    .loader-card {
-        padding: 27px 22px 23px;
-    }
-
-}
-
-</style>
-
+        async function removeWithAI(file) {
+            if (!API) return localRemove(file);
+            try {
+                const fd = new FormData();
+                fd.append('image', file);
+                const r = await fetch(API, {
+                    method: 'POST',
+                    body: fd
+                });
+                if (!r.ok) throw new Error('AI endpoint failed');
+                return await r.blob()
+            } catch (e) {
+                console.warn('PixelFlow AI endpoint unavailable, using browser model.', e);
+                return localRemove(file)
+            }
+        }
+        async function process(file) {
+            overlay.classList.add('show');
+            prog(3, 'Preparing your image...', 'Preparing image');
+            const srcURL = URL.createObjectURL(file);
+            try {
+                originalImage = await loadImage(srcURL);
+                prog(8, API ? 'Connecting to PixelFlow AI...' : 'Loading high-quality AI segmentation model...',
+                    'AI background removal');
+                resultBlob = await removeWithAI(file);
+                prog(96, 'Refining transparent edges...', 'Finalizing cutout');
+                resultImage = await loadImage(URL.createObjectURL(resultBlob));
+                canvas.width = resultImage.naturalWidth;
+                canvas.height = resultImage.naturalHeight;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(resultImage, 0, 0);
+                originalCanvas = document.createElement('canvas');
+                originalCanvas.width = originalImage.naturalWidth;
+                originalCanvas.height = originalImage.naturalHeight;
+                originalCanvas.getContext('2d').drawImage(originalImage, 0, 0);
+                history = [];
+                future = [];
+                save();
+                $('#emptyEditor').classList.add('hidden');
+                $('#stageStatus').textContent = 'Background removed • AI cutout ready';
+                $('#fileName').textContent = file.name;
+                $('#fileInfo').textContent = canvas.width + ' × ' + canvas.height + ' • AI transparent cutout';
+                $('#heroThumb').style.backgroundImage = `url(${URL.createObjectURL(resultBlob)})`;
+                uploadShell.style.display = 'none';
+                editor.style.display = 'block';
+                view();
+                prog(100, 'Your transparent cutout is ready.', 'Background removed');
+                setTimeout(() => overlay.classList.remove('show'), 450)
+            } catch (e) {
+                console.error(e);
+                prog(100, 'Could not process this image. Please try again.', 'Processing failed');
+                setTimeout(() => overlay.classList.remove('show'), 1500)
+            } finally {
+                URL.revokeObjectURL(srcURL)
+            }
+        }
+        input.addEventListener('change', e => e.target.files[0] && process(e.target.files[0]));
+        $('#uploadBtn').onclick = () => input.click();
+        $('#newImageBtn').onclick = () => input.click();
+        $('#addThumb').onclick = () => input.click();
+        const designEditor = $('#designEditor');
+        designEditor.addEventListener('dragover', e => {
+            e.preventDefault();
+            designEditor.classList.add('drag-active')
+        });
+        designEditor.addEventListener('dragleave', () => designEditor.classList.remove('drag-active'));
+        designEditor.addEventListener('drop', e => {
+            e.preventDefault();
+            designEditor.classList.remove('drag-active');
+            const f = e.dataTransfer.files[0];
+            if (f && f.type.startsWith('image/')) process(f)
+        });
+        uploadShell.addEventListener('dragover', e => {
+            e.preventDefault();
+            uploadShell.classList.add('drag-active')
+        });
+        uploadShell.addEventListener('dragleave', () => uploadShell.classList.remove('drag-active'));
+        uploadShell.addEventListener('drop', e => {
+            e.preventDefault();
+            uploadShell.classList.remove('drag-active');
+            const f = e.dataTransfer.files[0];
+            if (f && f.type.startsWith('image/')) process(f)
+        });
+        $$('.editor-tab').forEach(tab => tab.onclick = () => {
+            $$('.editor-tab').forEach(x => x.classList.remove('active'));
+            tab.classList.add('active');
+            $$('.panel-view').forEach(x => x.classList.remove('active'));
+            $('#panel-' + tab.dataset.panel).classList.add('active')
+        });
+        $$('.brush-tool').forEach(b => b.onclick = () => {
+            $$('.brush-tool').forEach(x => x.classList.remove('active'));
+            b.classList.add('active');
+            tool = b.dataset.tool;
+            $('#stageStatus').textContent = tool === 'erase' ? 'Erase mode • Paint unwanted areas' :
+                'Restore mode • Paint areas back';
+        });
+        $('#brushSize').oninput = e => {
+            $('#brushValue').textContent = e.target.value;
+            cursor.style.width = e.target.value + 'px';
+            cursor.style.height = e.target.value + 'px'
+        };
+
+        function updateCursor(e) {
+            const r = canvas.getBoundingClientRect();
+            cursor.style.left = (e.clientX - r.left) + 'px';
+            cursor.style.top = (e.clientY - r.top) + 'px';
+            cursor.style.display = 'block';
+            cursor.classList.toggle('restore', tool === 'restore')
+        }
+        canvas.addEventListener('pointerenter', updateCursor);
+        canvas.addEventListener('pointermove', e => {
+            updateCursor(e);
+            if (drawing) paint(e)
+        });
+        canvas.addEventListener('pointerleave', () => cursor.style.display = 'none');
+
+        function paint(e) {
+            if (!originalCanvas) return;
+            const r = canvas.getBoundingClientRect(),
+                x = (e.clientX - r.left) * canvas.width / r.width,
+                y = (e.clientY - r.top) * canvas.height / r.height,
+                s = +$('#brushSize').value * canvas.width / r.width;
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(x, y, s / 2, 0, Math.PI * 2);
+            if (tool === 'erase') {
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.fill()
+            } else {
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.clip();
+                ctx.drawImage(originalCanvas, 0, 0)
+            }
+            ctx.restore();
+            view();
+            updateCursor(e)
+        }
+        canvas.onpointerdown = e => {
+            drawing = true;
+            canvas.setPointerCapture(e.pointerId);
+            paint(e)
+        };
+        canvas.onpointerup = () => {
+            if (drawing) {
+                save();
+                drawing = false
+            }
+        };
+        canvas.onpointercancel = () => drawing = false;
+        $('#undoBtn').onclick = () => {
+            if (history.length > 1) {
+                future.push(history.pop());
+                ctx.putImageData(history[history.length - 1], 0, 0);
+                view()
+            }
+        };
+        $('#redoBtn').onclick = () => {
+            if (future.length) {
+                const d = future.pop();
+                history.push(d);
+                ctx.putImageData(d, 0, 0);
+                view()
+            }
+        };
+        $('#resetCutout').onclick = () => {
+            if (resultImage) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(resultImage, 0, 0);
+                save();
+                view()
+            }
+        };
+        $('#zoomIn').onclick = () => {
+            zoom = Math.min(1.8, zoom + .1);
+            $('#zoomLabel').textContent = Math.round(zoom * 100) + '%';
+            view()
+        };
+        $('#zoomOut').onclick = () => {
+            zoom = Math.max(.5, zoom - .1);
+            $('#zoomLabel').textContent = Math.round(zoom * 100) + '%';
+            view()
+        };
+        $$('.bg-choice').forEach(b => b.onclick = () => {
+            $$('.bg-choice').forEach(x => x.classList.remove('active'));
+            b.classList.add('active');
+            background = b.dataset.bg;
+            $('#stageWrap').style.setProperty('--custom-bg', background === 'gradient' ?
+                'linear-gradient(135deg,#2563eb,#111827)' : background)
+        });
+        $('#bgColor').oninput = e => {
+            $('#stageWrap').style.setProperty('--custom-bg', e.target.value);
+            background = e.target.value
+        };
+
+        function filters() {
+            canvas.style.filter = `brightness(${100+brightness}%) contrast(${100+contrast}%) saturate(${100+saturation}%)`
+        };
+        [
+            ['brightness', 'brightnessVal'],
+            ['contrast', 'contrastVal'],
+            ['saturation', 'saturationVal']
+        ].forEach(([a, b]) => $('#' + a).oninput = e => {
+            window[a] = +e.target.value;
+            $('#' + b).textContent = e.target.value;
+            filters()
+        });
+        $('#resetAdjust').onclick = () => {
+            brightness = contrast = saturation = 0;
+            ['brightness', 'contrast', 'saturation'].forEach(x => $('#' + x).value = 0);
+            ['brightnessVal', 'contrastVal', 'saturationVal'].forEach(x => $('#' + x).textContent = '0');
+            filters()
+        };
+        $('#shadowToggle').onchange = e => shadow = e.target.checked;
+        $('#outlineToggle').onchange = e => outline = e.target.checked;
+        $('#compareBtn').onclick = () => {
+            if (!originalImage) return;
+            compare.width = originalImage.naturalWidth;
+            compare.height = originalImage.naturalHeight;
+            cctx.drawImage(originalImage, 0, 0);
+            compare.style.display = 'block';
+            $('#compareClose').style.display = 'flex'
+        };
+        $('#compareClose').onclick = () => {
+            compare.style.display = 'none';
+            $('#compareClose').style.display = 'none'
+        };
+        $('#flipHorizontal').onclick = () => canvas.classList.toggle('flipped');
+        $('#fitSubject').onclick = () => {
+            zoom = 1;
+            $('#zoomLabel').textContent = '100%';
+            view()
+        };
+        $('#centerSubject').onclick = () => {
+            zoom = 1;
+            $('#zoomLabel').textContent = '100%';
+            view()
+        };
+        $('#eraseDistractions').onclick = () => {
+            tool = 'erase';
+            $$('.brush-tool').forEach(x => x.classList.toggle('active', x.dataset.tool === 'erase'));
+            $('#stageStatus').textContent = 'Erase distractions mode'
+        };
+
+        function exportCanvas() {
+            if (!canvas.width) return;
+            const out = document.createElement('canvas');
+            out.width = canvas.width;
+            out.height = canvas.height;
+            const o = out.getContext('2d');
+            if (background === 'gradient') {
+                const g = o.createLinearGradient(0, 0, out.width, out.height);
+                g.addColorStop(0, '#2563eb');
+                g.addColorStop(1, '#111827');
+                o.fillStyle = g;
+                o.fillRect(0, 0, out.width, out.height)
+            } else if (background !== 'transparent') {
+                o.fillStyle = background;
+                o.fillRect(0, 0, out.width, out.height)
+            }
+            o.filter = `brightness(${100+brightness}%) contrast(${100+contrast}%) saturate(${100+saturation}%)`;
+            if (shadow) {
+                o.save();
+                o.shadowColor = 'rgba(0,0,0,.38)';
+                o.shadowBlur = 28;
+                o.shadowOffsetY = 14;
+                o.drawImage(canvas, 0, 0);
+                o.restore()
+            } else o.drawImage(canvas, 0, 0);
+            return out
+        }
+        $('#downloadTop').onclick = () => {
+            const out = exportCanvas();
+            if (out) out.toBlob(b => {
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(b);
+                a.download = (($('#fileName').textContent || 'image').replace(/\.[^.]+$/, '')) +
+                    '-no-background.png';
+                a.click()
+            }, 'image/png')
+        };
+        window.addEventListener('resize', view);
+        const navbar = $('#morphNavbar');
+        window.addEventListener('scroll', () => navbar && navbar.classList.toggle('scrolled', scrollY > 50));
+        $('#mobileToggleBtn').onclick = () => $('#navLinksWrapper').classList.toggle('mobile-open');
+    </script>
 @endsection
+

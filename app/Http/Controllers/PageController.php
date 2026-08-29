@@ -41,9 +41,9 @@ class PageController extends Controller
 {
     return view('pages.image_resizer');
 }
-    public function imageToJpg()
+    public function imageConverter()
 {
-    return view('pages.image_to_jpg');
+    return view('pages.image_converter');
 }
 public function backgroundRemover()
 {
