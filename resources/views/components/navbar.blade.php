@@ -27,7 +27,7 @@
                 </div>
 
                 <a href="{{ route('contact') }}" class="nav-link-item">Contact Us</a>
-                <a href="#" class="nav-link-item">Login</a>
+                <a href="{{route('blog.index')}}" class="nav-link-item">Blog</a>
                 <a href="#" class="nav-link-item">Pricing</a>
 
                 <!-- API Docs Dropdown -->

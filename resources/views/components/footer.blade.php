@@ -54,8 +54,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 PixelFlow App. All rights reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
+                    <a href="{{ route('terms-and-conditions') }}">Terms of Service</a>
                     <a href="#">Security</a>
                 </div>
             </div>

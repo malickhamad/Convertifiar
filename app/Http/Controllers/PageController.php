@@ -16,12 +16,12 @@ class PageController extends Controller
         return view('pages.contact');
     }
 
-    public function privacy()
+    public function privacyPolicy()
     {
         return view('pages.privacy-policy');
     }
 
-    public function terms()
+    public function termsAndConditions()
     {
         return view('pages.terms-and-conditions');
     }
