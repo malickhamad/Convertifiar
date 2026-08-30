@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -49,4 +51,34 @@ public function backgroundRemover()
 {
     return view('pages.background_remover');
 }
+
+public function contactStore(Request $request)
+{
+    // dd($request->all());
+    $request->validate([
+        'name' => 'required|string|max:100',
+        'email' => 'required|email|max:150',
+        'subject' => 'required|string|max:200',
+        'message' => 'required|string|max:5000',
+    ]);
+
+    Mail::raw(
+        "Name: {$request->name}\n" .
+        "Email: {$request->email}\n\n" .
+        "Message:\n{$request->message}",
+        function ($mail) use ($request) {
+
+            $mail->to('adrashumair01@gmail.com')
+                 ->subject($request->subject)
+                 ->replyTo($request->email, $request->name);
+        }
+    );
+
+    return back()->with(
+        'success',
+        'Thank you for contacting us. Your message has been sent successfully.'
+    );
+}
+
+
 }

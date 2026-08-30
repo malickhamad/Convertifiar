@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="nav-link-item">Features</a>
+                <a href="{{ route('contact') }}" class="nav-link-item">Contact Us</a>
                 <a href="#" class="nav-link-item">Login</a>
                 <a href="#" class="nav-link-item">Pricing</a>
 
