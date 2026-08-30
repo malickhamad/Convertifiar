@@ -51,7 +51,7 @@
                 </h1>
 
 
-                <p class="lead text-secondary mx-auto mb-4 col-lg-6 col-10">
+                <p class="lead text-secondary mx-auto mb-4 col-lg-8 col-10">
 
                     We respect your privacy. Here's a clear explanation
                     of how Tool Baazar handles information when you use
