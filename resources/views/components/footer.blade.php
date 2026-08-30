@@ -45,7 +45,7 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">Contact Support</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="{{ route('blog.index') }}">Blog</a></li>
                     </ul>
                 </div>
             </div>
