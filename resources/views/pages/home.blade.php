@@ -120,7 +120,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="tool-card anim-border">
                     <div class="icon-box bg-purple"><i class="fas fa-paint-brush"></i></div>
-                    <h5>Photo editor</h5>
+                    <h5>Photo editorrr</h5>
                     <p>Spice up your pictures with text, effects, frames or stickers. Simple editing tools for your image
                         needs.</p>
                 </div>
