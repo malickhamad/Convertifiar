@@ -96,7 +96,24 @@
             </div>
 
             <!-- Tool 4 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+
+<div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+    <a target="_blank" href="{{ route('image.rotator') }}" class="text-decoration-none">
+        <div class="tool-card anim-border">
+            <div class="icon-box bg-cyan">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <h5>Rotate IMAGE</h5>
+            <p>Rotate JPG, PNG, GIF, and WebP images easily by 90°, 180°, or 270° with a simple online tool.</p>
+        </div>
+    </a>
+</div>
+
+
+
+            <!-- Tool 5 -->
+
+                  <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
                 <a target="_blank" href="{{ route('image.converter') }}" class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
@@ -107,34 +124,40 @@
 
             </div>
 
-            <!-- Tool 5 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
-                <div class="tool-card anim-border">
-                    <div class="icon-box bg-yellow"><i class="fas fa-file-import"></i></div>
-                    <h5>Convert from JPG</h5>
-                    <p>Turn JPG images to PNG and GIF. Choose several JPGs to create an animated GIF in seconds!</p>
-                </div>
-            </div>
-
+     
             <!-- Tool 6 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                            <a target="_blank" href="{{ route('video.to.audio') }}" class="text-decoration-none">
                 <div class="tool-card anim-border">
-                    <div class="icon-box bg-purple"><i class="fas fa-paint-brush"></i></div>
-                    <h5>Photo editor</h5>
-                    <p>Spice up your pictures with text, effects, frames or stickers. Simple editing tools for your image
-                        needs.</p>
+                    <div class="icon-box bg-purple"><i class="fas fa-music"></i></div>
+                    <h5>Video to Audio</h5>
+                    <p>Convert your videos into high-quality audio files quickly and easily. Upload a video, convert it, and download the audio.</p>
                 </div>
+                </a>
             </div>
 
             <!-- Tool 7 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-                <div class="tool-card anim-border">
-                    <span class="badge-new">New!</span>
-                    <div class="icon-box bg-green"><i class="fas fa-search-plus"></i></div>
-                    <h5>Upscale Image</h5>
-                    <p>Enlarge your images with high resolution. Easily increase the size of your JPG and PNG images.</p>
-                </div>
+    
+<div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+    <a target="_blank" href="{{ route('pdf.editor') }}" class="text-decoration-none">
+        <div class="tool-card anim-border">
+            <span class="badge-new">New!</span>
+
+            <div class="icon-box bg-green">
+                <i class="fas fa-file-pdf"></i>
             </div>
+
+            <h5>PDF Editor</h5>
+
+            <p>
+                Edit PDF files online with ease. Add text, rotate, reorder,
+                duplicate and delete pages, then download your edited PDF.
+            </p>
+        </div>
+    </a>
+</div>
+
+
 
             <!-- Tool 8 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
@@ -152,14 +175,24 @@
             </div>
 
             <!-- Tool 9 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="450">
-                <div class="tool-card anim-border">
-                    <div class="icon-box bg-blue"><i class="fas fa-stamp"></i></div>
-                    <h5>Watermark IMAGE</h5>
-                    <p>Stamp an image or text over your images in seconds. Choose the typography, transparency and position.
-                    </p>
-                </div>
+      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+    <a target="_blank" href="{{ route('pdf.to.word') }}" class="text-decoration-none">
+        <div class="tool-card anim-border">
+            <span class="badge-new">New!</span>
+
+            <div class="icon-box bg-green">
+                <i class="fas fa-file-word"></i>
             </div>
+
+            <h5>PDF to Word</h5>
+
+            <p>
+                Convert PDF files into editable Word documents quickly,
+                accurately and securely.
+            </p>
+        </div>
+    </a>
+</div>
 
             <!-- Tool 10 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">

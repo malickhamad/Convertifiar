@@ -81,4 +81,21 @@ public function contactStore(Request $request)
 }
 
 
+  public function videoToAudio()
+{
+    return view('pages.video_to_audio');
+}
+  public function imageRotator()
+{
+    return view('pages.image_rotator');
+}
+  public function pdfEditor()
+{
+    return view('pages.pdf_editor');
+}
+  public function pdfToWord()
+{
+    return view('pages.pdf_to_word');
+}
+
 }
