@@ -214,7 +214,7 @@
                     </div>
                 </a>
             </div>
-            <!-- Tool 11 -->
+            {{-- <!-- Tool 11 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="550">
                 <div class="tool-card anim-border">
                     <div class="icon-box bg-cyan"><i class="fas fa-sync-alt"></i></div>
@@ -233,7 +233,7 @@
                     <p>Easily blur out faces in photos. You can also blur licence plates and other objects to hide private
                         info.</p>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </section>
