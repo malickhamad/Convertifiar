@@ -1,6 +1,14 @@
   <!-- ========================================= -->
   <!-- Morphing Dynamic Navbar -->
   <!-- ========================================= -->
+  <style>
+    .brand-logo-img {
+    height: auto !important; /* Text header height ke mutabiq adjustment */
+    width: 170px !important;  /* Aspect ratio maintain rakhne ke liye */
+    object-fit: contain;
+    display: block;
+}
+  </style>
   <header class="dynamic-navbar" id="morphNavbar">
       <div class="nav-container">
           <!-- Left: Logo -->
