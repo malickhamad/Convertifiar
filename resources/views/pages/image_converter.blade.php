@@ -40,7 +40,7 @@
 
                 <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="100">
 
-                    {{-- <input type="file" id="converterFileInput" accept="image/*" multiple hidden> --}}
+                    <input type="file" id="converterFileInput" accept="image/*" multiple hidden>
 
                     {{-- <div class="converter-upload" id="converterUpload"
                         onclick="document.getElementById('converterFileInput').click()">
