@@ -25,6 +25,10 @@ class PageController extends Controller
     {
         return view('pages.terms-and-conditions');
     }
+    public function aboutUs()
+{
+    return view('pages.about_us');
+}
     public function sitemap()
     {
         return response()
