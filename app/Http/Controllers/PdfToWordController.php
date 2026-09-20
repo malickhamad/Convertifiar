@@ -120,7 +120,7 @@ class PdfToWordController extends Controller
         $path = storage_path('app/' . $this->toolFolder . '/' . $batch . '/' . $filename);
         abort_unless(is_file($path), 404);
 
-        return response()->download($path, $filename)->deleteFileAfterSend(true);
+        return response()->download($path, $filename);
     }
 
     /**
@@ -148,8 +148,7 @@ class PdfToWordController extends Controller
         });
 
         return response()
-            ->download($path, $filename)
-            ->deleteFileAfterSend(true);
+            ->download($path, $filename);
     }
     /**
      * Auto-create the tool folder if missing.

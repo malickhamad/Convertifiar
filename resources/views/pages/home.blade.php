@@ -97,23 +97,23 @@
 
             <!-- Tool 4 -->
 
-<div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
-    <a target="_blank" href="{{ route('image.rotator') }}" class="text-decoration-none">
-        <div class="tool-card anim-border">
-            <div class="icon-box bg-cyan">
-                <i class="fas fa-sync-alt"></i>
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                <a target="_blank" href="{{ route('image.rotator') }}" class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <div class="icon-box bg-cyan">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h5>Rotate IMAGE</h5>
+                        <p>Rotate JPG, PNG, GIF, and WebP images easily by 90°, 180°, or 270° with a simple online tool.</p>
+                    </div>
+                </a>
             </div>
-            <h5>Rotate IMAGE</h5>
-            <p>Rotate JPG, PNG, GIF, and WebP images easily by 90°, 180°, or 270° with a simple online tool.</p>
-        </div>
-    </a>
-</div>
 
 
 
             <!-- Tool 5 -->
 
-                  <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
                 <a target="_blank" href="{{ route('image.converter') }}" class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
@@ -124,86 +124,96 @@
 
             </div>
 
-     
+
             <!-- Tool 6 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                            <a target="_blank" href="{{ route('video.to.audio') }}" class="text-decoration-none">
-                <div class="tool-card anim-border">
-                    <div class="icon-box bg-purple"><i class="fas fa-music"></i></div>
-                    <h5>Video to Audio</h5>
-                    <p>Convert your videos into high-quality audio files quickly and easily. Upload a video, convert it, and download the audio.</p>
-                </div>
+                <a target="_blank" href="{{ route('video.to.audio') }}" class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <div class="icon-box bg-purple"><i class="fas fa-music"></i></div>
+                        <h5>Video to Audio</h5>
+                        <p>Convert your videos into high-quality audio files quickly and easily. Upload a video, convert it,
+                            and download the audio.</p>
+                    </div>
                 </a>
             </div>
 
             <!-- Tool 7 -->
-    
-<div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-    <a target="_blank" href="{{ route('pdf.editor') }}" class="text-decoration-none">
-        <div class="tool-card anim-border">
-            <span class="badge-new">New!</span>
 
-            <div class="icon-box bg-green">
-                <i class="fas fa-file-pdf"></i>
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                <a target="_blank" href="{{ route('pdf.editor') }}" class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
+
+                        <div class="icon-box bg-green">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <h5>PDF Editor</h5>
+
+                        <p>
+                            Edit PDF files online with ease. Add text, rotate, reorder,
+                            duplicate and delete pages, then download your edited PDF.
+                        </p>
+                    </div>
+                </a>
             </div>
-
-            <h5>PDF Editor</h5>
-
-            <p>
-                Edit PDF files online with ease. Add text, rotate, reorder,
-                duplicate and delete pages, then download your edited PDF.
-            </p>
-        </div>
-    </a>
-</div>
 
 
 
             <!-- Tool 8 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                                <a target="_blank" href="{{ route('image.background_remover') }}" class="text-decoration-none">
+                <a target="_blank" href="{{ route('image.background_remover') }}" class="text-decoration-none">
 
-                <div class="tool-card anim-border">
-                    <span class="badge-new">New!</span>
-                    <div class="icon-box bg-red"><i class="fas fa-eraser"></i></div>
-                    <h5>Remove background</h5>
-                    <p>Quickly remove image backgrounds with high accuracy. Instantly detect objects and cut out
-                        backgrounds.</p>
-                </div>
-                                </a>
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
+                        <div class="icon-box bg-red"><i class="fas fa-eraser"></i></div>
+                        <h5>Remove background</h5>
+                        <p>Quickly remove image backgrounds with high accuracy. Instantly detect objects and cut out
+                            backgrounds.</p>
+                    </div>
+                </a>
 
             </div>
 
             <!-- Tool 9 -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-    <a target="_blank" href="{{ route('pdf.to.word') }}" class="text-decoration-none">
-        <div class="tool-card anim-border">
-            <span class="badge-new">New!</span>
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                <a target="_blank" href="{{ route('pdf.to.word') }}" class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
 
-            <div class="icon-box bg-green">
-                <i class="fas fa-file-word"></i>
+                        <div class="icon-box bg-green">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+
+                        <h5>PDF to Word</h5>
+
+                        <p>
+                            Convert PDF files into editable Word documents quickly,
+                            accurately and securely.
+                        </p>
+                    </div>
+                </a>
             </div>
-
-            <h5>PDF to Word</h5>
-
-            <p>
-                Convert PDF files into editable Word documents quickly,
-                accurately and securely.
-            </p>
-        </div>
-    </a>
-</div>
 
             <!-- Tool 10 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="tool-card anim-border">
-                    <div class="icon-box bg-purple"><i class="far fa-laugh-squint"></i></div>
-                    <h5>Meme generator</h5>
-                    <p>Create your memes online with ease. Caption meme images or upload your pictures to make custom memes.
-                    </p>
-                </div>
-            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                <a target="_blank" href="{{ route('word.pdf.index') }}" class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
 
+                        <div class="icon-box bg-red">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <h5>Word to PDF</h5>
+
+                        <p>
+                            Convert Word documents into universally compatible PDF files
+                            quickly, accurately and securely.
+                        </p>
+                    </div>
+                </a>
+            </div>
             <!-- Tool 11 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="550">
                 <div class="tool-card anim-border">
@@ -298,5 +308,4 @@
 @endsection
 
 @section('scripts')
-   
 @endsection

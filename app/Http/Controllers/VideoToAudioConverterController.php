@@ -284,6 +284,6 @@ class VideoToAudioConverterController extends Controller
             'Content-Disposition' => 'inline; filename="' . $filename . '"',
             'Cache-Control' => 'no-store, no-cache, must-revalidate',
             'Pragma' => 'no-cache',
-        ])->deleteFileAfterSend(true);
+        ]);
     }
 }

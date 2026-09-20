@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\PdfToWordController;
+use App\Http\Controllers\WordToPdfController;
 use App\Http\Controllers\VideoToAudioConverterController;
 
 
@@ -82,3 +83,11 @@ Route::get('/video-to-audio/download/{filename}', [
     VideoToAudioConverterController::class,
     'download'
 ])->name('video.to.audio.download');
+
+
+Route::prefix('word-to-pdf')->name('word.pdf.')->group(function () {
+    Route::get('/', [WordToPdfController::class, 'index'])->name('index');
+    Route::post('/convert', [WordToPdfController::class, 'convert'])->name('convert');
+    Route::get('/download/{batch}', [WordToPdfController::class, 'download'])->name('download');
+    Route::get('/download-zip/{batch}', [WordToPdfController::class, 'downloadZip'])->name('downloadZip');
+});
