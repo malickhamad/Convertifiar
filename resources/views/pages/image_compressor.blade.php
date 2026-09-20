@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- Upload Box -->
-                <div class="crop-upload-box" id="compressUploadBox">
+                <div class="crop-upload-box cursor-pointer" id="compressUploadBox" onclick="document.getElementById('compressImageInput').click()">
                     <div class="crop-upload-icon">
                         <i class="fas fa-cloud-upload-alt"></i>
                     </div>
@@ -233,6 +233,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
 @endsection
 
 @section('scripts')
+
     <style>
         /* =========================================
            COMPRESSOR WORKSPACE STYLES

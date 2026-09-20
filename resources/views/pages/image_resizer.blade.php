@@ -69,7 +69,8 @@
                 <!-- =================================================
                      UPLOAD BOX
                 ================================================== -->
-                <div class="crop-upload-box" id="resizeUploadBox">
+                
+                <div class="crop-upload-box cursor-pointer" id="resizeUploadBox" onclick="document.getElementById('resizeImageInput').click()">
 
                     <div class="crop-upload-icon">
                         <i class="fas fa-cloud-upload-alt"></i>
@@ -225,7 +226,7 @@
                         <!-- =================================================
                              ORIGINAL / NEW DIMENSIONS
                         ================================================== -->
-                        <div class="resizer-control-group">
+                        {{-- <div class="resizer-control-group">
 
                             <label class="resizer-control-label">Dimensions Preview</label>
 
@@ -243,7 +244,7 @@
 
                             </div>
 
-                        </div>
+                        </div> --}}
 
 
 
