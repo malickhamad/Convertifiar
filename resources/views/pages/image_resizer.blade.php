@@ -762,7 +762,7 @@
         }
 
         .resizer-success-text {
-            color: #4ade80 !important;
+            color: #2563eb !important;
         }
 
         /* Action Buttons */
@@ -824,8 +824,8 @@
         }
 
         .resizer-download-btn {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-color: transparent;
+            background: #2563eb;
+            border-color: #2563eb;
             color: #fff;
             box-shadow:
                 0 4px 20px rgba(16, 185, 129, 0.3),

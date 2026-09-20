@@ -27,9 +27,9 @@
                         convert them instantly to JPG, JPEG, PNG, WEBP, GIF,
                         or PDF.</p>
                 </div>
-                <div class="converter-workspace" data-aos="fade-up" data-aos-delay="100">
+                <div class="converter-workspace cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                     <input type="file" id="converterFileInput" accept="image/*" multiple hidden>
-                    <div class="converter-upload" id="converterUpload">
+                    <div class="converter-upload" id="converterUpload" onclick="document.getElementById('converterFileInput').click()">
                         <div class="converter-upload-icon"><i class="fas fa-cloud-arrow-up"></i></div>
                         <h3>Drop
                             your images here</h3>
@@ -40,7 +40,7 @@
                             • Multiple files supported</small>
                     </div>
                     <div class="converter-files-panel d-none" id="converterFilesPanel">
-                        <div class="converter-panel-top">
+                        {{-- <div class="converter-panel-top">
                             <div><span class="converter-mini-label">READY TO
                                     CONVERT</span>
                                 <h2><span id="imageCount">0</span> images
@@ -48,18 +48,30 @@
                             </div><button type="button" class="converter-add-btn" id="addMoreBtn"><i
                                     class="fas fa-plus"></i> Add
                                 More</button>
-                        </div>
+                        </div> --}}
+
+                        <div class="converter-panel-top">
+    <div><span class="converter-mini-label">READY TO
+            CONVERT</span>
+        <h2><span id="imageCount">0</span> images
+            selected</h2>
+    </div>
+    <div class="converter-panel-actions">
+        <button type="button" class="converter-add-btn" id="addMoreBtn"><i
+                class="fas fa-plus"></i> Add
+            More</button>
+        <button type="button" class="converter-clear-btn btn btn-danger btn-sm" id="clearAllBtn"><i
+                class="fas fa-trash-can"></i> Clear
+            All</button>
+    </div>
+</div>
+
+
+
+
+
                         <div class="converter-file-grid" id="fileGrid"></div>
                         <div class="converter-controls">
-                            <div class="converter-control-heading">
-                                <div><span class="converter-mini-label">OUTPUT
-                                        FORMAT</span>
-                                    <h3>Choose your
-                                        format</h3>
-                                </div><button type="button" class="converter-clear-btn" id="clearAllBtn"><i
-                                        class="fas fa-trash-can"></i> Clear
-                                    All</button>
-                            </div>
                             <div class="format-buttons" id="formatButtons">
                                 <button type="button" class="format-btn active"
                                     data-format="jpeg"><strong>JPEG</strong><span>Best

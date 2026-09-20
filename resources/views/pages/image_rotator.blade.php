@@ -44,7 +44,7 @@
                     </p>
                 </div>
                 <!-- Upload Box -->
-                <div class="crop-upload-box">
+                <div class="crop-upload-box cursor-pointer" onclick="document.getElementById('rotateImageInput').click()">
                     <div class="crop-upload-icon">
                         <i class="fas fa-cloud-upload-alt"></i>
                     </div>

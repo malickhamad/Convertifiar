@@ -450,7 +450,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
         }
 
         .compressor-saved-text {
-            color: #4ade80 !important;
+            color: #2563eb !important;
         }
 
         .compressor-action-buttons {
@@ -502,8 +502,8 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
         }
 
         .compressor-download-btn {
-            background: #10b981;
-            border-color: #10b981;
+            background: #2563eb;
+            border-color: #2563eb;
             color: #fff;
         }
 

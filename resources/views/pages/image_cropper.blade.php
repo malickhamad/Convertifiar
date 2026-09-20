@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- Upload Box -->
-                <div class="crop-upload-box" id="uploadBox">
+                <div class="crop-upload-box cursor-pointer" id="uploadBox" onclick="document.getElementById('cropImageInput').click()">
                     <div class="crop-upload-icon">
                         <i class="fas fa-cloud-upload-alt"></i>
                     </div>

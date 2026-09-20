@@ -117,8 +117,8 @@
                 <a target="_blank" href="{{ route('image.converter') }}" class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
-                        <h5>Convert to JPG</h5>
-                        <p>Turn PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, or RAW format images to JPG in bulk with ease.</p>
+                        <h5>Image Converter</h5>
+                        <p>Convert PNG, JPG, WebP, GIF, SVG or PDF images to any format in bulk — fast, free and right in your browser..</p>
                     </div>
                 </a>
 
