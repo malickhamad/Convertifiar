@@ -13,15 +13,15 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                    </div>  
+                    </div>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6">
                     <h4 class="footer-title">Product</h4>
-                    <ul class="footer-links">
+                    <ul class=  "footer-links">
                         <li><a href="#">All Image Tools</a></li>
-                        <li><a href="#">Desktop App</a></li>
+                        <li><a href="#">All Video Tools</a></li>
                         <li><a href="#">Mobile App</a></li>
                         <li><a href="#">Pricing</a></li>
                     </ul>

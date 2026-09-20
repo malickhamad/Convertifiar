@@ -4,8 +4,9 @@
     <header class="dynamic-navbar" id="morphNavbar">
         <div class="nav-container">
             <!-- Left: Logo -->
-            <a href="{{ route('home') }}" class="brand-logo"><i class="fas fa-layer-group text-primary me-2"></i>PixelFlow</a>
-
+<a href="{{ route('home') }}" class="brand-logo">
+    <img src="{{ asset('assets/images/logo.png') }}" alt="Convertifire" class="brand-logo-img">
+</a>
             <!-- Center: Links Pill -->
             <div class="nav-links-wrapper" id="navLinksWrapper">
                 <a href="{{ route('home') }}" class="nav-link-item">Home</a>
