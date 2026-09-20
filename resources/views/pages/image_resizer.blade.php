@@ -40,7 +40,7 @@
 
 
         <!-- =========================================================
-             HERO / UPLOAD SECTION
+             HERO / UPLOAD SECTION (hidden after upload)
         ========================================================== -->
         <section class="crop-hero-section" id="resizeUploadSection">
 
@@ -112,102 +112,36 @@
 
 
         <!-- =========================================================
-             RESIZE INFORMATION / TOOL SECTION
+             RESIZE WORKSPACE SECTION (hidden initially)
         ========================================================== -->
-        <section class="crop-info-section">
+        <section class="resizer-workspace-section" id="resizeWorkspaceSection" style="display: none;">
 
             <div class="container">
 
-                <div class="crop-info-card" id="resizeSection">
+                <div class="resizer-workspace-header">
 
+                    <h2>Resize Your Image</h2>
+
+                    <button type="button" class="resizer-cancel-btn" id="resizeCancelBtn">
+                        <i class="fas fa-times"></i>
+                        Cancel & Upload New
+                    </button>
+
+                </div>
+
+
+                <div class="resizer-main-grid">
 
                     <!-- =================================================
-                         LEFT SIDE
+                         LEFT: IMAGE PREVIEW
                     ================================================== -->
-                    <div class="crop-info-content">
+                    <div class="resizer-image-panel">
 
-                        <span class="crop-info-badge">
-                            ABOUT
-                        </span>
+                        <div class="resizer-image-container">
 
-                        <h2>
-                            Resize Images<br>
-                            <span>Without Complication</span>
-                        </h2>
-
-                        <p class="crop-info-description">
-                            Define the exact dimensions you need using pixels
-                            or percentage. Keep your image proportions with
-                            the aspect ratio lock and resize everything directly
-                            in your browser.
-                        </p>
-
-
-                        <!-- Feature 01 -->
-                        <div class="crop-feature-item">
-
-                            <div class="crop-feature-icon crop-icon-blue">
-                                <i class="fas fa-ruler-combined"></i>
-                            </div>
-
-                            <div>
-
-                                <h4>
-                                    Custom Dimensions
-                                </h4>
-
-                                <p>
-                                    Set your preferred width and height in pixels
-                                    or percentage.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Feature 02 -->
-                        <div class="crop-feature-item">
-
-                            <div class="crop-feature-icon crop-icon-purple">
-                                <i class="fas fa-link"></i>
-                            </div>
-
-                            <div>
-
-                                <h4>
-                                    Keep Aspect Ratio
-                                </h4>
-
-                                <p>
-                                    Lock proportions to prevent stretching or
-                                    distortion.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Feature 03 -->
-                        <div class="crop-feature-item">
-
-                            <div class="crop-feature-icon crop-icon-green">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-
-                            <div>
-
-                                <h4>
-                                    Secure & Private
-                                </h4>
-
-                                <p>
-                                    Your images are processed directly in your
-                                    browser.
-                                </p>
-
-                            </div>
+                            <img id="resizeImagePreview"
+                                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+                                alt="Image Resize Preview">
 
                         </div>
 
@@ -216,46 +150,29 @@
 
 
                     <!-- =================================================
-                         RIGHT SIDE
+                         RIGHT: CONTROLS
                     ================================================== -->
-                    <div class="crop-preview-wrapper">
+                    <div class="resizer-controls-panel">
 
 
                         <!-- =================================================
-                             IMAGE PREVIEW
+                             FILE INFORMATION
                         ================================================== -->
-                        <div class="crop-preview-card">
+                        <div class="resizer-file-info">
 
-                            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
-                                alt="Image Resize Preview" class="crop-preview-image" id="resizeImagePreview">
+                            <div class="resizer-file-info-card">
+                                <span class="resizer-file-info-label">File Name</span>
+                                <div class="resizer-file-info-value" id="resizeFileName">-</div>
+                            </div>
 
-                        </div>
+                            <div class="resizer-file-info-card">
+                                <span class="resizer-file-info-label">Dimensions</span>
+                                <div class="resizer-file-info-value" id="resizeOriginalDimensions">-</div>
+                            </div>
 
-
-
-                        <!-- =================================================
-                             NORMAL STATE
-                        ================================================== -->
-                        <div id="resizeNormalState">
-
-                            <div class="crop-ratio-panel">
-
-                                <span class="crop-ratio-title">
-                                    Resize Options
-                                </span>
-
-                                <div class="crop-ratio-buttons">
-
-                                    <button type="button" class="crop-ratio-btn active">
-                                        Pixels
-                                    </button>
-
-                                    <button type="button" class="crop-ratio-btn">
-                                        Percentage
-                                    </button>
-
-                                </div>
-
+                            <div class="resizer-file-info-card">
+                                <span class="resizer-file-info-label">Size</span>
+                                <div class="resizer-file-info-value" id="resizeOriginalFileSize">-</div>
                             </div>
 
                         </div>
@@ -263,294 +180,139 @@
 
 
                         <!-- =================================================
-                             RESIZE TOOL
+                             RESIZE DIMENSIONS
                         ================================================== -->
-                        <div id="resizeProcessing" style="display:none;">
+                        <div class="resizer-control-group">
 
+                            <label class="resizer-control-label">Resize Dimensions</label>
 
-                            <!-- =================================================
-                                 FILE INFORMATION
-                            ================================================== -->
-                            <div class="crop-ratio-panel mt-3">
+                            <div class="resizer-dimensions-grid">
 
-                                <span class="crop-ratio-title">
-                                    Image Information
-                                </span>
+                                <!-- Unit -->
+                                <div class="resizer-field">
+                                    <label class="resizer-field-label">Unit</label>
+                                    <select id="resizeUnit" class="resizer-select">
+                                        <option value="px">Pixels</option>
+                                        <option value="percent">Percentage</option>
+                                    </select>
+                                </div>
 
-                                <div class="row g-3">
+                                <!-- Width -->
+                                <div class="resizer-field">
+                                    <label class="resizer-field-label">Width</label>
+                                    <input type="number" id="resizeWidth" class="resizer-input" min="1" placeholder="Width">
+                                </div>
 
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-
-                                        <div>
-                                            <strong>File</strong>
-
-                                            <div id="resizeFileName" class="text-break">
-                                                -
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-
-                                        <div>
-
-                                            <strong>Original Size</strong>
-
-                                            <div id="resizeOriginalDimensions">
-                                                -
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                        <div>
-
-                                            <strong>File Size</strong>
-
-                                            <div id="resizeOriginalFileSize">
-                                                -
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
+                                <!-- Height -->
+                                <div class="resizer-field">
+                                    <label class="resizer-field-label">Height</label>
+                                    <input type="number" id="resizeHeight" class="resizer-input" min="1" placeholder="Height">
                                 </div>
 
                             </div>
 
 
-
-                            <!-- =================================================
-                                 RESIZE SETTINGS
-                            ================================================== -->
-                            <div class="crop-ratio-panel mt-3">
-
-                                <span class="crop-ratio-title">
-                                    Resize Dimensions
-                                </span>
-
-
-                                <div class="row g-3 align-items-end">
-
-
-                                    <!-- Unit -->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-
-                                        <label class="form-label">
-                                            Unit
-                                        </label>
-
-                                        <select id="resizeUnit" class="form-select">
-
-                                            <option value="px">
-                                                Pixels
-                                            </option>
-
-                                            <option value="percent">
-                                                Percentage
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-
-                                    <!-- Width -->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-
-                                        <label class="form-label">
-                                            Width
-                                        </label>
-
-                                        <input type="number" id="resizeWidth" class="form-control" min="1"
-                                            placeholder="Width">
-
-                                    </div>
-
-
-                                    <!-- Height -->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-
-                                        <label class="form-label">
-                                            Height
-                                        </label>
-
-                                        <input type="number" id="resizeHeight" class="form-control" min="1"
-                                            placeholder="Height">
-
-                                    </div>
-
-
-                                    <!-- Aspect Ratio -->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-
-                                        <button type="button" id="resizeRatioLock" class="crop-ratio-btn active w-100">
-
-                                            <i class="fas fa-lock"></i>
-
-                                            Keep Ratio
-
-                                        </button>
-
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Original / New dimensions -->
-                                <div class="row g-3 mt-2">
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                        <div>
-
-                                            <small>
-                                                Original Dimensions
-                                            </small>
-
-                                            <strong id="resizeOriginalSizeText" class="d-block">
-                                                -
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                        <div>
-
-                                            <small>
-                                                New Dimensions
-                                            </small>
-
-                                            <strong id="resizeNewSizeText" class="d-block">
-                                                -
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- =================================================
-                                 RESULT
-                            ================================================== -->
-                            <div id="resizeResult" style="display:none;">
-
-                                <div class="crop-ratio-panel mt-3">
-
-                                    <span class="crop-ratio-title">
-                                        Resize Result
-                                    </span>
-
-
-                                    <div class="row g-3">
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                            <span>
-                                                Original
-                                            </span>
-
-                                            <strong id="resizeResultOriginal" class="d-block">
-                                                -
-                                            </strong>
-
-                                        </div>
-
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                            <span>
-                                                New Size
-                                            </span>
-
-                                            <strong id="resizeResultNew" class="d-block">
-                                                -
-                                            </strong>
-
-                                        </div>
-
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-
-                                            <span>
-                                                File Size
-                                            </span>
-
-                                            <strong id="resizeResultFileSize" class="d-block">
-                                                -
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- =================================================
-                                 MAIN ACTION BUTTONS
-                            ================================================== -->
-                            <div class="crop-action-buttons mt-3">
-
-                                <button type="button" id="resizeButton" class="crop-download-btn">
-
-                                    <i class="fas fa-expand-arrows-alt"></i>
-
-                                    Resize Image
-
-                                </button>
-
-
-                                <button type="button" id="resizeDownloadButton" class="crop-download-btn"
-                                    style="display:none;">
-
-                                    <i class="fas fa-download"></i>
-
-                                    Download Image
-
-                                </button>
-
-
-                                <button type="button" id="resizeAnotherButton" style="display:none;">
-
-                                    <i class="fas fa-plus"></i>
-
-                                    Resize Another
-
-                                </button>
-
-
-                                <button type="button" id="resizeRemoveButton">
-
-                                    <i class="fas fa-trash"></i>
-
-                                    Remove
-
-                                </button>
-
-                            </div>
-
+                            <!-- Aspect Ratio Lock -->
+                            <button type="button" id="resizeRatioLock" class="resizer-ratio-btn active">
+                                <i class="fas fa-lock"></i>
+                                Keep Aspect Ratio
+                            </button>
 
                         </div>
+
+
+
+                        <!-- =================================================
+                             ORIGINAL / NEW DIMENSIONS
+                        ================================================== -->
+                        <div class="resizer-control-group">
+
+                            <label class="resizer-control-label">Dimensions Preview</label>
+
+                            <div class="resizer-result-box">
+
+                                <div class="resizer-result-item">
+                                    <span>Original:</span>
+                                    <strong id="resizeOriginalSizeText">-</strong>
+                                </div>
+
+                                <div class="resizer-result-item">
+                                    <span>New Size:</span>
+                                    <strong id="resizeNewSizeText">-</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             RESULT (hidden initially)
+                        ================================================== -->
+                        <div class="resizer-control-group" id="resizeResult" style="display: none;">
+
+                            <label class="resizer-control-label">Resize Result</label>
+
+                            <div class="resizer-result-box resizer-result-success">
+
+                                <div class="resizer-result-item">
+                                    <span>Original:</span>
+                                    <strong id="resizeResultOriginal">-</strong>
+                                </div>
+
+                                <div class="resizer-result-item">
+                                    <span>New Size:</span>
+                                    <strong id="resizeResultNew">-</strong>
+                                </div>
+
+                                <div class="resizer-result-item">
+                                    <span>File Size:</span>
+                                    <strong id="resizeResultFileSize" class="resizer-success-text">-</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             ACTION BUTTONS
+                        ================================================== -->
+                        <div class="resizer-action-buttons">
+
+                            <button type="button" class="resizer-action-btn resizer-resize-btn" id="resizeButton">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                Resize Image
+                            </button>
+
+                            <button type="button" class="resizer-action-btn resizer-download-btn" id="resizeDownloadButton" style="display: none;">
+                                <i class="fas fa-download"></i>
+                                Download Image
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             HINT
+                        ================================================== -->
+                        <div class="resizer-hint">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Use pixels for exact dimensions or percentage to scale proportionally.</span>
+                        </div>
+
+
+
+                        <!-- =================================================
+                             RESET BUTTON
+                        ================================================== -->
+                        <button type="button" class="resizer-reset-btn" id="resizeAnotherButton" style="display: none;">
+                            <i class="fas fa-redo"></i>
+                            Resize Another Image
+                        </button>
 
                     </div>
 
@@ -686,6 +448,495 @@
 @endsection
 
 @section('scripts')
+    <style>
+        /* =========================================
+           RESIZER WORKSPACE STYLES
+           (Matching compressor design)
+        ========================================= */
+
+        .resizer-workspace-section {
+            padding: 30px 0 60px;
+        }
+
+        .resizer-workspace-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .resizer-workspace-header h2 {
+            margin: 0;
+            color: #fff;
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .resizer-cancel-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+        }
+
+        .resizer-cancel-btn:hover {
+            background: rgba(239, 68, 68, 0.12);
+            border-color: rgba(239, 68, 68, 0.35);
+            color: #f87171;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);
+        }
+
+        .resizer-main-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 28px;
+            align-items: start;
+        }
+
+        /* Left Image Panel */
+        .resizer-image-panel {
+            position: relative;
+        }
+
+        .resizer-image-container {
+            width: 100%;
+            max-height: 620px;
+            background: #09090b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            position: relative;
+            background-image:
+                linear-gradient(45deg, #0f0f11 25%, transparent 25%),
+                linear-gradient(-45deg, #0f0f11 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #0f0f11 75%),
+                linear-gradient(-45deg, transparent 75%, #0f0f11 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .resizer-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Right Controls Panel */
+        .resizer-controls-panel {
+            background: linear-gradient(180deg, #131315 0%, #0f0f11 100%);
+            border: 1px solid #1f1f23;
+            border-radius: 24px;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        /* File Info Cards */
+        .resizer-file-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .resizer-file-info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.25s ease;
+        }
+
+        .resizer-file-info-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .resizer-file-info-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #71717a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .resizer-file-info-value {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            word-break: break-word;
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        /* Control Group */
+        .resizer-control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .resizer-control-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #71717a;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .resizer-control-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, #1f1f23 0%, transparent 100%);
+        }
+
+        /* Dimensions Grid */
+        .resizer-dimensions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .resizer-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .resizer-field-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #71717a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resizer-input,
+        .resizer-select {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 11px 14px;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            width: 100%;
+        }
+
+        .resizer-input:focus,
+        .resizer-select:focus {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+            color: #fff;
+            outline: none;
+        }
+
+        .resizer-input::placeholder {
+            color: #52525b;
+        }
+
+        .resizer-select option {
+            background: #131315;
+            color: #fff;
+        }
+
+        /* Ratio Lock Button */
+        .resizer-ratio-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+            width: 100%;
+        }
+
+        .resizer-ratio-btn:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #e4e4e7;
+            transform: translateY(-1px);
+        }
+
+        .resizer-ratio-btn.active {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.15));
+            border-color: rgba(59, 130, 246, 0.5);
+            color: #60a5fa;
+            box-shadow:
+                0 4px 16px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Result Box */
+        .resizer-result-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .resizer-result-box.resizer-result-success {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(59, 130, 246, 0.06));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .resizer-result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #a1a1aa;
+            padding: 13px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: background 0.2s ease;
+            gap: 12px;
+        }
+
+        .resizer-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .resizer-result-item:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .resizer-result-item strong {
+            color: #fff;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+        }
+
+        .resizer-success-text {
+            color: #4ade80 !important;
+        }
+
+        /* Action Buttons */
+        .resizer-action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .resizer-action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
+            color: #a1a1aa;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resizer-action-btn i {
+            font-size: 0.9rem;
+        }
+
+        .resizer-resize-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            border-color: transparent;
+            color: #fff;
+            box-shadow:
+                0 4px 20px rgba(59, 130, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .resizer-resize-btn:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 8px 30px rgba(59, 130, 246, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .resizer-resize-btn:active {
+            transform: translateY(0);
+        }
+
+        .resizer-resize-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .resizer-download-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-color: transparent;
+            color: #fff;
+            box-shadow:
+                0 4px 20px rgba(16, 185, 129, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .resizer-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 8px 30px rgba(16, 185, 129, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        /* Hint */
+        .resizer-hint {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 12px 14px;
+            background: rgba(59, 130, 246, 0.06);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 10px;
+            font-size: 0.78rem;
+            color: #a1a1aa;
+            line-height: 1.5;
+        }
+
+        .resizer-hint i {
+            color: #60a5fa;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Reset Button */
+        .resizer-reset-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+        }
+
+        .resizer-reset-btn:hover {
+            background: rgba(234, 179, 8, 0.1);
+            border-color: rgba(234, 179, 8, 0.3);
+            color: #fbbf24;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(234, 179, 8, 0.15);
+        }
+
+        .resizer-reset-btn i {
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .resizer-main-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .resizer-controls-panel {
+                order: 2;
+            }
+
+            .resizer-image-container {
+                max-height: 450px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .resizer-workspace-header {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .resizer-workspace-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .resizer-controls-panel {
+                padding: 20px 16px;
+            }
+
+            .resizer-dimensions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resizer-file-info-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .resizer-file-info-value {
+                text-align: left;
+            }
+        }
+    </style>
+
     <script>
         $(document).ready(function() {
 
@@ -780,6 +1031,18 @@
 
 
             /* =========================================================
+               CANCEL BUTTON
+            ========================================================== */
+
+            $('#resizeCancelBtn').on('click', function() {
+
+                resetTool(true);
+
+            });
+
+
+
+            /* =========================================================
                PROCESS IMAGE
             ========================================================== */
 
@@ -848,19 +1111,11 @@
                     .text(formatBytes(file.size));
 
 
-                $('.crop-upload-text')
-                    .html(
-                        '<strong>' +
-                        escapeHtml(file.name) +
-                        '</strong> selected'
-                    );
+                /* Hide upload/hero section, show workspace */
 
+                $('#resizeUploadSection').hide();
 
-                $('.crop-upload-info')
-                    .html(
-                        formatBytes(file.size) +
-                        ' <span>|</span> Ready to resize'
-                    );
+                $('#resizeWorkspaceSection').show();
 
 
                 loadImageDimensions(file);
@@ -913,16 +1168,6 @@
                             );
 
 
-                        $('#resizeNormalState')
-                            .hide();
-
-
-                        $('#resizeProcessing')
-                            .stop(true, true)
-                            .hide()
-                            .slideDown(350);
-
-
                         $('#resizeResult')
                             .hide();
 
@@ -936,16 +1181,18 @@
 
 
                         $('#resizeButton')
-                            .show();
+                            .show()
+                            .prop('disabled', false)
+                            .html('<i class="fas fa-expand-arrows-alt"></i> Resize Image');
 
 
-                        /* Scroll user to tool */
+                        /* Scroll user to workspace */
 
                         setTimeout(function() {
 
                             $('html, body').animate({
 
-                                scrollTop: $('#resizeSection')
+                                scrollTop: $('#resizeWorkspaceSection')
                                     .offset()
                                     .top - 20
 
@@ -1144,7 +1391,7 @@
                     $(this)
                         .addClass('active')
                         .html(
-                            '<i class="fas fa-lock"></i> Keep Ratio'
+                            '<i class="fas fa-lock"></i> Keep Aspect Ratio'
                         );
 
 
@@ -1873,44 +2120,7 @@
                 'click',
                 function() {
 
-                    resetTool();
-
-
-                    $('html, body').animate({
-
-                        scrollTop: $('#resizeUploadSection')
-                            .offset()
-                            .top
-
-                    }, 650);
-
-                }
-            );
-
-
-
-            /* =========================================================
-               REMOVE
-            ========================================================== */
-
-            $('#resizeRemoveButton').on(
-                'click',
-                function() {
-
-                    resetTool();
-
-
-                    /*
-                     * Return user to upload section
-                     */
-
-                    $('html, body').animate({
-
-                        scrollTop: $('#resizeUploadSection')
-                            .offset()
-                            .top
-
-                    }, 650);
+                    resetTool(true);
 
                 }
             );
@@ -1921,7 +2131,7 @@
                RESET
             ========================================================== */
 
-            function resetTool() {
+            function resetTool(scrollToTop) {
 
                 if (previewUrl) {
 
@@ -1952,16 +2162,6 @@
                     );
 
 
-                $('#resizeProcessing')
-                    .stop(true, true)
-                    .slideUp(250);
-
-
-                $('#resizeNormalState')
-                    .stop(true, true)
-                    .fadeIn(250);
-
-
                 $('#resizeResult')
                     .hide();
 
@@ -1975,7 +2175,9 @@
 
 
                 $('#resizeButton')
-                    .show();
+                    .show()
+                    .prop('disabled', false)
+                    .html('<i class="fas fa-expand-arrows-alt"></i> Resize Image');
 
 
                 $('#resizeFileName')
@@ -2028,22 +2230,32 @@
                 $('#resizeRatioLock')
                     .addClass('active')
                     .html(
-                        '<i class="fas fa-lock"></i> Keep Ratio'
+                        '<i class="fas fa-lock"></i> Keep Aspect Ratio'
                     );
 
 
-                $('.crop-upload-text')
-                    .html(
-                        'Drag & drop your image here or'
-                    );
+                /* Show upload/hero section, hide workspace */
+
+                $('#resizeWorkspaceSection').hide();
+
+                $('#resizeUploadSection').show();
 
 
-                $('.crop-upload-info')
-                    .html(`
-                Supports JPG, PNG, SVG, GIF, WebP
-                <span>|</span>
-                Max size: 50MB
-            `);
+                if (scrollToTop) {
+
+                    setTimeout(function() {
+
+                        $('html, body').animate({
+
+                            scrollTop: $('#resizeUploadSection')
+                                .offset()
+                                .top - 20
+
+                        }, 600);
+
+                    }, 150);
+
+                }
 
             }
 
