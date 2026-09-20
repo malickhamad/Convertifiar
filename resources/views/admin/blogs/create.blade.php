@@ -1,7 +1,7 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Create Blog | PixelFlow</title>
+    <title>Create Blog | Xconvertifire</title>
 @endsection
 
 @section('content')
@@ -25,7 +25,7 @@
             </h2>
 
             <p class="text-secondary mb-0">
-                Create a new article for PixelFlow.
+                Create a new article for Xconvertifire.
             </p>
 
         </div>
@@ -203,7 +203,7 @@
                                    class="form-control bg-black text-white border-secondary"
                                    onclick="this.showPicker()">
                         </div>
-                        
+
 
 
                         <button type="submit"
@@ -281,7 +281,7 @@
                                    name="author"
                                    value="{{ old('author') }}"
                                    class="form-control bg-black text-white border-secondary"
-                                   placeholder="PixelFlow">
+                                   placeholder="Xconvertifire">
 
                         </div>
 

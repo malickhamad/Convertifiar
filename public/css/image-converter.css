@@ -1,6 +1,6 @@
 
 /* =========================================================
-   PIXELFLOW IMAGE FORMAT CONVERTER
+   Xconvertifire IMAGE FORMAT CONVERTER
    Page-specific styles — keeps the existing dark/blue theme.
 ========================================================= */
 .converter-page{min-height:100vh;background:var(--bg-color);color:var(--text-main)}

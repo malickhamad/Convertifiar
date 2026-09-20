@@ -6,7 +6,7 @@
             <!-- Brand Info -->
             <div class="col-lg-4 col-md-6">
                 <a href="{{ route('home') }}" class="footer-logo">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="PixelFlow" class="footer-logo-img" width="55%">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Xconvertifire" class="footer-logo-img" width="55%">
                 </a>
                 <p class="footer-text">
                     The ultimate all-in-one suite to convert, compress, and edit your visual assets safely. Trusted by
@@ -70,7 +70,7 @@
 
         <!-- Bottom Footer -->
         <div class="footer-bottom">
-            <p>&copy; {{ date('Y') }} PixelFlow App. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} Xconvertifire App. All rights reserved.</p>
             <div class="footer-bottom-links">
                 <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
                 <a href="{{ route('terms-and-conditions') }}">Terms of Service</a>

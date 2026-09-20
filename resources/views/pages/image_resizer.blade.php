@@ -69,7 +69,7 @@
                 <!-- =================================================
                      UPLOAD BOX
                 ================================================== -->
-                
+
                 <div class="crop-upload-box cursor-pointer" id="resizeUploadBox" onclick="document.getElementById('resizeImageInput').click()">
 
                     <div class="crop-upload-icon">
@@ -335,7 +335,7 @@
                 <div class="crop-benefits-heading">
 
                     <span>
-                        WHY USE PIXELFLOW
+                        WHY USE Xconvertifire
                     </span>
 
                     <h2>

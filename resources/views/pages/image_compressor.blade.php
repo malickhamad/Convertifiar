@@ -187,7 +187,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
         <section class="crop-benefits-section">
             <div class="container">
                 <div class="crop-benefits-heading">
-                    <span>WHY USE PIXELFLOW</span>
+                    <span>WHY USE Xconvertifire</span>
                     <h2>Smaller. Faster. <strong>Better.</strong></h2>
                     <p>Everything you need to reduce your image file size without complicated software.</p>
                 </div>

@@ -1,7 +1,7 @@
 @extends('components.app')
 
 @section('meta')
-    <title>{{ $blog->title }} | PixelFlow</title>
+    <title>{{ $blog->title }} | Xconvertifire</title>
 @endsection
 
 @section('content')

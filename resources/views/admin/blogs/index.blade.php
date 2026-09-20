@@ -1,7 +1,7 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Manage Blogs | PixelFlow</title>
+    <title>Manage Blogs | Xconvertifire</title>
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
             </h2>
 
             <p class="text-secondary mb-0">
-                Manage your PixelFlow blog articles.
+                Manage your Xconvertifire blog articles.
             </p>
         </div>
 
@@ -342,7 +342,7 @@
                                     </h5>
 
                                     <p class="text-secondary mb-3">
-                                        Create your first PixelFlow blog article.
+                                        Create your first Xconvertifire blog article.
                                     </p>
 
                                     <a href="{{ route('admin.blogs.create') }}"

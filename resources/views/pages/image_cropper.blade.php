@@ -170,7 +170,7 @@
         <section class="crop-benefits-section">
             <div class="container">
                 <div class="crop-benefits-heading">
-                    <span>WHY USE PIXELFLOW</span>
+                    <span>WHY USE Xconvertifire</span>
                     <h2>Simple. Fast. <strong>Precise.</strong></h2>
                     <p>Everything you need to crop your images without complicated software.</p>
                 </div>
@@ -844,7 +844,7 @@
                     const downloadURL = URL.createObjectURL(blob);
                     const link = document.createElement('a');
                     link.href = downloadURL;
-                    link.download = 'pixelflow-cropped-image.jpg';
+                    link.download = 'Xconvertifire-cropped-image.jpg';
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
