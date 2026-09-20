@@ -262,11 +262,9 @@
 
                         <h3>
                             Designed for privacy
-                        </hXconvertifire
-
-                        <p>
+                            </hXconvertifire <p>
                             Images are processed directly in the browser.
-                        </p>
+                            </p>
 
                     </div>
 
@@ -280,8 +278,14 @@
 
     <div class="conversion-overlay" id="conversionOverlay">
 
-        <div class="conversion-modal">
-
+<div class="conversion-modal position-relative">
+    <button type="button"
+            id="closeConversionBtn"
+            class="btn btn-danger btn-sm rounded-circle position-absolute top-0 end-0 m-3 d-none"
+            title="Close">
+        <i class="fas fa-xmark"></i>
+    </button>
+   
             {{-- Loader --}}
             <div class="conversion-spinner" id="conversionSpinner">
 
@@ -331,6 +335,11 @@
                 Download
 
             </button>
+{{-- 
+            <button type="button" id="closeConversionBtn" class="btn btn-outline-secondary d-none mt-3">
+                <i class="fas fa-xmark me-1"></i>
+                Close
+            </button> --}}
 
         </div>
 
@@ -846,6 +855,8 @@
          */
         function showCompletedState() {
 
+            document.getElementById('closeConversionBtn').classList.remove('d-none');
+
             /*
              * Stop/hide loader
              */
@@ -857,7 +868,7 @@
             statusLabel.textContent = 'COMPLETED';
 
             conversionTitle.textContent =
-                'Conversion complete';
+                'Conversion completed Successfully';
 
             stat.textContent =
                 'Your file is ready to download.';
@@ -1061,6 +1072,11 @@
 
             }
 
+        };
+
+
+        document.getElementById('closeConversionBtn').onclick = () => {
+            overlay.classList.remove('show');
         };
     </script>
 @endsection

@@ -27,7 +27,7 @@
                         Click any text, type your changes and download your edited PDF.
                     </p>
                 </div>
-                <div class="crop-upload-box mx-auto" id="uploadArea">
+                <div class="crop-upload-box mx-auto cursor-pointer" id="uploadArea" onclick="document.getElementById('pdfFileInput').click()">
                     <div class="crop-upload-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
