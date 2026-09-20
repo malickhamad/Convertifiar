@@ -3,24 +3,18 @@
 <link rel="stylesheet" href="{{ asset('css/image-converter.css') }}">
 
 @section('meta')
-
     <title>Image Converter</title>
 
-    <meta name="description"
-        content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online quickly and easily." />
+    <meta name="description" content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online quickly and easily." />
 
     <meta property="og:title" content="Image Converter">
-    <meta property="og:description"
-        content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
+    <meta property="og:description" content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
 
     <meta property="twitter:title" content="Image Converter">
-    <meta property="twitter:description"
-        content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
-
+    <meta property="twitter:description" content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
 @endsection
 
 @section('content')
-
     <main class="converter-page">
 
         <section class="converter-hero">
@@ -44,18 +38,11 @@
 
                 </div>
 
-                <div class="converter-workspace cursor-pointer"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
+                <div class="converter-workspace cursor-pointer" data-aos="fade-up" data-aos-delay="100">
 
-                    <input type="file"
-                        id="converterFileInput"
-                        accept="image/*"
-                        multiple
-                        hidden>
+                    <input type="file" id="converterFileInput" accept="image/*" multiple hidden>
 
-                    <div class="converter-upload"
-                        id="converterUpload"
+                    {{-- <div class="converter-upload" id="converterUpload"
                         onclick="document.getElementById('converterFileInput').click()">
 
                         <div class="converter-upload-icon">
@@ -70,9 +57,7 @@
                             or select multiple images from your device
                         </p>
 
-                        <button type="button"
-                            class="converter-primary-btn"
-                            id="browseImagesBtn">
+                        <button type="button" class="converter-primary-btn" id="browseImagesBtn">
 
                             <i class="fas fa-folder-open"></i>
                             Choose Images
@@ -83,10 +68,37 @@
                             JPG, JPEG, PNG, WEBP, GIF • Multiple files supported
                         </small>
 
+                    </div> --}}
+
+
+                    <div class="crop-upload-box cursor-pointer" id="converterUpload"
+                        onclick="document.getElementById('converterFileInput').click()">
+
+                        <div class="crop-upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+
+                        <h3>Upload your images</h3>
+
+                        <p class="crop-upload-text">
+                            Drag & drop your images here or
+                        </p>
+
+                        <label for="converterFileInput" class="crop-upload-btn">
+                            <i class="fas fa-upload"></i>
+                            Choose Images
+                        </label>
+
+                        <p class="crop-upload-info">
+                            Supports JPG, JPEG, PNG, WEBP, GIF
+                            <span>|</span>
+                            Multiple files supported
+                        </p>
+
                     </div>
 
-                    <div class="converter-files-panel d-none"
-                        id="converterFilesPanel">
+
+                    <div class="converter-files-panel d-none" id="converterFilesPanel">
 
                         <div class="converter-panel-top">
 
@@ -105,18 +117,14 @@
 
                             <div class="converter-panel-actions">
 
-                                <button type="button"
-                                    class="converter-add-btn"
-                                    id="addMoreBtn">
+                                <button type="button" class="converter-add-btn" id="addMoreBtn">
 
                                     <i class="fas fa-plus"></i>
                                     Add More
 
                                 </button>
 
-                                <button type="button"
-                                    class="converter-clear-btn btn btn-danger btn-sm"
-                                    id="clearAllBtn">
+                                <button type="button" class="converter-clear-btn btn btn-danger btn-sm" id="clearAllBtn">
 
                                     <i class="fas fa-trash-can"></i>
                                     Clear All
@@ -127,18 +135,14 @@
 
                         </div>
 
-                        <div class="converter-file-grid"
-                            id="fileGrid">
+                        <div class="converter-file-grid" id="fileGrid">
                         </div>
 
                         <div class="converter-controls">
 
-                            <div class="format-buttons"
-                                id="formatButtons">
+                            <div class="format-buttons" id="formatButtons">
 
-                                <button type="button"
-                                    class="format-btn active"
-                                    data-format="jpeg">
+                                <button type="button" class="format-btn active" data-format="jpeg">
 
                                     <strong>JPEG</strong>
 
@@ -148,9 +152,7 @@
 
                                 </button>
 
-                                <button type="button"
-                                    class="format-btn"
-                                    data-format="jpg">
+                                <button type="button" class="format-btn" data-format="jpg">
 
                                     <strong>JPG</strong>
 
@@ -160,9 +162,7 @@
 
                                 </button>
 
-                                <button type="button"
-                                    class="format-btn"
-                                    data-format="png">
+                                <button type="button" class="format-btn" data-format="png">
 
                                     <strong>PNG</strong>
 
@@ -172,9 +172,7 @@
 
                                 </button>
 
-                                <button type="button"
-                                    class="format-btn"
-                                    data-format="webp">
+                                <button type="button" class="format-btn" data-format="webp">
 
                                     <strong>WEBP</strong>
 
@@ -184,9 +182,7 @@
 
                                 </button>
 
-                                <button type="button"
-                                    class="format-btn"
-                                    data-format="gif">
+                                <button type="button" class="format-btn" data-format="gif">
 
                                     <strong>GIF</strong>
 
@@ -196,9 +192,7 @@
 
                                 </button>
 
-                                <button type="button"
-                                    class="format-btn"
-                                    data-format="pdf">
+                                <button type="button" class="format-btn" data-format="pdf">
 
                                     <strong>PDF</strong>
 
@@ -210,9 +204,7 @@
 
                             </div>
 
-                            <button type="button"
-                                class="converter-convert-btn"
-                                id="convertBtn">
+                            <button type="button" class="converter-convert-btn" id="convertBtn">
 
                                 <span>
                                     <i class="fas fa-wand-magic-sparkles"></i>
@@ -314,14 +306,12 @@
 
     </main>
 
-    <div class="conversion-overlay"
-        id="conversionOverlay">
+    <div class="conversion-overlay" id="conversionOverlay">
 
         <div class="conversion-modal">
 
             {{-- Loader --}}
-            <div class="conversion-spinner"
-                id="conversionSpinner">
+            <div class="conversion-spinner" id="conversionSpinner">
 
                 <span></span>
 
@@ -330,8 +320,7 @@
             </div>
 
             {{-- Status --}}
-            <span class="conversion-status-label"
-                id="conversionStatusLabel">
+            <span class="conversion-status-label" id="conversionStatusLabel">
 
                 PROCESSING
 
@@ -345,15 +334,13 @@
                 Preparing your files...
             </p>
 
-            <div class="conversion-progress"
-                id="conversionProgress">
+            <div class="conversion-progress" id="conversionProgress">
 
                 <span id="conversionProgressBar"></span>
 
             </div>
 
-            <div class="conversion-progress-text"
-                id="conversionProgressTextWrapper">
+            <div class="conversion-progress-text" id="conversionProgressTextWrapper">
 
                 <span id="conversionProgressText">
                     0%
@@ -366,9 +353,7 @@
             </div>
 
             {{-- Download Button --}}
-            <button type="button"
-                id="downloadConvertedBtn"
-                class="converter-primary-btn d-none mt-3">
+            <button type="button" id="downloadConvertedBtn" class="converter-primary-btn d-none mt-3">
 
                 <i class="fas fa-download"></i>
                 Download
@@ -389,7 +374,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     <script>
-
         AOS.init({
             once: true,
             offset: 50,
@@ -637,7 +621,7 @@
                 "'": '&#39;',
                 '"': '&quot;'
 
-            }[c] || c));
+            } [c] || c));
 
         }
 
@@ -656,10 +640,10 @@
 
 
             return (
-                n / 1024 ** i
-            ).toFixed(i ? 1 : 0) +
-            ' ' +
-            u[i];
+                    n / 1024 ** i
+                ).toFixed(i ? 1 : 0) +
+                ' ' +
+                u[i];
 
         }
 
@@ -738,9 +722,9 @@
             return new Promise(r =>
                 c.toBlob(
                     r,
-                    t === 'jpg' || t === 'jpeg'
-                        ? 'image/jpeg'
-                        : 'image/' + t,
+                    t === 'jpg' || t === 'jpeg' ?
+                    'image/jpeg' :
+                    'image/' + t,
                     .92
                 )
             );
@@ -1106,12 +1090,9 @@
             }
 
         };
-
     </script>
-
 @endsection
 
 
 @section('scripts')
-
 @endsection
