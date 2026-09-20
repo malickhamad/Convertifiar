@@ -928,7 +928,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
             ========================================================== */
             function createName(file, extension) {
                 const name = file.name.replace(/\.[^/.]+$/, '');
-                return name + '-compressed.' + extension;
+                return name + '-x-convertifire.' + extension;
             }
 
             /* =========================================================
