@@ -14,14 +14,14 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::post('/contact', [PageController::class, 'contactStore'])->name('contact.store');
-
+Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about');
 Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 
 Route::get('/terms-and-conditions', [PageController::class, 'termsAndConditions'])->name('terms-and-conditions');
 Route::get('/sitemap.xml', [PageController::class, 'sitemap'])
     ->name('sitemap');
 
-// routes for tools 
+// routes for tools
 Route::get('/image-cropper', [PageController::class, 'imageCropper'])->name('image.cropper');
 
 Route::get('/image-compressor', [PageController::class, 'imageCompressor'])->name('image.compressor');
