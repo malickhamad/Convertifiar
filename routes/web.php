@@ -14,7 +14,7 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::post('/contact', [PageController::class, 'contactStore'])->name('contact.store');
-Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about');
+Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 
 Route::get('/terms-and-conditions', [PageController::class, 'termsAndConditions'])->name('terms-and-conditions');

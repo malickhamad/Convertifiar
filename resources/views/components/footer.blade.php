@@ -48,7 +48,7 @@
             <div class="col-lg-2 col-md-6">
                 <h4 class="footer-title">Company</h4>
                 <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{ route('about-us') }}">About Us</a></li>
                     <li><a href="#">Help Center</a></li>
                     <li><a href="{{ route('contact') }}">Contact Support</a></li>
                     <li><a href="{{ route('blog.index') }}">Blog</a></li>

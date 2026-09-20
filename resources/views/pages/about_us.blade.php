@@ -72,6 +72,7 @@
     </section>
 
 
+
     <!-- ========================================= -->
     <!-- MISSION SECTION -->
     <!-- ========================================= -->
@@ -141,6 +142,76 @@
         </div>
     </section>
 
+     <!-- ========================================= -->
+    <!-- VIDEO SHOWCASE - 3D EFFECT -->
+    <!-- ========================================= -->
+    <section class="container about-video-section">
+        <div class="row align-items-center g-5">
+
+            <!-- Left Content -->
+            <div class="col-lg-5" data-aos="fade-right">
+                <span class="about-mini-badge">See It In Action</span>
+
+                <h2 class="about-heading">
+                    Watch how <span>Xconvertify works</span>
+                </h2>
+
+                <p class="about-para">
+                    A quick look at how our tools handle your files — instantly, securely, and
+                    without any complicated setup. Whether you're editing a single image or
+                    processing hundreds of files, it's all done in a few clicks.
+                </p>
+
+                <div class="about-video-points">
+                    <div class="about-video-point">
+                        <div class="about-video-point-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h5>Instant Processing</h5>
+                            <p>No waiting, no queues — results in seconds.</p>
+                        </div>
+                    </div>
+                    <div class="about-video-point">
+                        <div class="about-video-point-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h5>Private & Secure</h5>
+                            <p>Your files stay on your device, always.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right 3D Video -->
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+                <div class="about-video-3d-wrap" id="video3dWrap">
+                    <!-- Floating badges -->
+                    <div class="about-video-float-badge about-video-float-1">
+                        <i class="fas fa-check-circle"></i> 100% Free
+                    </div>
+                    <div class="about-video-float-badge about-video-float-2">
+                        <i class="fas fa-bolt"></i> Fast
+                    </div>
+
+                    <!-- 3D Video Card -->
+                    <div class="about-video-3d" id="video3dCard">
+                        <video autoplay loop muted playsinline>
+                            <source
+                                src="https://myaio.com/wp-content/uploads/2026/07/My-AIO-Demo-Video-For-Website-Full-video.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div class="about-video-3d-overlay"></div>
+                    </div>
+
+                    <!-- Glow behind -->
+                    <div class="about-video-glow"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- ========================================= -->
     <!-- WHAT WE OFFER - BENTO GRID -->
@@ -286,76 +357,7 @@
     </section>
 
 
-    <!-- ========================================= -->
-    <!-- VIDEO SHOWCASE - 3D EFFECT -->
-    <!-- ========================================= -->
-    <section class="container about-video-section">
-        <div class="row align-items-center g-5">
 
-            <!-- Left Content -->
-            <div class="col-lg-5" data-aos="fade-right">
-                <span class="about-mini-badge">See It In Action</span>
-
-                <h2 class="about-heading">
-                    Watch how <span>Xconvertify works</span>
-                </h2>
-
-                <p class="about-para">
-                    A quick look at how our tools handle your files — instantly, securely, and
-                    without any complicated setup. Whether you're editing a single image or
-                    processing hundreds of files, it's all done in a few clicks.
-                </p>
-
-                <div class="about-video-points">
-                    <div class="about-video-point">
-                        <div class="about-video-point-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div>
-                            <h5>Instant Processing</h5>
-                            <p>No waiting, no queues — results in seconds.</p>
-                        </div>
-                    </div>
-                    <div class="about-video-point">
-                        <div class="about-video-point-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h5>Private & Secure</h5>
-                            <p>Your files stay on your device, always.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right 3D Video -->
-            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
-                <div class="about-video-3d-wrap" id="video3dWrap">
-                    <!-- Floating badges -->
-                    <div class="about-video-float-badge about-video-float-1">
-                        <i class="fas fa-check-circle"></i> 100% Free
-                    </div>
-                    <div class="about-video-float-badge about-video-float-2">
-                        <i class="fas fa-bolt"></i> Fast
-                    </div>
-
-                    <!-- 3D Video Card -->
-                    <div class="about-video-3d" id="video3dCard">
-                        <video autoplay loop muted playsinline>
-                            <source
-                                src="https://myaio.com/wp-content/uploads/2026/07/My-AIO-Demo-Video-For-Website-Full-video.mp4"
-                                type="video/mp4">
-                        </video>
-                        <div class="about-video-3d-overlay"></div>
-                    </div>
-
-                    <!-- Glow behind -->
-                    <div class="about-video-glow"></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
 
     <!-- ========================================= -->
