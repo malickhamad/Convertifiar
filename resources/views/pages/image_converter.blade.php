@@ -42,7 +42,7 @@
 
                     <input type="file" id="converterFileInput" accept="image/*" multiple hidden>
 
-                    {{-- <div class="converter-upload" id="converterUpload"
+                    <div class="crop-upload-box converter-upload" id="converterUpload"
                         onclick="document.getElementById('converterFileInput').click()">
 
                         <div class="converter-upload-icon">
@@ -68,35 +68,7 @@
                             JPG, JPEG, PNG, WEBP, GIF • Multiple files supported
                         </small>
 
-                    </div> --}}
-
-
-                    <div class="crop-upload-box cursor-pointer" id="converterUpload"
-                        onclick="document.getElementById('converterFileInput').click()">
-
-                        <div class="crop-upload-icon">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </div>
-
-                        <h3>Upload your images</h3>
-
-                        <p class="crop-upload-text">
-                            Drag & drop your images here or
-                        </p>
-
-                        <label for="converterFileInput" class="crop-upload-btn">
-                            <i class="fas fa-upload"></i>
-                            Choose Images
-                        </label>
-
-                        <p class="crop-upload-info">
-                            Supports JPG, JPEG, PNG, WEBP, GIF
-                            <span>|</span>
-                            Multiple files supported
-                        </p>
-
                     </div>
-
 
                     <div class="converter-files-panel d-none" id="converterFilesPanel">
 
