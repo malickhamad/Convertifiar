@@ -86,15 +86,27 @@
                         <div class="compressor-image-container">
                             <img id="uploadedImagePreview" src="" alt="Image Preview">
                         </div>
-                        <div class="compressor-image-info" id="imageInfoBar">
-                            <span><strong>File:</strong> <span id="fileName">-</span></span>
-                            <span><strong>Size:</strong> <span id="fileSize">-</span></span>
-                            <span><strong>Type:</strong> <span id="fileType">-</span></span>
-                        </div>
                     </div>
 
                     <!-- Right: Controls -->
                     <div class="compressor-controls-panel">
+
+                        <div class="bg-dark border rounded-3 p-3">
+    <div class="d-flex justify-content-between mb-2">
+        <span class="text-secondary">File:</span>
+        <strong class="text-white text-break" id="fileName">-</strong>
+    </div>
+
+    <div class="d-flex justify-content-between mb-2">
+        <span class="text-secondary">Size:</span>
+        <strong class="text-white" id="fileSize">-</strong>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <span class="text-secondary">Type:</span>
+        <strong class="text-white" id="fileType">-</strong>
+    </div>
+</div>
                         <!-- Compression Quality -->
                         <div class="compressor-control-group">
                             <label class="compressor-control-label">Compression Quality</label>
@@ -133,7 +145,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="compressor-action-buttons">
+                        {{-- <div class="compressor-action-buttons">
                             <button type="button" class="compressor-action-btn compressor-compress-btn" id="compressButton">
                                 <i class="fas fa-compress-alt"></i>
                                 Compress Image
@@ -142,7 +154,24 @@
                                 <i class="fas fa-download"></i>
                                 Download
                             </button>
-                        </div>
+                        </div> --}}
+
+                        <div class="compressor-action-buttons">
+    <button type="button" class="compressor-action-btn compressor-compress-btn" id="compressButton">
+        <i class="fas fa-compress-alt"></i>
+        Compress Image
+    </button>
+
+    <button type="button" class="compressor-action-btn compressor-download-btn" id="downloadButton" style="display: none;">
+        <i class="fas fa-download"></i>
+        Download
+    </button>
+</div>
+
+<small class="text-secondary d-block text-center mt-2">
+    <i class="fas fa-info-circle text-primary"></i>
+Lower the percentage to reduce file size. Minimum file sizes may reduce image quality.
+</small>
 
                         <!-- Reset Button -->
                         <button type="button" class="compressor-reset-btn" id="compressAnotherButton" style="display: none;">
