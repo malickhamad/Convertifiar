@@ -185,7 +185,7 @@
                                     </div>
                                 @endforeach
                                 {{-- Back to hero --}}
-                                <a href="{{ route('pdf.word') }}" class="btn btn-outline-light w-100 mt-3">
+                                <a href="{{ route('pdf.to.word') }}" class="btn btn-outline-light w-100 mt-3">
                                     <i class="fas fa-rotate-left me-2"></i>
                                     Convert More Files
                                 </a>
