@@ -13,9 +13,9 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
+                    </div>  
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6">
                     <h4 class="footer-title">Product</h4>
@@ -26,7 +26,7 @@
                         <li><a href="#">Pricing</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Solutions -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="footer-title">Solutions</h4>
@@ -37,7 +37,7 @@
                         <li><a href="#">For Social Media</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Company -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="footer-title">Company</h4>
@@ -49,7 +49,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Bottom Footer -->
             <div class="footer-bottom">
                 <p>&copy; 2026 PixelFlow App. All rights reserved.</p>
