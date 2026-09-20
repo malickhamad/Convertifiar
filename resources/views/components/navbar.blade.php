@@ -9,7 +9,7 @@
     display: block;
 }
   </style>
-  <header class="dynamic-navbar" id="morphNavbar">
+  <header class="dynamic-navbar" id="morphNavbar">   
       <div class="nav-container">
           <!-- Left: Logo -->
           <a href="{{ route('home') }}" class="brand-logo">

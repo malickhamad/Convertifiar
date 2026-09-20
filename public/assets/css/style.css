@@ -40,17 +40,6 @@ body {
     max-width: 1300px;
     transition: all 0.8s ease-in-out;
 }
-.brand-logo-img {
-    height: auto !important; /* Text header height ke mutabiq adjustment */
-    width: 170px !important;  /* Aspect ratio maintain rakhne ke liye */
-    object-fit: contain;
-    display: block;
-}
-
-/* Scrolled state me sizing adjust karne ke liye */
-.dynamic-navbar.scrolled .brand-logo-img {
-    height: 40px;
-}
 
 
 
