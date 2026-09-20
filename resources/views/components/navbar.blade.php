@@ -7,9 +7,7 @@
           <a href="{{ route('home') }}" class="brand-logo">
               <img src="{{ asset('assets/images/logo.png') }}" alt="Convertifire" class="brand-logo-img">
           </a>
-
-          
-            <!-- Center: Links Pill -->
+          <!-- Center: Links Pill -->
           <div class="nav-links-wrapper" id="navLinksWrapper">
               <a href="{{ route('home') }}" class="nav-link-item">Home</a>
 

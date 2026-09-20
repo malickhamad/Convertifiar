@@ -41,28 +41,18 @@ body {
     transition: all 0.8s ease-in-out;
 }
 .brand-logo-img {
-    height: 60px; /* Text header height ke mutabiq adjustment */
-    width: auto;  /* Aspect ratio maintain rakhne ke liye */
+    height: auto !important; /* Text header height ke mutabiq adjustment */
+    width: 170px !important;  /* Aspect ratio maintain rakhne ke liye */
     object-fit: contain;
     display: block;
 }
 
 /* Scrolled state me sizing adjust karne ke liye */
 .dynamic-navbar.scrolled .brand-logo-img {
-    height: 43px;
+    height: 40px;
 }
 
-/* State 1: TOP OF PAGE */
-.brand-logo {
-    font-weight: 800;
-    font-size: 1.6rem;
-    color: #fff !important;
-    text-decoration: none;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
 
-}
 
 .nav-links-wrapper {
     background-color: #262626;
