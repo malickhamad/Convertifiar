@@ -14,12 +14,13 @@
 @section('content')
     <!-- Hero Section -->
     <section class="hero-section">
- 
+
         <!-- Background Video -->
-    <video class="hero-bg-video" autoplay loop muted playsinline poster="{{ asset('assets/video/convertifire-poster.jpg') }}">
-    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+        <video class="hero-bg-video" autoplay loop muted playsinline
+            poster="{{ asset('assets/video/convertifire-poster.jpg') }}">
+            <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
         <!-- Dark Overlay over Video -->
         <div class="hero-overlay"></div>
@@ -118,7 +119,8 @@
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
                         <h5>Image Converter</h5>
-                        <p>Convert PNG, JPG, WebP, GIF, SVG or PDF images to any format in bulk — fast, free and right in your browser..</p>
+                        <p>Convert PNG, JPG, WebP, GIF, SVG or PDF images to any format in bulk — fast, free and right in
+                            your browser..</p>
                     </div>
                 </a>
 
@@ -251,9 +253,9 @@
                             automatically using our REST API.</p>
                     </div>
                     <!-- 3rd Video Placement inside Bento Box -->
-                  <video class="" autoplay loop muted playsinline>
-    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
-</video>
+                    <video class="" autoplay loop muted playsinline>
+                        <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+                    </video>
                 </div>
             </div>
 
