@@ -176,9 +176,9 @@
                   </div>
               </div>
 
-              <a href="{{ route('contact') }}" class="nav-link-item {{ request()->routeIs('contact') ? 'active' : '' }}"">Contact Us</a>
-              <a href="{{ route('blog.index') }}" class="nav-link-item {{ request()->routeIs('blog.index') ? 'active' : '' }}"">Blog</a>
               <a href="{{ route('about-us') }}" class="nav-link-item {{ request()->routeIs('about-us') ? 'active' : '' }}"">About Us</a>
+              <a href="{{ route('blog.index') }}" class="nav-link-item {{ request()->routeIs('blog.index') ? 'active' : '' }}"">Blog</a>
+              <a href="{{ route('contact') }}" class="nav-link-item {{ request()->routeIs('contact') ? 'active' : '' }}"">Contact Us</a>
 
               {{-- <!-- API Docs Dropdown -->
               <div class="nav-item-dropdown" id="apiDropdown">
