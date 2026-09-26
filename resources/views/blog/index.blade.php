@@ -17,7 +17,6 @@
 
 <div class="bg-black text-white min-vh-100" style="margin-top: 105px;">
 
-```
 {{-- Header --}}
 <div class="container pt-5 pb-4 text-center">
 
@@ -289,7 +288,6 @@
     </div>
 
 @endif
-```
 
 </div>
 
