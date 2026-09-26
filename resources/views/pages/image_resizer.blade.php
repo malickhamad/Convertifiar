@@ -1,14 +1,14 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Image cropper</title>
-    <meta name="description" content="Main Image cropper Description" />
+    <title>Image Resizer</title>
+    <meta name="description" content="Main Image Resizer Description" />
 
-    <meta property="og:title" content="Image cropper">
-    <meta property="og:description" content="Main Image cropper Description">
+    <meta property="og:title" content="Image Resizer">
+    <meta property="og:description" content="Main Image Resizer Description">
 
-    <meta property="twitter:title" content="Image cropper">
-    <meta property="twitter:description" content="Main Image cropper Description">
+    <meta property="twitter:title" content="Image Resizer">
+    <meta property="twitter:description" content="Main Image Resizer Description">
 @endsection
 
 @section('content')
