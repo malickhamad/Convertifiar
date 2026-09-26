@@ -14,12 +14,12 @@
 @section('content')
     <!-- Hero Section -->
     <section class="hero-section">
-
+ 
         <!-- Background Video -->
-        <video class="hero-bg-video" autoplay loop muted playsinline>
-            <source src="https://myaio.com/wp-content/uploads/2026/07/My-AIO-Demo-Video-For-Website-Full-video.mp4"
-                type="video/mp4">
-        </video>
+    <video class="hero-bg-video" autoplay loop muted playsinline poster="{{ asset('assets/video/convertifire-poster.jpg') }}">
+    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
         <!-- Dark Overlay over Video -->
         <div class="hero-overlay"></div>
@@ -251,11 +251,9 @@
                             automatically using our REST API.</p>
                     </div>
                     <!-- 3rd Video Placement inside Bento Box -->
-                    <video class="bento-video" autoplay loop muted playsinline>
-                        <source
-                            src="https://myaio.com/wp-content/uploads/2026/07/My-AIO-Demo-Video-For-Website-Full-video.mp4"
-                            type="video/mp4">
-                    </video>
+                  <video class="" autoplay loop muted playsinline>
+    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+</video>
                 </div>
             </div>
 

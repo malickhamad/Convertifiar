@@ -19,11 +19,9 @@
     <section class="about-hero">
 
         <!-- Background Video -->
-        <video class="about-hero-bg-video" autoplay loop muted playsinline>
-            <source src="https://myaio.com/wp-content/uploads/2026/07/My-AIO-Demo-Video-For-Website-Full-video.mp4"
-                type="video/mp4">
-        </video>
-
+      <video class="about-hero-bg-video" autoplay loop muted playsinline preload="metadata">
+    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+</video>
         <!-- Overlay -->
         <div class="about-hero-overlay"></div>
 
@@ -197,11 +195,9 @@
 
                     <!-- 3D Video Card -->
                     <div class="about-video-3d" id="video3dCard">
-                        <video autoplay loop muted playsinline>
-                            <source
-                                src="https://myaio.com/wp-content/uploads/2026/07/My-AIO-Demo-Video-For-Website-Full-video.mp4"
-                                type="video/mp4">
-                        </video>
+                       <video autoplay loop muted playsinline>
+    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+</video>
                         <div class="about-video-3d-overlay"></div>
                     </div>
 
