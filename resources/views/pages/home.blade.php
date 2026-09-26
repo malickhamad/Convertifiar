@@ -34,22 +34,19 @@
                     </div>
 
                     <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                        Every tool you could want to edit images in bulk
+                         All your file tools — in one free toolkit.
                     </h2>
 
                     <p class="hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        Your online photo editor is here and forever free! Compress, resize, convert, and edit your visual
-                        assets safely with bank-level security.
+                     Convertifire: convert, compress, edit. Images, videos, PDFs, documents. Done.
                     </p>
 
                     <!-- Filters (Left Aligned) -->
                     <div class="filter-pills" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                        <button class="pill active">All</button>
-                        <button class="pill">Optimize</button>
-                        <button class="pill">Create</button>
-                        <button class="pill">Edit</button>
-                        <button class="pill">Convert</button>
-                        <button class="pill">Security</button>
+                        <button class="pill active">Bank-Level Security</button>
+                        <button class="pill">Instant Processing</button>
+                        <button class="pill">100% Free Forever</button>
+                        <button class="pill">No Signup Required</button>
                     </div>
 
                 </div>

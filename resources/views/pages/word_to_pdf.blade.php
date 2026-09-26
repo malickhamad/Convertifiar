@@ -32,7 +32,7 @@
                     id="wordPdfForm">
                     @csrf
                     {{-- Upload Box --}}
-                    <div class="crop-upload-box mx-auto" id="uploadArea">
+                    <div class="crop-upload-box mx-auto cursor-pointer" id="uploadArea" onclick="document.getElementById('wordFile').click()">
                         <div class="crop-upload-icon">
                             <i class="fas fa-file-word"></i>
                         </div>
