@@ -43,10 +43,11 @@
 
                     <!-- Filters (Left Aligned) -->
                     <div class="filter-pills" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                        <button class="pill active">Bank-Level Security</button>
-                        <button class="pill">Instant Processing</button>
-                        <button class="pill">100% Free Forever</button>
-                        <button class="pill">No Signup Required</button>
+                        <button class="pill active">Images</button>
+                        <button class="pill">Videos</button>
+                        <button class="pill">PDFs</button>
+                        <button class="pill">Documents</button>
+                        <button class="pill">Archives</button>
                     </div>
 
                 </div>
