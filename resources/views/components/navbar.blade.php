@@ -152,7 +152,7 @@
         transform: translateX(-50%) translateY(8px) !important;
 
         border-radius: 16px !important;
-        border: 1px solid rgba(59, 130, 246, 0.25);
+        /* border: 1px solid rgba(59, 130, 246, 0.25); */
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
 
         opacity: 0;
