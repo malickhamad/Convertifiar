@@ -12,122 +12,6 @@
       }
   </style>
 
-  {{-- <style>
-    .brand-logo-img {
-        height: auto !important;
-        width: 170px !important;
-        object-fit: contain;
-        display: block;
-    }
-
-    /* ✅ Tools dropdown as 4-column grid — centered on page */
-    #toolsDropdown .nav-dropdown-menu {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 6px;
-        min-width: 720px;
-        padding: 14px;
-
-        position: fixed !important;
-        left: 50% !important;
-        right: auto !important;
-        top: 80px !important;          /* adjust to match navbar height */
-        transform: translateX(-50%) !important;
-    }
-
-    /* Keep hover state centered too (prevent parent transform override) */
-    #toolsDropdown:hover .nav-dropdown-menu {
-        transform: translateX(-50%) !important;
-    }
-</style> --}}
-
-
-  {{-- <style>
-    .brand-logo-img {
-        height: auto !important;
-        width: 170px !important;
-        object-fit: contain;
-        display: block;
-    }
-
-    /* Tools dropdown — 4-column grid, centered */
-    #toolsDropdown .nav-dropdown-menu {
-        display: grid !important;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 6px;
-        width: max-content;
-        max-width: calc(100vw - 40px);
-        padding: 14px;
-
-        position: fixed !important;
-        left: 50% !important;
-        top: 80px !important;
-        transform: translateX(-50%) !important;
-
-        background: #0b0f19 !important;
-        border-radius: 16px !important;
-        border: 1px solid rgba(59, 130, 246, 0.25);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
-    }
-
-    /* Tool item */
-    #toolsDropdown .nav-dropdown-menu a {
-        display: flex !important;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 12px;
-        font-size: 13px;
-        font-weight: 500;
-        color: #cbd5e1 !important;
-        text-decoration: none;
-        border-radius: 10px;
-        white-space: nowrap;
-        transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    #toolsDropdown .nav-dropdown-menu a i {
-        width: 32px;
-        height: 32px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 13px;
-        color: #60a5fa;
-        background: rgba(59, 130, 246, 0.12);
-        border-radius: 8px;
-        flex-shrink: 0;
-    }
-
-    #toolsDropdown .nav-dropdown-menu a:hover {
-        background: rgba(59, 130, 246, 0.15) !important;
-        color: #ffffff !important;
-    }
-
-    #toolsDropdown:hover .nav-dropdown-menu {
-        transform: translateX(-50%) !important;
-    }
-
-    /* Responsive: 2 columns on smaller screens */
-    @media (max-width: 1024px) {
-        #toolsDropdown .nav-dropdown-menu {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            width: calc(100vw - 32px);
-        }
-    }
-        @media (max-width: 768px) {
-        #toolsDropdown .nav-dropdown-menu {
-            left: 20% !important;
-            transform: translateX(-20%) !important;
-        }
-    }
-     @media (max-width: 458px) {
-        #toolsDropdown .nav-dropdown-menu {
-            left: 15% !important;
-            transform: translateX(-15%) !important;
-        }
-    }
-</style> --}}
-
 
 <style>
     .brand-logo-img {
@@ -267,7 +151,7 @@
           </a>
           <!-- Center: Links Pill -->
           <div class="nav-links-wrapper" id="navLinksWrapper">
-              <a href="{{ route('home') }}" class="nav-link-item">Home</a>
+              <a href="{{ route('home') }}" class="nav-link-item {{ request()->routeIs('home') ? 'active' : '' }}"">Home</a>
 
               <!-- Tools Dropdown -->
               <div class="nav-item-dropdown" id="toolsDropdown">
@@ -292,11 +176,11 @@
                   </div>
               </div>
 
-              <a href="{{ route('contact') }}" class="nav-link-item">Contact Us</a>
-              <a href="{{ route('blog.index') }}" class="nav-link-item">Blog</a>
-              <a href="#" class="nav-link-item">Pricing</a>
+              <a href="{{ route('contact') }}" class="nav-link-item {{ request()->routeIs('contact') ? 'active' : '' }}"">Contact Us</a>
+              <a href="{{ route('blog.index') }}" class="nav-link-item {{ request()->routeIs('blog.index') ? 'active' : '' }}"">Blog</a>
+              <a href="{{ route('about-us') }}" class="nav-link-item {{ request()->routeIs('about-us') ? 'active' : '' }}"">About Us</a>
 
-              <!-- API Docs Dropdown -->
+              {{-- <!-- API Docs Dropdown -->
               <div class="nav-item-dropdown" id="apiDropdown">
                   <a href="#" class="nav-link-item dropdown-trigger">
                       API Docs <i class="fas fa-chevron-down dropdown-caret"></i>
@@ -307,7 +191,7 @@
                       <a href="#"><i class="fas fa-cloud-upload-alt"></i> Batch Processing</a>
                       <a href="#"><i class="fas fa-code"></i> API Reference</a>
                   </div>
-              </div>
+              </div> --}}
 
           </div>
 
