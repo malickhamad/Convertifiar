@@ -1,4 +1,4 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
+﻿import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
 
 const ffmpeg = new FFmpeg();
@@ -25,8 +25,8 @@ async function loadFFmpeg() {
         throw error;
     }
 }
-   
-$(function() {           
+
+$(function() {
     const input = $('#videoInput');
     const uploadArea = $('#uploadArea');
     const videoUploadSection = $('#videoUploadSection');
