@@ -911,7 +911,55 @@
             border-color: #444
         }
 
+        /* ===== Thumb strip ===== */
+        .thumb-strip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 1280px;
+            margin: 15px auto 0;
+            padding: 0 8px
+        }
 
+        .add-thumb {
+            width: 55px;
+            height: 55px;
+            border: 1px solid #292929;
+            background: #141414;
+            color: #777;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer
+        }
+
+        .add-thumb:hover {
+            color: #fff;
+            border-color: #444
+        }
+
+        .thumb {
+            width: 55px;
+            height: 55px;
+            padding: 3px;
+            border-radius: 10px;
+            border: 2px solid #3b82f6;
+            background: #151515
+        }
+
+        .mini-checker {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .mini-checker canvas {
+            max-width: 100%;
+            max-height: 100%
+        }
 
         /* ===== Processing overlay ===== */
         .processing-overlay {
@@ -1311,7 +1359,12 @@
                         </aside>
                     </div>
                 </div>
-
+                <div class="thumb-strip d-none">
+                    <button class="add-thumb" id="addThumb"><i class="fas fa-plus"></i></button>
+                    <div class="thumb active">
+                        <div class="mini-checker"><canvas id="thumbCanvas"></canvas></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

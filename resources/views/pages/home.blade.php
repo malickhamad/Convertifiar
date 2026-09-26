@@ -14,12 +14,13 @@
 @section('content')
     <!-- Hero Section -->
     <section class="hero-section">
- 
+
         <!-- Background Video -->
-    <video class="hero-bg-video" autoplay loop muted playsinline poster="{{ asset('assets/video/convertifire-poster.jpg') }}">
-    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+        <video class="hero-bg-video" autoplay loop muted playsinline
+            poster="{{ asset('assets/video/convertifire-poster.jpg') }}">
+            <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
         <!-- Dark Overlay over Video -->
         <div class="hero-overlay"></div>
@@ -33,22 +34,20 @@
                     </div>
 
                     <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                        Every tool you could want to edit images in bulk
+                         All your file tools — in one free toolkit.
                     </h2>
 
                     <p class="hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        Your online photo editor is here and forever free! Compress, resize, convert, and edit your visual
-                        assets safely with bank-level security.
+                     Convertifire: convert, compress, edit. Images, videos, PDFs, documents. Done.
                     </p>
 
                     <!-- Filters (Left Aligned) -->
                     <div class="filter-pills" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                        <button class="pill active">All</button>
-                        <button class="pill">Optimize</button>
-                        <button class="pill">Create</button>
-                        <button class="pill">Edit</button>
-                        <button class="pill">Convert</button>
-                        <button class="pill">Security</button>
+                        <button class="pill active">Images</button>
+                        <button class="pill">Videos</button>
+                        <button class="pill">PDFs</button>
+                        <button class="pill">Documents</button>
+                        <button class="pill">Archives</button>
                     </div>
 
                 </div>
@@ -118,7 +117,8 @@
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
                         <h5>Image Converter</h5>
-                        <p>Convert PNG, JPG, WebP, GIF, SVG or PDF images to any format in bulk — fast, free and right in your browser..</p>
+                        <p>Convert PNG, JPG, WebP, GIF, SVG or PDF images to any format in bulk — fast, free and right in
+                            your browser..</p>
                     </div>
                 </a>
 
@@ -251,9 +251,9 @@
                             automatically using our REST API.</p>
                     </div>
                     <!-- 3rd Video Placement inside Bento Box -->
-                  <video class="" autoplay loop muted playsinline>
-    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
-</video>
+                    <video class="" autoplay loop muted playsinline>
+                        <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+                    </video>
                 </div>
             </div>
 

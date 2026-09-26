@@ -43,7 +43,7 @@
                     </p>
                 </div>
                 {{-- Upload Box --}}
-                <div class="crop-upload-box mx-auto" id="uploadArea">
+                <div class="crop-upload-box mx-auto cursor-pointer" id="uploadArea" onclick="document.getElementById('videoInput').click()">
                     <div class="crop-upload-icon">
                         <i class="fas fa-cloud-upload-alt"></i>
                     </div>
