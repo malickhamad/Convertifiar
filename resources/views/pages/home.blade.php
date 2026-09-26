@@ -14,7 +14,7 @@
 @section('content')
     <!-- Hero Section -->
     <section class="hero-section">
-
+ 
         <!-- Background Video -->
     <video class="hero-bg-video" autoplay loop muted playsinline poster="{{ asset('assets/video/convertifire-poster.jpg') }}">
     <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
