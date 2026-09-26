@@ -20,7 +20,7 @@
 
         <!-- Background Video -->
       <video class="about-hero-bg-video" autoplay loop muted playsinline preload="metadata">
-    <source src="{{ asset('assets/video/convertifire.mp4') }}" type="video/mp4">
+    <source src="{{ asset('assets/video/Convertifire.mp4') }}" type="video/mp4">
 </video>
         <!-- Overlay -->
         <div class="about-hero-overlay"></div>
