@@ -226,35 +226,43 @@
         <div class="row g-4">
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
+                <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-blue"><i class="fas fa-image"></i></div>
                     <h5>Image Tools</h5>
                     <p>Compress, resize, crop, rotate, and convert any image format in seconds.</p>
                 </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-purple"><i class="fas fa-video"></i></div>
                     <h5>Video Tools</h5>
                     <p>Extract audio from videos, compress files, and prepare media for any platform.</p>
                 </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-red"><i class="fas fa-file-pdf"></i></div>
                     <h5>PDF Tools</h5>
                     <p>Edit, convert, and merge PDF documents with full precision and security.</p>
                 </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-green"><i class="fas fa-file-word"></i></div>
                     <h5>Document Tools</h5>
                     <p>Seamlessly convert between Word, PDF, and other document formats.</p>
                 </div>
+                                </a>
             </div>
 
         </div>

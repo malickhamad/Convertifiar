@@ -23,7 +23,6 @@
 
 <div class="bg-black text-white min-vh-100" style="margin-top: 105px;">
 
-```
 {{-- =========================
      BLOG HEADER
 ========================== --}}
@@ -492,7 +491,6 @@
     @endif
 
 </main>
-```
 
 </div>
 

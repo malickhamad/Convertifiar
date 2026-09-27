@@ -34,20 +34,20 @@
                     </div>
 
                     <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                         All your file tools — in one free toolkit.
+                        All your file tools — in one free toolkit.
                     </h2>
 
                     <p class="hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                     Convertifire: convert, compress, edit. Images, videos, PDFs, documents. Done.
+                        Convertifire: convert, compress, edit. Images, videos, PDFs, documents. Done.
                     </p>
 
                     <!-- Filters (Left Aligned) -->
                     <div class="filter-pills" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                        <button class="pill active">Images</button>
-                        <button class="pill">Videos</button>
-                        <button class="pill">PDFs</button>
-                        <button class="pill">Documents</button>
-                        <button class="pill">Archives</button>
+                        <button class="pill" data-target="documents">All</button>
+                         <button class="pill active" data-target="images">Images</button>
+                         <button class="pill" data-target="videos">Videos</button>
+                         <button class="pill" data-target="pdfs">PDFs</button>
+                        {{-- <button class="pill">Archives</button> --}}
                     </div>
 
                 </div>
@@ -60,7 +60,7 @@
         <div class="row g-4">
 
             <!-- Tool 1 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
+            <div id="images" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
                 <a target="_blank" href="{{ route('image.compressor') }}" class="text-decoration-none">
                     <div class="tool-card  anim-border">
                         <div class="icon-box bg-green"><i class="fas fa-compress-arrows-alt"></i></div>
@@ -126,7 +126,25 @@
 
 
             <!-- Tool 6 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                <a target="_blank" href="{{ route('image.background_remover') }}" class="text-decoration-none">
+
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
+                        <div class="icon-box bg-red"><i class="fas fa-eraser"></i></div>
+                        <h5>Remove background</h5>
+                        <p>Quickly remove image backgrounds with high accuracy. Instantly detect objects and cut out
+                            backgrounds.</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Tool 7 -->
+
+
+            <div id="videos" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
                 <a target="_blank" href="{{ route('video.to.audio') }}" class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-purple"><i class="fas fa-music"></i></div>
@@ -137,9 +155,10 @@
                 </a>
             </div>
 
-            <!-- Tool 7 -->
 
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+            <!-- Tool 8 -->
+
+            <div id="pdfs" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
                 <a target="_blank" href="{{ route('pdf.editor') }}" class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <span class="badge-new">New!</span>
@@ -160,20 +179,6 @@
 
 
 
-            <!-- Tool 8 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                <a target="_blank" href="{{ route('image.background_remover') }}" class="text-decoration-none">
-
-                    <div class="tool-card anim-border">
-                        <span class="badge-new">New!</span>
-                        <div class="icon-box bg-red"><i class="fas fa-eraser"></i></div>
-                        <h5>Remove background</h5>
-                        <p>Quickly remove image backgrounds with high accuracy. Instantly detect objects and cut out
-                            backgrounds.</p>
-                    </div>
-                </a>
-
-            </div>
 
             <!-- Tool 9 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
@@ -245,10 +250,11 @@
             <div class="col-lg-6" data-aos="fade-up">
                 <div class="grid-box h-100 d-flex flex-column justify-content-between">
                     <div>
-                        <span class="badge bg-dark border border-secondary mb-3">For Developers</span>
-                        <h3>Powerful Image API Engine</h3>
-                        <p>Integrate our fast processing engine directly into your app. Resize, crop, and convert images
-                            automatically using our REST API.</p>
+                        <span class="badge bg-dark border border-secondary mb-3">All-in-One Online Tools</span>
+                        <h3>Everything You Need to Work with Files</h3>
+                        <p>Compress, resize, crop, rotate and convert images, edit PDF files, convert PDF and Word
+                            documents, remove image backgrounds, or extract audio from videos — all from one simple online
+                            platform.</p>
                     </div>
                     <!-- 3rd Video Placement inside Bento Box -->
                     <video class="" autoplay loop muted playsinline>
@@ -264,17 +270,17 @@
                         <div class="grid-box h-100 d-flex flex-column justify-content-center"
                             style="background: url('https://www.transparenttextures.com/patterns/cubes.png'), var(--card-bg);">
                             <i class="fas fa-cloud-upload-alt fa-3x text-light mb-3"></i>
-                            <h3>Batch Processing</h3>
-                            <p>Drag and drop up to 100 images at once. Apply the same edits, watermarks, or conversions
-                                across your entire gallery in one click.</p>
+                            <h3>Fast Processing</h3>
+                            <p>Get your files processed quickly with easy-to-use tools designed for everyday image, video,
+                                and PDF tasks. No complicated software or technical knowledge required.</p>
                         </div>
                     </div>
                     <div class="col-12 h-50" data-aos="fade-up" data-aos-delay="200">
                         <div class="grid-box h-100 d-flex flex-column justify-content-center">
                             <i class="fas fa-mobile-alt fa-3x text-light mb-3"></i>
                             <h3>Works on Any Device</h3>
-                            <p>No software installation required. Access your full image editing suite directly from your
-                                mobile, tablet, or desktop browser seamlessly.</p>
+                            <p>Use Tool Baazar directly from your browser on mobile, tablet, or desktop. No software
+                                installation required — just upload your file and get started.</p>
                         </div>
                     </div>
                 </div>
@@ -285,8 +291,8 @@
     <!-- Technologies Marquee -->
     <section class="py-5 text-center mt-3 border-top border-dark">
         <div data-aos="fade-up">
-            <span class="tag-badge">Trusted Infrastructure</span>
-            <h2 class="fw-bold mt-2 mb-5">Powered by industry-leading<br>cloud technology.</h2>
+            <span class="tag-badge">Work Smarter</span>
+            <h2 class="fw-bold mt-2 mb-5">Transform, optimize and manage <br>your files in just a few clicks.</h2>
         </div>
 
         <div class="marquee-container" data-aos="fade-up" data-aos-delay="100">
@@ -306,4 +312,23 @@
 @endsection
 
 @section('scripts')
+
+<script>
+$(document).ready(function () {
+
+    $('.pill').click(function () {
+
+        $('.pill').removeClass('active');
+        $(this).addClass('active');
+
+        let target = $(this).data('target');
+
+        $('#' + target)[0].scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    });
+
+});
+</script>
 @endsection

@@ -196,7 +196,7 @@
           </div>
 
           <!-- Right: Action Button (desktop) -->
-          <a href="#" class="btn-action">Start for Free</a>
+          <a href="{{ route('contact') }}" class="btn-action">Request a Tool</a>
 
           <!-- Mobile Hamburger Toggle -->
           <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle menu">
