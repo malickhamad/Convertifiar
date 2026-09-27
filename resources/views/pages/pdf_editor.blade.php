@@ -5,7 +5,7 @@
         content="Edit PDF files online like Microsoft Word. Edit text, add text, change fonts, colors, sizes and download your edited PDF with Tool Baazar.">
 @endsection
 @section('content')
-    <main class="bg-black" style="margin-top:70px;">
+    <main class="bg-black" style="margin-top:90px;">
         {{-- =========================================================
             FIRST SECTION
             KEEPING YOUR EXISTING DESIGN
@@ -27,7 +27,8 @@
                         Click any text, type your changes and download your edited PDF.
                     </p>
                 </div>
-                <div class="crop-upload-box mx-auto cursor-pointer" id="uploadArea" onclick="document.getElementById('pdfFileInput').click()">
+                <div class="crop-upload-box mx-auto cursor-pointer" id="uploadArea"
+                    onclick="document.getElementById('pdfFileInput').click()">
                     <div class="crop-upload-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
@@ -55,207 +56,6 @@
         ========================================================== --}}
         <section id="pdfEditorSection" class="d-none pb-5">
             <div class="container-fluid px-lg-4">
-                {{-- =================================================
-                    EDITOR TOOLBAR
-                ================================================== --}}
-                <div class="pdf-editor-toolbar">
-                    <div class="pdf-toolbar-top">
-                        <div class="pdf-toolbar-left">
-                            {{-- HISTORY --}}
-                            <div class="pdf-toolbar-group">
-                                <div class="pdf-group-label">
-                                    <i class="fas fa-history"></i>
-                                    History
-                                </div>
-                                <div class="pdf-button-row">
-                                    <button type="button" class="pdf-tool-btn" id="undoBtn" title="Undo">
-                                        <i class="fas fa-undo"></i>
-                                        <span>Undo</span>
-                                    </button>
-                                    <button type="button" class="pdf-tool-btn" id="redoBtn" title="Redo">
-                                        <i class="fas fa-redo"></i>
-                                        <span>Redo</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="toolbar-divider"></div>
-                            {{-- EDIT --}}
-                            <div class="pdf-toolbar-group">
-                                <div class="pdf-group-label">
-                                    <i class="fas fa-pen"></i>
-                                    Edit
-                                </div>
-                                <div class="pdf-button-row">
-                                    <button type="button" class="pdf-tool-btn pdf-add-text-btn" id="addTextBtn"
-                                        title="Add a new text box">
-                                        <i class="fas fa-plus"></i>
-                                        <span>Add Text</span>
-                                    </button>
-                                    <button type="button" class="pdf-tool-btn danger-tool" id="deleteTextBtn"
-                                        title="Delete selected text">
-                                        <i class="fas fa-trash"></i>
-                                        <span>Delete</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="toolbar-divider"></div>
-                            {{-- TEXT --}}
-                            <div class="pdf-toolbar-group">
-                                <div class="pdf-group-label">
-                                    <i class="fas fa-font"></i>
-                                    Text
-                                </div>
-                                <div class="pdf-button-row">
-                                    {{-- FONT --}}
-                                    <div class="pdf-control-box">
-                                        <div class="pdf-control-icon">
-                                            <i class="fas fa-font"></i>
-                                        </div>
-                                        <div class="pdf-control-content">
-                                            <span>Font</span>
-                                            <select id="fontFamilySelect" class="pdf-select">
-                                                <option value="Helvetica">
-                                                    Helvetica
-                                                </option>
-                                                <option value="Times-Roman">
-                                                    Times New Roman
-                                                </option>
-                                                <option value="Courier">
-                                                    Courier
-                                                </option>
-                                                <option value="Arial">
-                                                    Arial
-                                                </option>
-                                                <option value="Georgia">
-                                                    Georgia
-                                                </option>
-                                                <option value="Verdana">
-                                                    Verdana
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    {{-- SIZE --}}
-                                    <div class="pdf-control-box pdf-size-box">
-                                        <div class="pdf-control-icon">
-                                            <i class="fas fa-text-height"></i>
-                                        </div>
-                                        <div class="pdf-control-content">
-                                            <span>Size</span>
-                                            <select id="fontSizeSelect" class="pdf-select">
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12" selected>12</option>
-                                                <option value="14">14</option>
-                                                <option value="16">16</option>
-                                                <option value="18">18</option>
-                                                <option value="20">20</option>
-                                                <option value="24">24</option>
-                                                <option value="28">28</option>
-                                                <option value="32">32</option>
-                                                <option value="36">36</option>
-                                                <option value="42">42</option>
-                                                <option value="48">48</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="toolbar-divider"></div>
-                            {{-- FORMAT --}}
-                            <div class="pdf-toolbar-group">
-                                <div class="pdf-group-label">
-                                    <i class="fas fa-sliders-h"></i>
-                                    Format
-                                </div>
-                                <div class="pdf-button-row">
-                                    <button type="button" class="pdf-format-btn" data-format="bold" id="boldBtn"
-                                        title="Bold">
-                                        <i class="fas fa-bold"></i>
-                                    </button>
-                                    <button type="button" class="pdf-format-btn" data-format="italic" id="italicBtn"
-                                        title="Italic">
-                                        <i class="fas fa-italic"></i>
-                                    </button>
-                                    <button type="button" class="pdf-format-btn" data-format="underline"
-                                        id="underlineBtn" title="Underline">
-                                        <i class="fas fa-underline"></i>
-                                    </button>
-                                    {{-- COLOR --}}
-                                    <div class="color-picker-wrapper">
-                                        <button type="button" class="pdf-color-btn" id="textColorButton"
-                                            title="Change text color">
-                                            <span class="color-icon">
-                                                <i class="fas fa-palette"></i>
-                                            </span>
-                                            <span class="color-bar" id="currentColorBar"></span>
-                                        </button>
-                                        <input type="color" id="textColorPicker" value="#111111">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- RIGHT CONTROLS --}}
-                        <div class="pdf-toolbar-right">
-                            {{-- ZOOM --}}
-                            <div class="pdf-zoom-control">
-                                <span class="pdf-zoom-label">
-                                    <i class="fas fa-search"></i>
-                                    Zoom
-                                </span>
-                                <div class="pdf-zoom-buttons">
-                                    <button type="button" class="pdf-tool-btn" id="zoomOutBtn" title="Zoom out">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <span id="zoomValue" class="zoom-value">
-                                        100%
-                                    </span>
-                                    <button type="button" class="pdf-tool-btn" id="zoomInBtn" title="Zoom in">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            {{-- DOWNLOAD --}}
-                            <button type="button" class="pdf-download-btn" id="downloadPdfBtn">
-                                <span class="download-icon">
-                                    <i class="fas fa-download"></i>
-                                </span>
-                                <span>
-                                    Download PDF
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    {{-- QUICK HELP --}}
-                    <div class="pdf-toolbar-help">
-                        <div>
-                            <i class="fas fa-info-circle"></i>
-                            <span>
-                                Click any text to edit it directly
-                            </span>
-                        </div>
-                        <div class="pdf-help-items">
-                            <span>
-                                <kbd>Ctrl</kbd> + <kbd>Z</kbd>
-                                Undo
-                            </span>
-                            <span>
-                                <kbd>Ctrl</kbd> + <kbd>C</kbd>
-                                Copy
-                            </span>
-                            <span>
-                                <kbd>Ctrl</kbd> + <kbd>V</kbd>
-                                Paste
-                            </span>
-                            <span>
-                                <kbd>Ctrl</kbd> + <kbd>S</kbd>
-                                Download
-                            </span>
-                        </div>
-                    </div>
-                </div>
                 {{-- =================================================
                     EDITOR WORKSPACE
                 ================================================== --}}
@@ -294,17 +94,225 @@
                                 </div>
                             </div>
                             <div class="pdf-editor-tip">
-                                <i class="fas fa-lightbulb"></i>
+                                {{-- <i class="fas fa-lightbulb"></i>
                                 <span>
                                     Select text to change its font, size,
                                     style or color
-                                </span>
+                                </span> --}}
+                                <a href="{{ url()->current() }}" class="btn btn-sm btn-outline-primary"
+                                    onclick="return confirm('Upload a new PDF? Your current edits will be lost.');">
+                                    <i class="fas fa-file-upload me-1"></i>
+                                    Upload New PDF
+                                </a>
                             </div>
                         </div>
                         {{-- PDF PAGES --}}
                         <div id="pdfPagesContainer" class="pdf-pages-container">
                         </div>
                     </div>
+
+                    {{-- =================================================
+                        EDITOR TOOLBAR (RIGHT SIDE)
+                    ================================================== --}}
+                    <div class="pdf-editor-toolbar">
+                        <div class="pdf-toolbar-top">
+                            <div class="pdf-toolbar-left">
+                                {{-- HISTORY --}}
+                                <div class="pdf-toolbar-group">
+                                    <div class="pdf-group-label">
+                                        <i class="fas fa-history"></i>
+                                        History
+                                    </div>
+                                    <div class="pdf-button-row">
+                                        <button type="button" class="pdf-tool-btn" id="undoBtn" title="Undo">
+                                            <i class="fas fa-undo"></i>
+                                            <span>Undo</span>
+                                        </button>
+                                        <button type="button" class="pdf-tool-btn" id="redoBtn" title="Redo">
+                                            <i class="fas fa-redo"></i>
+                                            <span>Redo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="toolbar-divider"></div>
+                                {{-- EDIT --}}
+                                <div class="pdf-toolbar-group">
+                                    <div class="pdf-group-label">
+                                        <i class="fas fa-pen"></i>
+                                        Edit
+                                    </div>
+                                    <div class="pdf-button-row">
+                                        <button type="button" class="pdf-tool-btn pdf-add-text-btn" id="addTextBtn"
+                                            title="Add a new text box">
+                                            <i class="fas fa-plus"></i>
+                                            <span>Add Text</span>
+                                        </button>
+                                        <button type="button" class="pdf-tool-btn danger-tool" id="deleteTextBtn"
+                                            title="Delete selected text">
+                                            <i class="fas fa-trash"></i>
+                                            <span>Delete</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="toolbar-divider"></div>
+                                {{-- TEXT --}}
+                                <div class="pdf-toolbar-group">
+                                    <div class="pdf-group-label">
+                                        <i class="fas fa-font"></i>
+                                        Text
+                                    </div>
+                                    <div class="pdf-button-row">
+                                        {{-- FONT --}}
+                                        <div class="pdf-control-box">
+                                            <div class="pdf-control-icon">
+                                                <i class="fas fa-font"></i>
+                                            </div>
+                                            <div class="pdf-control-content">
+                                                <span>Font</span>
+                                                <select id="fontFamilySelect" class="pdf-select">
+                                                    <option value="Helvetica">
+                                                        Helvetica
+                                                    </option>
+                                                    <option value="Times-Roman">
+                                                        Times New Roman
+                                                    </option>
+                                                    <option value="Courier">
+                                                        Courier
+                                                    </option>
+                                                    <option value="Arial">
+                                                        Arial
+                                                    </option>
+                                                    <option value="Georgia">
+                                                        Georgia
+                                                    </option>
+                                                    <option value="Verdana">
+                                                        Verdana
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        {{-- SIZE --}}
+                                        <div class="pdf-control-box pdf-size-box">
+                                            <div class="pdf-control-icon">
+                                                <i class="fas fa-text-height"></i>
+                                            </div>
+                                            <div class="pdf-control-content">
+                                                <span>Size</span>
+                                                <select id="fontSizeSelect" class="pdf-select">
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12" selected>12</option>
+                                                    <option value="14">14</option>
+                                                    <option value="16">16</option>
+                                                    <option value="18">18</option>
+                                                    <option value="20">20</option>
+                                                    <option value="24">24</option>
+                                                    <option value="28">28</option>
+                                                    <option value="32">32</option>
+                                                    <option value="36">36</option>
+                                                    <option value="42">42</option>
+                                                    <option value="48">48</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="toolbar-divider"></div>
+                                {{-- FORMAT --}}
+                                <div class="pdf-toolbar-group">
+                                    <div class="pdf-group-label">
+                                        <i class="fas fa-sliders-h"></i>
+                                        Format
+                                    </div>
+                                    <div class="pdf-button-row">
+                                        <button type="button" class="pdf-format-btn" data-format="bold" id="boldBtn"
+                                            title="Bold">
+                                            <i class="fas fa-bold"></i>
+                                        </button>
+                                        <button type="button" class="pdf-format-btn" data-format="italic"
+                                            id="italicBtn" title="Italic">
+                                            <i class="fas fa-italic"></i>
+                                        </button>
+                                        <button type="button" class="pdf-format-btn" data-format="underline"
+                                            id="underlineBtn" title="Underline">
+                                            <i class="fas fa-underline"></i>
+                                        </button>
+                                        {{-- COLOR --}}
+                                        <div class="color-picker-wrapper">
+                                            <button type="button" class="pdf-color-btn" id="textColorButton"
+                                                title="Change text color">
+                                                <span class="color-icon">
+                                                    <i class="fas fa-palette"></i>
+                                                </span>
+                                                <span class="color-bar" id="currentColorBar"></span>
+                                            </button>
+                                            <input type="color" id="textColorPicker" value="#111111">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- RIGHT CONTROLS --}}
+                            <div class="pdf-toolbar-right">
+                                {{-- ZOOM --}}
+                                <div class="pdf-zoom-control">
+                                    <span class="pdf-zoom-label">
+                                        <i class="fas fa-search"></i>
+                                        Zoom
+                                    </span>
+                                    <div class="pdf-zoom-buttons">
+                                        <button type="button" class="pdf-tool-btn" id="zoomOutBtn" title="Zoom out">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <span id="zoomValue" class="zoom-value">
+                                            100%
+                                        </span>
+                                        <button type="button" class="pdf-tool-btn" id="zoomInBtn" title="Zoom in">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                {{-- DOWNLOAD --}}
+                                <button type="button" class="pdf-download-btn" id="downloadPdfBtn">
+                                    <span class="download-icon">
+                                        <i class="fas fa-download"></i>
+                                    </span>
+                                    <span>
+                                        Download PDF
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        {{-- QUICK HELP --}}
+                        <div class="pdf-toolbar-help">
+                            <div>
+                                <i class="fas fa-info-circle"></i>
+                                <span>
+                                    Click any text to edit it directly
+                                </span>
+                            </div>
+                            <div class="pdf-help-items">
+                                <span>
+                                    <kbd>Ctrl</kbd> + <kbd>Z</kbd>
+                                    Undo
+                                </span>
+                                <span>
+                                    <kbd>Ctrl</kbd> + <kbd>C</kbd>
+                                    Copy
+                                </span>
+                                <span>
+                                    <kbd>Ctrl</kbd> + <kbd>V</kbd>
+                                    Paste
+                                </span>
+                                <span>
+                                    <kbd>Ctrl</kbd> + <kbd>S</kbd>
+                                    Download
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -335,8 +343,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
     <style>
         /* =========================================================
-                   EDITOR MAIN
-                ========================================================== */
+                       EDITOR MAIN
+                    ========================================================== */
         #pdfEditorSection {
             background:
                 radial-gradient(circle at 50% 0%,
@@ -348,89 +356,77 @@
         }
 
         /* =========================================================
-                   TOOLBAR
-                ========================================================== */
+                       TOOLBAR (RIGHT SIDE)
+                    ========================================================== */
         .pdf-editor-toolbar {
-            position: sticky;
-            top: 70px;
-            z-index: 100;
-            background: rgba(14, 14, 14, .96);
-            border: 1px solid #292929;
-            border-radius: 16px;
-            padding: 14px;
-            margin: 15px 0;
-            box-shadow:
-                0 15px 45px rgba(0, 0, 0, .42),
-                0 0 0 1px rgba(255, 255, 255, .015);
-            backdrop-filter: blur(14px);
+            width: 330px;
+            min-width: 330px;
+            flex-shrink: 0;
+            background: linear-gradient(180deg, #111, #0c0c0c);
+            border-left: 1px solid #292929;
+            padding: 14px 12px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .pdf-toolbar-top {
+        .pdf-editor-toolbar .pdf-toolbar-top {
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 15px;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
         }
 
-        .pdf-toolbar-left {
+        .pdf-editor-toolbar .pdf-toolbar-left,
+        .pdf-editor-toolbar .pdf-toolbar-right {
             display: flex;
-            align-items: flex-end;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
             gap: 10px;
+        }
+
+        .pdf-editor-toolbar .pdf-toolbar-group {
+            width: 100%;
+        }
+
+        .pdf-editor-toolbar .pdf-button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .pdf-editor-toolbar .pdf-control-box {
+            width: 100%;
             min-width: 0;
         }
 
-        .pdf-toolbar-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
+        .pdf-editor-toolbar .pdf-select {
+            width: 100%;
         }
 
-        .pdf-toolbar-group {
-            display: flex;
+        .pdf-editor-toolbar .toolbar-divider {
+            width: 100%;
+            height: 1px;
+            margin: 4px 0;
+            background: linear-gradient(to right, transparent, #353535, transparent);
+        }
+
+        .pdf-editor-toolbar .pdf-toolbar-help {
             flex-direction: column;
-            gap: 5px;
+            align-items: flex-start;
+            gap: 6px;
         }
 
-        .pdf-group-label {
-            color: #686868;
-            font-size: 9px;
-            line-height: 1;
-            font-weight: 700;
-            letter-spacing: .7px;
-            text-transform: uppercase;
-            padding-left: 2px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .pdf-group-label i {
-            color: #0d6efd;
-            font-size: 9px;
-        }
-
-        .pdf-button-row {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .toolbar-divider {
-            width: 1px;
-            height: 55px;
-            background: linear-gradient(to bottom,
-                    transparent,
-                    #353535,
-                    transparent);
-            display: inline-block;
-            margin: 0 2px;
+        .pdf-editor-toolbar .pdf-help-items {
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         /* =========================================================
-                   TOOL BUTTONS
-                ========================================================== */
+                       TOOL BUTTONS
+                    ========================================================== */
         .pdf-tool-btn,
         .pdf-format-btn,
         .pdf-color-btn {
@@ -514,8 +510,8 @@
         }
 
         /* =========================================================
-                   FONT / SIZE CONTROLS
-                ========================================================== */
+                       FONT / SIZE CONTROLS
+                    ========================================================== */
         .pdf-control-box {
             height: 38px;
             min-width: 190px;
@@ -542,6 +538,7 @@
             background: rgba(13, 110, 253, .06);
             border-right: 1px solid #2b2b2b;
             font-size: 11px;
+            flex-shrink: 0;
         }
 
         .pdf-control-content {
@@ -549,6 +546,7 @@
             align-items: center;
             height: 100%;
             flex: 1;
+            min-width: 0;
         }
 
         .pdf-control-content>span {
@@ -559,16 +557,17 @@
             font-weight: 700;
             padding: 0 8px;
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .pdf-select {
             height: 36px;
-            min-width: 118px;
+            min-width: 60px;
             flex: 1;
             background: #181818;
             color: #eee;
             border: 0;
-            padding: 0 25px 0 4px;
+            padding: 0 20px 0 4px;
             outline: none;
             font-size: 12px;
             cursor: pointer;
@@ -592,8 +591,8 @@
         }
 
         /* =========================================================
-                   COLOR
-                ========================================================== */
+                       COLOR
+                    ========================================================== */
         .color-picker-wrapper {
             position: relative;
         }
@@ -630,8 +629,8 @@
         }
 
         /* =========================================================
-                   ZOOM
-                ========================================================== */
+                       ZOOM
+                    ========================================================== */
         .pdf-zoom-control {
             display: flex;
             flex-direction: column;
@@ -687,8 +686,8 @@
         }
 
         /* =========================================================
-                   DOWNLOAD
-                ========================================================== */
+                       DOWNLOAD
+                    ========================================================== */
         .pdf-download-btn {
             height: 42px;
             border: 0;
@@ -735,11 +734,12 @@
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, .14);
+            flex-shrink: 0;
         }
 
         /* =========================================================
-                   TOOLBAR HELP
-                ========================================================== */
+                       TOOLBAR HELP
+                    ========================================================== */
         .pdf-toolbar-help {
             margin-top: 12px;
             padding: 8px 10px;
@@ -784,25 +784,27 @@
         }
 
         /* =========================================================
-                   WORKSPACE
-                ========================================================== */
+                       WORKSPACE
+                    ========================================================== */
         .pdf-workspace {
             display: flex;
             background: #0a0a0a;
             border: 1px solid #242424;
             border-radius: 16px;
             overflow: hidden;
-            min-height: 75vh;
+            height: calc(100vh - 100px);
+            min-height: 600px;
+            margin-top: 20px;
             box-shadow:
                 0 18px 55px rgba(0, 0, 0, .35);
         }
 
         /* =========================================================
-                   SIDEBAR
-                ========================================================== */
+                       SIDEBAR (smaller)
+                    ========================================================== */
         .pdf-sidebar {
-            width: 185px;
-            min-width: 185px;
+            width: 130px;
+            min-width: 130px;
             background:
                 linear-gradient(180deg,
                     #111,
@@ -813,72 +815,78 @@
         }
 
         .pdf-sidebar-header {
-            padding: 15px 14px 13px;
+            padding: 12px 10px 10px;
             border-bottom: 1px solid #252525;
             background: #111;
         }
 
         .sidebar-title {
             color: #ddd;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 9px;
+            gap: 6px;
         }
 
         .sidebar-title strong {
             display: block;
             color: #ddd;
-            font-size: 12px;
+            font-size: 11px;
             line-height: 1.2;
         }
 
         .sidebar-title small {
             display: block;
             color: #555;
-            font-size: 9px;
+            font-size: 8px;
             font-weight: 500;
             margin-top: 2px;
         }
 
         .sidebar-title-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
             background: rgba(13, 110, 253, .12);
             border: 1px solid rgba(13, 110, 253, .25);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             color: #4e9aff;
+            font-size: 11px;
+            flex-shrink: 0;
         }
 
         .pdf-thumbnails-list {
             flex: 1;
-            padding: 13px 11px;
+            padding: 10px 8px;
             overflow-y: auto;
         }
 
         .pdf-thumbnails-list::-webkit-scrollbar,
-        .pdf-pages-container::-webkit-scrollbar {
+        .pdf-pages-container::-webkit-scrollbar,
+        .pdf-editor-toolbar::-webkit-scrollbar {
             width: 7px;
             height: 7px;
         }
 
         .pdf-thumbnails-list::-webkit-scrollbar-track,
-        .pdf-pages-container::-webkit-scrollbar-track {
+        .pdf-pages-container::-webkit-scrollbar-track,
+        .pdf-editor-toolbar::-webkit-scrollbar-track {
             background: #0b0b0b;
         }
 
         .pdf-thumbnails-list::-webkit-scrollbar-thumb,
-        .pdf-pages-container::-webkit-scrollbar-thumb {
+        .pdf-pages-container::-webkit-scrollbar-thumb,
+        .pdf-editor-toolbar::-webkit-scrollbar-thumb {
             background: #303030;
             border-radius: 10px;
         }
 
         .pdf-thumbnails-list::-webkit-scrollbar-thumb:hover,
-        .pdf-pages-container::-webkit-scrollbar-thumb:hover {
+        .pdf-pages-container::-webkit-scrollbar-thumb:hover,
+        .pdf-editor-toolbar::-webkit-scrollbar-thumb:hover {
             background: #0d6efd;
         }
 
@@ -886,9 +894,9 @@
             position: relative;
             background: #171717;
             border: 2px solid transparent;
-            border-radius: 10px;
-            padding: 6px;
-            margin-bottom: 10px;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 8px;
             cursor: pointer;
             transition:
                 border-color .18s ease,
@@ -916,15 +924,15 @@
             width: 100%;
             height: auto;
             background: white;
-            border-radius: 5px;
+            border-radius: 4px;
         }
 
         .pdf-thumb-number {
             color: #686868;
-            font-size: 9px;
+            font-size: 8px;
             font-weight: 600;
             text-align: center;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         .pdf-thumbnail.active .pdf-thumb-number {
@@ -932,8 +940,8 @@
         }
 
         /* =========================================================
-                   MAIN AREA
-                ========================================================== */
+                       MAIN AREA
+                    ========================================================== */
         .pdf-main-area {
             flex: 1;
             min-width: 0;
@@ -944,16 +952,12 @@
                     #141414 100%);
             display: flex;
             flex-direction: column;
-            /* ---- SCROLL FIX: constrain height & hide overflow ---- */
-            max-height: 80vh;
-            /* editor bounded so inner scroll appears */
             overflow: hidden;
-            /* keep rounded corners clean */
         }
 
         /* =========================================================
-                   INFO BAR
-                ========================================================== */
+                       INFO BAR
+                    ========================================================== */
         .pdf-info-bar {
             min-height: 50px;
             border-bottom: 1px solid #292929;
@@ -967,7 +971,6 @@
             flex-wrap: wrap;
             font-size: 11px;
             flex-shrink: 0;
-            /* prevent shrinking */
         }
 
         .pdf-editor-status {
@@ -1026,15 +1029,13 @@
         }
 
         /* =========================================================
-                   PDF PAGES  (SCROLLABLE)
-                ========================================================== */
+                       PDF PAGES
+                    ========================================================== */
         .pdf-pages-container {
             flex: 1;
             padding: 34px;
             overflow: auto;
-            /* <-- THE SCROLL */
             min-height: 0;
-            /* flexbox overflow fix */
             background:
                 radial-gradient(circle at center,
                     rgba(255, 255, 255, .025),
@@ -1043,7 +1044,6 @@
             scrollbar-color: #3a3a3a #0b0b0b;
         }
 
-        /* custom webkit scrollbar for the pages container */
         .pdf-pages-container::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -1094,8 +1094,8 @@
         }
 
         /* =========================================================
-                   EDITABLE TEXT
-                ========================================================== */
+                       EDITABLE TEXT
+                    ========================================================== */
         .pdf-editable-text {
             position: absolute;
             display: block;
@@ -1135,8 +1135,8 @@
         }
 
         /* =========================================================
-                   ADDED TEXT
-                ========================================================== */
+                       ADDED TEXT
+                    ========================================================== */
         .pdf-added-text {
             border: 1px dashed rgba(13, 110, 253, .75);
             background: rgba(255, 255, 255, .92);
@@ -1180,8 +1180,8 @@
         }
 
         /* =========================================================
-                   LOADER
-                ========================================================== */
+                       LOADER
+                    ========================================================== */
         .pdf-loading-overlay {
             position: fixed;
             inset: 0;
@@ -1237,76 +1237,121 @@
         }
 
         /* =========================================================
-                   RESPONSIVE
-                ========================================================== */
+                       RESPONSIVE
+                    ========================================================== */
+
+        /* Large tablets / small laptops */
         @media(max-width: 1200px) {
-            .pdf-toolbar-top {
-                align-items: stretch;
-                flex-direction: column;
+            .pdf-editor-toolbar {
+                width: 200px;
+                min-width: 200px;
             }
 
-            .pdf-toolbar-left {
-                width: 100%;
-            }
-
-            .pdf-toolbar-right {
-                width: 100%;
-                justify-content: flex-end;
-            }
-
-            .pdf-toolbar-left .toolbar-divider {
-                height: 45px;
+            .pdf-sidebar {
+                width: 120px;
+                min-width: 120px;
             }
         }
 
+        /* Tablets */
         @media(max-width: 992px) {
             .pdf-sidebar {
-                width: 145px;
-                min-width: 145px;
+                width: 110px;
+                min-width: 110px;
+            }
+
+            .pdf-editor-toolbar {
+                width: 190px;
+                min-width: 190px;
             }
 
             .pdf-pages-container {
-                padding: 25px 18px;
+                padding: 20px 14px;
             }
 
-            .pdf-editor-toolbar {
-                top: 65px;
+            .pdf-workspace {
+                height: auto;
+                min-height: calc(100vh - 120px);
             }
 
-            .pdf-control-box {
-                min-width: 170px;
-            }
-
-            .pdf-toolbar-help {
-                align-items: flex-start;
-                flex-direction: column;
+            .pdf-main-area {
+                max-height: calc(100vh - 140px);
             }
         }
 
+        /* Small tablets / large phones — stack into column */
         @media(max-width: 768px) {
-            .pdf-editor-toolbar {
+            .pdf-workspace {
+                flex-direction: column;
+                height: auto;
+                min-height: 0;
+                margin-top: 12px;
                 border-radius: 12px;
-                padding: 10px;
-            }
-
-            .pdf-toolbar-left {
-                gap: 7px;
-            }
-
-            .pdf-toolbar-right {
-                justify-content: space-between;
-            }
-
-            .pdf-toolbar-help {
-                display: none;
             }
 
             .pdf-sidebar {
                 display: none;
             }
 
-            .pdf-workspace {
-                border-radius: 12px;
+            .pdf-main-area {
+                max-height: 60vh;
+            }
+
+            .pdf-editor-toolbar {
+                width: 100%;
+                min-width: 100%;
+                border-left: 0;
+                border-top: 1px solid #252525;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                padding: 10px;
+                gap: 8px;
+                max-height: none;
+                overflow-y: visible;
+            }
+
+            .pdf-editor-toolbar .pdf-toolbar-top {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .pdf-editor-toolbar .pdf-toolbar-left,
+            .pdf-editor-toolbar .pdf-toolbar-right {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: auto;
+                gap: 6px;
+            }
+
+            .pdf-toolbar-group {
+                width: auto;
+                flex: 0 0 auto;
+            }
+
+            .pdf-editor-toolbar .pdf-control-box {
+                width: auto;
+                min-width: 130px;
+            }
+
+            .pdf-editor-toolbar .pdf-select {
+                width: auto;
+                min-width: 80px;
+            }
+
+            .pdf-editor-toolbar .toolbar-divider {
+                display: none;
+            }
+
+            .pdf-editor-toolbar .pdf-toolbar-help {
+                display: none;
+            }
+
+            .pdf-download-btn {
+                width: auto;
+                flex: 1;
+                min-width: 130px;
             }
 
             .pdf-info-bar {
@@ -1318,19 +1363,11 @@
             }
 
             .pdf-pages-container {
-                padding: 18px 8px;
-            }
-
-            .pdf-toolbar-left .toolbar-divider {
-                display: none;
+                padding: 16px 10px;
             }
 
             .pdf-group-label {
                 display: none;
-            }
-
-            .pdf-toolbar-group {
-                align-self: center;
             }
 
             .pdf-tool-btn span {
@@ -1341,50 +1378,54 @@
             .danger-tool span {
                 display: inline;
             }
-
-            .pdf-control-box {
-                min-width: 145px;
-            }
-
-            .pdf-size-box {
-                min-width: 90px;
-            }
         }
 
+        /* Phones */
         @media(max-width: 520px) {
-            .pdf-toolbar-right {
-                flex-wrap: wrap;
+            .pdf-workspace {
+                margin-top: 8px;
+                border-radius: 10px;
             }
 
-            .pdf-zoom-control {
-                flex: 1;
+            .pdf-editor-toolbar {
+                padding: 8px;
+                gap: 6px;
+            }
+
+            .pdf-editor-toolbar .pdf-control-box {
+                min-width: 110px;
+            }
+
+            .pdf-editor-toolbar .pdf-select {
+                min-width: 60px;
             }
 
             .pdf-download-btn {
-                flex: 1;
-                min-width: 145px;
+                width: 100%;
+                flex: 1 1 100%;
             }
 
-            .pdf-control-box {
-                min-width: 135px;
+            .pdf-tool-btn,
+            .pdf-format-btn {
+                height: 34px;
+                min-width: 34px;
             }
 
-            .pdf-control-content>span {
-                display: none;
+            .pdf-zoom-buttons {
+                padding: 0 2px;
             }
 
-            .pdf-select {
-                min-width: 85px;
-            }
-
-            .pdf-size-box {
-                min-width: 75px;
-            }
-
-            .pdf-format-btn,
-            .pdf-tool-btn {
-                height: 36px;
+            .zoom-value {
                 min-width: 36px;
+                font-size: 10px;
+            }
+
+            .pdf-info-bar {
+                font-size: 10px;
+            }
+
+            #editorStatus {
+                font-size: 10px;
             }
         }
     </style>
@@ -1798,11 +1839,6 @@
                             text.height * scale,
                             text.fontSize * scale * 1.15
                         );
-                    /*
-                     * Every original PDF text gets a mask.
-                     * This prevents the PDF.js canvas text from
-                     * appearing underneath the editable HTML text.
-                     */
                     if (!text.added) {
                         const mask =
                             $('<div class="pdf-text-mask"></div>');
