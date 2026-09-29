@@ -1751,18 +1751,49 @@
             /* =====================================================
                RENDER ALL
             ====================================================== */
-            async function renderAllPages() {
+            // async function renderAllPages() {
+            //     if (!pdfDocument || isRendering) {
+            //         return;
+            //     }
+            //     isRendering = true;
+            //     $('#pdfPagesContainer').empty();
+            //     $('#pdfThumbnails').empty();
+            //     for (const pageData of pages) {
+            //         await renderPage(pageData);
+            //     }
+            //     isRendering = false;
+            // }
+
+
+                        async function renderAllPages() {
                 if (!pdfDocument || isRendering) {
                     return;
                 }
                 isRendering = true;
-                $('#pdfPagesContainer').empty();
-                $('#pdfThumbnails').empty();
-                for (const pageData of pages) {
-                    await renderPage(pageData);
+                const existing = $('#pdfPagesContainer .pdf-page-wrapper');
+                if (existing.length !== pages.length) {
+                    $('#pdfPagesContainer').empty();
+                    $('#pdfThumbnails').empty();
+                    for (const pageData of pages) {
+                        await renderPage(pageData);
+                    }
+                } else {
+                    for (const pageData of pages) {
+                        const wrapper = $('[data-page-id="' + pageData.id + '"]');
+                        if (!wrapper.length) continue;
+                        const layer = wrapper.find('.pdf-text-layer');
+                        layer.empty();
+                        renderTextElements(pageData, layer, {
+                            width: pageData.width * zoom,
+                            height: pageData.height * zoom
+                        });
+                    }
                 }
                 isRendering = false;
             }
+
+
+            
             async function renderPage(pageData) {
                 const page =
                     await pdfDocument.getPage(
