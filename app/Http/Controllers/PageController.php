@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Blog; // make sure this is imported at the top
 
 class PageController extends Controller
 {
@@ -29,12 +30,16 @@ class PageController extends Controller
 {
     return view('pages.about_us');
 }
-    public function sitemap()
-    {
-        return response()
-            ->view('pages.sitemap')
-            ->header('Content-Type', 'application/xml');
-    }
+ public function sitemap()
+{
+    $blogs = Blog::select('slug', 'updated_at')
+        ->latest('updated_at')
+        ->get();
+
+    return response()
+        ->view('pages.sitemap', compact('blogs'))
+        ->header('Content-Type', 'application/xml');
+}
     public function imageCropper()
     {
         return view('pages.image_cropper');
