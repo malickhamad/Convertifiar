@@ -279,7 +279,7 @@
                         <div class="grid-box h-100 d-flex flex-column justify-content-center">
                             <i class="fas fa-mobile-alt fa-3x text-light mb-3"></i>
                             <h3>Works on Any Device</h3>
-                            <p>Use Tool Baazar directly from your browser on mobile, tablet, or desktop. No software
+                            <p>Use Convertifire directly from your browser on mobile, tablet, or desktop. No software
                                 installation required — just upload your file and get started.</p>
                         </div>
                     </div>

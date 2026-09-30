@@ -3,15 +3,15 @@
 
 @section('meta')
 
-<title>Terms & Conditions | Tool Baazar</title>
+<title>Terms & Conditions | Convertifire</title>
 
 <meta name="description"
-    content="Read the Terms & Conditions of Tool Baazar to understand the rules and conditions for using our online tools and services.">
+    content="Read the Terms & Conditions of Convertifire to understand the rules and conditions for using our online tools and services.">
 
-<meta property="og:title" content="Terms & Conditions | Tool Baazar">
+<meta property="og:title" content="Terms & Conditions | Convertifire">
 
 <meta property="og:description"
-    content="Review the terms and conditions that apply when using Tool Baazar online tools and services.">
+    content="Review the terms and conditions that apply when using Convertifire online tools and services.">
 
 @endsection
 
@@ -54,7 +54,7 @@
                 <p class="lead text-secondary mx-auto mx-auto mb-4 col-lg-8 col-10">
 
                     Please read these terms carefully before using
-                    Tool Baazar and its online tools and services.
+                    Convertifire and its online tools and services.
 
                 </p>
 
@@ -181,7 +181,7 @@
 
                                     <small class="text-secondary">
 
-                                        By using Tool Baazar, you agree
+                                        By using Convertifire, you agree
                                         to these terms.
 
                                     </small>
@@ -440,10 +440,10 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Welcome to Tool Baazar. These Terms &
+                                    Welcome to Convertifire. These Terms &
                                     Conditions govern your access to and use
                                     of our website, online tools, and related
-                                    services. By accessing or using Tool Baazar,
+                                    services. By accessing or using Convertifire,
                                     you agree to comply with these terms.
 
                                 </p>
@@ -475,7 +475,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    By accessing or using Tool Baazar, you
+                                    By accessing or using Convertifire, you
                                     acknowledge that you have read, understood,
                                     and agreed to these Terms & Conditions. If
                                     you do not agree with any part of these
@@ -510,7 +510,7 @@
 
                                 <p class="text-secondary lh-lg">
 
-                                    You agree to use Tool Baazar only for
+                                    You agree to use Convertifire only for
                                     lawful and appropriate purposes. You are
                                     responsible for ensuring that your use of
                                     our services complies with applicable laws
@@ -570,7 +570,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Tool Baazar provides various online tools
+                                    Convertifire provides various online tools
                                     designed to perform specific tasks.
                                     Results may depend on the files, data,
                                     settings, or inputs provided by the user.
@@ -607,7 +607,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Some Tool Baazar tools may allow you to
+                                    Some Convertifire tools may allow you to
                                     upload files for processing. You are
                                     responsible for ensuring that you have the
                                     necessary rights and permissions to upload
@@ -642,7 +642,7 @@
 
                                 <p class="text-secondary lh-lg">
 
-                                    When using Tool Baazar, you must not:
+                                    When using Convertifire, you must not:
 
                                 </p>
 
@@ -706,7 +706,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    The Tool Baazar website, branding, design,
+                                    The Convertifire website, branding, design,
                                     text, graphics, logos, and other original
                                     content are protected by applicable
                                     intellectual property laws. You may not
@@ -742,7 +742,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    We aim to keep Tool Baazar available and
+                                    We aim to keep Convertifire available and
                                     reliable, but we do not guarantee that the
                                     website or any individual tool will always
                                     be available, uninterrupted, or free from
@@ -779,7 +779,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Tool Baazar provides its website and tools
+                                    Convertifire provides its website and tools
                                     on an "as available" basis. While we make
                                     reasonable efforts to provide useful and
                                     reliable services, we make no guarantee
@@ -817,7 +817,7 @@
                                 <p class="text-secondary lh-lg mb-0">
 
                                     To the extent permitted by applicable law,
-                                    Tool Baazar shall not be responsible for
+                                    Convertifire shall not be responsible for
                                     indirect, incidental, or consequential
                                     losses arising from your use of the
                                     website, online tools, or services.
@@ -854,7 +854,7 @@
                                     We may update these Terms & Conditions from
                                     time to time. Changes will be posted on
                                     this page along with an updated revision
-                                    date. Your continued use of Tool Baazar
+                                    date. Your continued use of Convertifire
                                     after changes are posted means that you
                                     accept the updated terms.
 
@@ -973,7 +973,7 @@
 
                 <h2 class="fw-bold mb-2">
 
-                    Use Tool Baazar Responsibly
+                    Use Convertifire Responsibly
 
                 </h2>
 

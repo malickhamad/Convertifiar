@@ -3,15 +3,15 @@
 
 @section('meta')
 
-<title>Privacy Policy | Tool Baazar</title>
+<title>Privacy Policy | Convertifire</title>
 
 <meta name="description"
-    content="Learn how Tool Baazar collects, uses, protects, and handles information when you use our online tools and services.">
+    content="Learn how Convertifire collects, uses, protects, and handles information when you use our online tools and services.">
 
-<meta property="og:title" content="Privacy Policy | Tool Baazar">
+<meta property="og:title" content="Privacy Policy | Convertifire">
 
 <meta property="og:description"
-    content="Learn how Tool Baazar handles your information and protects your privacy.">
+    content="Learn how Convertifire handles your information and protects your privacy.">
 
 @endsection
 
@@ -54,7 +54,7 @@
                 <p class="lead text-secondary mx-auto mb-4 col-lg-8 col-10">
 
                     We respect your privacy. Here's a clear explanation
-                    of how Tool Baazar handles information when you use
+                    of how Convertifire handles information when you use
                     our website and online tools.
 
                 </p>
@@ -417,7 +417,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Welcome to Tool Baazar. We respect your
+                                    Welcome to Convertifire. We respect your
                                     privacy and are committed to protecting
                                     your personal information. This Privacy
                                     Policy explains what information may be
@@ -514,7 +514,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Some Tool Baazar tools may allow you to
+                                    Some Convertifire tools may allow you to
                                     upload files for processing. Uploaded files
                                     are used for the purpose of providing the
                                     requested tool functionality. Where
@@ -613,7 +613,7 @@
 
                                 <p class="text-secondary lh-lg mb-0">
 
-                                    Tool Baazar may use cookies or similar
+                                    Convertifire may use cookies or similar
                                     technologies to help the website function
                                     properly, remember preferences, and
                                     understand how visitors use the website.
@@ -882,7 +882,7 @@
 
                 <p class="mb-0 opacity-75">
 
-                    We aim to keep Tool Baazar simple, useful, secure,
+                    We aim to keep Convertifire simple, useful, secure,
                     and respectful of your privacy.
 
                 </p>

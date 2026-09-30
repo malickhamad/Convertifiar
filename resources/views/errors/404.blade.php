@@ -2,7 +2,7 @@
 
 @section('meta')
 
-<title>404 - Page Not Found | Tool Baazar</title>
+<title>404 - Page Not Found | Convertifire</title>
 
 <meta name="description" content="The page you are looking for could not be found or may have been moved.">
 @endsection

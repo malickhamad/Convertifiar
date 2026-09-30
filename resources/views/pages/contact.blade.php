@@ -1,13 +1,13 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Contact Us | Tool Baazar</title>
+    <title>Contact Us | Convertifire</title>
 
     <meta name="description"
-        content="Contact Tool Baazar for questions, suggestions, feedback, or support. We are here to help you get the most from our online tools.">
+        content="Contact Convertifire for questions, suggestions, feedback, or support. We are here to help you get the most from our online tools.">
 
-    <meta property="og:title" content="Contact Us | Tool Baazar">
-    <meta property="og:description" content="Get in touch with Tool Baazar for questions, feedback, suggestions, or support.">
+    <meta property="og:title" content="Contact Us | Convertifire">
+    <meta property="og:description" content="Get in touch with Convertifire for questions, feedback, suggestions, or support.">
 @endsection
 
 @section('content')

@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>PDF to Word Converter | Tool Baazar</title>
+    <title>PDF to Word Converter | Convertifire</title>
     <meta name="description"
-        content="Convert PDF files to editable Word documents online. Fast, secure and easy PDF to Word converter by Tool Baazar.">
+        content="Convert PDF files to editable Word documents online. Fast, secure and easy PDF to Word converter by Convertifire.">
 @endsection
 @section('content')
     <main class="bg-black" style="margin-top:70px;">

@@ -2,14 +2,14 @@
 
 @section('meta')
 
-<title>Blog | Tool Baazar</title>
+<title>Blog | Convertifire</title>
 
 <meta name="description"
- content="Useful guides, tutorials, tips and insights from Tool Baazar.">
+ content="Useful guides, tutorials, tips and insights from Convertifire.">
 
-<meta property="og:title" content="Blog | Tool Baazar">
+<meta property="og:title" content="Blog | Convertifire">
 <meta property="og:description"
-    content="Useful guides, tutorials, tips and insights from Tool Baazar.">
+    content="Useful guides, tutorials, tips and insights from Convertifire.">
 
 @endsection
 
@@ -21,7 +21,7 @@
 <div class="container pt-5 pb-4 text-center">
 
     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">
-        <i class="fas fa-book-open me-1"></i> Tool Baazar Blog
+        <i class="fas fa-book-open me-1"></i> Convertifire Blog
     </span>
 
     <h1 class="display-5 fw-bold mb-2">
@@ -29,7 +29,7 @@
     </h1>
 
     <p class="text-secondary mb-0">
-        Helpful articles, tutorials and insights from Tool Baazar.
+        Helpful articles, tutorials and insights from Convertifire.
     </p>
 
 </div>
@@ -158,7 +158,7 @@
             </h2>
 
             <p class="text-secondary mb-0">
-                Explore more useful articles from Tool Baazar.
+                Explore more useful articles from Convertifire.
             </p>
 
         </div>

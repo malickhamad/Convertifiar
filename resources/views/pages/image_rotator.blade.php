@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>Image Rotator - Rotate JPG, PNG & WebP Online | Tool Baazar</title>
+    <title>Image Rotator - Rotate JPG, PNG & WebP Online | Convertifire</title>
     <meta name="description"
-        content="Rotate JPG, PNG, WebP and GIF images online to any angle from 0° to 360°. Fast, secure and easy image rotation with Tool Baazar.">
+        content="Rotate JPG, PNG, WebP and GIF images online to any angle from 0° to 360°. Fast, secure and easy image rotation with Convertifire.">
 @endsection
 @section('content')
     <main class="crop-page bg-black">
@@ -320,7 +320,7 @@
             <div class="container">
                 <div class="text-center mb-4">
                     <span class="text-primary small fw-semibold text-uppercase">
-                        Why Tool Baazar?
+                        Why Convertifire?
                     </span>
                     <h2 class="text-white fw-bold mt-2">
                         Simple. Fast. Secure.

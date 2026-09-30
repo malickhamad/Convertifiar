@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>Video to Audio Converter | Tool Baazar</title>
+    <title>Video to Audio Converter | Convertifire</title>
     <meta name="description"
-        content="Convert video files to MP3, WAV and M4A audio online with Tool Baazar. Fast, secure and easy to use.">
+        content="Convert video files to MP3, WAV and M4A audio online with Convertifire. Fast, secure and easy to use.">
 @endsection
 @section('content')
     <main class="crop-page bg-black">
@@ -397,7 +397,7 @@
             <div class="container">
                 <div class="text-center mb-5">
                     <div class="crop-small-badge">
-                        WHY USE TOOL BAAZAR
+                        WHY USE Convertifire
                     </div>
                     <h2 class="text-white">
                         Simple. Fast. <span>Easy.</span>
