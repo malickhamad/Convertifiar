@@ -5,6 +5,13 @@
         content="Convert video files to MP3, WAV and M4A audio online with Convertifire. Fast, secure and easy to use.">
 @endsection
 @section('content')
+
+<style>
+    .crop-benefit-card {
+    display: flex;
+    flex-direction: column;   /* 👈 ADD THIS LINE ONLY */
+}
+</style>
     <main class="crop-page bg-black">
         {{-- =========================================================
              BREADCRUMB
@@ -411,7 +418,7 @@
                     <div class="col-md-4">
                         <div class="crop-benefit-card h-100">
                             <div class="crop-feature-icon
-                                       crop-icon-blue mb-4">
+                                       crop-icon-blue mb-2">
                                 <i class="fas fa-bolt"></i>
                             </div>
                             <h5 class="text-white">
@@ -426,7 +433,7 @@
                     <div class="col-md-4">
                         <div class="crop-benefit-card h-100">
                             <div class="crop-feature-icon
-                                       crop-icon-purple mb-4">
+                                       crop-icon-purple mb-2">
                                 <i class="fas fa-file-audio"></i>
                             </div>
                             <h5 class="text-white">
@@ -441,7 +448,7 @@
                     <div class="col-md-4">
                         <div class="crop-benefit-card h-100">
                             <div class="crop-feature-icon
-                                       crop-icon-green mb-4">
+                                       crop-icon-green mb-2">
                                 <i class="fas fa-lock"></i>
                             </div>
                             <h5 class="text-white">
@@ -454,6 +461,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
     </main>
