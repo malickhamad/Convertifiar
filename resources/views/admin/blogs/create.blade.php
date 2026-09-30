@@ -1,7 +1,7 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Create Blog | Xconvertifire</title>
+    <title>Create Blog | X Convertifire</title>
 @endsection
 
 @section('content')
@@ -25,7 +25,7 @@
             </h2>
 
             <p class="text-secondary mb-0">
-                Create a new article for Xconvertifire.
+                Create a new article for X Convertifire.
             </p>
 
         </div>
@@ -281,7 +281,7 @@
                                    name="author"
                                    value="{{ old('author') }}"
                                    class="form-control bg-black text-white border-secondary"
-                                   placeholder="Xconvertifire">
+                                   placeholder="X Convertifire">
 
                         </div>
 

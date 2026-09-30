@@ -262,7 +262,7 @@
 
                         <h3>
                             Designed for privacy
-                            </hXconvertifire <p>
+                            </hX Convertifire <p>
                             Images are processed directly in the browser.
                             </p>
 

@@ -1,7 +1,7 @@
 @extends('components.app')
 
 @section('meta')
-    <title>{{ $blog->title }} | Xconvertifire</title>
+    <title>{{ $blog->title }} | X Convertifire</title>
 @endsection
 
 @section('content')

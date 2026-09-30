@@ -1,7 +1,7 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Manage Blogs | Xconvertifire</title>
+    <title>Manage Blogs | X Convertifire</title>
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
             </h2>
 
             <p class="text-secondary mb-0">
-                Manage your Xconvertifire blog articles.
+                Manage your X Convertifire blog articles.
             </p>
         </div>
 
@@ -342,7 +342,7 @@
                                     </h5>
 
                                     <p class="text-secondary mb-3">
-                                        Create your first Xconvertifire blog article.
+                                        Create your first X Convertifire blog article.
                                     </p>
 
                                     <a href="{{ route('admin.blogs.create') }}"

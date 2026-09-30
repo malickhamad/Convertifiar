@@ -1,14 +1,14 @@
 @extends('components.app')
 
 @section('meta')
-    <title>About Us | Xconvertifire</title>
+    <title>About Us | X Convertifire</title>
 
     <meta name="description"
-        content="Learn about Xconvertifire — the all-in-one online toolkit trusted by millions to convert, compress, and edit images, videos, and PDFs safely.">
+        content="Learn about X Convertifire — the all-in-one online toolkit trusted by millions to convert, compress, and edit images, videos, and PDFs safely.">
 
-    <meta property="og:title" content="About Us | Xconvertifire">
+    <meta property="og:title" content="About Us | X Convertifire">
     <meta property="og:description"
-        content="Learn about Xconvertifire — the all-in-one online toolkit trusted by millions worldwide.">
+        content="Learn about X Convertifire — the all-in-one online toolkit trusted by millions worldwide.">
 @endsection
 
 @section('content')
@@ -44,7 +44,7 @@
                     </h1>
 
                     <p class="about-hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        Xconvertifire was born from a simple idea — powerful file editing shouldn't be complicated,
+                        X Convertifire was born from a simple idea — powerful file editing shouldn't be complicated,
                         expensive, or require installing heavy software. Today we help millions of people
                         convert, compress, and edit their files right from the browser.
                     </p>
@@ -151,7 +151,7 @@
                 <span class="about-mini-badge">See It In Action</span>
 
                 <h2 class="about-heading">
-                    Watch how <span>Xconvertifire works</span>
+                    Watch how <span>X Convertifire works</span>
                 </h2>
 
                 <p class="about-para">
@@ -278,7 +278,7 @@
             <!-- Big Card -->
             <div class="col-lg-6" data-aos="fade-up">
                 <div class="about-why-big">
-                    <span class="about-mini-badge">Why Xconvertifire</span>
+                    <span class="about-mini-badge">Why X Convertifire</span>
                     <h3 class="about-why-title">
                         Trusted by creators, students, and businesses worldwide
                     </h3>

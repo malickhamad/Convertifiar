@@ -806,7 +806,7 @@
         <div class="crop-benefits-heading">
 
             <span>
-                WHY USE Xconvertifire
+                WHY USE X Convertifire
             </span>
 
             <h2>

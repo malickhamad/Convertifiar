@@ -7,7 +7,7 @@
 
 @section('content')
     <style>
-        /* ========== Xconvertifire AI Background Remover — black theme ========== */
+        /* ========== X Convertifire AI Background Remover — black theme ========== */
         .bg-remover-page {
             min-height: 100vh;
             background: #080808;
@@ -1191,7 +1191,7 @@
                         <div class="upload-orb"><i class="fas fa-wand-magic-sparkles"></i></div>
                         <span class="upload-kicker">AI POWERED CUTOUT</span>
                         <h2>Remove your background</h2>
-                        <p>Upload a photo and Xconvertifire will automatically create a clean transparent cutout.</p>
+                        <p>Upload a photo and X Convertifire will automatically create a clean transparent cutout.</p>
                         <label class="main-upload-btn">
                             <i class="fas fa-cloud-arrow-up"></i> Upload Image
                             <input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
@@ -1384,7 +1384,7 @@
 
     <script type="module">
         /* =========================================================
-       Xconvertifire BG Remover — New design + Working AI logic
+       X Convertifire BG Remover — New design + Working AI logic
        ========================================================== */
         const $ = s => document.querySelector(s);
         const $$ = s => document.querySelectorAll(s);
