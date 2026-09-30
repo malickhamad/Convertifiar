@@ -65,7 +65,7 @@
                             </div>
                             <div>
                                 <small class="contact-info-label">Email</small>
-                                <span class="contact-info-value">info@X Convertifire.com</span>
+                                <span class="contact-info-value">info@xconvertifire.com</span>
                             </div>
                         </div>
 

@@ -404,7 +404,7 @@
             <div class="container">
                 <div class="text-center mb-5">
                     <div class="crop-small-badge">
-                        WHY USE Convertifire
+                        WHY USE X Convertifire
                     </div>
                     <h2 class="text-white">
                         Simple. Fast. <span>Easy.</span>
