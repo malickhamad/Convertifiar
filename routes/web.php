@@ -91,15 +91,3 @@ Route::prefix('word-to-pdf')->name('word.pdf.')->group(function () {
     Route::get('/download/{batch}', [WordToPdfController::class, 'download'])->name('download');
     Route::get('/download-zip/{batch}', [WordToPdfController::class, 'downloadZip'])->name('downloadZip');
 });
-
-
-use Illuminate\Support\Facades\Artisan;
-
-Route::get('/run-storage-link', function () {
-    try {
-        Artisan::call('storage:link');
-        return '<pre>' . Artisan::output() . '</pre>';
-    } catch (\Throwable $e) {
-        return 'Error: ' . $e->getMessage();
-    }
-});
