@@ -93,18 +93,13 @@ Route::prefix('word-to-pdf')->name('word.pdf.')->group(function () {
 });
 
 
-Route::get('/storage-link', function () {
-    $target = storage_path('app/public');
-    $link   = public_path('storage');
+use Illuminate\Support\Facades\Artisan;
 
-    if (file_exists($link)) {
-        return 'Storage link already exists ✅';
-    }
-
+Route::get('/run-storage-link', function () {
     try {
-        symlink($target, $link);
-        return 'Storage link created successfully ✅';
+        Artisan::call('storage:link');
+        return '<pre>' . Artisan::output() . '</pre>';
     } catch (\Throwable $e) {
-        return 'Failed: ' . $e->getMessage();
+        return 'Error: ' . $e->getMessage();
     }
 });
