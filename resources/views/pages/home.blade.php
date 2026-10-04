@@ -34,7 +34,7 @@
                     </div>
 
                     <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                        All your file tools — in one free toolkit.
+                        Everything You Need to Convert Files, In One Place.
                     </h2>
 
                     <p class="hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">

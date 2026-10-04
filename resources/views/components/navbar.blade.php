@@ -153,6 +153,10 @@
         padding-bottom: 30px;   /* fills the gap */
         margin-bottom: -30px;   /* keeps layout unchanged */
     }
+    .dynamic-navbar .nav-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
 </style>
 
 
