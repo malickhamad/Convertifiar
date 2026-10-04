@@ -157,6 +157,13 @@
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
+
+.dynamic-navbar.scrolled #toolsDropdown .nav-dropdown-menu,
+.dynamic-navbar.fixed #toolsDropdown .nav-dropdown-menu,
+.dynamic-navbar.shrink #toolsDropdown .nav-dropdown-menu {
+    top: 70px !important;
+}
+
 </style>
 
 
