@@ -13,6 +13,16 @@
 
 @section('content')
 
+<style>
+    /* Page-level overflow guard */
+.about-hero,
+.about-mission-section,
+.about-video-section,
+.about-offer-section,
+.about-why-section {
+    overflow-x: clip;
+}
+</style>
     <!-- ========================================= -->
     <!-- HERO SECTION (WITH VIDEO BACKGROUND) -->
     <!-- ========================================= -->
