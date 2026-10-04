@@ -91,3 +91,20 @@ Route::prefix('word-to-pdf')->name('word.pdf.')->group(function () {
     Route::get('/download/{batch}', [WordToPdfController::class, 'download'])->name('download');
     Route::get('/download-zip/{batch}', [WordToPdfController::class, 'downloadZip'])->name('downloadZip');
 });
+
+
+Route::get('/storage-link', function () {
+    $target = storage_path('app/public');
+    $link   = public_path('storage');
+
+    if (file_exists($link)) {
+        return 'Storage link already exists ✅';
+    }
+
+    try {
+        symlink($target, $link);
+        return 'Storage link created successfully ✅';
+    } catch (\Throwable $e) {
+        return 'Failed: ' . $e->getMessage();
+    }
+});
