@@ -301,7 +301,8 @@
                     alt="AWS">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Apple_logo_black.svg" alt="Apple">
+                {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Apple_logo_black.svg" alt="Apple"> --}}
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
                     alt="AWS">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure">
