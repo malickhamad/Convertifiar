@@ -6,6 +6,20 @@
 
 @section('content')
 
+ <style>
+        .ck-editor__editable_inline {
+            min-height: 400px;
+            background-color: #000 !important;
+            color: #fff !important;
+        }
+
+        .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+            border-color: #6c757d !important;
+        }
+    </style>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+
 <div class="container-fluid py-4" style="margin-top: 105px;">
 
     {{-- Header --}}
@@ -182,7 +196,7 @@
 
                             </label>
 
-                            <textarea name="content"
+                            <textarea id="blogContent" name="content"
                                       rows="20"
                                       class="form-control bg-black text-white border-secondary"
                                       placeholder="Write your article..."
@@ -447,5 +461,21 @@
     </form>
 
 </div>
+
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#blogContent'), {
+                toolbar: [
+                    'heading', '|',
+                    'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
+                    'blockQuote', 'insertTable', 'undo', 'redo'
+                ]
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
 
 @endsection
