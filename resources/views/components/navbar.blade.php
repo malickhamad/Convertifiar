@@ -139,6 +139,20 @@
             box-sizing: border-box;
         }
     }
+    /* Give the trigger a padding-bottom that fills the gap */
+    .nav-item-dropdown {
+        position: relative;
+        padding-bottom: 0; /* default */
+    }
+
+    /* When navbar is fixed/shrunk, the trigger area extends down to the dropdown */
+    .dynamic-navbar.scrolled .nav-item-dropdown,
+    .dynamic-navbar.fixed .nav-item-dropdown,
+    .dynamic-navbar.shrink .nav-item-dropdown,
+    .dynamic-navbar.is-fixed .nav-item-dropdown {
+        padding-bottom: 30px;   /* fills the gap */
+        margin-bottom: -30px;   /* keeps layout unchanged */
+    }
 </style>
 
 
