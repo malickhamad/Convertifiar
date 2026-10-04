@@ -11,6 +11,19 @@
             KEEPING YOUR EXISTING DESIGN
         ========================================================== --}}
         <section class="crop-hero-section" id="pdfUploadSection">
+              <section class="mb-5">
+            <div class="container">
+                <div class="crop-breadcrumb">
+                    <a href="{{ route('home') }}" class="text-decoration-none">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <i class="fas fa-chevron-right mx-2"></i>
+                    <span>PDF Editor</span>
+                </div>
+            </div>
+        </section>
+
             <div class="container">
                 <div class="crop-heading text-center">
                     <div class="crop-small-badge">

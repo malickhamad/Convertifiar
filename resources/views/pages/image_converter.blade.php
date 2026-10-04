@@ -15,9 +15,22 @@
 @endsection
 
 @section('content')
-    <main class="converter-page">
+    <main class="converter-page bg-black">
+        <section class="converter-hero bg-black">
 
-        <section class="converter-hero">
+          <section class="mb-5">
+            <div class="container">
+                <div class="crop-breadcrumb">
+                    <a href="{{ route('home') }}" class="text-decoration-none">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <i class="fas fa-chevron-right mx-2"></i>
+                    <span>Image Converter</span>
+                </div>
+            </div>
+        </section>
+        
 
             <div class="container">
 
@@ -363,50 +376,50 @@
         });
 
 
-        const navbar = document.getElementById('morphNavbar');
+        // const navbar = document.getElementById('morphNavbar');
 
-        window.addEventListener('scroll', () =>
-            navbar.classList.toggle('scrolled', scrollY > 50)
-        );
-
-
-        const toggle = document.getElementById('mobileToggleBtn'),
-            links = document.getElementById('navLinksWrapper');
+        // window.addEventListener('scroll', () =>
+        //     navbar.classList.toggle('scrolled', scrollY > 50)
+        // );
 
 
-        toggle.addEventListener('click', () => {
-
-            links.classList.toggle('mobile-open');
-
-            const i = toggle.querySelector('i');
-
-            i.classList.toggle('fa-bars');
-            i.classList.toggle('fa-times');
-
-        });
+        // const toggle = document.getElementById('mobileToggleBtn'),
+        //     links = document.getElementById('navLinksWrapper');
 
 
-        document.querySelectorAll('.nav-item-dropdown').forEach(d =>
-            d.querySelector('.dropdown-trigger').addEventListener('click', e => {
+        // toggle.addEventListener('click', () => {
 
-                if (innerWidth < 992) {
+        //     links.classList.toggle('mobile-open');
 
-                    e.preventDefault();
+        //     const i = toggle.querySelector('i');
 
-                    document.querySelectorAll('.nav-item-dropdown').forEach(x => {
+        //     i.classList.toggle('fa-bars');
+        //     i.classList.toggle('fa-times');
 
-                        if (x !== d) {
-                            x.classList.remove('open');
-                        }
+        // });
 
-                    });
 
-                    d.classList.toggle('open');
+        // document.querySelectorAll('.nav-item-dropdown').forEach(d =>
+        //     d.querySelector('.dropdown-trigger').addEventListener('click', e => {
 
-                }
+        //         if (innerWidth < 992) {
 
-            })
-        );
+        //             e.preventDefault();
+
+        //             document.querySelectorAll('.nav-item-dropdown').forEach(x => {
+
+        //                 if (x !== d) {
+        //                     x.classList.remove('open');
+        //                 }
+
+        //             });
+
+        //             d.classList.toggle('open');
+
+        //         }
+
+        //     })
+        // );
 
 
         const input = document.getElementById('converterFileInput'),
