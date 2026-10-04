@@ -69,7 +69,7 @@
                                 <img
                                     src="{{ asset('storage/' . $featuredBlog->featured_image) }}"
                                     alt="{{ $featuredBlog->title }}"
-                                    class="w-100 h-100 object-fit-cover"
+                                    class="w-100 h-100 object-fit-contain"
                                     loading="lazy">
 
                             @else
@@ -182,7 +182,7 @@
                                     <img
                                         src="{{ asset('storage/' . $blog->featured_image) }}"
                                         alt="{{ $blog->title }}"
-                                        class="w-100 h-100 object-fit-cover"
+                                        class="w-100 h-100 object-fit-contain"
                                         loading="lazy">
 
                                 @else
