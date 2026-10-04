@@ -161,7 +161,7 @@
 .dynamic-navbar.scrolled #toolsDropdown .nav-dropdown-menu,
 .dynamic-navbar.fixed #toolsDropdown .nav-dropdown-menu,
 .dynamic-navbar.shrink #toolsDropdown .nav-dropdown-menu {
-    top: 70px !important;
+    top: 76px !important;
 }
 
 </style>
