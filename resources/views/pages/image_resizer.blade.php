@@ -1,14 +1,14 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Image Resizer</title>
-    <meta name="description" content="Main Image Resizer Description" />
+    <title>FREE Image Resizer: Resize Photos Online | XConvertifire</title>
+    <meta name="description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely." />
 
-    <meta property="og:title" content="Image Resizer">
-    <meta property="og:description" content="Main Image Resizer Description">
+    <meta property="og:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
+    <meta property="og:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
 
-    <meta property="twitter:title" content="Image Resizer">
-    <meta property="twitter:description" content="Main Image Resizer Description">
+    <meta property="twitter:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
+    <meta property="twitter:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
 @endsection
 
 @section('content')

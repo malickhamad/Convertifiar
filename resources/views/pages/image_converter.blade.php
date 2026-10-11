@@ -3,15 +3,15 @@
 <link rel="stylesheet" href="{{ asset('css/image-converter.css') }}">
 
 @section('meta')
-    <title>Image Converter</title>
+    <title>FREE Image Converter: Convert Images Online | XConvertifire</title>
 
-    <meta name="description" content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online quickly and easily." />
+    <meta name="description" content="Convert JPG, JPEG, PNG, WebP, GIF, and PDF files online for FREE with XConvertifire. Convert multiple images quickly with fast, secure browser-based processing." />
 
-    <meta property="og:title" content="Image Converter">
-    <meta property="og:description" content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
+    <meta property="og:title" content="FREE Image Converter: Convert Images Online | XConvertifire">
+    <meta property="og:description" content="Convert JPG, JPEG, PNG, WebP, GIF, and PDF files online for FREE with XConvertifire. Convert multiple images quickly with fast, secure browser-based processing.">
 
-    <meta property="twitter:title" content="Image Converter">
-    <meta property="twitter:description" content="Convert multiple images to PNG, JPG, JPEG, WebP or PDF online.">
+    <meta property="twitter:title" content="FREE Image Converter: Convert Images Online | XConvertifire">
+    <meta property="twitter:description" content="Convert JPG, JPEG, PNG, WebP, GIF, and PDF files online for FREE with XConvertifire. Convert multiple images quickly with fast, secure browser-based processing.">
 @endsection
 
 @section('content')

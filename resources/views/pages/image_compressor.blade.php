@@ -1,14 +1,14 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Image Compressor</title>
-    <meta name="description" content="Compress images online without losing quality. Fast, secure, and private." />
+    <title>FREE Image Compressor: Reduce Image Size | XConvertifire</title>
+    <meta name="description" content="Compress JPG, PNG, SVG, and WebP images for FREE with XConvertifire. Reduce image file size online for FREE while keeping quality with fast, secure compression." />
 
-    <meta property="og:title" content="Image Compressor">
-    <meta property="og:description" content="Compress images online without losing quality. Fast, secure, and private.">
+    <meta property="og:title" content="FREE Image Compressor: Reduce Image Size | XConvertifire">
+    <meta property="og:description" content="Compress JPG, PNG, SVG, and WebP images for FREE with XConvertifire. Reduce image file size online for FREE while keeping quality with fast, secure compression.">
 
-    <meta property="twitter:title" content="Image Compressor">
-    <meta property="twitter:description" content="Compress images online without losing quality. Fast, secure, and private.">
+    <meta property="twitter:title" content="FREE Image Compressor: Reduce Image Size | XConvertifire">
+    <meta property="twitter:description" content="Compress JPG, PNG, SVG, and WebP images for FREE with XConvertifire. Reduce image file size online for FREE while keeping quality with fast, secure compression.">
 @endsection
 
 @section('content')

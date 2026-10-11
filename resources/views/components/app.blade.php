@@ -20,6 +20,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @include('components.style-links')
+    <meta name="google-site-verification" content="1lIfyOhBm9UiZSK6O3WSAzfYT9h_L2ceRwixYlpsS6s" />
+    <meta name="google-adsense-account" content="ca-pub-2172091253082286">
 </head>
 
 <body>

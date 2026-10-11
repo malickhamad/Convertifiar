@@ -1,8 +1,8 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Background Remover</title>
-    <meta name="description" content="Remove image backgrounds online quickly and easily.">
+    <title>FREE Background Remover: Erase Background | XConvertifire</title>
+    <meta name="description" content="Remove image backgrounds for FREE with XConvertifire. Create clean AI cutouts, refine edges, add backgrounds, and download polished images quickly and securely.">
 @endsection
 
 @section('content')

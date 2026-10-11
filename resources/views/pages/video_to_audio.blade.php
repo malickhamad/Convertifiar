@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>Video to Audio Converter | Convertifire</title>
+    <title>FREE Video to Audio Converter: Extract MP3 | XConvertifire</title>
     <meta name="description"
-        content="Convert video files to MP3, WAV and M4A audio online with Convertifire. Fast, secure and easy to use.">
+        content="Convert MP4, MOV, AVI, WebM, MKV, MPEG, MPG, FLV, and 3GP videos to MP3, WAV, or M4A for FREE with XConvertifire. Fast, secure video-to-audio conversion.">
 @endsection
 @section('content')
 

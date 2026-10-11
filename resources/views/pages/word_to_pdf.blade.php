@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>Word to PDF Converter | Convertifire</title>
+    <title>FREE Word to PDF Converter: Convert DOCX | XConvertifire</title>
     <meta name="description"
-        content="Convert Word documents to PDF files online. Fast, secure and easy Word to PDF converter by Convertifire.">
+        content="Convert DOC and DOCX files to PDF for FREE with XConvertifire. Convert single or multiple Word documents quickly, accurately, and securely.">
 @endsection
 @section('content')
     <main class="bg-black" style="margin-top:70px;">

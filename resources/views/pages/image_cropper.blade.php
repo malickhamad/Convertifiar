@@ -1,12 +1,12 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Image cropper</title>
-    <meta name="description" content="Main Image cropper Description" />
-    <meta property="og:title" content="Image cropper">
-    <meta property="og:description" content="Main Image cropper Description">
-    <meta property="twitter:title" content="Image cropper">
-    <meta property="twitter:description" content="Main Image cropper Description">
+    <title>FREE Image Cropper: Crop Images Online | XConvertifire</title>
+    <meta name="description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping." />
+    <meta property="og:title" content="FREE Image Cropper: Crop Images Online | XConvertifire">
+    <meta property="og:description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping.">
+    <meta property="twitter:title" content="FREE Image Cropper: Crop Images Online | XConvertifire">
+    <meta property="twitter:description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping.">
 @endsection
 
 @section('content')

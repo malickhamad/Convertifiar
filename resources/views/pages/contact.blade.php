@@ -1,13 +1,13 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Contact Us | Convertifire</title>
+    <title>Contact XConvertifire: Get Help & Support</title>
 
     <meta name="description"
-        content="Contact Convertifire for questions, suggestions, feedback, or support. We are here to help you get the most from our online tools.">
+        content="Contact XConvertifire for help, support, feedback, or tool suggestions. Send us a message and our team will usually respond within 24–48 hours.">
 
-    <meta property="og:title" content="Contact Us | Convertifire">
-    <meta property="og:description" content="Get in touch with Convertifire for questions, feedback, suggestions, or support.">
+    <meta property="og:title" content="Contact XConvertifire: Get Help & Support">
+    <meta property="og:description" content="Contact XConvertifire for help, support, feedback, or tool suggestions. Send us a message and our team will usually respond within 24–48 hours.">
 @endsection
 
 @section('content')
