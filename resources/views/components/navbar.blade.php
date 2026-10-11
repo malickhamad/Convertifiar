@@ -180,7 +180,7 @@
 
               <!-- Tools Dropdown -->
               <div class="nav-item-dropdown" id="toolsDropdown">
-                  <a class="nav-link-item active text-white dropdown-trigger">
+                  <a href="{{ route('home') }}#tools" class="nav-link-item active text-white dropdown-trigger">
                       Tools <i class="fas fa-chevron-down dropdown-caret"></i>
                   </a>
                   <div class="nav-dropdown-menu">

@@ -2,14 +2,14 @@
 
 @section('meta')
 
-<title>Blog | Convertifire</title>
+<title>FREE File Conversion Guides & Tips | XConvertifire</title>
 
 <meta name="description"
- content="Useful guides, tutorials, tips and insights from Convertifire.">
+ content="Explore FREE file conversion guides, tips, and tutorials from XConvertifire. Learn to convert, compress, resize, edit, and manage files online with ease.">
 
-<meta property="og:title" content="Blog | Convertifire">
+<meta property="og:title" content="FREE File Conversion Guides & Tips | XConvertifire">
 <meta property="og:description"
-    content="Useful guides, tutorials, tips and insights from Convertifire.">
+    content="Explore FREE file conversion guides, tips, and tutorials from XConvertifire. Learn to convert, compress, resize, edit, and manage files online with ease.">
 
 @endsection
 

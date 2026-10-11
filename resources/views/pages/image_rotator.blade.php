@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>Image Rotator - Rotate JPG, PNG & WebP Online | Convertifire</title>
+    <title>FREE Image Rotator: Rotate Images Online | XConvertifire</title>
     <meta name="description"
-        content="Rotate JPG, PNG, WebP and GIF images online to any angle from 0° to 360°. Fast, secure and easy image rotation with Convertifire.">
+        content="Rotate JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Choose any angle from 0° to 360° for fast, secure, and precise image rotation.">
 @endsection
 @section('content')
     <main class="crop-page bg-black">

@@ -1,14 +1,14 @@
 @extends('components.app')
 
 @section('meta')
-    <title>Home</title>
-    <meta name="description" content="Main Description" />
+    <title>FREE Online File Converter: Convert Files | XConvertifire</title>
+    <meta name="description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely." />
 
-    <meta property="og:title" content="Home">
-    <meta property="og:description" content="Main Description">
+    <meta property="og:title" content="FREE Online File Converter: Convert Files | XConvertifire">
+    <meta property="og:description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
 
-    <meta property="twitter:title" content="Home">
-    <meta property="twitter:description" content="Main Description">
+    <meta property="twitter:title" content="FREE Online File Converter: Convert Files | XConvertifire">
+    <meta property="twitter:description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
 @endsection
 
 @section('content')
@@ -56,7 +56,7 @@
     </section>
 
     <!-- Tools Grid Section (Exact 12 Cards) -->
-    <section class="container tools-grid mt-5">
+    <section id="tools" class="container tools-grid mt-5">
         <div class="row g-4">
 
             <!-- Tool 1 -->

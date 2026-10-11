@@ -1,14 +1,14 @@
 @extends('components.app')
 
 @section('meta')
-    <title>About Us | X Convertifire</title>
+    <title>About Us: FREE Online File Tools | XConvertifire</title>
 
     <meta name="description"
-        content="Learn about X Convertifire — the all-in-one online toolkit trusted by millions to convert, compress, and edit images, videos, and PDFs safely.">
+        content="Learn about XConvertifire and our mission to make file editing simple, private, and FREE with fast browser-based tools, no signup, and no hidden fees.">
 
-    <meta property="og:title" content="About Us | X Convertifire">
+    <meta property="og:title" content="About Us: FREE Online File Tools | XConvertifire">
     <meta property="og:description"
-        content="Learn about X Convertifire — the all-in-one online toolkit trusted by millions worldwide.">
+        content="Learn about XConvertifire and our mission to make file editing simple, private, and FREE with fast browser-based tools, no signup, and no hidden fees.">
 @endsection
 
 @section('content')

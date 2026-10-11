@@ -1,8 +1,8 @@
 @extends('components.app')
 @section('meta')
-    <title>Edit PDF Online | Convertifire</title>
+    <title>FREE PDF Editor: Edit PDF Online FREE | XConvertifire</title>
     <meta name="description"
-        content="Edit PDF files online like Microsoft Word. Edit text, add text, change fonts, colors, sizes and download your edited PDF with Convertifire.">
+        content="Edit PDF files online for FREE with XConvertifire. Add, edit, or delete text, undo changes, and download your updated PDF quickly and securely.">
 @endsection
 @section('content')
     <main class="bg-black" style="margin-top:90px;">
