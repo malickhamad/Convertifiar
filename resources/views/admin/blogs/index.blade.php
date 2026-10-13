@@ -22,11 +22,22 @@
             </p>
         </div>
 
-        <a href="{{ route('admin.blogs.create') }}"
-           class="btn btn-primary rounded-pill px-4">
-            <i class="fas fa-plus me-2"></i>
-            Add New Blog
-        </a>
+        <div class="d-flex flex-wrap gap-2">
+            <a href="{{ route('admin.blogs.create') }}"
+               class="btn btn-primary rounded-pill px-4">
+                <i class="fas fa-plus me-2"></i>
+                Add New Blog
+            </a>
+
+            @auth
+                <form method="POST" action="{{ route('admin.logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-light rounded-pill px-4">
+                        Logout
+                    </button>
+                </form>
+            @endauth
+        </div>
 
     </div>
 
@@ -233,7 +244,7 @@
                                         </span>
 
                                     @else
-                                        <span class="text-secondary">—</span>
+                                        <span class="text-secondary">Not provided</span>
                                     @endif
 
                                 </td>
@@ -241,7 +252,7 @@
 
                                 {{-- Author --}}
                                 <td class="text-secondary">
-                                    {{ $blog->author ?: '—' }}
+                                    {{ $blog->author ?: 'Not provided' }}
                                 </td>
 
 
@@ -272,7 +283,7 @@
 
                                     {{ $blog->published_at
                                         ? $blog->published_at->format('M d, Y')
-                                        : '—' }}
+                                        : 'Not published' }}
 
                                 </td>
 

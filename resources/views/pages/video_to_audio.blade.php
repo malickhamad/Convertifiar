@@ -258,13 +258,13 @@
                                         class="form-select bg-black text-white
                                                border-secondary rounded-3">
                                         <option value="mp3" class="bg-black text-white">
-                                            MP3 — Recommended • 192 kbps
+                                            MP3: Recommended • 192 kbps
                                         </option>
                                         <option value="wav" class="bg-black text-white">
-                                            WAV — High Quality • Lossless
+                                            WAV: High Quality • Lossless
                                         </option>
                                         <option value="m4a" class="bg-black text-white">
-                                            M4A — Compact • AAC
+                                            M4A: Compact • AAC
                                         </option>
                                     </select>
                                 </div>

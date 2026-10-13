@@ -15,7 +15,7 @@
 
     @yield('meta')
     <meta name="robots" content="@yield('robots', 'index, follow')">
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
     <link rel="icon" href="{{ asset('images/favicon.ico') }}">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">

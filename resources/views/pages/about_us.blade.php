@@ -54,23 +54,23 @@
                     </h1>
 
                     <p class="about-hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        X Convertifire was born from a simple idea — powerful file editing shouldn't be complicated,
-                        expensive, or require installing heavy software. Today we help millions of people
-                        convert, compress, and edit their files right from the browser.
+                        XConvertifire provides free online tools for common image, PDF, document, and video tasks.
+                        Use supported tools to compress, resize, crop, rotate, or convert images; edit PDFs;
+                        convert PDFs and Word documents; and extract audio from videos.
                     </p>
 
                     <div class="about-hero-stats" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                         <div class="about-stat">
-                            <h3>10M+</h3>
-                            <p>Files Processed</p>
+                            <h3>Image</h3>
+                            <p>Tools</p>
                         </div>
                         <div class="about-stat">
-                            <h3>150+</h3>
-                            <p>Countries</p>
+                            <h3>PDF</h3>
+                            <p>Tools</p>
                         </div>
                         <div class="about-stat">
-                            <h3>4.9★</h3>
-                            <p>User Rating</p>
+                            <h3>Video</h3>
+                            <p>Tools</p>
                         </div>
                     </div>
 
@@ -95,24 +95,22 @@
                 </h2>
 
                 <p class="about-para">
-                    Whether you're a designer compressing images for a client, a student converting PDFs
-                    before submission, or a business handling hundreds of files a day — our tools are built
-                    for you. No watermarks, no signups, no hidden fees. Just fast, private, and reliable
-                    processing in your browser.
+                    Our tools are designed for everyday image, PDF, document, and video tasks.
+                    Available tools are free to use, and processing features vary by tool.
                 </p>
 
                 <div class="about-points">
                     <div class="about-point">
                         <i class="fas fa-check-circle"></i>
-                        <span>100% free for personal and commercial use</span>
+                        <span>Free online tools for supported tasks</span>
                     </div>
                     <div class="about-point">
                         <i class="fas fa-check-circle"></i>
-                        <span>Files never stored — processed in your browser</span>
+                        <span>Some tools process files in your browser; others require server-side processing</span>
                     </div>
                     <div class="about-point">
                         <i class="fas fa-check-circle"></i>
-                        <span>No signup, no software, works on any device</span>
+                        <span>Use the tools online without installing software</span>
                     </div>
                 </div>
             </div>
@@ -125,24 +123,28 @@
                         <div class="about-mini-icon bg-blue">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h4>Privacy First</h4>
-                        <p>Your files stay on your device. We never upload or store your data on our servers.</p>
+                        <h4>File Processing</h4>
+                        <p>
+                            Some tools process files in your browser; others send files to our servers for
+                            processing. See our
+                            <a href="{{ route('privacy-policy') }}">Privacy Policy</a> for details.
+                        </p>
                     </div>
 
                     <div class="about-mini-card">
                         <div class="about-mini-icon bg-green">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <h4>Lightning Fast</h4>
-                        <p>Powered by modern web tech — no waiting in queues, no server bottlenecks.</p>
+                        <h4>Processing Time</h4>
+                        <p>Processing time depends on the tool, file, device, and connection.</p>
                     </div>
 
                     <div class="about-mini-card">
                         <div class="about-mini-icon bg-purple">
                             <i class="fas fa-infinity"></i>
                         </div>
-                        <h4>Unlimited Usage</h4>
-                        <p>Process as many files as you want. No daily limits, no credit systems, no surprises.</p>
+                        <h4>Tool Limits</h4>
+                        <p>File-size and usage limits may vary by tool; check the relevant tool page.</p>
                     </div>
                 </div>
             </div>
@@ -165,9 +167,8 @@
                 </h2>
 
                 <p class="about-para">
-                    A quick look at how our tools handle your files — instantly, securely, and
-                    without any complicated setup. Whether you're editing a single image or
-                    processing hundreds of files, it's all done in a few clicks.
+                    See how to use XConvertifire's online tools. Available features and processing
+                    methods vary by tool.
                 </p>
 
                 <div class="about-video-points">
@@ -176,8 +177,8 @@
                             <i class="fas fa-bolt"></i>
                         </div>
                         <div>
-                            <h5>Instant Processing</h5>
-                            <p>No waiting, no queues — results in seconds.</p>
+                            <h5>Processing Time</h5>
+                            <p>Processing depends on the tool and file.</p>
                         </div>
                     </div>
                     <div class="about-video-point">
@@ -185,8 +186,8 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
-                            <h5>Private & Secure</h5>
-                            <p>Your files stay on your device, always.</p>
+                            <h5>File Processing</h5>
+                            <p>Some tools process files in your browser; others use server-side processing.</p>
                         </div>
                     </div>
                 </div>
@@ -197,7 +198,7 @@
                 <div class="about-video-3d-wrap" id="video3dWrap">
                     <!-- Floating badges -->
                     <div class="about-video-float-badge about-video-float-1">
-                        <i class="fas fa-check-circle"></i> 100% Free
+                        <i class="fas fa-check-circle"></i> Free Online Tools
                     </div>
                     <div class="about-video-float-badge about-video-float-2">
                         <i class="fas fa-bolt"></i> Fast
@@ -236,41 +237,41 @@
         <div class="row g-4">
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
-                <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
+                <a href="{{ route('image.compressor') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-blue"><i class="fas fa-image"></i></div>
                     <h5>Image Tools</h5>
-                    <p>Compress, resize, crop, rotate, and convert any image format in seconds.</p>
+                    <p>Compress, resize, crop, rotate, and convert supported image formats.</p>
                 </div>
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
+                <a href="{{ route('video.to.audio') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-purple"><i class="fas fa-video"></i></div>
                     <h5>Video Tools</h5>
-                    <p>Extract audio from videos, compress files, and prepare media for any platform.</p>
+                    <p>Extract audio from video files with our video-to-audio tool.</p>
                 </div>
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
-                <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
+                <a href="{{ route('pdf.editor') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-red"><i class="fas fa-file-pdf"></i></div>
                     <h5>PDF Tools</h5>
-                    <p>Edit, convert, and merge PDF documents with full precision and security.</p>
+                    <p>Edit PDF text or convert PDFs to Word documents.</p>
                 </div>
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <a target="_blank" href="{{ route('home') }}" class="text-decoration-none">
+            <a href="{{ route('word.pdf.index') }}" class="text-decoration-none">
                 <div class="about-feature-card anim-border">
                     <div class="icon-box bg-green"><i class="fas fa-file-word"></i></div>
                     <h5>Document Tools</h5>
-                    <p>Seamlessly convert between Word, PDF, and other document formats.</p>
+                    <p>Convert Word documents to PDF files.</p>
                 </div>
                                 </a>
             </div>
@@ -290,34 +291,33 @@
                 <div class="about-why-big">
                     <span class="about-mini-badge">Why X Convertifire</span>
                     <h3 class="about-why-title">
-                        Trusted by creators, students, and businesses worldwide
+                        Tools for everyday file tasks
                     </h3>
                     <p class="about-why-desc">
-                        We've processed over 10 million files for users in more than 150 countries.
-                        Whether you're working on a single photo or a batch of thousands,
-                        our tools are built to handle it — fast, safely, and completely free.
+                        Use XConvertifire's free online tools for common image, PDF, document, and video tasks.
+                        Available features and processing methods vary by tool.
                     </p>
 
                     <div class="about-why-stats">
                         <div class="about-why-stat">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-image"></i>
                             <div>
-                                <h4>2M+</h4>
-                                <p>Active Users</p>
+                                <h4>Images</h4>
+                                <p>Compress, resize, crop, rotate, and convert supported formats</p>
                             </div>
                         </div>
                         <div class="about-why-stat">
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-file-pdf"></i>
                             <div>
-                                <h4>4.9/5</h4>
-                                <p>Average Rating</p>
+                                <h4>PDFs</h4>
+                                <p>Edit text and convert to Word documents</p>
                             </div>
                         </div>
                         <div class="about-why-stat">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-video"></i>
                             <div>
-                                <h4>150+</h4>
-                                <p>Countries</p>
+                                <h4>Videos</h4>
+                                <p>Extract audio from video files</p>
                             </div>
                         </div>
                     </div>
@@ -334,8 +334,8 @@
                                 <i class="fas fa-lock"></i>
                             </div>
                             <div>
-                                <h4>Bank-level Security</h4>
-                                <p>Every file is processed with SSL encryption and never shared with third parties.</p>
+                                <h4>File Processing</h4>
+                                <p>Some tools process files in your browser; others require server-side processing.</p>
                             </div>
                         </div>
                     </div>
@@ -347,7 +347,7 @@
                             </div>
                             <div>
                                 <h4>Works Everywhere</h4>
-                                <p>Use our tools on desktop, tablet, or mobile — no installation required.</p>
+                                <p>Use our tools on desktop, tablet, or mobile, with no installation required.</p>
                             </div>
                         </div>
                     </div>
@@ -358,8 +358,8 @@
                                 <i class="fas fa-headset"></i>
                             </div>
                             <div>
-                                <h4>Real Human Support</h4>
-                                <p>Questions? Our team responds within 24–48 hours, always happy to help.</p>
+                                <h4>Contact Support</h4>
+                                <p>For help using a tool, <a href="{{ route('contact') }}">contact us</a>.</p>
                             </div>
                         </div>
                     </div>

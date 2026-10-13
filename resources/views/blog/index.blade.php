@@ -13,6 +13,8 @@
 
 @endsection
 
+@section('canonical', $blogs->currentPage() > 1 ? $blogs->url($blogs->currentPage()) : url()->current())
+
 @section('content')
 
 <div class="bg-black text-white min-vh-100" style="margin-top: 105px;">

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\PdfToWordController;
 use App\Http\Controllers\WordToPdfController;
 use App\Http\Controllers\VideoToAudioConverterController;
+use App\Http\Controllers\Admin\AdminLoginController;
 
 
 Route::get('/', [PageController::class, 'home'])->name('home');
@@ -34,7 +35,18 @@ Route::get('/image-converter', [PageController::class, 'imageConverter'])->name(
 Route::get('/background-remover', [PageController::class, 'backgroundRemover'])->name('image.background_remover');
 
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::get('/admin/login', [AdminLoginController::class, 'create'])
+    ->name('admin.login');
+
+Route::post('/admin/login', [AdminLoginController::class, 'store'])
+    ->middleware('throttle:admin-login')
+    ->name('admin.login.store');
+
+Route::post('/admin/logout', [AdminLoginController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('admin.logout');
+
+Route::middleware(['auth', 'can:access-admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::resource('blogs', AdminBlogController::class);
 });
 
@@ -46,8 +58,6 @@ Route::get('/blog', [BlogController::class, 'index'])
 Route::get('/blog/{slug}', [BlogController::class, 'show'])
     ->name('blog.show');
 
-Route::get('/image-resizer', [PageController::class, 'imageResizer'])->name('image.resizer');
-
 Route::get('/image-to-jpg', [PageController::class, 'imageToJpg'])->name('image.to.jpg');
 
 Route::get('/video-to-audio', [PageController::class, 'videoToAudio'])->name('video.to.audio');
@@ -56,11 +66,6 @@ Route::get('/image-rotator', [PageController::class, 'imageRotator'])
     ->name('image.rotator');
 Route::get('/pdf-editor', [PageController::class, 'pdfEditor'])
     ->name('pdf.editor');
-Route::get('/pdf-to-word', [PageController::class, 'pdfToWord'])
-    ->name('pdf.to.word');
-
-
-
 // PDF to Word Tool
 Route::get('/pdf-to-word', [PdfToWordController::class, 'index'])
     ->name('pdf.to.word');

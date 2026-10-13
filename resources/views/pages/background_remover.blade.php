@@ -7,7 +7,7 @@
 
 @section('content')
     <style>
-        /* ========== X Convertifire AI Background Remover — black theme ========== */
+        /* ========== X Convertifire AI Background Remover: black theme ========== */
         .bg-remover-page {
             min-height: 100vh;
             background: #080808;
@@ -1384,7 +1384,7 @@
 
     <script type="module">
         /* =========================================================
-       X Convertifire BG Remover — New design + Working AI logic
+       X Convertifire BG Remover: New design + Working AI logic
        ========================================================== */
         const $ = s => document.querySelector(s);
         const $$ = s => document.querySelectorAll(s);
@@ -1859,7 +1859,5 @@
         window.addEventListener('resize', view);
         const navbar = $('#morphNavbar');
         window.addEventListener('scroll', () => navbar && navbar.classList.toggle('scrolled', scrollY > 50));
-        $('#mobileToggleBtn') && ($('#mobileToggleBtn').onclick = () => $('#navLinksWrapper').classList.toggle(
-            'mobile-open'));
     </script>
 @endsection
