@@ -47,7 +47,7 @@
             <div class="row g-4 align-items-stretch">
 
                 <!-- ===== Contact Information ===== -->
-                <div class="col-lg-5" data-aos="fade-right">
+                <div class="col-lg-5" data-aos="fade-up">
                     <div class="contact-info-card h-100">
 
                         <h2 class="contact-card-title">Let's Talk</h2>
@@ -105,7 +105,7 @@
 
 
                 <!-- ===== Contact Form ===== -->
-                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
                     <div class="contact-form-card h-100">
 
                         <h2 class="contact-card-title mb-2">Send Us a Message</h2>

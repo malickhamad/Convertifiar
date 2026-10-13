@@ -58,6 +58,15 @@
 
         @endif
 
+        @auth
+            <form method="POST" action="{{ route('admin.logout') }}">
+                @csrf
+                <button type="submit" class="btn btn-outline-light rounded-pill px-4">
+                    Logout
+                </button>
+            </form>
+        @endauth
+
     </div>
 
 

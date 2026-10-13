@@ -7,7 +7,7 @@
           /* Text header height ke mutabiq adjustment */
           width: 170px !important;
           /* Aspect ratio maintain rakhne ke liye */
-          object-fit: contain;`
+          object-fit: contain;
           display: block;
       }
   </style>
@@ -21,7 +21,7 @@
         display: block;
     }
 
-    /* Tools dropdown — hidden by default, shows only when opened */
+    /* Tools dropdown: hidden by default, shows only when opened */
     #toolsDropdown .nav-dropdown-menu {
         display: grid !important;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -46,7 +46,7 @@
         z-index: 9999;
     }
 
-    /* ✅ Invisible hover bridge — keeps dropdown open while moving to it */
+    /* ✅ Invisible hover bridge: keeps dropdown open while moving to it */
     #toolsDropdown::after {
         content: "";
         position: fixed;
@@ -175,8 +175,8 @@
               <img src="{{ asset('assets/images/logo.png') }}" alt="Convertifire" class="brand-logo-img">
           </a>
           <!-- Center: Links Pill -->
-          <div class="nav-links-wrapper" id="navLinksWrapper">
-              <a href="{{ route('home') }}" class="nav-link-item {{ request()->routeIs('home') ? 'active' : '' }}"">Home</a>
+          <nav class="nav-links-wrapper" id="navLinksWrapper" aria-label="Main navigation">
+              <a href="{{ route('home') }}" class="nav-link-item {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
 
               <!-- Tools Dropdown -->
               <div class="nav-item-dropdown" id="toolsDropdown">
@@ -201,9 +201,9 @@
                   </div>
               </div>
 
-              <a href="{{ route('about-us') }}" class="nav-link-item {{ request()->routeIs('about-us') ? 'active' : '' }}"">About Us</a>
-              <a href="{{ route('blog.index') }}" class="nav-link-item {{ request()->routeIs('blog.index') ? 'active' : '' }}"">Blog</a>
-              <a href="{{ route('contact') }}" class="nav-link-item {{ request()->routeIs('contact') ? 'active' : '' }}"">Contact Us</a>
+              <a href="{{ route('about-us') }}" class="nav-link-item {{ request()->routeIs('about-us') ? 'active' : '' }}">About Us</a>
+              <a href="{{ route('blog.index') }}" class="nav-link-item {{ request()->routeIs('blog.index') ? 'active' : '' }}">Blog</a>
+              <a href="{{ route('contact') }}" class="nav-link-item {{ request()->routeIs('contact') ? 'active' : '' }}">Contact Us</a>
 
               {{-- <!-- API Docs Dropdown -->
               <div class="nav-item-dropdown" id="apiDropdown">
@@ -218,13 +218,13 @@
                   </div>
               </div> --}}
 
-          </div>
+          </nav>
 
           <!-- Right: Action Button (desktop) -->
           <a href="{{ route('contact') }}" class="btn-action">Request a Tool</a>
 
           <!-- Mobile Hamburger Toggle -->
-          <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle menu">
+          <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle menu" aria-controls="navLinksWrapper" aria-expanded="false">
               <i class="fas fa-bars"></i>
           </button>
       </div>

@@ -8,7 +8,7 @@
     <main class="bg-black" style="margin-top:70px;">
         {{-- ============================================================
          HERO / UPLOAD SECTION
-         Visible by default — hidden when results exist
+         Visible by default (hidden when results exist)
     ============================================================ --}}
         <section class="crop-hero-section {{ session('downloads') ? 'd-none' : '' }}" id="heroSection">
             <div class="container">
@@ -59,7 +59,7 @@
         </section>
         {{-- ============================================================
          SELECTED FILES SECTION
-         Hidden by default — shown only when user picks files
+         Hidden by default (shown only when user picks files)
     ============================================================ --}}
         <section class="crop-hero-section d-none" id="filesSection">
             <div class="container">
@@ -113,7 +113,7 @@
         </section>
         {{-- ============================================================
          PROGRESS SECTION
-         Hidden by default — shown on submit
+         Hidden by default (shown on submit)
     ============================================================ --}}
         <section class="crop-hero-section d-none" id="progressSection">
             <div class="container">

@@ -32,7 +32,8 @@ class PageController extends Controller
 }
  public function sitemap()
 {
-    $blogs = Blog::select('slug', 'updated_at')
+    $blogs = Blog::published()
+        ->select('slug', 'updated_at')
         ->latest('updated_at')
         ->get();
 

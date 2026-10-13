@@ -136,7 +136,7 @@ class PdfToWordController extends Controller
         abort_unless(is_file($path), 404);
 
         // Delete the whole batch folder after the response finishes
-        // (register a shutdown function — runs after the file is fully sent)
+        // (register a shutdown function, which runs after the file is fully sent)
         $cleanupDir = $dir;
         app()->terminating(function () use ($cleanupDir) {
             if (is_dir($cleanupDir)) {

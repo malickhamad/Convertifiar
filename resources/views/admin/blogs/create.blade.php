@@ -24,7 +24,7 @@
     <div class="container-fluid py-4" style="margin-top: 105px;">
 
         {{-- Header --}}
-        <div class="d-flex align-items-center gap-3 mb-4">
+        <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
 
             <a href="{{ route('admin.blogs.index') }}" class="btn btn-dark border-secondary rounded-circle">
 
@@ -43,6 +43,15 @@
                 </p>
 
             </div>
+
+            @auth
+                <form method="POST" action="{{ route('admin.logout') }}" class="ms-auto">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-light rounded-pill px-4">
+                        Logout
+                    </button>
+                </form>
+            @endauth
 
         </div>
 

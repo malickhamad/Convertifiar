@@ -58,6 +58,15 @@
 
             @endif
 
+            @auth
+                <form method="POST" action="{{ route('admin.logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-light rounded-pill px-4">
+                        Logout
+                    </button>
+                </form>
+            @endauth
+
         </div>
 
     </div>
@@ -239,7 +248,7 @@
                         </small>
 
                         <span class="text-white">
-                            {{ $blog->category ?: '—' }}
+                            {{ $blog->category ?: 'Not provided' }}
                         </span>
 
                     </div>
@@ -252,7 +261,7 @@
                         </small>
 
                         <span class="text-white">
-                            {{ $blog->author ?: '—' }}
+                            {{ $blog->author ?: 'Not provided' }}
                         </span>
 
                     </div>

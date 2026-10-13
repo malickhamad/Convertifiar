@@ -27,10 +27,20 @@
         var mobileToggleBtn = document.getElementById('mobileToggleBtn');
         var navLinksWrapper = document.getElementById('navLinksWrapper');
 
+        function syncMobileMenuExpanded() {
+            var isDesktop = window.innerWidth >= 992;
+            var isOpen = isDesktop || navLinksWrapper.classList.contains('mobile-open');
+            mobileToggleBtn.setAttribute('aria-expanded', String(isOpen));
+        }
+
+        syncMobileMenuExpanded();
+
         mobileToggleBtn.addEventListener('click', function() {
             navLinksWrapper.classList.toggle('mobile-open');
             var icon = mobileToggleBtn.querySelector('i');
-            if (navLinksWrapper.classList.contains('mobile-open')) {
+            var isOpen = navLinksWrapper.classList.contains('mobile-open');
+            syncMobileMenuExpanded();
+            if (isOpen) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
             } else {
@@ -71,4 +81,5 @@
                     d.classList.remove('open');
                 });
             }
+            syncMobileMenuExpanded();
         });

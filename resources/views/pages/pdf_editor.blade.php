@@ -1292,7 +1292,7 @@
             }
         }
 
-        /* Small tablets / large phones — stack into column */
+        /* Small tablets / large phones: stack into column */
         @media(max-width: 768px) {
             .pdf-workspace {
                 flex-direction: column;
@@ -1750,7 +1750,7 @@
                     await renderAllPages();
                     hideLoading();
                     $('#editorStatus').text(
-                        'PDF loaded — click any text to edit'
+                        'PDF loaded. Click any text to edit'
                     );
                 } catch (error) {
                     console.error(error);
@@ -2059,8 +2059,8 @@
                 updateToolbarFromText(text);
                 $('#editorStatus').text(
                     text.added ?
-                    'Added text selected — drag it to move' :
-                    'Text selected — type to edit'
+                    'Added text selected. Drag it to move' :
+                    'Text selected. Type to edit'
                 );
             }
 
