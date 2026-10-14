@@ -299,7 +299,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
                     <p>PNG is often used for logos, screenshots, illustrations and images requiring transparency.</p>
                     <p>An important limitation of this compressor is that PNG inputs can be exported as JPEG files when the selected quality is below 90%. JPEG does not support transparency, so transparent regions may change appearance.</p>
                     <p>When keeping a PNG output and its transparency is important, use the High preset or a quality value of at least 90%. This still does not guarantee a smaller file.</p>
-                    <p>If you need a different image format instead of compression, use the <a href="https://xconvertifire.com/image-converter">online image converter</a>.</p>
+                    <p>If you need a different image format instead of compression, use the <a href="{{ route('image.converter') }}">online image converter</a>.</p>
 
                     <h3>Compress WebP Images</h3>
                     <p>WebP is useful for many web images because it supports efficient compression and transparency. XConvertifire can re-encode supported WebP images using the selected browser quality setting.</p>
@@ -333,8 +333,8 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
                     <p><strong>Start with the Recommended setting.</strong> Review the resulting image before trying stronger compression.</p>
                     <p><strong>Keep your original file.</strong> If the output looks blurry or loses important visual details, return to the original and select a higher quality setting.</p>
                     <p><strong>Choose an appropriate format.</strong> JPG often suits photographs, while PNG may be preferable for graphics that require transparency. WebP can be a useful option for modern websites.</p>
-                    <p><strong>Check image dimensions.</strong> A very large image may still occupy substantial space after compression. If the picture has larger pixel dimensions than you need, try the <a href="https://xconvertifire.com/image-resizer">image resizer</a> before compressing it.</p>
-                    <p><strong>Crop unnecessary areas.</strong> Removing unused parts of an image can help you create a more focused asset. The <a href="https://xconvertifire.com/image-cropper">online image cropper</a> can help with this separate task.</p>
+                    <p><strong>Check image dimensions.</strong> A very large image may still occupy substantial space after compression. If the picture has larger pixel dimensions than you need, try the <a href="{{ route('image.resizer') }}">image resizer</a> before compressing it.</p>
+                    <p><strong>Crop unnecessary areas.</strong> Removing unused parts of an image can help you create a more focused asset. The <a href="{{ route('image.cropper') }}">online image cropper</a> can help with this separate task.</p>
                     <p><strong>Verify the final download.</strong> Inspect image quality, transparency, file extension and file size before uploading the result to your website or other platform.</p>
 
                     <h2>Frequently Asked Questions About Image Compression</h2>

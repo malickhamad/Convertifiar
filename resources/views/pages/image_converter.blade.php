@@ -446,10 +446,10 @@
                         </div>
 
                         <h3>
-                            Designed for privacy
+                            Browser-Based Processing
                         </h3>
                         <p>
-                            Images are processed directly in the browser.
+                            Image conversion uses browser-side image and canvas processing. This describes the conversion workflow, not all website activity.
                         </p>
 
                     </div>
@@ -464,7 +464,7 @@
             <div class="container">
                 <div class="converter-seo-wrap">
                     <h2>Free Online Image Converter</h2>
-                    <p>An image converter online changes a file's format for use in a website, document or app. XConvertifire's free image converter lets you convert images in your browser to JPG, JPEG, PNG, WebP, GIF or PDF.</p>
+                    <p>An image converter online changes a file's format for use in a website, document or app. XConvertifire's free image converter lets you convert images in your browser to JPG, JPEG, PNG, WebP, GIF or PDF. GIF output depends on browser canvas encoding; when GIF encoding is unsupported, the result may contain PNG data even if its filename ends in <code>.gif</code>.</p>
                     <p>JPG and JPEG refer to the same widely supported image encoding and are often used for photographs. PNG is useful for graphics and images that need transparency. WebP can provide a modern web image format, although browser support affects encoding. PDF output collects selected images into a document. The best choice depends on what you are making and where the file will be used.</p>
                     <p>Select browser-decodable image files, choose one output option and start conversion. Results depend on the source and browser.</p>
 
@@ -510,7 +510,7 @@
                     <p>WebP may suit websites that support it. The browser must support WebP encoding; otherwise canvas may return PNG data. Check the download rather than assuming its format or size reduction.</p>
 
                     <h3>Convert GIF Input Images</h3>
-                    <p>A browser may decode GIF input as an image frame; this conversion workflow does not preserve animated GIF playback. The GIF output option is also limited by canvas support. Many browsers do not encode GIF with canvas, and an unsupported request may produce PNG data even though the generated filename ends in <code>.gif</code>. Do not rely on this option to create an animated GIF.</p>
+                    <p>A browser may decode GIF input as an image frame, so this conversion workflow does not preserve animated GIF playback. Do not rely on the GIF output option to create an animated GIF.</p>
 
                     <h2>Convert Multiple Images Online</h2>
                     <p>Add or remove selected images, or clear the selection. One output format applies to the whole batch; process separate groups if they need different formats.</p>
@@ -538,7 +538,6 @@
                     <ul class="converter-seo-list">
                         <li>JPEG does not support transparent pixels. This converter uses a white canvas background for JPEG output.</li>
                         <li>PNG can retain transparency when the input and browser-based export support it.</li>
-                        <li>Animated GIF frames are not retained in the browser canvas conversion workflow.</li>
                         <li>WebP output depends on browser encoding support and does not promise a specific reduction percentage.</li>
                         <li>Review the downloaded file, including its format, transparency, dimensions and fine details.</li>
                     </ul>

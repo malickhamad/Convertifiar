@@ -762,6 +762,7 @@
 
                     <h3>Prepare Audio for Permitted Editing Projects</h3>
                     <p>A separate audio file may be easier to import into an editing project. This tool does not trim clips, remove noise, isolate vocals or edit audio.</p>
+                    <p>If you are also preparing a supporting image, the <a href="{{ route('image.converter') }}">Image Converter</a> handles image-format conversions separately; it does not edit the extracted audio.</p>
 
                     <h3>Use Audio in Presentations</h3>
                     <p>A permitted sound clip can be prepared for a presentation. Confirm the output works in the software you will use.</p>

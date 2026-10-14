@@ -455,7 +455,7 @@
                     <p>When an image turns by an angle other than a multiple of 90°, its rectangular bounds need more canvas area to contain the rotated corners. This can create empty space around the image. Inspect the exported result to decide whether its framing works for your use.</p>
 
                     <h2>Rotate JPG, PNG, WebP and GIF Images</h2>
-                    <p>Input formats do not all have the same export behavior. The format used for the download and its characteristics depend on the source format and, for WebP, browser encoding support.</p>
+                    <p>Input formats do not all have the same export behavior. The format used for the download and its characteristics depend on the source format and, for WebP, browser encoding support. If you need a separate format conversion after rotating, use the <a href="{{ route('image.converter') }}">image converter</a> and check its available output options.</p>
 
                     <h3>Rotate JPG and JPEG Photos</h3>
                     <p>JPG and JPEG are common formats for photographs. Rotated JPEG input is exported as JPEG. Exporting requires encoding the image again, which may affect file size or visual quality. Keep the original if you need an untouched copy, and inspect fine details in the downloaded result.</p>
@@ -504,7 +504,6 @@
                         <li><strong>Review non-right-angle turns.</strong> A rotated rectangle needs different bounds and may have empty canvas space near its corners. This tool does not automatically crop or fill that area.</li>
                         <li><strong>Inspect the downloaded file.</strong> Verify orientation, edges, transparency, format and visual details in the actual export, not only in the editor preview.</li>
                         <li><strong>Consider browser limits.</strong> Large images can use substantial memory during canvas processing. Browser memory and canvas size limits may constrain very large files even when they are below the upload limit.</li>
-                        <li><strong>Keep animated originals.</strong> GIF exports are static PNG files, so the animation is not preserved by this tool.</li>
                     </ul>
                     <p>For technical background, see MDN's documentation on <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate" target="_blank" rel="noopener noreferrer">rotating a canvas drawing</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="noopener noreferrer">creating an image file from a canvas</a>.</p>
 

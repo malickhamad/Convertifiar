@@ -17,6 +17,58 @@
  content="{{ asset('storage/' . $blog->featured_image) }}">
 @endif
 
+@php
+    $articleUrl = route('blog.show', $blog->slug);
+    $articleDescription = trim((string) $blog->meta_description);
+    if ($articleDescription === '') {
+        $articleDescription = trim((string) $blog->excerpt);
+    }
+    if ($articleDescription === '') {
+        $articleDescription = \Illuminate\Support\Str::limit(strip_tags($blog->content ?? ''), 160);
+    }
+    $articleDescription = trim(html_entity_decode(strip_tags($articleDescription), ENT_QUOTES | ENT_HTML5, 'UTF-8'));
+    $blogPostingSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BlogPosting',
+        '@id' => $articleUrl . '#article',
+        'headline' => $blog->title,
+        'mainEntityOfPage' => $articleUrl,
+        'publisher' => [
+            '@type' => 'Organization',
+            '@id' => 'https://xconvertifire.com/#organization',
+        ],
+    ];
+
+    if ($articleDescription !== '') {
+        $blogPostingSchema['description'] = $articleDescription;
+    }
+
+    $articleAuthor = trim((string) $blog->author);
+    if ($articleAuthor !== '') {
+        if (preg_match('/^XConvertifire(?:\s+(?:Editorial(?:\s+Team)?|Team))?$/i', $articleAuthor)) {
+            $blogPostingSchema['author'] = [
+                '@type' => 'Organization',
+                '@id' => 'https://xconvertifire.com/#organization',
+                'name' => $articleAuthor,
+            ];
+        } else {
+            $blogPostingSchema['author'] = [
+                '@type' => 'Person',
+                'name' => $articleAuthor,
+            ];
+        }
+    }
+
+    if ($blog->published_at) {
+        $blogPostingSchema['datePublished'] = $blog->published_at->toIso8601String();
+    }
+
+    if (trim((string) $blog->featured_image) !== '') {
+        $blogPostingSchema['image'] = asset('storage/' . $blog->featured_image);
+    }
+@endphp
+<script type="application/ld+json">{!! json_encode($blogPostingSchema, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE) !!}</script>
+
 @endsection
 
 @section('content')

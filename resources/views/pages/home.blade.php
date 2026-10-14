@@ -9,6 +9,41 @@
 
     <meta property="twitter:title" content="FREE Online File Converter: Convert Files | XConvertifire">
     <meta property="twitter:description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
+
+    @php
+        $homeSchemaUrl = 'https://xconvertifire.com/';
+        $organizationSchemaId = $homeSchemaUrl . '#organization';
+        $homeSchema = [
+            '@context' => 'https://schema.org',
+            '@graph' => [
+                [
+                    '@type' => 'WebSite',
+                    '@id' => $homeSchemaUrl . '#website',
+                    'name' => 'XConvertifire',
+                    'url' => $homeSchemaUrl,
+                    'publisher' => [
+                        '@id' => $organizationSchemaId,
+                    ],
+                ],
+                [
+                    '@type' => 'Organization',
+                    '@id' => $organizationSchemaId,
+                    'name' => 'XConvertifire',
+                    'url' => $homeSchemaUrl,
+                    'logo' => [
+                        '@type' => 'ImageObject',
+                        'url' => $homeSchemaUrl . 'assets/images/logo.png',
+                    ],
+                    'sameAs' => [
+                        'https://www.linkedin.com/company/x-convertifire/',
+                        'https://www.instagram.com/xconvertifire',
+                        'https://x.com/xconvertifire',
+                    ],
+                ],
+            ],
+        ];
+    @endphp
+    <script type="application/ld+json">{!! json_encode($homeSchema, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE) !!}</script>
 @endsection
 
 @section('content')

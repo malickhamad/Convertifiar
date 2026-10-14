@@ -519,7 +519,7 @@
                     <p>If the same image is forced into dimensions of 600 × 600 pixels without cropping, its content may appear stretched or squeezed.</p>
                     <p>XConvertifire's aspect ratio lock helps calculate proportional dimensions automatically.</p>
                     <p>For an image that must fit a differently shaped space, simply unlocking the ratio is not always the best solution. Cropping may produce a more natural-looking result.</p>
-                    <p>To remove unwanted edges or change the visible composition, use the <a href="https://xconvertifire.com/image-cropper">online image cropper</a>.</p>
+                    <p>To remove unwanted edges or change the visible composition, use the <a href="{{ route('image.cropper') }}">online image cropper</a>.</p>
 
                     <h2>Resize JPG, PNG, WebP, SVG and GIF Images</h2>
                     <p>Different image formats behave differently when resized. Understanding those differences helps you select the right workflow.</p>
@@ -534,7 +534,7 @@
                     <p>PNG is commonly used for screenshots, illustrations, logos and graphics that require transparency.</p>
                     <p>When a PNG is resized through this tool, it is exported as PNG in the normal raster resizing workflow.</p>
                     <p>Keep the aspect ratio locked when the original proportions matter. Review thin lines and small text after reducing the dimensions.</p>
-                    <p>If you need to change the file format rather than its dimensions, use the <a href="https://xconvertifire.com/image-converter">online image converter</a>.</p>
+                    <p>If you need to change the file format rather than its dimensions, use the <a href="{{ route('image.converter') }}">online image converter</a>.</p>
 
                     <h3>Resize WebP Images</h3>
                     <p>WebP is a useful image format for many modern websites.</p>
@@ -566,7 +566,7 @@
                     <h3>Compress an Image</h3>
                     <p>Compression focuses on reducing file size, often by changing encoding settings.</p>
                     <p>An image can have the correct pixel dimensions but still be too large in KB or MB.</p>
-                    <p>If your dimensions are already correct and you want to reduce the download size, try the <a href="https://xconvertifire.com/image-compressor">free image compressor</a>.</p>
+                    <p>If your dimensions are already correct and you want to reduce the download size, try the <a href="{{ route('image.compressor') }}">free image compressor</a>.</p>
                     <p>Resizing and compression can be used together, but neither guarantees a particular final file size.</p>
 
                     <h2>Common Reasons to Resize Images</h2>
@@ -598,7 +598,6 @@
                     <p><strong>Choose dimensions for the final use.</strong> Start with the actual requirements of your website, form, document or destination platform.</p>
                     <p><strong>Understand the difference between dimensions and file size.</strong> An image's pixel dimensions and its KB/MB file size are different measurements.</p>
                     <p><strong>Preserve your original.</strong> Keep the full-resolution file so you can create another version if necessary.</p>
-                    <p><strong>Check the resulting file format.</strong> In particular, GIF input is exported as a still PNG rather than an animated GIF.</p>
                     <p>For more technical background on image scaling, read the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank" rel="noopener noreferrer">MDN guide to canvas image drawing</a>.</p>
 
                     <h2>Frequently Asked Questions About Image Resizing</h2>
