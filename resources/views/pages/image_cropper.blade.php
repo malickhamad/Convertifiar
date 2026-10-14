@@ -212,6 +212,134 @@
                 </div>
             </div>
         </section>
+        <!-- Image Cropper SEO guidance: informational content only -->
+        <section class="crop-seo-section" aria-label="Image cropping guide">
+            <div class="container">
+                <div class="crop-seo-wrap">
+                    <header class="crop-seo-intro">
+                        <span class="crop-seo-eyebrow">IMAGE CROPPING GUIDE</span>
+                        <h2>Free Image Cropper to Crop Photos Online</h2>
+                        <p>Want to remove unwanted edges, focus on a subject, or prepare a picture for a particular layout? XConvertifire's free image cropper lets you crop images online using an interactive selection area and familiar aspect ratios.</p>
+                        <p>Select a JPG, PNG, WebP, or GIF image up to 50 MB, adjust the area you want to keep, and download the cropped result. The current tool processes your image in your browser without requiring separate editing software.</p>
+                        <p><strong>Important:</strong> The current cropper downloads a JPEG image, regardless of the input format. Transparent areas and animated GIF frames are not preserved in the output.</p>
+                    </header>
+
+                    <div class="crop-seo-block">
+                        <h2>How to Crop an Image Online</h2>
+                        <p>Follow these steps to make a crop with XConvertifire:</p>
+                        <div class="crop-seo-steps">
+                            <div class="crop-seo-step"><h3>1. Choose an Image</h3><p>Click <strong>Choose File</strong> and select a JPG/JPEG, PNG, WebP, or GIF file. The maximum accepted size is 50 MB per image, and the tool handles one image at a time.</p></div>
+                            <div class="crop-seo-step"><h3>2. Select the Crop Area</h3><p>When the editing workspace opens, drag or adjust the crop box around the part of the image you want to keep. Review the framing before exporting.</p></div>
+                            <div class="crop-seo-step"><h3>3. Pick an Aspect Ratio</h3><p>Choose <strong>Free</strong> for a flexible crop, or select 1:1, 4:3, 16:9, 9:16, or 3:4. Width and height inputs influence the selection and its proportions; they do not guarantee exact output pixel dimensions.</p></div>
+                            <div class="crop-seo-step"><h3>4. Rotate or Reset</h3><p>Use <strong>Rotate Left</strong> or <strong>Rotate Right</strong> to turn the image in 90-degree increments. Choose <strong>Reset Changes</strong> to start over with the crop settings.</p></div>
+                            <div class="crop-seo-step"><h3>5. Download Your Crop</h3><p>Click <strong>Download</strong>. The result is a JPEG called <code>X Convertifire-cropped-image.jpg</code>. Open it to confirm the composition, image quality, and dimensions before publishing.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>Understanding Image Crop Aspect Ratios</h2>
+                        <p>An aspect ratio is the relationship between the width and height of the selected area. Picking the right ratio helps an image fit its destination without stretching the subject.</p>
+                        <div class="crop-seo-grid">
+                            <div class="crop-seo-card"><h3>Free Crop</h3><p>Adjust the crop area without locking it to a preset shape. Useful for removing a border or framing an unusual subject.</p></div>
+                            <div class="crop-seo-card"><h3>1:1 Square</h3><p>Equal width and height. Useful for avatars, product tiles, and square profile pictures.</p></div>
+                            <div class="crop-seo-card"><h3>4:3 Landscape</h3><p>A moderate landscape shape often suitable for photographs, galleries, and presentations.</p></div>
+                            <div class="crop-seo-card"><h3>16:9 Widescreen</h3><p>A wide composition commonly used for website banners and landscape thumbnails. It does not set a specific pixel resolution.</p></div>
+                            <div class="crop-seo-card"><h3>9:16 Portrait</h3><p>A tall vertical frame for mobile-first visuals and portrait-oriented layouts. Always check platform requirements.</p></div>
+                            <div class="crop-seo-card"><h3>3:4 Portrait</h3><p>A shorter portrait option for photos that need a more moderate vertical composition.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>How to Crop a Photo Without Stretching It</h2>
+                        <p>Cropping removes the portions outside a selected rectangle. Stretching changes the relationship between width and height, potentially making people and objects look too narrow or wide.</p>
+                        <p>For example, a 1200 &times; 800 pixel photo has a 3:2 aspect ratio. You can take a square crop from it without stretching the subjects, but content near its edges will be removed. Protect faces, text, and other details when positioning the crop.</p>
+                        <p>If you want to change an entire image's width and height without removing part of the composition, use the <a href="https://xconvertifire.com/image-resizer">online image resizer</a> instead.</p>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>Crop JPG, PNG, WebP, and GIF Images</h2>
+                        <h3>Crop JPG and JPEG Photos</h3>
+                        <p>JPG/JPEG photographs can be reframed to remove distracting edges or emphasize a subject. The downloaded JPEG is re-encoded, so it should not be considered pixel-for-pixel identical to the original.</p>
+                        <h3>Crop PNG Images</h3>
+                        <p>PNG is common for screenshots, graphics, and images with transparency. You can upload a PNG, but the cropper exports JPEG, which does not support transparent pixels. If transparent output is essential, this cropper's current export workflow will not preserve it. For separate file-format tasks, explore the <a href="https://xconvertifire.com/image-converter">online image converter</a> and confirm its available output formats.</p>
+                        <h3>Crop WebP Images</h3>
+                        <p>WebP works well for many modern web images. A WebP input can be cropped here, but the result will be JPEG rather than WebP. Check image appearance and file size after export.</p>
+                        <h3>Crop GIF Images</h3>
+                        <p>GIF input is accepted, including files containing animation. However, the current cropper exports one static JPEG image, not a new animated GIF. Use a dedicated animation editor if you need to preserve motion.</p>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>Crop, Resize, or Compress: Which Tool Should You Use?</h2>
+                        <h3>Crop to Improve Composition</h3>
+                        <p>Choose cropping when you want to remove unwanted surroundings, center a subject, or create a new frame shape. A crop keeps only the selected area.</p>
+                        <h3>Resize to Change Image Dimensions</h3>
+                        <p>Resizing scales the image to a different width or height. It is more appropriate for specified pixel dimensions. Try the <a href="https://xconvertifire.com/image-resizer">free image resizer</a> when exact image sizing matters.</p>
+                        <h3>Compress to Reduce File Size</h3>
+                        <p>Compression focuses on the amount of data in the file, measured in KB or MB. A crop can change file size but cannot guarantee a target KB value. For that goal, try the <a href="https://xconvertifire.com/image-compressor">free image compressor</a>. Depending on your workflow, you may crop first, resize next, and then compress if needed.</p>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>Practical Reasons to Crop Images</h2>
+                        <h3>Profile Photos and Avatars</h3>
+                        <p>A square crop helps you place a person in the center and remove distractions. Leave enough space around the face to avoid an awkward final frame.</p>
+                        <h3>Website Banners and Blog Images</h3>
+                        <p>Wide ratios help prepare landscape-oriented visuals, but a wide crop may cut off the top or bottom of the original picture. Google's <a href="https://web.dev/learn/design/responsive-images">responsive images guidance</a> explains how images can adapt to different layouts.</p>
+                        <h3>Product Photography</h3>
+                        <p>Crop unnecessary surroundings to draw attention to a product. Keep all essential features visible and avoid creating a misleading representation.</p>
+                        <h3>Presentations and Documents</h3>
+                        <p>Improve the framing of pictures placed in slides or documents without distorting the subject to force a particular shape.</p>
+                        <h3>Screenshots and Graphics</h3>
+                        <p>Remove empty borders or unrelated interface elements. Be careful with small text because JPEG export may be less suitable than the original lossless PNG for sharp screenshot details.</p>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>Tips for Better Image Cropping Results</h2>
+                        <ul class="crop-seo-tips">
+                            <li><strong>Start with the subject.</strong> Decide what the viewer should notice before moving the selection.</li>
+                            <li><strong>Choose the correct ratio.</strong> A square avatar and a wide banner require different framing.</li>
+                            <li><strong>Protect important details.</strong> Keep faces, logos, product features, and essential text within the crop.</li>
+                            <li><strong>Avoid excessive trimming.</strong> A tiny crop from a low-resolution source may lack the detail needed at its destination.</li>
+                            <li><strong>Keep the original.</strong> An untouched file makes future crops easier.</li>
+                            <li><strong>Check transparency and animation.</strong> This tool exports JPEG, which preserves neither.</li>
+                            <li><strong>Review the exported file.</strong> Inspect the composition and fine detail after JPEG encoding.</li>
+                        </ul>
+                        <p>For technical background on how browser canvases produce downloadable image files, see MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob">Canvas toBlob documentation</a>.</p>
+                    </div>
+
+                    <div class="crop-seo-block">
+                        <h2>Frequently Asked Questions About Image Cropping</h2>
+                        <div class="crop-seo-faq">
+                            <h3>Is XConvertifire's image cropper free?</h3>
+                            <p>Yes. The image cropper is offered as a free online tool for selecting and downloading cropped portions of supported images.</p>
+                            <h3>Which formats can I upload?</h3>
+                            <p>JPG/JPEG, PNG, WebP, and GIF files up to 50 MB per image. The downloaded output is JPEG.</p>
+                            <h3>Can I crop a picture into a square?</h3>
+                            <p>Yes. Select 1:1 and position the crop box around the subject.</p>
+                            <h3>Can I use 16:9 or 9:16?</h3>
+                            <p>Yes. Both are available, alongside Free, 1:1, 4:3, and 3:4 aspect ratios.</p>
+                            <h3>Can I rotate the image?</h3>
+                            <p>Yes. The Rotate Left and Rotate Right buttons each turn the image by 90 degrees.</p>
+                            <h3>Can I set exact crop dimensions?</h3>
+                            <p>The width and height fields influence the crop selection and its proportions, but the current export does not guarantee exact output pixel dimensions. Use the resizer for that separate task.</p>
+                            <h3>Will a cropped PNG keep its transparency?</h3>
+                            <p>No. The downloaded result is JPEG, which cannot store transparency.</p>
+                            <h3>Can I crop an animated GIF and preserve its animation?</h3>
+                            <p>No. The current export is a single static JPEG image.</p>
+                            <h3>Does cropping always reduce the file size?</h3>
+                            <p>No. File size also depends on dimensions, image content, and JPEG encoding. A smaller file is not guaranteed.</p>
+                            <h3>Are images sent to a server for cropping?</h3>
+                            <p>The current crop operation uses browser-side Cropper.js and canvas export; it does not require sending the selected file to a server-side cropping endpoint.</p>
+                        </div>
+                    </div>
+
+                    <div class="crop-seo-block crop-seo-final">
+                        <h2>Crop Your Image Online for Free</h2>
+                        <p>Choose a supported image, select the composition you want, and inspect the resulting JPEG before sharing it. Start with the image uploader above.</p>
+                        <a class="crop-seo-cta" href="#heroSection">Start Cropping Your Image</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 @endsection
 
@@ -221,6 +349,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
 
     <style>
+        /* Image Cropper SEO information only. Never affects crop workspace. */
+        .crop-seo-section { padding: 12px 0 96px; }
+        .crop-seo-wrap { max-width: 960px; margin: 0 auto; color: #d4d4d8; line-height: 1.75; overflow-wrap: anywhere; }
+        .crop-seo-intro { text-align: center; margin-bottom: 46px; }
+        .crop-seo-eyebrow { display: inline-block; margin-bottom: 15px; color: #93c5fd; font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
+        .crop-seo-wrap h2 { color: #f8fafc; font-weight: 750; font-size: clamp(1.55rem, 3vw, 2.05rem); line-height: 1.3; margin: 0 0 18px; }
+        .crop-seo-wrap h3 { color: #f4f4f5; font-size: 1.1rem; line-height: 1.4; font-weight: 700; margin: 26px 0 10px; }
+        .crop-seo-wrap p { margin: 0 0 17px; color: #b5b5bf; line-height: 1.78; }
+        .crop-seo-wrap strong { color: #f4f4f5; }
+        .crop-seo-wrap a:not(.crop-seo-cta) { color: #93c5fd; text-decoration: underline; text-underline-offset: 3px; }
+        .crop-seo-wrap a:hover, .crop-seo-wrap a:focus-visible { color: #bfdbfe; }
+        .crop-seo-wrap a:focus-visible { outline: 2px solid #60a5fa; outline-offset: 3px; }
+        .crop-seo-block { margin: 0 0 52px; }
+        .crop-seo-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+        .crop-seo-step, .crop-seo-card { min-width: 0; border: 1px solid rgba(255,255,255,.11); border-radius: 16px; background: #111113; padding: 22px; }
+        .crop-seo-step h3, .crop-seo-card h3 { margin: 0 0 10px; }
+        .crop-seo-step p:last-child, .crop-seo-card p:last-child { margin-bottom: 0; }
+        .crop-seo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+        .crop-seo-tips { padding-left: 23px; margin: 0 0 22px; }
+        .crop-seo-tips li { margin-bottom: 11px; color: #b5b5bf; }
+        .crop-seo-faq h3 { padding-top: 9px; border-top: 1px solid rgba(255,255,255,.08); }
+        .crop-seo-final { text-align: center; padding: 26px 20px; border: 1px solid rgba(96,165,250,.3); border-radius: 17px; background: rgba(59,130,246,.055); }
+        .crop-seo-cta { display: inline-flex; justify-content: center; align-items: center; margin-top: 8px; padding: 12px 24px; border: 1px solid #60a5fa; border-radius: 10px; color: #fff; background: #2563eb; font-weight: 700; text-decoration: none; }
+        .crop-seo-cta:hover, .crop-seo-cta:focus-visible { background: #1d4ed8; color: #fff; }
+        @media (max-width: 767px) {
+            .crop-seo-section { padding: 8px 0 66px; }
+            .crop-seo-intro { margin-bottom: 34px; }
+            .crop-seo-block { margin-bottom: 40px; }
+            .crop-seo-steps, .crop-seo-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+            .crop-seo-step, .crop-seo-card { padding: 18px; }
+            .crop-seo-final { padding: 24px 16px; }
+        }
         /* =========================================
            CROP WORKSPACE STYLES
         ========================================= */
@@ -575,6 +735,7 @@
             const uploadBox = document.getElementById('uploadBox');
             const heroSection = document.getElementById('heroSection');
             const cropWorkspace = document.getElementById('cropWorkspace');
+            const cropCta = document.querySelector('.crop-seo-final .crop-seo-cta');
             const fileInput = document.getElementById('cropImageInput');
             const previewImage = document.getElementById('cropPreviewImage');
             const cancelBtn = document.getElementById('cancelCropBtn');
@@ -593,6 +754,20 @@
             let cropper = null;
             let originalImageUrl = null;
             let updatingInputs = false;
+
+            cropCta.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const target = window.getComputedStyle(heroSection).display === 'none'
+                    ? cropWorkspace
+                    : heroSection;
+                const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                target.scrollIntoView({
+                    behavior: reduceMotion ? 'auto' : 'smooth',
+                    block: 'start'
+                });
+            });
 
             function initCropper() {
                 if (cropper) {

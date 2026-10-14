@@ -229,12 +229,279 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
                 </div>
             </div>
         </section>
+
+        <section class="compressor-seo-section">
+            <div class="container">
+                <div class="compressor-seo-wrap">
+                    <h2>Free Image Compressor to Reduce Image Size Online</h2>
+                    <p>Large image files can make websites slower to load and harder to share. XConvertifire's free image compressor helps you reduce image size online with adjustable quality settings and no software installation.</p>
+                    <p>Choose a JPG, PNG, WebP, SVG or GIF file up to 50 MB, review the available options and download the result. Image processing takes place in your browser, giving you direct control over the selected file and its compression settings.</p>
+                    <p>Compression results depend on the original image format, content and quality level. Some images become noticeably smaller, while images that are already optimized may show little or no improvement.</p>
+
+                    <h2>How to Compress Images Online</h2>
+                    <p>Use the following steps to reduce the file size of an image:</p>
+
+                    <div class="row g-4 compressor-seo-steps">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="compressor-seo-step">
+                                <h3>Step 1: Upload Your Image</h3>
+                                <p>Select <strong>Choose File</strong> or drag an image into the upload area. The compressor accepts JPG, PNG, WebP, SVG and GIF files with a maximum file size of 50 MB.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="compressor-seo-step">
+                                <h3>Step 2: Select Your Compression Quality</h3>
+                                <p>Choose High, Recommended, Balanced or Small Size. You can also use the quality slider to select a custom value between 10% and 100%.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="compressor-seo-step">
+                                <h3>Step 3: Compress and Review the Result</h3>
+                                <p>Click <strong>Compress Image</strong>. The tool processes the selected file and displays its original size, output size and calculated savings. Check the resulting file carefully, especially if the image contains text, fine details or transparency.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="compressor-seo-step">
+                                <h3>Step 4: Download the Image</h3>
+                                <p>Click <strong>Download</strong> to save the resulting file. If you need to process a different picture, select <strong>Compress Another Image</strong> and repeat the process.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Understanding Image Compression Quality</h2>
+                    <p>Image compression is about finding a practical balance between file size and visual appearance. Higher-quality settings generally preserve more visual detail, while lower-quality settings may produce smaller files with more noticeable artifacts.</p>
+                    <p>XConvertifire provides four useful presets:</p>
+                    <ul class="compressor-seo-list">
+                        <li><strong>High (90%):</strong> A good starting point when preserving fine details matters.</li>
+                        <li><strong>Recommended (75%):</strong> A practical default for trying to balance image quality and file size.</li>
+                        <li><strong>Balanced (60%):</strong> Worth testing when a smaller download is more important than retaining every detail.</li>
+                        <li><strong>Small Size (40%):</strong> Prioritizes stronger compression for supported lossy formats, but may introduce visible artifacts.</li>
+                    </ul>
+                    <p>These percentages represent encoding quality settings, not guaranteed file-size reductions. Actual results depend on the image and browser. You can adjust the slider and try different settings when the first result does not meet your needs.</p>
+                    <p>The quality slider affects lossy JPEG and WebP encoding, including PNG images when they are converted to JPEG. It does not control SVG minification, GIF processing, or PNG's lossless encoding.</p>
+                    <p>For background information on how browsers export compressed images, read the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="noopener noreferrer">MDN guide to canvas image encoding</a>.</p>
+
+                    <h2>JPG, PNG, WebP, SVG and GIF Compression Explained</h2>
+
+                    <h3>Compress JPG Images</h3>
+                    <p>JPG and JPEG are common formats for photographs and images with many colors. Re-encoding a JPG at a lower quality setting may reduce its file size, making it easier to upload, download or use on a website.</p>
+                    <p>If the photograph contains small text, sharp outlines or intricate details, check the output at full size before choosing an aggressive compression setting.</p>
+
+                    <h3>Compress PNG Images</h3>
+                    <p>PNG is often used for logos, screenshots, illustrations and images requiring transparency.</p>
+                    <p>An important limitation of this compressor is that PNG inputs can be exported as JPEG files when the selected quality is below 90%. JPEG does not support transparency, so transparent regions may change appearance.</p>
+                    <p>When keeping a PNG output and its transparency is important, use the High preset or a quality value of at least 90%. This still does not guarantee a smaller file.</p>
+                    <p>If you need a different image format instead of compression, use the <a href="https://xconvertifire.com/image-converter">online image converter</a>.</p>
+
+                    <h3>Compress WebP Images</h3>
+                    <p>WebP is useful for many web images because it supports efficient compression and transparency. XConvertifire can re-encode supported WebP images using the selected browser quality setting.</p>
+                    <p>The output may be smaller, but results vary. Review the final image before publishing it, particularly when working with transparent graphics or fine visual details.</p>
+
+                    <h3>Optimize SVG Files</h3>
+                    <p>SVG files use vector-based markup and are well suited to icons, logos and scalable graphics.</p>
+                    <p>For SVG uploads, this tool performs basic text-level optimization by removing comments and reducing certain unnecessary whitespace. It does not perform advanced SVG restructuring or vector shape optimization. If the optimized version is not smaller, the original file is preserved.</p>
+
+                    <h3>What Happens to GIF Files?</h3>
+                    <p>GIF files are accepted by the uploader, but the current tool returns the original GIF rather than applying GIF-specific compression. Animated GIFs are not optimized by the compression engine.</p>
+                    <p>If you need to reduce an animated GIF's file size, use a dedicated GIF optimization tool rather than expecting savings from this compressor.</p>
+
+                    <h2>Why Compress Images Before Uploading Them?</h2>
+                    <p>Reducing image file size can be useful in several everyday situations.</p>
+
+                    <h3>Website Images and Blog Posts</h3>
+                    <p>Large image downloads can contribute to slow-loading web pages. Appropriately sized and compressed images can reduce the amount of data visitors need to download.</p>
+                    <p>Image format, dimensions and compression settings all matter. See Google's <a href="https://web.dev/learn/performance/image-performance" target="_blank" rel="noopener noreferrer">image performance guidance</a> for more information about efficient web image delivery.</p>
+
+                    <h3>Online Forms and Applications</h3>
+                    <p>Some websites restrict attachment sizes. Compressing a photograph or scanned image may help when an upload exceeds a file-size limit. However, this tool does not promise a specific final size such as 100 KB or 200 KB, so check the downloaded result.</p>
+
+                    <h3>Email and File Sharing</h3>
+                    <p>Smaller images can be easier to send and receive, particularly when sharing several photographs or working with limited connectivity.</p>
+
+                    <h3>Product Photos and Digital Content</h3>
+                    <p>Online sellers, bloggers and content creators can test compression settings before publishing pictures. Keep the original image available in case the compressed version loses details important to your presentation.</p>
+
+                    <h2>Tips to Reduce Image Size Without Unnecessary Quality Loss</h2>
+                    <p><strong>Start with the Recommended setting.</strong> Review the resulting image before trying stronger compression.</p>
+                    <p><strong>Keep your original file.</strong> If the output looks blurry or loses important visual details, return to the original and select a higher quality setting.</p>
+                    <p><strong>Choose an appropriate format.</strong> JPG often suits photographs, while PNG may be preferable for graphics that require transparency. WebP can be a useful option for modern websites.</p>
+                    <p><strong>Check image dimensions.</strong> A very large image may still occupy substantial space after compression. If the picture has larger pixel dimensions than you need, try the <a href="https://xconvertifire.com/image-resizer">image resizer</a> before compressing it.</p>
+                    <p><strong>Crop unnecessary areas.</strong> Removing unused parts of an image can help you create a more focused asset. The <a href="https://xconvertifire.com/image-cropper">online image cropper</a> can help with this separate task.</p>
+                    <p><strong>Verify the final download.</strong> Inspect image quality, transparency, file extension and file size before uploading the result to your website or other platform.</p>
+
+                    <h2>Frequently Asked Questions About Image Compression</h2>
+
+                    <h3>Is XConvertifire's image compressor free?</h3>
+                    <p>Yes. The online image compressor is available as a free tool, with browser-based image processing and adjustable compression settings.</p>
+
+                    <h3>Which image formats are supported?</h3>
+                    <p>The uploader accepts JPG/JPEG, PNG, WebP, SVG and GIF. Processing behavior differs by format. JPG and WebP can be re-encoded, PNG output may change to JPEG at lower quality settings, SVG receives basic markup optimization, and GIF is returned unchanged.</p>
+
+                    <h3>What is the maximum upload size?</h3>
+                    <p>The current file-size limit is 50 MB per image. Browser memory and device capabilities may affect the handling of very large images.</p>
+
+                    <h3>Will compression reduce image quality?</h3>
+                    <p>It can. Lossy image encoding may remove image information, especially at lower quality settings. Use higher quality levels when fine details matter and always inspect the output.</p>
+
+                    <h3>Why is my compressed image not smaller?</h3>
+                    <p>Some images have already been efficiently compressed. Others may not become smaller using the selected format and quality setting. When the processed version is not smaller, XConvertifire keeps the original file rather than replacing it with a larger one.</p>
+
+                    <h3>Can I compress multiple images at the same time?</h3>
+                    <p>The current Image Compressor processes one selected image at a time. After downloading the result, you can choose another image.</p>
+
+                    <h3>Can I reduce an image to exactly 100 KB or 200 KB?</h3>
+                    <p>The tool provides quality settings rather than a guaranteed target-size feature. You can try different settings and review the resulting file size, but an exact KB target is not guaranteed.</p>
+
+                    <h3>Are my images uploaded to a server for compression?</h3>
+                    <p>The current compression workflow uses browser-side file reading, canvas processing and local download generation. The selected image does not need to be sent to a server-side compression endpoint for this workflow.</p>
+
+                    <div class="compressor-seo-cta">
+                        <h2>Start Compressing Your Images</h2>
+                        <p>Need a smaller JPG, PNG or WebP image? Use XConvertifire's free online image compressor to select an image, adjust quality and review the result before downloading.</p>
+                        <a href="#uploadSection" class="compressor-seo-cta-link">Compress Your Image Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 @endsection
 
 @section('scripts')
 
     <style>
+        .compressor-seo-section {
+            padding: 24px 0 72px;
+        }
+
+        .compressor-seo-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .compressor-seo-wrap > h2:not(:first-child) {
+            margin-top: 42px;
+        }
+
+        .compressor-seo-section h2 {
+            color: #fff;
+            font-size: clamp(2rem, 3vw, 2.7rem);
+            line-height: 1.2;
+            margin: 0 0 18px;
+            letter-spacing: -0.03em;
+        }
+
+        .compressor-seo-section h3 {
+            color: #fff;
+            font-size: 1.25rem;
+            margin: 28px 0 12px;
+        }
+
+        .compressor-seo-section p,
+        .compressor-seo-section li {
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 1.03rem;
+            line-height: 1.75;
+            margin: 0 0 16px;
+        }
+
+        .compressor-seo-section a {
+            color: #60a5fa;
+            text-decoration: underline;
+            text-underline-offset: 0.18em;
+        }
+
+        .compressor-seo-section a:hover,
+        .compressor-seo-section a:focus-visible {
+            color: #93c5fd;
+        }
+
+        .compressor-seo-list {
+            margin: 0 0 18px 1.3rem;
+            padding-left: 1rem;
+        }
+
+        .compressor-seo-steps {
+            margin-top: 8px;
+            margin-bottom: 24px;
+        }
+
+        .compressor-seo-step {
+            height: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 18px;
+            padding: 22px 18px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+        }
+
+        .compressor-seo-step h3 {
+            font-size: 1.05rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .compressor-seo-step p {
+            margin-bottom: 0;
+            font-size: 0.98rem;
+        }
+
+        .compressor-seo-cta {
+            margin-top: 36px;
+            padding: 28px 24px;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(96, 165, 250, 0.28);
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .compressor-seo-cta h2 {
+            margin-bottom: 14px;
+        }
+
+        .compressor-seo-cta-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: #2563eb;
+            border: 1px solid #2563eb;
+            color: #fff !important;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+        }
+
+        .compressor-seo-cta-link:hover,
+        .compressor-seo-cta-link:focus-visible {
+            background: #1d4ed8;
+            color: #fff !important;
+        }
+
+        @media (max-width: 767px) {
+            .compressor-seo-section {
+                padding-top: 14px;
+            }
+
+            .compressor-seo-wrap > h2:not(:first-child) {
+                margin-top: 32px;
+            }
+
+            .compressor-seo-section h2 {
+                font-size: 1.9rem;
+            }
+
+            .compressor-seo-section p,
+            .compressor-seo-section li {
+                font-size: 0.98rem;
+            }
+
+            .compressor-seo-cta {
+                padding: 22px 18px;
+            }
+        }
+
         /* =========================================
            COMPRESSOR WORKSPACE STYLES
         ========================================= */
