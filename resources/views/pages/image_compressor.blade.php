@@ -6,9 +6,17 @@
 
     <meta property="og:title" content="FREE Image Compressor: Reduce Image Size | XConvertifire">
     <meta property="og:description" content="Compress JPG, PNG, SVG, and WebP images for FREE with XConvertifire. Reduce image file size online for FREE while keeping quality with fast, secure compression.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ route('image.compressor') }}">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:image:alt" content="XConvertifire logo">
+    <meta property="og:site_name" content="XConvertifire">
 
-    <meta property="twitter:title" content="FREE Image Compressor: Reduce Image Size | XConvertifire">
-    <meta property="twitter:description" content="Compress JPG, PNG, SVG, and WebP images for FREE with XConvertifire. Reduce image file size online for FREE while keeping quality with fast, secure compression.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FREE Image Compressor: Reduce Image Size | XConvertifire">
+    <meta name="twitter:description" content="Compress JPG, PNG, SVG, and WebP images for FREE with XConvertifire. Reduce image file size online for FREE while keeping quality with fast, secure compression.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta name="twitter:image:alt" content="XConvertifire logo">
 @endsection
 
 @section('content')
@@ -18,7 +26,7 @@
         <section class="crop-breadcrumb-section">
             <div class="container">
                 <div class="crop-breadcrumb">
-                    <a href="#">
+                    <a href="{{ route('home') }}">
                         <i class="fas fa-home"></i>
                         Home
                     </a>
@@ -40,11 +48,11 @@
                     </span>
                     <h1>
                         Compress Your Images<br>
-                        <span>Without Losing Quality.</span>
+                        <span>With Adjustable Quality.</span>
                     </h1>
                     <p>
-                        Compress JPG, PNG, SVG, and GIF images while
-                        reducing file size and maintaining excellent quality.
+                        Try to reduce JPG, PNG, and WebP file sizes with adjustable options.
+                        SVG can be optimized, while GIF files are returned unchanged.
                     </p>
                 </div>
 

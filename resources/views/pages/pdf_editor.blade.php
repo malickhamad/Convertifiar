@@ -3,6 +3,19 @@
     <title>FREE PDF Editor: Edit PDF Online FREE | XConvertifire</title>
     <meta name="description"
         content="Edit PDF files online for FREE with XConvertifire. Add, edit, or delete text, undo changes, and download your updated PDF quickly and securely.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FREE PDF Editor: Edit PDF Online FREE | XConvertifire">
+    <meta property="og:description"
+        content="Edit PDF files online for FREE with XConvertifire. Add, edit, or delete text, undo changes, and download your updated PDF quickly and securely.">
+    <meta property="og:url" content="{{ route('pdf.editor') }}">
+    <meta property="og:site_name" content="XConvertifire">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:image:alt" content="XConvertifire PDF Editor">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FREE PDF Editor: Edit PDF Online FREE | XConvertifire">
+    <meta name="twitter:description"
+        content="Edit PDF files online for FREE with XConvertifire. Add, edit, or delete text, undo changes, and download your updated PDF quickly and securely.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
     <main class="bg-black" style="margin-top:90px;">
@@ -31,13 +44,13 @@
                         PDF Tool
                     </div>
                     <h1>
-                        Edit Your PDF
+                        Edit PDF Text
                         <br>
-                        <span>Like A Pro.</span>
+                        <span>Online for Free</span>
                     </h1>
                     <p>
-                        Edit text directly inside your PDF, just like a Word document.
-                        Click any text, type your changes and download your edited PDF.
+                        Edit selectable text, add text boxes, apply available formatting,
+                        and download an updated copy. Results depend on the PDF's text and layout.
                     </p>
                 </div>
                 <div class="crop-upload-box mx-auto cursor-pointer" id="uploadArea"
@@ -347,6 +360,152 @@
                 </div>
             </div>
         </div>
+        <section class="pdf-editor-seo-section">
+            <div class="container">
+                <div class="pdf-editor-seo-wrap">
+                    <h2>Free Online PDF Editor</h2>
+                    <p>An online PDF editor helps you make focused text changes without first rebuilding a document in another application. XConvertifire lets you edit PDF online by selecting text the page can extract, adding new text boxes, applying the available formatting controls, and downloading an updated PDF.</p>
+                    <p>This free PDF editor online works with extractable text and new text overlays on a rendered view of each page. It is useful for small corrections, labels, or notes, but it is not a complete document reconstruction system. What you can change depends on how a PDF was created and how its content is encoded.</p>
+
+                    <h2>How to Edit a PDF Online</h2>
+                    <p>Use the upload area and editor controls to make changes, then inspect the result before saving it.</p>
+                    <div class="row g-3 pdf-editor-seo-steps">
+                        <div class="col-md-6">
+                            <article class="pdf-editor-seo-step">
+                                <h3>1. Upload Your PDF</h3>
+                                <p>Choose a PDF from your device or drag it into the upload area. Files up to 50 MB are accepted. The page loads the document into its editor and displays its pages for review. A password-protected, damaged, unusually structured, or otherwise unsupported file may not load as expected.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="pdf-editor-seo-step">
+                                <h3>2. Select or Add Text</h3>
+                                <p>Click text that the editor can identify to work with an existing text element. To add content that is not already on the page, choose <strong>Add Text</strong> to create a new text box. A scanned page is an image, so its printed words are not selectable text in this editor.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="pdf-editor-seo-step">
+                                <h3>3. Adjust Your Changes</h3>
+                                <p>Use the font, size, color, bold, italic, and underline controls for supported text. Position added text with the editor's existing controls. Check alignment, line breaks, and nearby content as you work, because replacement text may not fit the same space as the original.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="pdf-editor-seo-step">
+                                <h3>4. Download the Edited PDF</h3>
+                                <p>Review the edited pages in the workspace, including pages you did not change, before choosing <strong>Download PDF</strong>. Open the downloaded file in a PDF reader and inspect it again. For more extensive text editing, you may find it useful to <a href="{{ route('pdf.to.word') }}">convert a PDF to Word</a>, then use <a href="{{ route('word.pdf.index') }}">Word to PDF</a> when you are ready to export.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <h2>Edit Existing PDF Text</h2>
+                    <p>When the editor can extract text from a PDF page, selecting a text element lets you change its content and apply the available formatting. The page is rendered as a visual reference, while editable text elements are reconstructed over that rendered view for interaction and export. This process does not fully reconstruct the PDF's original text structure or every relationship between its text, fonts, and layout.</p>
+                    <p>PDFs vary in how they store text. A file may use unusual character mappings, embedded fonts, separate glyphs, or layout instructions that make extraction incomplete. In those cases, some words may not be selectable, or a change may not align exactly with the original. If the selected text does not behave as expected, keep the source file and avoid relying on the edited copy without a careful review.</p>
+
+                    <h2>Add New Text to a PDF</h2>
+                    <p>The <strong>Add Text</strong> control creates a text box that can be used for a short label, a note, or additional information. Enter the wording, then position the new text using the editor's existing controls. Use a concise amount of text and check its placement against the page content, since a new box may overlap other material or extend beyond the intended area.</p>
+                    <p>New text is not the same as changing the PDF's underlying page design. This editor provides text editing and text-box overlays; it does not offer general-purpose insertion of images, signatures, shapes, or other objects. If your document needs those kinds of changes, choose an application designed for that work.</p>
+
+                    <h2>Change PDF Text Fonts, Sizes and Colors</h2>
+                    <p>For a selected or added text element, the toolbar provides font selection, font-size choices, and a text-color control. Bold, italic, and underline options are also available. These controls can help make a small correction or added note clearer, but they do not guarantee that the edited text will look identical to the original PDF.</p>
+                    <p>The available output fonts may differ from fonts embedded in the source document. A replacement font can have different character widths and shapes, which may change line breaks or spacing. Preview each change at a useful zoom level, and check the exported page because the final appearance can differ from the editing view.</p>
+
+                    <h2>Undo, Redo and Navigate PDF Pages</h2>
+                    <p>Use Undo and Redo to move through supported editing actions. The zoom controls help you inspect small text and page details, while the page thumbnails provide previews for moving through a multi-page document. These are navigation and review aids, not controls for rearranging or rebuilding the pages.</p>
+                    <p>Before downloading, revisit pages with edits and scan the remaining pages for unexpected display issues. Undo or redo a change if needed, then inspect the downloaded PDF separately. Keeping the original gives you a way back if an edit or export does not meet your needs.</p>
+
+                    <h2>PDF Text Editing vs Scanned Documents</h2>
+                    <p>A PDF with extractable text contains characters the editor can identify and select. A scanned PDF often contains a page-sized image instead. Although both files may look like pages of text, selecting and changing text requires the content to be available as text rather than only as pixels.</p>
+                    <p>This editor does not provide optical character recognition (OCR). It cannot turn words embedded in a scanned image into editable text by itself. If a scan needs text recognition, first use a suitable OCR tool to create a text-enabled PDF, then check the recognized text for errors before editing it here.</p>
+
+                    <h2>Understanding PDF Text Removal and Redaction</h2>
+                    <p>The <strong>Delete Text</strong> control can visually remove a selected text element in the edited view. For changed or deleted text, export may place a white mask over the original content and draw replacement text where applicable. A white mask changes what is visible on the page; it does not necessarily remove the original text or other underlying PDF data.</p>
+                    <p><strong>Do not rely on this editor to securely redact passwords, identity numbers, financial details, or other confidential information.</strong> Visually covering text is not secure redaction, and underlying content may remain recoverable. For sensitive material, use a suitable redaction tool that actually removes the underlying information and provides a way to verify that the removal is complete. When appropriate, obtain qualified guidance before sharing the document.</p>
+
+                    <h2>How to Preserve PDF Formatting When Editing</h2>
+                    <p>PDFs can contain carefully positioned text, embedded fonts, and complex page layouts. Editing one text element does not rebuild the entire composition. Replacement text may use a different font, wrap onto another line, or shift relative to nearby content. The available export fonts may not include the original embedded font, and unsupported characters may be omitted during export.</p>
+                    <p>Non-Latin scripts, including Urdu and Arabic, and complex text shaping may be limited by the current export process. Do not assume full Unicode support. Test important characters on a copy, download the result, and inspect every page in a PDF reader before using or sharing it.</p>
+
+                    <h2>Tips for Editing PDF Documents Online</h2>
+                    <ul>
+                        <li>Start with a PDF that contains selectable text for edits to existing wording.</li>
+                        <li>Keep an unchanged copy of the original before you make edits.</li>
+                        <li>Choose a suitable font size and check line breaks and spacing near each change.</li>
+                        <li>Review every edited page and open the downloaded PDF in a separate reader.</li>
+                        <li>Test special characters on a copy before relying on them in the final document.</li>
+                        <li>Do not use visual text masking for confidential or security-sensitive redaction.</li>
+                    </ul>
+
+                    <h2>Frequently Asked Questions About PDF Editing</h2>
+                    <div class="pdf-editor-seo-faq">
+                        <article>
+                            <h3>Is XConvertifire's PDF Editor free?</h3>
+                            <p>The editor is presented as a free online tool. Upload limits and document compatibility still apply, and you should review the result before relying on it.</p>
+                        </article>
+                        <article>
+                            <h3>Can I edit PDF text online?</h3>
+                            <p>You can edit text that the editor can extract, add text boxes, apply available formatting, and download an updated PDF. Not every PDF stores its text in a form that can be edited accurately.</p>
+                        </article>
+                        <article>
+                            <h3>How do I add new text to a PDF?</h3>
+                            <p>Upload the PDF, choose <strong>Add Text</strong>, enter your content, position the new text box with the existing controls, and review the page before downloading.</p>
+                        </article>
+                        <article>
+                            <h3>Can I change the font or color of PDF text?</h3>
+                            <p>The toolbar includes font, size, color, bold, italic, and underline controls for supported text. Available fonts may not match the source PDF's embedded fonts, so exact visual matching is not guaranteed.</p>
+                        </article>
+                        <article>
+                            <h3>Can I delete text from a PDF?</h3>
+                            <p>The Delete Text control can visually remove selected text in the edited output. It should not be treated as secure removal of the underlying PDF content.</p>
+                        </article>
+                        <article>
+                            <h3>Does deleting text permanently remove it from the PDF?</h3>
+                            <p>Not necessarily. The export may cover original content with a white mask, which can leave underlying information in the PDF. Do not use this method as secure redaction.</p>
+                        </article>
+                        <article>
+                            <h3>Can I securely redact confidential information?</h3>
+                            <p>No. Use a dedicated redaction tool that removes sensitive data from the underlying document and lets you verify the result. Do not rely on this editor to redact confidential information.</p>
+                        </article>
+                        <article>
+                            <h3>Can I edit a scanned PDF?</h3>
+                            <p>This editor does not include OCR. Text that appears only inside a scanned page image is not selectable for editing here. Use an OCR tool first if you need recognized text, then check its accuracy.</p>
+                        </article>
+                        <article>
+                            <h3>What is the maximum PDF upload size?</h3>
+                            <p>The upload interface lists a maximum file size of 50 MB.</p>
+                        </article>
+                        <article>
+                            <h3>Can I undo and redo edits?</h3>
+                            <p>Yes. The editor has Undo and Redo controls for supported editing actions. Review the page after undoing or reapplying a change.</p>
+                        </article>
+                        <article>
+                            <h3>Does the editor support multi-page PDFs?</h3>
+                            <p>The editor displays PDF page previews and thumbnails for navigating the document. How a particular file loads can depend on its structure and compatibility.</p>
+                        </article>
+                        <article>
+                            <h3>Will the original PDF formatting be preserved?</h3>
+                            <p>Exact preservation is not guaranteed. Different fonts, text widths, line wrapping, complex layouts, or export limitations can change the appearance. Inspect the downloaded file page by page.</p>
+                        </article>
+                        <article>
+                            <h3>Can I edit Urdu or other non-Latin text?</h3>
+                            <p>Support is not guaranteed. The current export process may omit unsupported characters or fail to handle complex text shaping. Test a copy and verify the downloaded result before depending on it.</p>
+                        </article>
+                        <article>
+                            <h3>How do I download an edited PDF?</h3>
+                            <p>Review the pages in the editor, then select <strong>Download PDF</strong>. Open the downloaded file in a PDF reader and check that the content and layout are as expected.</p>
+                        </article>
+                        <article>
+                            <h3>Is PDF editing performed in the browser?</h3>
+                            <p>This page renders and edits the selected document through browser-loaded PDF.js and pdf-lib libraries. This description is not a privacy or security guarantee; consider the document's sensitivity before uploading it.</p>
+                        </article>
+                    </div>
+
+                    <div class="pdf-editor-seo-final">
+                        <h2>Edit Your PDF Online for Free</h2>
+                        <p>Upload your PDF, update selectable text, add new text and download your edited document with XConvertifire.</p>
+                        <a href="#pdfUploadSection" class="pdf-editor-seo-cta" id="pdfEditorSeoCta">Edit Your PDF Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 @endsection
 @section('scripts')
@@ -1439,6 +1598,138 @@
 
             #editorStatus {
                 font-size: 10px;
+            }
+        }
+
+        .pdf-editor-seo-section {
+            background: #050505;
+            color: #e5e7eb;
+            padding: 64px 0;
+        }
+
+        .pdf-editor-seo-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pdf-editor-seo-wrap > h2 {
+            color: #fff;
+            font-size: clamp(1.45rem, 2.5vw, 2rem);
+            line-height: 1.3;
+            margin: 0 0 14px;
+        }
+
+        .pdf-editor-seo-wrap > h2:not(:first-child) {
+            margin-top: 42px;
+        }
+
+        .pdf-editor-seo-wrap p,
+        .pdf-editor-seo-wrap li {
+            color: #c2c7d0;
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .pdf-editor-seo-wrap a:not(.pdf-editor-seo-cta) {
+            color: #78b7ff;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .pdf-editor-seo-steps {
+            margin-top: 8px;
+        }
+
+        .pdf-editor-seo-step,
+        .pdf-editor-seo-faq article {
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 12px;
+            background: #0c0d10;
+            padding: 20px;
+        }
+
+        .pdf-editor-seo-step h3,
+        .pdf-editor-seo-faq h3 {
+            color: #fff;
+            font-size: 1.08rem;
+            line-height: 1.45;
+            margin: 0 0 10px;
+        }
+
+        .pdf-editor-seo-step p,
+        .pdf-editor-seo-faq p {
+            margin: 0;
+        }
+
+        .pdf-editor-seo-wrap ul {
+            padding-left: 1.25rem;
+        }
+
+        .pdf-editor-seo-wrap li + li {
+            margin-top: 8px;
+        }
+
+        .pdf-editor-seo-faq {
+            display: grid;
+            gap: 12px;
+        }
+
+        .pdf-editor-seo-final {
+            margin-top: 46px;
+            padding: 30px 24px;
+            border: 1px solid rgba(13, 110, 253, .4);
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(13, 110, 253, .13), rgba(12, 13, 16, .96));
+            text-align: center;
+        }
+
+        .pdf-editor-seo-final h2 {
+            color: #fff;
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            margin: 0 0 10px;
+        }
+
+        .pdf-editor-seo-final p {
+            max-width: 680px;
+            margin: 0 auto 20px;
+        }
+
+        .pdf-editor-seo-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: #0d6efd;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .pdf-editor-seo-cta:hover,
+        .pdf-editor-seo-cta:focus-visible {
+            background: #0b5ed7;
+            color: #fff;
+        }
+
+        @media (max-width: 575.98px) {
+            .pdf-editor-seo-section {
+                padding: 44px 0;
+            }
+
+            .pdf-editor-seo-wrap > h2:not(:first-child) {
+                margin-top: 34px;
+            }
+
+            .pdf-editor-seo-final {
+                padding: 24px 16px;
+            }
+
+            .pdf-editor-seo-cta {
+                width: 100%;
             }
         }
     </style>
@@ -3140,5 +3431,37 @@
             ====================================================== */
             updateHistoryButtons();
         });
+    </script>
+    <script>
+        const pdfEditorSeoCta = document.getElementById('pdfEditorSeoCta');
+
+        if (pdfEditorSeoCta) {
+            pdfEditorSeoCta.addEventListener('click', function(event) {
+                const uploadSection = document.getElementById('pdfUploadSection');
+                const editorSection = document.getElementById('pdfEditorSection');
+                const isVisible = function(element) {
+                    return element &&
+                        !element.classList.contains('d-none') &&
+                        window.getComputedStyle(element).display !== 'none' &&
+                        element.getClientRects().length > 0;
+                };
+                const target = isVisible(uploadSection) ? uploadSection :
+                    (isVisible(editorSection) ? editorSection : null);
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+                const reduceMotion = window.matchMedia(
+                    '(prefers-reduced-motion: reduce)'
+                ).matches;
+
+                target.scrollIntoView({
+                    behavior: reduceMotion ? 'auto' : 'smooth',
+                    block: 'start'
+                });
+            });
+        }
     </script>
 @endsection

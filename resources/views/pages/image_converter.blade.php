@@ -1,17 +1,181 @@
 @extends('components.app')
 
-<link rel="stylesheet" href="{{ asset('css/image-converter.css') }}">
-
 @section('meta')
     <title>FREE Image Converter: Convert Images Online | XConvertifire</title>
 
-    <meta name="description" content="Convert JPG, JPEG, PNG, WebP, GIF, and PDF files online for FREE with XConvertifire. Convert multiple images quickly with fast, secure browser-based processing." />
+    <meta name="description" content="Convert JPG, PNG and WebP images online for free. Convert multiple photos to JPG, PNG, WebP or PDF, then download files or a ZIP with XConvertifire." />
 
+    <meta property="og:type" content="website">
     <meta property="og:title" content="FREE Image Converter: Convert Images Online | XConvertifire">
-    <meta property="og:description" content="Convert JPG, JPEG, PNG, WebP, GIF, and PDF files online for FREE with XConvertifire. Convert multiple images quickly with fast, secure browser-based processing.">
+    <meta property="og:description" content="Convert JPG, PNG and WebP images online for free. Convert multiple photos to JPG, PNG, WebP or PDF, then download files or a ZIP with XConvertifire.">
+    <meta property="og:url" content="{{ route('image.converter') }}">
+    <meta property="og:site_name" content="XConvertifire">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:image:alt" content="XConvertifire logo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FREE Image Converter: Convert Images Online | XConvertifire">
+    <meta name="twitter:description" content="Convert JPG, PNG and WebP images online for free. Convert multiple photos to JPG, PNG, WebP or PDF, then download files or a ZIP with XConvertifire.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 
-    <meta property="twitter:title" content="FREE Image Converter: Convert Images Online | XConvertifire">
-    <meta property="twitter:description" content="Convert JPG, JPEG, PNG, WebP, GIF, and PDF files online for FREE with XConvertifire. Convert multiple images quickly with fast, secure browser-based processing.">
+    <link rel="stylesheet" href="{{ asset('css/image-converter.css') }}">
+
+    <style>
+        .converter-seo-section {
+            padding: 24px 0 72px;
+        }
+
+        .converter-seo-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .converter-seo-wrap > h2:not(:first-child) {
+            margin-top: 42px;
+        }
+
+        .converter-seo-section h2 {
+            color: #fff;
+            font-size: clamp(2rem, 3vw, 2.7rem);
+            line-height: 1.2;
+            margin: 0 0 18px;
+            letter-spacing: -0.03em;
+        }
+
+        .converter-seo-section h3 {
+            color: #fff;
+            font-size: 1.25rem;
+            margin: 28px 0 12px;
+        }
+
+        .converter-seo-section p,
+        .converter-seo-section li {
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 1.03rem;
+            line-height: 1.75;
+            margin: 0 0 16px;
+        }
+
+        .converter-seo-section a:not(.converter-seo-cta) {
+            color: #60a5fa;
+            text-decoration: underline;
+            text-underline-offset: 0.18em;
+        }
+
+        .converter-seo-section a:not(.converter-seo-cta):hover,
+        .converter-seo-section a:not(.converter-seo-cta):focus-visible {
+            color: #93c5fd;
+        }
+
+        .converter-seo-steps {
+            margin: 8px 0 24px;
+        }
+
+        .converter-seo-card {
+            height: 100%;
+            padding: 22px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 18px;
+        }
+
+        .converter-seo-card h3 {
+            margin-top: 0;
+            font-size: 1.05rem;
+        }
+
+        .converter-seo-card p {
+            margin-bottom: 0;
+            font-size: 0.98rem;
+        }
+
+        .converter-seo-list {
+            margin: 0 0 20px;
+            padding-left: 1.4rem;
+        }
+
+        .converter-seo-faq h3 {
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .converter-seo-final {
+            margin-top: 40px;
+            padding: 28px 24px;
+            text-align: center;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(96, 165, 250, 0.28);
+            border-radius: 18px;
+        }
+
+        .converter-seo-final h2 {
+            margin-bottom: 14px;
+        }
+
+        .converter-seo-final p {
+            max-width: 720px;
+            margin: 0 auto 20px;
+        }
+
+        .converter-seo-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            padding: 12px 18px;
+            border: 1px solid #2563eb;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .converter-seo-cta:hover,
+        .converter-seo-cta:focus-visible {
+            background: #1d4ed8;
+            border-color: #1d4ed8;
+            color: #fff;
+        }
+
+        .converter-seo-cta:focus-visible {
+            outline: 2px solid #93c5fd;
+            outline-offset: 3px;
+        }
+
+        .converter-format-note {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-left: 3px solid rgba(96, 165, 250, 0.7);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.035);
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 767px) {
+            .converter-seo-section {
+                padding-top: 14px;
+            }
+
+            .converter-seo-wrap > h2:not(:first-child) {
+                margin-top: 32px;
+            }
+
+            .converter-seo-section h2 {
+                font-size: 1.9rem;
+            }
+
+            .converter-seo-section p,
+            .converter-seo-section li {
+                font-size: 0.98rem;
+            }
+
+            .converter-seo-final {
+                padding: 22px 18px;
+            }
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -41,12 +205,12 @@
                     </span>
 
                     <h1>
-                        Convert Images to <span>Any Format</span>
+                        Convert Images <span>Online</span>
                     </h1>
 
                     <p>
-                        Upload multiple images and convert them instantly to JPG, JPEG, PNG, WEBP, GIF,
-                        or PDF.
+                        Convert supported images to JPG, JPEG, PNG, WebP or PDF, one at a time or in a
+                        batch. Available output formats depend on browser support.
                     </p>
 
                 </div>
@@ -200,6 +364,13 @@
 
                             </button>
 
+                            <p class="converter-format-note">
+                                JPG and JPEG use the same image encoding. GIF export is not reliably
+                                supported by browser canvas encoding, so an unsupported GIF export may
+                                contain PNG data despite a <code>.gif</code> filename. WebP export
+                                depends on browser support.
+                            </p>
+
                         </div>
 
                     </div>
@@ -258,11 +429,12 @@
                         </div>
 
                         <h3>
-                            Six output formats
+                            Multiple output choices
                         </h3>
 
                         <p>
-                            Choose JPG, JPEG, PNG, WEBP, GIF or PDF.
+                            Choose from six output options. JPG and JPEG are extensions of the same
+                            image format; GIF and WebP encoding depend on browser support.
                         </p>
 
                     </div>
@@ -275,9 +447,10 @@
 
                         <h3>
                             Designed for privacy
-                            </hX Convertifire <p>
+                        </h3>
+                        <p>
                             Images are processed directly in the browser.
-                            </p>
+                        </p>
 
                     </div>
 
@@ -285,6 +458,176 @@
 
             </div>
 
+        </section>
+
+        <section class="converter-seo-section">
+            <div class="container">
+                <div class="converter-seo-wrap">
+                    <h2>Free Online Image Converter</h2>
+                    <p>An image converter online changes a file's format for use in a website, document or app. XConvertifire's free image converter lets you convert images in your browser to JPG, JPEG, PNG, WebP, GIF or PDF.</p>
+                    <p>JPG and JPEG refer to the same widely supported image encoding and are often used for photographs. PNG is useful for graphics and images that need transparency. WebP can provide a modern web image format, although browser support affects encoding. PDF output collects selected images into a document. The best choice depends on what you are making and where the file will be used.</p>
+                    <p>Select browser-decodable image files, choose one output option and start conversion. Results depend on the source and browser.</p>
+
+                    <h2>How to Convert Images Online</h2>
+                    <p>The converter follows a short workflow from choosing files to saving the result.</p>
+                    <div class="row g-4 converter-seo-steps">
+                        <div class="col-lg-3 col-md-6">
+                            <article class="converter-seo-card">
+                                <h3>1. Select Your Images</h3>
+                                <p>Select or drop one or more supported images. Add more files before converting if needed.</p>
+                            </article>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <article class="converter-seo-card">
+                                <h3>2. Choose an Output</h3>
+                                <p>Select one format for the selected images: JPEG, JPG, PNG, WebP, GIF or PDF. The six controls include JPG and JPEG options for the same encoding format.</p>
+                            </article>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <article class="converter-seo-card">
+                                <h3>3. Convert the Files</h3>
+                                <p>Start conversion and follow its progress. All selected images use the same output choice.</p>
+                            </article>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <article class="converter-seo-card">
+                                <h3>4. Download the Result</h3>
+                                <p>Download the result when ready. A single non-PDF output is a file; multiple non-PDF outputs are packaged in a ZIP.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <h2>Convert JPG, PNG, WebP and GIF Images</h2>
+                    <p>Input depends on browser decoding, so every file with an image extension is not guaranteed to convert.</p>
+
+                    <h3>Convert JPG and JPEG Images</h3>
+                    <p>JPG and JPEG are extensions for the same encoding, widely used for photographs. JPEG encoding can be lossy, changing detail or file size. Repeated conversions can accumulate quality changes, so start from the original when practical.</p>
+
+                    <h3>Convert PNG Images</h3>
+                    <p>PNG suits screenshots, illustrations and graphics with transparent areas. Transparency may be retained when supported by the source and browser. For JPEG output, the canvas background is white because JPEG cannot store transparency.</p>
+
+                    <h3>Convert WebP Images</h3>
+                    <p>WebP may suit websites that support it. The browser must support WebP encoding; otherwise canvas may return PNG data. Check the download rather than assuming its format or size reduction.</p>
+
+                    <h3>Convert GIF Input Images</h3>
+                    <p>A browser may decode GIF input as an image frame; this conversion workflow does not preserve animated GIF playback. The GIF output option is also limited by canvas support. Many browsers do not encode GIF with canvas, and an unsupported request may produce PNG data even though the generated filename ends in <code>.gif</code>. Do not rely on this option to create an animated GIF.</p>
+
+                    <h2>Convert Multiple Images Online</h2>
+                    <p>Add or remove selected images, or clear the selection. One output format applies to the whole batch; process separate groups if they need different formats.</p>
+                    <p>Multiple non-PDF outputs are packaged into a ZIP. No fixed batch-count or upload-size limit is published; practical capacity depends on the browser, device and files.</p>
+                    <p>A single image downloads as a file. PDF uses its own document-generation workflow.</p>
+
+                    <h2>Convert Images to PDF</h2>
+                    <p>Select image files, choose PDF and convert them into a document containing the selected images. Download the generated PDF when processing finishes.</p>
+                    <p>This creates PDFs from images. It does not accept existing PDF documents and convert their pages to images. Review the result before printing or sharing.</p>
+
+                    <h2>JPG vs PNG vs WebP: Which Format Should You Choose?</h2>
+                    <p>Choose an output based on image content, transparency, intended use and compatibility. Results vary by image and browser.</p>
+
+                    <h3>JPG for Photographs</h3>
+                    <p>JPG/JPEG suits many photographs and is broadly supported, but its lossy encoding cannot retain transparency. Transparent canvas areas are filled white. Inspect details and edges after export.</p>
+
+                    <h3>PNG for Graphics and Transparency</h3>
+                    <p>PNG often suits screenshots, diagrams, text-heavy graphics and transparent artwork. It may retain source transparency where supported, but is not guaranteed to be smaller than JPEG or WebP.</p>
+
+                    <h3>WebP for Modern Web Images</h3>
+                    <p>WebP may suit modern web use, but destination compatibility varies and browser support determines whether encoding succeeds. Check format and appearance before publishing.</p>
+
+                    <h2>Image Conversion, Transparency and Quality</h2>
+                    <p>Conversion changes encoding, unlike resizing dimensions or compressing file data. It may alter visual quality and does not guarantee a smaller file or unchanged pixels.</p>
+                    <ul class="converter-seo-list">
+                        <li>JPEG does not support transparent pixels. This converter uses a white canvas background for JPEG output.</li>
+                        <li>PNG can retain transparency when the input and browser-based export support it.</li>
+                        <li>Animated GIF frames are not retained in the browser canvas conversion workflow.</li>
+                        <li>WebP output depends on browser encoding support and does not promise a specific reduction percentage.</li>
+                        <li>Review the downloaded file, including its format, transparency, dimensions and fine details.</li>
+                    </ul>
+                    <p>If your next step is to reduce file size, use the <a href="{{ route('image.compressor') }}">image compressor</a>. For changing pixel dimensions, the <a href="{{ route('image.resizer') }}">image resizer</a> is more appropriate. To remove unwanted edges, use the <a href="{{ route('image.cropper') }}">image cropper</a>. If an image needs a different orientation, try the <a href="{{ route('image.rotator') }}">image rotator</a>.</p>
+
+                    <h2>Common Reasons to Convert Images</h2>
+
+                    <h3>Prepare Website Images</h3>
+                    <p>If a website requests a particular format, convert a copy and test it there. Requirements vary; no format is accepted everywhere.</p>
+
+                    <h3>Share Photos in Compatible Formats</h3>
+                    <p>Convert a photo when a recipient expects JPEG or PNG. Choose based on compatibility, transparency and graphic detail.</p>
+
+                    <h3>Use Graphics in Documents</h3>
+                    <p>For documents or presentations, PNG may suit transparent artwork and text-heavy visuals; JPEG may suit photos without transparency.</p>
+
+                    <h3>Create Image-Based PDFs</h3>
+                    <p>Use PDF output to combine selected images into a document, then check its pages and image placement.</p>
+
+                    <h3>Convert a Batch for a Project</h3>
+                    <p>Convert several assets to one format and download the ZIP. Separate groups that need different formats.</p>
+
+                    <h3>Prepare Files for Online Uploads</h3>
+                    <p>Forms and marketplaces may specify formats. Convert a copy and check the platform's file, dimension and size rules.</p>
+
+                    <h2>Tips for Better Image Conversion Results</h2>
+                    <ul class="converter-seo-list">
+                        <li><strong>Choose for the image.</strong> Consider detail, transparency and destination compatibility.</li>
+                        <li><strong>Check transparency before choosing JPEG.</strong> The converter places transparent canvas areas on white for JPEG output.</li>
+                        <li><strong>Review fine details.</strong> Re-encoding may affect small text and sharp lines.</li>
+                        <li><strong>Check dimensions and file size.</strong> Conversion is not a resizing operation and does not promise a smaller file.</li>
+                        <li><strong>Account for browser support.</strong> WebP and GIF encoding may not yield the requested format.</li>
+                        <li><strong>Avoid repeated lossy conversions.</strong> Keep the original for making other versions.</li>
+                        <li><strong>Test before publishing.</strong> Open the output and check it in the destination workflow.</li>
+                    </ul>
+                    <p>For technical detail, see MDN's guides to <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types" target="_blank" rel="noopener noreferrer">web image formats</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="noopener noreferrer">canvas image encoding</a>.</p>
+
+                    <h2>Frequently Asked Questions About Image Conversion</h2>
+                    <div class="converter-seo-faq">
+                        <h3>Is XConvertifire's Image Converter free?</h3>
+                        <p>Yes. The Image Converter is available online for converting supported image files to one of the provided output options.</p>
+
+                        <h3>Which image formats can I upload?</h3>
+                        <p>The file input accepts image files, and conversion requires the browser to decode them. JPG, JPEG, PNG, WebP and GIF are common supported image types; not every image format is guaranteed to work in every browser.</p>
+
+                        <h3>Can I convert JPG to PNG?</h3>
+                        <p>Yes. Select a JPG/JPEG image and choose PNG. Check the result because encoding and appearance depend on the source and browser.</p>
+
+                        <h3>Can I convert PNG to JPG?</h3>
+                        <p>Yes. Choose JPG or JPEG output. The converter fills the JPEG canvas background with white because JPEG cannot keep transparency.</p>
+
+                        <h3>Can I convert images to WebP?</h3>
+                        <p>You can select WebP output. Successful WebP encoding depends on the browser, so verify the resulting file format.</p>
+
+                        <h3>Can I convert multiple images at once?</h3>
+                        <p>Yes. Select or add multiple images and apply one output format to the selection. Different formats must be handled in separate conversions.</p>
+
+                        <h3>How do I download multiple converted images?</h3>
+                        <p>For multiple non-PDF images, the converter packages the results into one ZIP archive. PDF output creates a PDF document containing the selected images.</p>
+
+                        <h3>Can I convert images into a PDF?</h3>
+                        <p>Yes. Select image files, choose PDF and convert them into a generated image-based PDF document.</p>
+
+                        <h3>Can I convert a PDF into an image?</h3>
+                        <p>No. This converter creates PDFs from images; it does not accept PDF files and convert their pages into images.</p>
+
+                        <h3>Will converting an image reduce its file size?</h3>
+                        <p>Not necessarily. Output size depends on the source, selected format and browser encoding. A smaller file or specific reduction is not guaranteed.</p>
+
+                        <h3>Does JPG support transparent backgrounds?</h3>
+                        <p>No. JPEG does not support transparency. The converter uses a white background for JPEG output.</p>
+
+                        <h3>Can I convert animated GIFs without losing animation?</h3>
+                        <p>No. The browser canvas workflow does not preserve animated GIF frames; GIF input may be decoded as a static image.</p>
+
+                        <h3>Does the GIF output option work in every browser?</h3>
+                        <p>No. Canvas GIF encoding is not reliably supported. An unsupported request may produce PNG data even if the output filename ends in <code>.gif</code>.</p>
+
+                        <h3>Are selected images processed in the browser?</h3>
+                        <p>The converter's image decoding and conversion use browser-side image and canvas processing. This describes the conversion workflow, not a blanket statement about all website activity.</p>
+                    </div>
+
+                    <div class="converter-seo-final">
+                        <h2>Convert Your Images Online for Free</h2>
+                        <p>Upload your images, choose a supported output format and download the converted result using XConvertifire's free online Image Converter.</p>
+                        <a href="#converterUpload" class="converter-seo-cta" id="converterSeoCta">Convert Your Images Now</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -1087,6 +1430,29 @@
         document.getElementById('closeConversionBtn').onclick = () => {
             overlay.classList.remove('show');
         };
+    </script>
+    <script>
+        const converterSeoCta = document.getElementById('converterSeoCta');
+        const converterUpload = document.getElementById('converterUpload');
+        const converterFilesPanel = document.getElementById('converterFilesPanel');
+
+        if (converterSeoCta && converterUpload && converterFilesPanel) {
+            converterSeoCta.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const target = converterUpload.classList.contains('d-none')
+                    ? converterFilesPanel
+                    : converterUpload;
+                const reduceMotion = window.matchMedia(
+                    '(prefers-reduced-motion: reduce)'
+                ).matches;
+
+                target.scrollIntoView({
+                    behavior: reduceMotion ? 'auto' : 'smooth',
+                    block: 'start'
+                });
+            });
+        }
     </script>
 @endsection
 
