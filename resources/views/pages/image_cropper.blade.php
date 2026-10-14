@@ -5,8 +5,16 @@
     <meta name="description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping." />
     <meta property="og:title" content="FREE Image Cropper: Crop Images Online | XConvertifire">
     <meta property="og:description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping.">
-    <meta property="twitter:title" content="FREE Image Cropper: Crop Images Online | XConvertifire">
-    <meta property="twitter:description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ route('image.cropper') }}">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:image:alt" content="XConvertifire logo">
+    <meta property="og:site_name" content="XConvertifire">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FREE Image Cropper: Crop Images Online | XConvertifire">
+    <meta name="twitter:description" content="Crop JPG, PNG, WebP, and GIF images online for FREE with XConvertifire. Use custom sizes or aspect ratios for fast, secure, and precise image cropping.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta name="twitter:image:alt" content="XConvertifire logo">
 @endsection
 
 @section('content')
@@ -16,7 +24,7 @@
         <section class="crop-breadcrumb-section">
             <div class="container">
                 <div class="crop-breadcrumb">
-                    <a href="#">
+                    <a href="{{ route('home') }}">
                         <i class="fas fa-home"></i>
                         Home
                     </a>

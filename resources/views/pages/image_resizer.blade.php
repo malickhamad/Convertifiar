@@ -6,9 +6,17 @@
 
     <meta property="og:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
     <meta property="og:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ route('image.resizer') }}">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:image:alt" content="XConvertifire logo">
+    <meta property="og:site_name" content="XConvertifire">
 
-    <meta property="twitter:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
-    <meta property="twitter:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
+    <meta name="twitter:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta name="twitter:image:alt" content="XConvertifire logo">
 @endsection
 
 @section('content')
@@ -22,7 +30,7 @@
 
                 <div class="crop-breadcrumb">
 
-                    <a href="#">
+                    <a href="{{ route('home') }}">
                         <i class="fas fa-home"></i>
                         Home
                     </a>
