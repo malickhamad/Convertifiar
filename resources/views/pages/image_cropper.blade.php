@@ -261,7 +261,7 @@
                         <h2>How to Crop a Photo Without Stretching It</h2>
                         <p>Cropping removes the portions outside a selected rectangle. Stretching changes the relationship between width and height, potentially making people and objects look too narrow or wide.</p>
                         <p>For example, a 1200 &times; 800 pixel photo has a 3:2 aspect ratio. You can take a square crop from it without stretching the subjects, but content near its edges will be removed. Protect faces, text, and other details when positioning the crop.</p>
-                        <p>If you want to change an entire image's width and height without removing part of the composition, use the <a href="https://xconvertifire.com/image-resizer">online image resizer</a> instead.</p>
+                        <p>If you want to change an entire image's width and height without removing part of the composition, resizing is a better fit.</p>
                     </div>
 
                     <div class="crop-seo-block">
@@ -269,7 +269,7 @@
                         <h3>Crop JPG and JPEG Photos</h3>
                         <p>JPG/JPEG photographs can be reframed to remove distracting edges or emphasize a subject. The downloaded JPEG is re-encoded, so it should not be considered pixel-for-pixel identical to the original.</p>
                         <h3>Crop PNG Images</h3>
-                        <p>PNG is common for screenshots, graphics, and images with transparency. You can upload a PNG, but the cropper exports JPEG, which does not support transparent pixels. If transparent output is essential, this cropper's current export workflow will not preserve it. For separate file-format tasks, explore the <a href="https://xconvertifire.com/image-converter">online image converter</a> and confirm its available output formats.</p>
+                        <p>PNG is common for screenshots, graphics, and images with transparency. You can upload a PNG, but the cropper exports JPEG, which does not support transparent pixels. If transparent output is essential, this cropper's current export workflow will not preserve it. For separate file-format tasks, explore the <a href="{{ route('image.converter') }}">online image converter</a> and confirm its available output formats.</p>
                         <h3>Crop WebP Images</h3>
                         <p>WebP works well for many modern web images. A WebP input can be cropped here, but the result will be JPEG rather than WebP. Check image appearance and file size after export.</p>
                         <h3>Crop GIF Images</h3>
@@ -281,9 +281,9 @@
                         <h3>Crop to Improve Composition</h3>
                         <p>Choose cropping when you want to remove unwanted surroundings, center a subject, or create a new frame shape. A crop keeps only the selected area.</p>
                         <h3>Resize to Change Image Dimensions</h3>
-                        <p>Resizing scales the image to a different width or height. It is more appropriate for specified pixel dimensions. Try the <a href="https://xconvertifire.com/image-resizer">free image resizer</a> when exact image sizing matters.</p>
+                        <p>Resizing scales the image to a different width or height. It is more appropriate for specified pixel dimensions. Try the <a href="{{ route('image.resizer') }}">free image resizer</a> when exact image sizing matters.</p>
                         <h3>Compress to Reduce File Size</h3>
-                        <p>Compression focuses on the amount of data in the file, measured in KB or MB. A crop can change file size but cannot guarantee a target KB value. For that goal, try the <a href="https://xconvertifire.com/image-compressor">free image compressor</a>. Depending on your workflow, you may crop first, resize next, and then compress if needed.</p>
+                        <p>Compression focuses on the amount of data in the file, measured in KB or MB. A crop can change file size but cannot guarantee a target KB value. For that goal, try the <a href="{{ route('image.compressor') }}">free image compressor</a>. Depending on your workflow, you may crop first, resize next, and then compress if needed.</p>
                     </div>
 
                     <div class="crop-seo-block">
@@ -308,7 +308,6 @@
                             <li><strong>Protect important details.</strong> Keep faces, logos, product features, and essential text within the crop.</li>
                             <li><strong>Avoid excessive trimming.</strong> A tiny crop from a low-resolution source may lack the detail needed at its destination.</li>
                             <li><strong>Keep the original.</strong> An untouched file makes future crops easier.</li>
-                            <li><strong>Check transparency and animation.</strong> This tool exports JPEG, which preserves neither.</li>
                             <li><strong>Review the exported file.</strong> Inspect the composition and fine detail after JPEG encoding.</li>
                         </ul>
                         <p>For technical background on how browser canvases produce downloadable image files, see MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob">Canvas toBlob documentation</a>.</p>
@@ -326,7 +325,7 @@
                             <h3>Can I use 16:9 or 9:16?</h3>
                             <p>Yes. Both are available, alongside Free, 1:1, 4:3, and 3:4 aspect ratios.</p>
                             <h3>Can I rotate the image?</h3>
-                            <p>Yes. The Rotate Left and Rotate Right buttons each turn the image by 90 degrees.</p>
+                            <p>Yes. The Rotate Left and Rotate Right buttons each turn the image by 90 degrees. For a separate rotation workflow, use the <a href="{{ route('image.rotator') }}">Image Rotator</a>.</p>
                             <h3>Can I set exact crop dimensions?</h3>
                             <p>The width and height fields influence the crop selection and its proportions, but the current export does not guarantee exact output pixel dimensions. Use the resizer for that separate task.</p>
                             <h3>Will a cropped PNG keep its transparency?</h3>

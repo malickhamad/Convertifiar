@@ -494,7 +494,7 @@
                         </article>
                         <article>
                             <h3>Is PDF editing performed in the browser?</h3>
-                            <p>This page renders and edits the selected document through browser-loaded PDF.js and pdf-lib libraries. This description is not a privacy or security guarantee; consider the document's sensitivity before uploading it.</p>
+                            <p>This page renders and edits the selected document through browser-loaded PDF.js and pdf-lib libraries. Their project pages explain <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener noreferrer">PDF.js rendering</a> and <a href="https://pdf-lib.js.org/" target="_blank" rel="noopener noreferrer">PDF document creation and modification</a>. This description is not a privacy or security guarantee; consider the document's sensitivity before uploading it.</p>
                         </article>
                     </div>
 
