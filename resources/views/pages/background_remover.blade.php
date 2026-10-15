@@ -3,6 +3,19 @@
 @section('meta')
     <title>FREE Background Remover: Erase Background | XConvertifire</title>
     <meta name="description" content="Remove image backgrounds for FREE with XConvertifire. Create clean AI cutouts, refine edges, add backgrounds, and download polished images quickly and securely.">
+    <meta property="og:title" content="FREE Background Remover: Erase Background | XConvertifire">
+    <meta property="og:description" content="Remove image backgrounds for FREE with XConvertifire. Create clean AI cutouts, refine edges, add backgrounds, and download polished images quickly and securely.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ route('image.background_remover') }}">
+    <meta property="og:site_name" content="XConvertifire">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:image:alt" content="XConvertifire logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FREE Background Remover: Erase Background | XConvertifire">
+    <meta name="twitter:description" content="Remove image backgrounds for FREE with XConvertifire. Create clean AI cutouts, refine edges, add backgrounds, and download polished images quickly and securely.">
+    <meta name="twitter:url" content="{{ route('image.background_remover') }}">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta name="twitter:image:alt" content="XConvertifire logo">
 @endsection
 
 @section('content')
@@ -1175,6 +1188,141 @@
                 padding: 32px 20px
             }
         }
+
+        .background-remover-seo-section {
+            padding: 64px 20px 80px;
+            border-top: 1px solid #262626;
+            background: #0b0b0b
+        }
+
+        .background-remover-seo-section .seo-content {
+            max-width: 960px;
+            margin: 0 auto
+        }
+
+        .background-remover-seo-section h2 {
+            margin: 42px 0 16px;
+            color: #f4f4f5;
+            font-size: clamp(1.45rem, 3vw, 2rem);
+            font-weight: 750;
+            line-height: 1.25
+        }
+
+        .background-remover-seo-section h2:first-child {
+            margin-top: 0
+        }
+
+        .background-remover-seo-section h3 {
+            margin: 26px 0 10px;
+            color: #e4e4e7;
+            font-size: 1.15rem;
+            font-weight: 700
+        }
+
+        .background-remover-seo-section p,
+        .background-remover-seo-section li {
+            color: #b8b8c0;
+            font-size: 1rem;
+            line-height: 1.8
+        }
+
+        .background-remover-seo-section p {
+            margin: 0 0 16px
+        }
+
+        .background-remover-seo-section ul,
+        .background-remover-seo-section ol {
+            padding-left: 1.4rem;
+            margin: 0 0 20px
+        }
+
+        .background-remover-seo-section li {
+            padding-left: 4px;
+            margin: 0 0 8px
+        }
+
+        .background-remover-seo-section a {
+            color: #93c5fd;
+            text-decoration: underline;
+            text-decoration-color: rgba(147, 197, 253, .45);
+            text-underline-offset: 3px
+        }
+
+        .background-remover-seo-section a:hover {
+            color: #bfdbfe;
+            text-decoration-color: currentColor
+        }
+
+        .background-remover-seo-section .seo-faq-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px
+        }
+
+        .background-remover-seo-section .seo-faq-list details {
+            padding: 17px 18px;
+            border: 1px solid #292929;
+            border-radius: 12px;
+            background: #111
+        }
+
+        .background-remover-seo-section .seo-faq-list summary {
+            color: #f4f4f5;
+            font-weight: 650;
+            line-height: 1.5;
+            cursor: pointer
+        }
+
+        .background-remover-seo-section .seo-faq-list p {
+            margin: 12px 0 0;
+            font-size: .95rem
+        }
+
+        .background-remover-seo-section .seo-cta {
+            margin-top: 48px;
+            padding: 28px;
+            border: 1px solid rgba(59, 130, 246, .35);
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, .14), rgba(17, 24, 39, .55));
+            text-align: center
+        }
+
+        .background-remover-seo-section .seo-cta h2 {
+            margin: 0 0 10px
+        }
+
+        .background-remover-seo-section .seo-cta-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            margin-top: 8px;
+            padding: 0 20px;
+            border-radius: 9px;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none
+        }
+
+        .background-remover-seo-section .seo-cta-link:hover {
+            background: #1d4ed8;
+            color: #fff
+        }
+
+        @media (max-width: 640px) {
+            .background-remover-seo-section {
+                padding: 44px 16px 56px
+            }
+
+            .background-remover-seo-section .seo-faq-list {
+                grid-template-columns: 1fr
+            }
+
+            .background-remover-seo-section .seo-cta {
+                padding: 22px 18px
+            }
+        }
     </style>
 
     <main class="bg-remover-page">
@@ -1182,7 +1330,7 @@
             <div class="container-fluid px-lg-4">
                 <div class="editor-heading">
                     <span class="bg-badge"><i class="fas fa-wand-magic-sparkles"></i> AI BACKGROUND REMOVER</span>
-                    <h1>Make your images <span>stand out.</span></h1>
+                    <h1>AI Background Remover <span>Online</span></h1>
                     <p>Remove backgrounds with AI, then refine every edge with professional editing tools.</p>
                 </div>
 
@@ -1364,6 +1512,111 @@
                     <div class="thumb active">
                         <div class="mini-checker"><canvas id="thumbCanvas"></canvas></div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="background-remover-seo-section" aria-labelledby="background-remover-guide-title">
+            <div class="seo-content">
+                <h2 id="background-remover-guide-title">Free AI Background Remover Online</h2>
+                <p>XConvertifire's background remover uses an AI model to identify a prominent subject and separate it from the surrounding image. The result appears as a cutout in the editor, where you can review edges, make brush edits, choose a background and download a PNG. It is designed for removing an image background online without needing desktop image-editing software.</p>
+                <p>The removal process runs through this page in your browser. The tool loads its background-removal library and model when needed, then uses them to create an initial result. Automatic separation can be useful for portraits and product photos, but it is not equally accurate for every picture. Review the output before using it in a design or publishing it.</p>
+
+                <h2>How to Remove an Image Background Online</h2>
+                <ol>
+                    <li>Select an image with the upload control or drop a supported file into the upload area.</li>
+                    <li>Allow the page to load the AI assets it needs and process the image. On a first use, model files may need to download.</li>
+                    <li>Review the generated cutout in the editor. Check the outline around the subject, especially where the background and subject meet.</li>
+                    <li>Use Erase to remove leftover background areas or Restore to paint back parts of the original image. Adjust the brush size for broad or more precise edits.</li>
+                    <li>Choose a transparent background, a preset color, a gradient, or a custom color if you want a colored backdrop.</li>
+                    <li>Select Download to save the result as a PNG. A transparent selection keeps clear areas transparent; an opaque color or gradient fills those areas.</li>
+                </ol>
+                <p>For the final composition, you can also compare the original with the cutout, zoom in to inspect details, and use Undo or Redo for brush edits. If the subject needs different framing, use the <a href="{{ route('image.cropper') }}">Image Cropper to adjust the composition</a>. The separate <a href="{{ route('image.resizer') }}">Image Resizer</a> can change dimensions for a project, while the <a href="{{ route('image.compressor') }}">Image Compressor</a> can help manage file size afterward.</p>
+
+                <h2>Supported Image Formats and File Size</h2>
+                <p>The uploader accepts JPG or JPEG, PNG, WebP and GIF files, with a maximum source file size of 50 MB. The downloaded result is PNG, whether you keep transparency or fill the background with a solid color or gradient. A GIF input does not mean that animation is preserved: the output workflow downloads a PNG image.</p>
+                <p>A supported extension alone cannot guarantee that every file will open successfully. An unusual encoding, damaged file or other browser limitation may prevent processing. The page checks the reported file type and size before starting. For more about common image formats, see <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types" target="_blank" rel="noopener noreferrer">MDN's guide to image file types</a>. If you need to change a file's format for another workflow, XConvertifire's <a href="{{ route('image.converter') }}">Image Converter</a> provides a separate conversion tool.</p>
+
+                <h2>Transparent PNG Backgrounds</h2>
+                <p>Transparency means that some pixels in an image are clear rather than filled with a visible color. PNG supports transparency, so a cutout can sit over different colors, layouts or photographs without retaining a rectangular background. This can be useful for product pictures, profile graphics, presentation slides and other design assets.</p>
+                <p>The editor starts with a transparent background option. Selecting white, dark, blue, light, a gradient or a custom color changes the areas behind the cutout; those areas are then included in the PNG rather than remaining transparent. The tool downloads PNG files and does not offer JPEG output. The MDN image format reference linked above also explains how image formats handle transparency.</p>
+
+                <h2>Review and Refine the Cutout</h2>
+                <p>Automatic background removal is a starting point, and a quick manual review can catch areas that need attention. The editor provides Erase and Restore brushes with an adjustable size, plus background color and gradient choices. Brightness, contrast and saturation controls can adjust the subject's appearance. Compare, zoom, Undo and Redo help with reviewing and editing the visible cutout.</p>
+                <p>Fine hair, fur, transparent objects and edges with little contrast may be difficult to separate cleanly. Busy scenes can also confuse the boundary between subject and background. Try a smaller brush near a detailed edge and inspect the result at a useful zoom level. Avoid assuming that every visible preview control changes the saved file in the same way; the exported result supports the cutout edits, background selection and image adjustments described above, but some decorative or view controls may only affect the editor.</p>
+
+                <h2>Useful Projects for a Background Remover</h2>
+                <p>A transparent cutout can make it easier to place a product on a consistent catalog backdrop, position a profile picture in a graphic, or build a social media post with a different color behind the subject. It can also help prepare a presentation visual or a personal design project. Check the result at its intended size and on the background where it will be used; the tool does not certify images for official identification or other regulated requirements.</p>
+
+                <h2>Tips for Better Background Removal Results</h2>
+                <ul>
+                    <li>Choose an image where the subject is clearly separated from the background.</li>
+                    <li>Even lighting and a sharp subject can make the subject's outline easier to identify.</li>
+                    <li>Low contrast between the subject and its surroundings can lead to missing or removed edge details.</li>
+                    <li>Inspect fine hair, fur, transparent materials and complex backgrounds carefully, then make local Erase or Restore edits where helpful.</li>
+                    <li>Review the finished PNG before publishing or using it in a design.</li>
+                </ul>
+
+                <h2>Browser Processing and Practical Limits</h2>
+                <p>The background-removal workflow uses browser-side AI processing. The page may download the processing library and model assets from its configured CDN, especially on first use. Your browser and device affect how quickly the assets load and the image is processed, so a specific completion time cannot be promised. Large images can also require considerable memory during processing and editing.</p>
+                <p>Selected images are handled through this page's browser workflow. This description does not mean the entire website works offline or make broader privacy guarantees. Keep your browser open while the tool works, and try a smaller supported image if the browser runs short of resources. Even with a supported format and size, damaged or unusually encoded files may fail.</p>
+                <p>The tool uses the <a href="https://www.npmjs.com/package/@imgly/background-removal" target="_blank" rel="noopener noreferrer">IMG.LY background-removal package</a> for its browser AI workflow. Its model and processing requirements are one reason that a first run can involve downloading assets and that available device resources matter.</p>
+
+                <h2>Background Remover FAQ</h2>
+                <div class="seo-faq-list">
+                    <details>
+                        <summary>Is this background remover free?</summary>
+                        <p>The page presents the background-removal tool as free to use. Processing still depends on your browser, device and the required AI assets loading successfully.</p>
+                    </details>
+                    <details>
+                        <summary>How do I remove a background online?</summary>
+                        <p>Upload or drop a supported image, wait for browser processing, review the cutout, make optional Erase or Restore edits, choose a background if desired, and download the PNG.</p>
+                    </details>
+                    <details>
+                        <summary>Which image formats can I use?</summary>
+                        <p>The input accepts JPG or JPEG, PNG, WebP and GIF. The downloaded image is PNG.</p>
+                    </details>
+                    <details>
+                        <summary>What is the maximum image file size?</summary>
+                        <p>The source file limit is 50 MB. Very large images may also require substantial browser memory.</p>
+                    </details>
+                    <details>
+                        <summary>Can I download a transparent PNG?</summary>
+                        <p>Yes. Keep the Transparent background option selected to leave the background clear in the PNG.</p>
+                    </details>
+                    <details>
+                        <summary>Can I replace the background with a solid color?</summary>
+                        <p>Yes. Choose a preset or custom color, or select the gradient option. The chosen backdrop is included in the PNG.</p>
+                    </details>
+                    <details>
+                        <summary>Can I refine areas the AI missed?</summary>
+                        <p>Use the Erase and Restore brushes and adjust the brush size to remove or bring back image areas. Review fine edges manually.</p>
+                    </details>
+                    <details>
+                        <summary>Will a GIF stay animated after background removal?</summary>
+                        <p>No. Although GIF is accepted as an input format, the download workflow produces a PNG image, not an animated GIF.</p>
+                    </details>
+                    <details>
+                        <summary>Why can hair and fine edges look imperfect?</summary>
+                        <p>Fine strands, transparent objects, low contrast and complex scenes can make subject boundaries hard to distinguish. Inspect and refine the cutout where practical.</p>
+                    </details>
+                    <details>
+                        <summary>Does the tool work in a web browser?</summary>
+                        <p>Yes. The AI workflow runs through the browser and may download its library and model files before processing.</p>
+                    </details>
+                    <details>
+                        <summary>Can I remove backgrounds from multiple images at once?</summary>
+                        <p>The current editor processes one selected image at a time. It does not provide automatic batch background removal.</p>
+                    </details>
+                    <details>
+                        <summary>Is the original resolution and image quality guaranteed?</summary>
+                        <p>No specific resolution or quality outcome is guaranteed for every input. Results depend on the image, model processing and available browser resources; inspect the downloaded PNG before relying on it.</p>
+                    </details>
+                </div>
+
+                <div class="seo-cta">
+                    <h2>Ready to remove an image background?</h2>
+                    <p>Start with a supported image and review the cutout in the editor.</p>
+                    <a class="seo-cta-link" href="#uploadShell">Upload an image</a>
                 </div>
             </div>
         </section>

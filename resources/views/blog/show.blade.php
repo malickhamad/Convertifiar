@@ -45,11 +45,12 @@
 
     $articleAuthor = trim((string) $blog->author);
     if ($articleAuthor !== '') {
-        if (preg_match('/^XConvertifire(?:\s+(?:Editorial(?:\s+Team)?|Team))?$/i', $articleAuthor)) {
+        if (preg_match('/^X\s*Convertifire(?:\s+(?:Editorial(?:\s+Team)?|Team))?$/i', $articleAuthor)) {
             $blogPostingSchema['author'] = [
                 '@type' => 'Organization',
                 '@id' => 'https://xconvertifire.com/#organization',
                 'name' => $articleAuthor,
+                'url' => 'https://xconvertifire.com/',
             ];
         } else {
             $blogPostingSchema['author'] = [
