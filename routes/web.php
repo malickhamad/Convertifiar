@@ -96,3 +96,8 @@ Route::prefix('word-to-pdf')->name('word.pdf.')->group(function () {
     Route::get('/download/{batch}', [WordToPdfController::class, 'download'])->name('download');
     Route::get('/download-zip/{batch}', [WordToPdfController::class, 'downloadZip'])->name('downloadZip');
 });
+
+
+Route::get('/watermark-remover', [PageController::class, 'watermarkRemover'])->name('watermark.remover');
+
+Route::get('/metadata-remover', [PageController::class, 'metadataRemover'])->name('metadata.remover');
