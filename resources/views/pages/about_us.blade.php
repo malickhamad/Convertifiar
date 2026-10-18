@@ -50,7 +50,7 @@
                     </div>
 
                     <h1 class="about-hero-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                        Building the simplest tools for everyday creators
+                        About XConvertifire
                     </h1>
 
                     <p class="about-hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
@@ -163,7 +163,7 @@
                 <span class="about-mini-badge">See It In Action</span>
 
                 <h2 class="about-heading">
-                    Watch how <span>X Convertifire works</span>
+                    Watch how <span>XConvertifire works</span>
                 </h2>
 
                 <p class="about-para">
@@ -227,10 +227,10 @@
         <div class="text-center mb-5" data-aos="fade-up">
             <span class="about-mini-badge">What We Offer</span>
             <h2 class="about-heading mt-3">
-                A complete toolkit, <span>all in one place</span>
+                Online tools for <span>everyday file tasks</span>
             </h2>
             <p class="about-section-desc">
-                From images to documents, every tool you need to get the job done quickly.
+                Explore tools for common image, PDF, document, and video tasks.
             </p>
         </div>
 
@@ -277,6 +277,11 @@
             </div>
 
         </div>
+        <p class="about-para mt-4">
+            Need a Word document from a PDF? Explore our
+            <a href="{{ route('pdf.to.word') }}">PDF to Word converter</a>
+            and its supported features.
+        </p>
     </section>
 
 
@@ -289,7 +294,7 @@
             <!-- Big Card -->
             <div class="col-lg-6" data-aos="fade-up">
                 <div class="about-why-big">
-                    <span class="about-mini-badge">Why X Convertifire</span>
+                    <span class="about-mini-badge">Why XConvertifire</span>
                     <h3 class="about-why-title">
                         Tools for everyday file tasks
                     </h3>
