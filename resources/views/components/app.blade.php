@@ -21,6 +21,9 @@
     })(window,document,'script','dataLayer','GTM-NWSKF2CP');</script>
     <!-- End Google Tag Manager -->
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172091253082286"
+        crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
