@@ -145,8 +145,7 @@
                                 </label>
 
                                 <textarea name="content" id="blogContent" rows="18" class="form-control bg-black text-white border-secondary"
-                                    placeholder="Write your blog article here..." style="min-height: 1000px; background-color: #000 !important;"
-                                    required>{{ old('content') }}</textarea>
+                                    placeholder="Write your blog article here..." style="min-height: 1000px; background-color: #000 !important;">{{ old('content') }}</textarea>
 
                                 <div class="form-text text-secondary">
                                     You can add your article content here.
