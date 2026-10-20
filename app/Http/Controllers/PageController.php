@@ -108,4 +108,13 @@ public function contactStore(Request $request)
     return view('pages.pdf_to_word');
 }
 
+    public function watermarkRemover()
+{
+    return view('pages.watermark_remover');
+}
+public function metadataRemover()
+{
+    return view('pages.metadata_remover');
+}
+
 }

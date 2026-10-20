@@ -2,13 +2,16 @@
 
 @section('meta')
     <title>FREE Online File Converter: Convert Files | XConvertifire</title>
-    <meta name="description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely." />
+    <meta name="description"
+        content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely." />
 
     <meta property="og:title" content="FREE Online File Converter: Convert Files | XConvertifire">
-    <meta property="og:description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
+    <meta property="og:description"
+        content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
 
     <meta property="twitter:title" content="FREE Online File Converter: Convert Files | XConvertifire">
-    <meta property="twitter:description" content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
+    <meta property="twitter:description"
+        content="Use XConvertifire's FREE online tools to convert, compress, resize, crop, rotate, edit PDFs, remove backgrounds, and process files quickly and securely.">
 
     @php
         $homeSchemaUrl = 'https://xconvertifire.com/';
@@ -68,17 +71,11 @@
                         <span class="tag-badge"><i class="fas fa-magic text-light me-2"></i> Free Online Toolkit</span>
                     </div>
 
-                    <h1 class="hero-title"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="100">
+                    <h1 class="hero-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                         Free Online File Tools for Images, PDFs and Video
                     </h1>
 
-                    <p class="hero-subtitle"
-                       data-aos="fade-right"
-                       data-aos-duration="1000"
-                       data-aos-delay="200">
+                    <p class="hero-subtitle" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                         Compress, resize, crop and convert images,
                         edit PDF documents, and extract audio
                         from videos with XConvertifire's free tools.
@@ -106,41 +103,38 @@
 
             <!-- Tool 1 -->
             <div id="images" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
-                <a href="{{ route('image.compressor') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('image.compressor') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card  anim-border">
                         <div class="icon-box bg-green"><i class="fas fa-compress-arrows-alt"></i></div>
                         <h3>Compress IMAGE</h3>
-                        <p>Compress JPG, PNG, SVG, GIF, and WebP images with adjustable quality settings to reduce file size.</p>
+                        <p>Compress JPG, PNG, SVG, GIF, and WebP images with adjustable quality settings to reduce file
+                            size.</p>
                     </div>
                 </a>
             </div>
             <!-- Tool 2 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                <a href="{{ route('image.resizer') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('image.resizer') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-blue"><i class="fas fa-expand-arrows-alt"></i></div>
                         <h3>Resize IMAGE</h3>
-                        <p>Resize JPG, PNG, SVG, GIF, and WebP images by setting custom dimensions and adjusting the aspect ratio.</p>
+                        <p>Resize JPG, PNG, SVG, GIF, and WebP images by setting custom dimensions and adjusting the aspect
+                            ratio.</p>
                     </div>
                 </a>
             </div>
 
             <!-- Tool 3 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
-                <a href="{{ route('image.cropper') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('image.cropper') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-cyan"><i class="fas fa-crop-alt"></i></div>
                         <h3>Crop IMAGE</h3>
-                        <p>Crop JPG, PNG, WebP, and GIF images with a visual editor, preset aspect ratios, or custom dimensions.</p>
+                        <p>Crop JPG, PNG, WebP, and GIF images with a visual editor, preset aspect ratios, or custom
+                            dimensions.</p>
                     </div>
                 </a>
 
@@ -149,9 +143,7 @@
             <!-- Tool 4 -->
 
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
-                <a href="{{ route('image.rotator') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('image.rotator') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-cyan">
@@ -168,9 +160,7 @@
             <!-- Tool 5 -->
 
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                <a href="{{ route('image.converter') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('image.converter') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-yellow"><i class="fas fa-file-export"></i></div>
@@ -185,16 +175,15 @@
             <!-- Tool 6 -->
 
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                <a href="{{ route('image.background_remover') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('image.background_remover') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
 
                     <div class="tool-card anim-border">
                         <span class="badge-new">New!</span>
                         <div class="icon-box bg-red"><i class="fas fa-eraser"></i></div>
                         <h3>Remove background</h3>
-                        <p>Remove backgrounds from JPG, PNG, WebP, and GIF images, refine the cutout, and download it as a PNG.</p>
+                        <p>Remove backgrounds from JPG, PNG, WebP, and GIF images, refine the cutout, and download it as a
+                            PNG.</p>
                     </div>
                 </a>
 
@@ -204,14 +193,13 @@
 
 
             <div id="videos" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                <a href="{{ route('video.to.audio') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('video.to.audio') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <div class="icon-box bg-purple"><i class="fas fa-music"></i></div>
                         <h3>Video to Audio</h3>
-                        <p>Extract audio from MP4, MOV, AVI, WebM, MKV, MPEG, MPG, FLV, and 3GP videos as MP3, WAV, or M4A.</p>
+                        <p>Extract audio from MP4, MOV, AVI, WebM, MKV, MPEG, MPG, FLV, and 3GP videos as MP3, WAV, or M4A.
+                        </p>
                     </div>
                 </a>
             </div>
@@ -220,9 +208,7 @@
             <!-- Tool 8 -->
 
             <div id="pdfs" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-                <a href="{{ route('pdf.editor') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('pdf.editor') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <span class="badge-new">New!</span>
@@ -245,9 +231,7 @@
 
             <!-- Tool 9 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-                <a href="{{ route('pdf.to.word') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('pdf.to.word') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <span class="badge-new">New!</span>
@@ -267,9 +251,7 @@
 
             <!-- Tool 10 -->
             <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-                <a href="{{ route('word.pdf.index') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a href="{{ route('word.pdf.index') }}" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
                     <div class="tool-card anim-border">
                         <span class="badge-new">New!</span>
@@ -286,33 +268,59 @@
                     </div>
                 </a>
             </div>
-            {{-- <!-- Tool 11 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="550">
-                <div class="tool-card anim-border">
-                    <div class="icon-box bg-cyan"><i class="fas fa-sync-alt"></i></div>
-                    <h5>Rotate IMAGE</h5>
-                    <p>Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images!
-                    </p>
-                </div>
+            <!-- Tool 11 -->
+            <!-- Watermark Remover -->
+            <!-- Watermark Remover -->
+            <div id="watermark-remover" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="550">
+                <a href="{{ route('watermark.remover') }}" target="_blank" rel="noopener noreferrer"
+                    class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
+
+                        <div class="icon-box bg-cyan">
+                            <i class="fas fa-eraser"></i>
+                        </div>
+
+                        <h3>Watermark Remover</h3>
+
+                        <p>
+                            Remove or clean unwanted watermark areas from images online. Supports JPG, PNG, and WebP.
+                        </p>
+                    </div>
+                </a>
             </div>
 
             <!-- Tool 12 -->
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="tool-card anim-border">
-                    <span class="badge-new">New!</span>
-                    <div class="icon-box bg-blue"><i class="fas fa-user-secret"></i></div>
-                    <h5>Blur face</h5>
-                    <p>Easily blur out faces in photos. You can also blur licence plates and other objects to hide private
-                        info.</p>
-                </div>
-            </div> --}}
+
+
+            <div id="metadata-remover" class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
+                <a href="{{ route('metadata.remover') }}" target="_blank" rel="noopener noreferrer"
+                    class="text-decoration-none">
+                    <div class="tool-card anim-border">
+                        <span class="badge-new">New!</span>
+
+                        <div class="icon-box bg-cyan">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+
+                        <h3>Metadata Remover</h3>
+
+                        <p>
+                            Strip EXIF, GPS, author, and hidden metadata from images and PDFs. Keeps your files clean and
+                            private.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+
+
 
         </div>
     </section>
 
     <!-- SEO: Helpful Tool Guide -->
-    <section class="container py-5"
-        aria-labelledby="tool-guide-title">
+    <section class="container py-5" aria-labelledby="tool-guide-title">
 
         <h2 id="tool-guide-title" class="fw-bold mb-3">
             Find the Right Free Online Tool
@@ -340,8 +348,7 @@
                         and conversion changes its format.
                         Want a smaller image file?
                         Try our
-                        <a href="{{ route('image.compressor') }}"
-                           class="text-info text-decoration-underline">
+                        <a href="{{ route('image.compressor') }}" class="text-info text-decoration-underline">
                             free image compressor</a>.
                     </p>
                 </div>
@@ -360,8 +367,7 @@
                         better suited to editing.
                         Need an editable document?
                         Try our
-                        <a href="{{ route('pdf.to.word') }}"
-                           class="text-info text-decoration-underline">
+                        <a href="{{ route('pdf.to.word') }}" class="text-info text-decoration-underline">
                             free PDF to Word converter</a>.
                     </p>
                 </div>
@@ -379,8 +385,7 @@
                         from a video, such as a recording
                         or presentation.
                         Use our
-                        <a href="{{ route('video.to.audio') }}"
-                           class="text-info text-decoration-underline">
+                        <a href="{{ route('video.to.audio') }}" class="text-info text-decoration-underline">
                             free video to audio converter</a>
                         to extract the audio track.
                     </p>
@@ -461,27 +466,26 @@
 @endsection
 
 @section('scripts')
+    <script>
+        $(document).ready(function() {
 
-<script>
-$(document).ready(function () {
+            $('.pill').click(function() {
 
-    $('.pill').click(function () {
+                $('.pill').removeClass('active');
+                $(this).addClass('active');
 
-        $('.pill').removeClass('active');
-        $(this).addClass('active');
+                const targetId = $(this).data('target');
+                const targetElement = document.getElementById(targetId);
 
-        const targetId = $(this).data('target');
-        const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
 
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
             });
-        }
 
-    });
-
-});
-</script>
+        });
+    </script>
 @endsection
