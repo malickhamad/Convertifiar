@@ -2,7 +2,7 @@
 
 @section('meta')
 
-<title>{{ $blog->meta_title ?: $blog->title }} | Convertifire</title>
+<title>{{ $blog->meta_title ?: $blog->title }}</title>
 
 <meta name="description"
  content="{{ $blog->meta_description ?: ($blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 160)) }}">
