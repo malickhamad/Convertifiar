@@ -87,94 +87,11 @@
                     {{-- =================================================
                     LEFT INFORMATION PANEL
                 ================================================== --}}
-                    <div class="col-lg-3">
-                        <div class="card bg-dark border border-secondary border-opacity-25 rounded-4 shadow-sm h-100">
-                            <div class="card-body p-3">
-                                <div class="mb-3">
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span
-                                            class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 text-primary"
-                                            style="width:34px;height:34px;">
-                                            <i class="fas fa-sync-alt"></i>
-                                        </span>
-                                        <span class="text-primary small fw-semibold">
-                                            IMAGE ROTATOR
-                                        </span>
-                                    </div>
-                                    <h4 class="text-white fw-bold mb-1">
-                                        Rotate Image
-                                    </h4>
-                                    <p class="text-secondary small mb-0">
-                                        Adjust the angle and preview your image
-                                        instantly.
-                                    </p>
-                                </div>
-                                {{-- Feature 1 --}}
-                                <div class="d-flex align-items-center border-top border-secondary border-opacity-25 py-2">
-                                    <span
-                                        class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary flex-shrink-0"
-                                        style="width:32px;height:32px;">
-                                        <i class="fas fa-sliders-h small"></i>
-                                    </span>
-                                    <div class="ms-2">
-                                        <div class="text-white small fw-semibold">
-                                            Any Angle
-                                        </div>
-                                        <div class="text-secondary" style="font-size:11px;">
-                                            0° to 360° control
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- Feature 2 --}}
-                                <div class="d-flex align-items-center border-top border-secondary border-opacity-25 py-2">
-                                    <span
-                                        class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary flex-shrink-0"
-                                        style="width:32px;height:32px;">
-                                        <i class="fas fa-eye small"></i>
-                                    </span>
-                                    <div class="ms-2">
-                                        <div class="text-white small fw-semibold">
-                                            Live Preview
-                                        </div>
-                                        <div class="text-secondary" style="font-size:11px;">
-                                            See changes instantly
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- Feature 3 --}}
-                                <div class="d-flex align-items-center border-top border-secondary border-opacity-25 py-2">
-                                    <span
-                                        class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary flex-shrink-0"
-                                        style="width:32px;height:32px;">
-                                        <i class="fas fa-shield-alt small"></i>
-                                    </span>
-                                    <div class="ms-2">
-                                        <div class="text-white small fw-semibold">
-                                            Private
-                                        </div>
-                                        <div class="text-secondary" style="font-size:11px;">
-                                            Processed in browser
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- File Info --}}
-                                <div class="mt-3 p-2 rounded-3 bg-black border border-secondary border-opacity-25">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="text-secondary" style="font-size:11px;">
-                                            Current Angle
-                                        </span>
-                                        <span class="badge bg-primary" id="sideRotationAngle">
-                                            0°
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     {{-- =================================================
                     RIGHT EDITOR
                 ================================================== --}}
-                    <div class="col-lg-9">
+                  <div class="col-lg-8 mx-auto">
                         <div class="card bg-dark border border-secondary border-opacity-25 rounded-4 shadow-sm">
                             <div class="card-body p-2 p-md-3">
                                 {{-- =====================================
