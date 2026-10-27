@@ -20,6 +20,29 @@
     <link rel="stylesheet" href="{{ asset('css/image-converter.css') }}">
 
     <style>
+    .seo-card {
+        background: #151515 !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border-radius: 1rem !important;
+    }
+    .seo-card .accordion-button {
+        background: #151515 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+        font-weight: 600;
+    }
+    .seo-card .accordion-button:not(.collapsed) {
+        background: rgba(59, 130, 246, 0.08) !important;
+        color: #60a5fa !important;
+    }
+    .seo-card .accordion-button::after { filter: invert(1); }
+    .seo-card .accordion-body {
+        background: #151515 !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+</style>
+
+    <style>
         .converter-seo-section {
             padding: 24px 0 72px;
         }
@@ -460,7 +483,7 @@
 
         </section>
 
-        <section class="converter-seo-section">
+        {{-- <section class="converter-seo-section">
             <div class="container">
                 <div class="converter-seo-wrap">
                     <h2>Free Online Image Converter</h2>
@@ -627,7 +650,543 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+
+        <section class="py-5">
+    <div class="container">
+
+        <!-- ═══ HERO ═══ -->
+        <div class="seo-card shadow-lg mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">
+                    <i class="fas fa-shuffle me-1"></i> Image Conversion Guide
+                </span>
+                <h2 class="text-white fw-bold mb-3">Free Online Image Converter</h2>
+                <p class="text-secondary mb-3">An image converter online changes a file's format for use in a website, document or app. XConvertifire's free image converter lets you convert images in your browser to JPG, JPEG, PNG, WebP, GIF or PDF. GIF output depends on browser canvas encoding; when GIF encoding is unsupported, the result may contain PNG data even if its filename ends in <code class="text-white">.gif</code>.</p>
+                <p class="text-secondary mb-3">JPG and JPEG refer to the same widely supported image encoding and are often used for photographs. PNG is useful for graphics and images that need transparency. WebP can provide a modern web image format, although browser support affects encoding. PDF output collects selected images into a document. The best choice depends on what you are making and where the file will be used.</p>
+                <p class="text-secondary mb-0">Select browser-decodable image files, choose one output option and start conversion. Results depend on the source and browser.</p>
+            </div>
+        </div>
+
+        <!-- ═══ STEPS ═══ -->
+        <div class="text-center mb-4">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">How It Works</span>
+            <h2 class="text-white fw-bold mb-2">How to Convert Images Online</h2>
+            <p class="text-secondary mb-0">The converter follows a short workflow from choosing files to saving the result.</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">1. Select Your Images</h3>
+                        <p class="text-secondary small mb-0">Select or drop one or more supported images. Add more files before converting if needed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-sliders"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">2. Choose an Output</h3>
+                        <p class="text-secondary small mb-0">Select one format for the selected images: JPEG, JPG, PNG, WebP, GIF or PDF. The six controls include JPG and JPEG options for the same encoding format.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">3. Convert the Files</h3>
+                        <p class="text-secondary small mb-0">Start conversion and follow its progress. All selected images use the same output choice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">4. Download the Result</h3>
+                        <p class="text-secondary small mb-0">Download the result when ready. A single non-PDF output is a file; multiple non-PDF outputs are packaged in a ZIP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ FORMATS ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Format Guide</span>
+            <h2 class="text-white fw-bold mb-0">Convert JPG, PNG, WebP and GIF Images</h2>
+        </div>
+
+        <p class="text-secondary text-center mb-4">Input depends on browser decoding, so every file with an image extension is not guaranteed to convert.</p>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 text-warning mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Convert JPG and JPEG Images</h3>
+                        <p class="text-secondary small mb-0">JPG and JPEG are extensions for the same encoding, widely used for photographs. JPEG encoding can be lossy, changing detail or file size. Repeated conversions can accumulate quality changes, so start from the original when practical.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25 text-info mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Convert PNG Images</h3>
+                        <p class="text-secondary small mb-0">PNG suits screenshots, illustrations and graphics with transparent areas. Transparency may be retained when supported by the source and browser. For JPEG output, the canvas background is white because JPEG cannot store transparency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 text-success mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Convert WebP Images</h3>
+                        <p class="text-secondary small mb-0">WebP may suit websites that support it. The browser must support WebP encoding; otherwise canvas may return PNG data. Check the download rather than assuming its format or size reduction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 text-danger mb-3">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Convert GIF Input Images</h3>
+                        <p class="text-secondary small mb-0">A browser may decode GIF input as an image frame, so this conversion workflow does not preserve animated GIF playback. Do not rely on the GIF output option to create an animated GIF.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ BATCH ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Convert Multiple Images Online</h2>
+                <p class="text-secondary mb-3">Add or remove selected images, or clear the selection. One output format applies to the whole batch; process separate groups if they need different formats.</p>
+                <p class="text-secondary mb-3">Multiple non-PDF outputs are packaged into a ZIP. No fixed batch-count or upload-size limit is published; practical capacity depends on the browser, device and files.</p>
+                <p class="text-secondary mb-0">A single image downloads as a file. PDF uses its own document-generation workflow.</p>
+            </div>
+        </div>
+
+        <!-- ═══ PDF ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Convert Images to PDF</h2>
+                <p class="text-secondary mb-3">Select image files, choose PDF and convert them into a document containing the selected images. Download the generated PDF when processing finishes.</p>
+                <p class="text-secondary mb-0">This creates PDFs from images. It does not accept existing PDF documents and convert their pages to images. Review the result before printing or sharing.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FORMAT COMPARISON ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Format Comparison</span>
+            <h2 class="text-white fw-bold mb-2">JPG vs PNG vs WebP: Which Format Should You Choose?</h2>
+            <p class="text-secondary mb-0">Choose an output based on image content, transparency, intended use and compatibility. Results vary by image and browser.</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 text-warning mb-3">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">JPG for Photographs</h3>
+                        <p class="text-secondary small mb-0">JPG/JPEG suits many photographs and is broadly supported, but its lossy encoding cannot retain transparency. Transparent canvas areas are filled white. Inspect details and edges after export.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25 text-info mb-3">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">PNG for Graphics and Transparency</h3>
+                        <p class="text-secondary small mb-0">PNG often suits screenshots, diagrams, text-heavy graphics and transparent artwork. It may retain source transparency where supported, but is not guaranteed to be smaller than JPEG or WebP.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 text-success mb-3">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">WebP for Modern Web Images</h3>
+                        <p class="text-secondary small mb-0">WebP may suit modern web use, but destination compatibility varies and browser support determines whether encoding succeeds. Check format and appearance before publishing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ QUALITY & TRANSPARENCY ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Image Conversion, Transparency and Quality</h2>
+                <p class="text-secondary mb-3">Conversion changes encoding, unlike resizing dimensions or compressing file data. It may alter visual quality and does not guarantee a smaller file or unchanged pixels.</p>
+                <ul class="text-secondary mb-3 ps-3">
+                    <li class="mb-2">JPEG does not support transparent pixels. This converter uses a white canvas background for JPEG output.</li>
+                    <li class="mb-2">PNG can retain transparency when the input and browser-based export support it.</li>
+                    <li class="mb-2">WebP output depends on browser encoding support and does not promise a specific reduction percentage.</li>
+                    <li class="mb-2">Review the downloaded file, including its format, transparency, dimensions and fine details.</li>
+                </ul>
+                <p class="text-secondary mb-0">If your next step is to reduce file size, use the <a href="{{ route('image.compressor') }}" class="text-primary">image compressor</a>. For changing pixel dimensions, the <a href="{{ route('image.resizer') }}" class="text-primary">image resizer</a> is more appropriate. To remove unwanted edges, use the <a href="{{ route('image.cropper') }}" class="text-primary">image cropper</a>. If an image needs a different orientation, try the <a href="{{ route('image.rotator') }}" class="text-primary">image rotator</a>.</p>
+            </div>
+        </div>
+
+        <!-- ═══ WHY CONVERT ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Common Uses</span>
+            <h2 class="text-white fw-bold mb-0">Common Reasons to Convert Images</h2>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Prepare Website Images</h3>
+                        <p class="text-secondary small mb-0">If a website requests a particular format, convert a copy and test it there. Requirements vary; no format is accepted everywhere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-share-nodes"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Share Photos in Compatible Formats</h3>
+                        <p class="text-secondary small mb-0">Convert a photo when a recipient expects JPEG or PNG. Choose based on compatibility, transparency and graphic detail.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-file-powerpoint"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Use Graphics in Documents</h3>
+                        <p class="text-secondary small mb-0">For documents or presentations, PNG may suit transparent artwork and text-heavy visuals; JPEG may suit photos without transparency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Create Image-Based PDFs</h3>
+                        <p class="text-secondary small mb-0">Use PDF output to combine selected images into a document, then check its pages and image placement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Convert a Batch for a Project</h3>
+                        <p class="text-secondary small mb-0">Convert several assets to one format and download the ZIP. Separate groups that need different formats.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Prepare Files for Online Uploads</h3>
+                        <p class="text-secondary small mb-0">Forms and marketplaces may specify formats. Convert a copy and check the platform's file, dimension and size rules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ TIPS ═══ -->
+        <div class="seo-card shadow-sm mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 mb-3">Best Practices</span>
+                <h2 class="text-white fw-bold h4 mb-4">Tips for Better Image Conversion Results</h2>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Choose for the image.</strong> Consider detail, transparency and destination compatibility.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Check transparency before choosing JPEG.</strong> The converter places transparent canvas areas on white for JPEG output.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Review fine details.</strong> Re-encoding may affect small text and sharp lines.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Check dimensions and file size.</strong> Conversion is not a resizing operation and does not promise a smaller file.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Account for browser support.</strong> WebP and GIF encoding may not yield the requested format.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Avoid repeated lossy conversions.</strong> Keep the original for making other versions.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Test before publishing.</strong> Open the output and check it in the destination workflow.</p>
+                    </div>
+                </div>
+                <p class="text-secondary small mt-4 mb-0">For technical detail, see MDN's guides to <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types" target="_blank" rel="noopener noreferrer" class="text-primary">web image formats</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="noopener noreferrer" class="text-primary">canvas image encoding</a>.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FAQ ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">FAQ</span>
+            <h2 class="text-white fw-bold mb-0">Frequently Asked Questions About Image Conversion</h2>
+        </div>
+
+        <div class="accordion mb-5" id="converterFaqAccordion">
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqOne">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Is XConvertifire's Image Converter free?
+                    </button>
+                </h3>
+                <div id="cvfaqOne" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. The Image Converter is available online for converting supported image files to one of the provided output options.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqTwo">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Which image formats can I upload?
+                    </button>
+                </h3>
+                <div id="cvfaqTwo" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        The file input accepts image files, and conversion requires the browser to decode them. JPG, JPEG, PNG, WebP and GIF are common supported image types; not every image format is guaranteed to work in every browser.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqThree">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert JPG to PNG?
+                    </button>
+                </h3>
+                <div id="cvfaqThree" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Select a JPG/JPEG image and choose PNG. Check the result because encoding and appearance depend on the source and browser.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqFour">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert PNG to JPG?
+                    </button>
+                </h3>
+                <div id="cvfaqFour" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Choose JPG or JPEG output. The converter fills the JPEG canvas background with white because JPEG cannot keep transparency.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqFive">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert images to WebP?
+                    </button>
+                </h3>
+                <div id="cvfaqFive" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        You can select WebP output. Successful WebP encoding depends on the browser, so verify the resulting file format.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqSix">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert multiple images at once?
+                    </button>
+                </h3>
+                <div id="cvfaqSix" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Select or add multiple images and apply one output format to the selection. Different formats must be handled in separate conversions.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqSeven">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        How do I download multiple converted images?
+                    </button>
+                </h3>
+                <div id="cvfaqSeven" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        For multiple non-PDF images, the converter packages the results into one ZIP archive. PDF output creates a PDF document containing the selected images.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqEight">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert images into a PDF?
+                    </button>
+                </h3>
+                <div id="cvfaqEight" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Select image files, choose PDF and convert them into a generated image-based PDF document.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqNine">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert a PDF into an image?
+                    </button>
+                </h3>
+                <div id="cvfaqNine" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        No. This converter creates PDFs from images; it does not accept PDF files and convert their pages into images.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqTen">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Will converting an image reduce its file size?
+                    </button>
+                </h3>
+                <div id="cvfaqTen" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        Not necessarily. Output size depends on the source, selected format and browser encoding. A smaller file or specific reduction is not guaranteed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqEleven">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Does JPG support transparent backgrounds?
+                    </button>
+                </h3>
+                <div id="cvfaqEleven" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        No. JPEG does not support transparency. The converter uses a white background for JPEG output.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqTwelve">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I convert animated GIFs without losing animation?
+                    </button>
+                </h3>
+                <div id="cvfaqTwelve" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        No. The browser canvas workflow does not preserve animated GIF frames; GIF input may be decoded as a static image.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqThirteen">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Does the GIF output option work in every browser?
+                    </button>
+                </h3>
+                <div id="cvfaqThirteen" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        No. Canvas GIF encoding is not reliably supported. An unsupported request may produce PNG data even if the output filename ends in <code class="text-white">.gif</code>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cvfaqFourteen">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Are selected images processed in the browser?
+                    </button>
+                </h3>
+                <div id="cvfaqFourteen" class="accordion-collapse collapse" data-bs-parent="#converterFaqAccordion">
+                    <div class="accordion-body small">
+                        The converter's image decoding and conversion use browser-side image and canvas processing. This describes the conversion workflow, not a blanket statement about all website activity.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <div class="seo-card shadow-lg">
+            <div class="card-body p-4 p-md-5 text-center">
+                <h2 class="text-white fw-bold mb-3">Convert Your Images Online for Free</h2>
+                <p class="text-secondary mb-4">Upload your images, choose a supported output format and download the converted result using XConvertifire's free online Image Converter.</p>
+                <a href="#converterUpload" class="btn btn-primary btn-lg fw-semibold px-4 py-2">
+                    <i class="fas fa-shuffle me-2"></i>Convert Your Images Now
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     </main>
 

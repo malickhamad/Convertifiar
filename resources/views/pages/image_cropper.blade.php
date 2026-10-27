@@ -221,7 +221,7 @@
             </div>
         </section>
         <!-- Image Cropper SEO guidance: informational content only -->
-        <section class="crop-seo-section" aria-label="Image cropping guide">
+        {{-- <section class="crop-seo-section" aria-label="Image cropping guide">
             <div class="container">
                 <div class="crop-seo-wrap">
                     <header class="crop-seo-intro">
@@ -346,7 +346,490 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+
+        <section class="py-5">
+    <div class="container">
+
+        <!-- ═══ HERO ═══ -->
+        <div class="seo-card shadow-lg mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">
+                    <i class="fas fa-crop-alt me-1"></i> Image Cropping Guide
+                </span>
+                <h2 class="text-white fw-bold mb-3">Free Image Cropper to Crop Photos Online</h2>
+                <p class="text-secondary mb-3">Want to remove unwanted edges, focus on a subject, or prepare a picture for a particular layout? XConvertifire's free image cropper lets you crop images online using an interactive selection area and familiar aspect ratios.</p>
+                <p class="text-secondary mb-3">Select a JPG, PNG, WebP, or GIF image up to 50 MB, adjust the area you want to keep, and download the cropped result. The current tool processes your image in your browser without requiring separate editing software.</p>
+                <p class="text-secondary mb-0"><strong class="text-white">Important:</strong> The current cropper downloads a JPEG image, regardless of the input format. Transparent areas and animated GIF frames are not preserved in the output.</p>
+            </div>
+        </div>
+
+        <!-- ═══ STEPS ═══ -->
+        <div class="text-center mb-4">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">How It Works</span>
+            <h2 class="text-white fw-bold mb-2">How to Crop an Image Online</h2>
+            <p class="text-secondary mb-0">Follow these steps to make a crop with XConvertifire:</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">1. Choose an Image</h3>
+                        <p class="text-secondary small mb-0">Click <strong class="text-white">Choose File</strong> and select a JPG/JPEG, PNG, WebP, or GIF file. The maximum accepted size is 50 MB per image, and the tool handles one image at a time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-crop-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">2. Select the Crop Area</h3>
+                        <p class="text-secondary small mb-0">When the editing workspace opens, drag or adjust the crop box around the part of the image you want to keep. Review the framing before exporting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">3. Pick an Aspect Ratio</h3>
+                        <p class="text-secondary small mb-0">Choose <strong class="text-white">Free</strong> for a flexible crop, or select 1:1, 4:3, 16:9, 9:16, or 3:4. Width and height inputs influence the selection and its proportions; they do not guarantee exact output pixel dimensions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">4. Rotate or Reset</h3>
+                        <p class="text-secondary small mb-0">Use <strong class="text-white">Rotate Left</strong> or <strong class="text-white">Rotate Right</strong> to turn the image in 90-degree increments. Choose <strong class="text-white">Reset Changes</strong> to start over with the crop settings.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">5. Download Your Crop</h3>
+                        <p class="text-secondary small mb-0">Click <strong class="text-white">Download</strong>. The result is a JPEG called <code class="text-white">X Convertifire-cropped-image.jpg</code>. Open it to confirm the composition, image quality, and dimensions before publishing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ ASPECT RATIOS ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Aspect Ratios</span>
+            <h2 class="text-white fw-bold mb-2">Understanding Image Crop Aspect Ratios</h2>
+            <p class="text-secondary mb-0">An aspect ratio is the relationship between the width and height of the selected area. Picking the right ratio helps an image fit its destination without stretching the subject.</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h6 text-white fw-semibold mb-3"><i class="fas fa-expand text-primary me-2"></i>Free Crop</h3>
+                        <p class="text-secondary small mb-0">Adjust the crop area without locking it to a preset shape. Useful for removing a border or framing an unusual subject.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h6 text-white fw-semibold mb-3"><i class="fas fa-square text-primary me-2"></i>1:1 Square</h3>
+                        <p class="text-secondary small mb-0">Equal width and height. Useful for avatars, product tiles, and square profile pictures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h6 text-white fw-semibold mb-3"><i class="fas fa-image text-primary me-2"></i>4:3 Landscape</h3>
+                        <p class="text-secondary small mb-0">A moderate landscape shape often suitable for photographs, galleries, and presentations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h6 text-white fw-semibold mb-3"><i class="fas fa-tv text-primary me-2"></i>16:9 Widescreen</h3>
+                        <p class="text-secondary small mb-0">A wide composition commonly used for website banners and landscape thumbnails. It does not set a specific pixel resolution.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h6 text-white fw-semibold mb-3"><i class="fas fa-mobile-alt text-primary me-2"></i>9:16 Portrait</h3>
+                        <p class="text-secondary small mb-0">A tall vertical frame for mobile-first visuals and portrait-oriented layouts. Always check platform requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h6 text-white fw-semibold mb-3"><i class="fas fa-user text-primary me-2"></i>3:4 Portrait</h3>
+                        <p class="text-secondary small mb-0">A shorter portrait option for photos that need a more moderate vertical composition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ WITHOUT STRETCHING ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">How to Crop a Photo Without Stretching It</h2>
+                <p class="text-secondary mb-3">Cropping removes the portions outside a selected rectangle. Stretching changes the relationship between width and height, potentially making people and objects look too narrow or wide.</p>
+                <p class="text-secondary mb-3">For example, a 1200 &times; 800 pixel photo has a 3:2 aspect ratio. You can take a square crop from it without stretching the subjects, but content near its edges will be removed. Protect faces, text, and other details when positioning the crop.</p>
+                <p class="text-secondary mb-0">If you want to change an entire image's width and height without removing part of the composition, resizing is a better fit.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FORMATS ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Format Guide</span>
+            <h2 class="text-white fw-bold mb-0">Crop JPG, PNG, WebP, and GIF Images</h2>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 text-warning mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Crop JPG and JPEG Photos</h3>
+                        <p class="text-secondary small mb-0">JPG/JPEG photographs can be reframed to remove distracting edges or emphasize a subject. The downloaded JPEG is re-encoded, so it should not be considered pixel-for-pixel identical to the original.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25 text-info mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Crop PNG Images</h3>
+                        <p class="text-secondary small mb-0">PNG is common for screenshots, graphics, and images with transparency. You can upload a PNG, but the cropper exports JPEG, which does not support transparent pixels. If transparent output is essential, this cropper's current export workflow will not preserve it. For separate file-format tasks, explore the <a href="{{ route('image.converter') }}" class="text-primary">online image converter</a> and confirm its available output formats.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 text-success mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Crop WebP Images</h3>
+                        <p class="text-secondary small mb-0">WebP works well for many modern web images. A WebP input can be cropped here, but the result will be JPEG rather than WebP. Check image appearance and file size after export.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 text-danger mb-3">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Crop GIF Images</h3>
+                        <p class="text-secondary small mb-0">GIF input is accepted, including files containing animation. However, the current cropper exports one static JPEG image, not a new animated GIF. Use a dedicated animation editor if you need to preserve motion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ CROP VS RESIZE VS COMPRESS ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Crop, Resize, or Compress: Which Tool Should You Use?</h2>
+
+                <h3 class="text-white fw-semibold h6 mt-4 mb-2">Crop to Improve Composition</h3>
+                <p class="text-secondary mb-4">Choose cropping when you want to remove unwanted surroundings, center a subject, or create a new frame shape. A crop keeps only the selected area.</p>
+
+                <h3 class="text-white fw-semibold h6 mb-2">Resize to Change Image Dimensions</h3>
+                <p class="text-secondary mb-4">Resizing scales the image to a different width or height. It is more appropriate for specified pixel dimensions. Try the <a href="{{ route('image.resizer') }}" class="text-primary">free image resizer</a> when exact image sizing matters.</p>
+
+                <h3 class="text-white fw-semibold h6 mb-2">Compress to Reduce File Size</h3>
+                <p class="text-secondary mb-0">Compression focuses on the amount of data in the file, measured in KB or MB. A crop can change file size but cannot guarantee a target KB value. For that goal, try the <a href="{{ route('image.compressor') }}" class="text-primary">free image compressor</a>. Depending on your workflow, you may crop first, resize next, and then compress if needed.</p>
+            </div>
+        </div>
+
+        <!-- ═══ WHY CROP ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Common Uses</span>
+            <h2 class="text-white fw-bold mb-0">Practical Reasons to Crop Images</h2>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Profile Photos and Avatars</h3>
+                        <p class="text-secondary small mb-0">A square crop helps you place a person in the center and remove distractions. Leave enough space around the face to avoid an awkward final frame.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Website Banners and Blog Images</h3>
+                        <p class="text-secondary small mb-0">Wide ratios help prepare landscape-oriented visuals, but a wide crop may cut off the top or bottom of the original picture. Google's <a href="https://web.dev/learn/design/responsive-images" class="text-primary">responsive images guidance</a> explains how images can adapt to different layouts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Product Photography</h3>
+                        <p class="text-secondary small mb-0">Crop unnecessary surroundings to draw attention to a product. Keep all essential features visible and avoid creating a misleading representation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-file-powerpoint"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Presentations and Documents</h3>
+                        <p class="text-secondary small mb-0">Improve the framing of pictures placed in slides or documents without distorting the subject to force a particular shape.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Screenshots and Graphics</h3>
+                        <p class="text-secondary small mb-0">Remove empty borders or unrelated interface elements. Be careful with small text because JPEG export may be less suitable than the original lossless PNG for sharp screenshot details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ TIPS ═══ -->
+        <div class="seo-card shadow-sm mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 mb-3">Best Practices</span>
+                <h2 class="text-white fw-bold h4 mb-4">Tips for Better Image Cropping Results</h2>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Start with the subject.</strong> Decide what the viewer should notice before moving the selection.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Choose the correct ratio.</strong> A square avatar and a wide banner require different framing.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Protect important details.</strong> Keep faces, logos, product features, and essential text within the crop.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Avoid excessive trimming.</strong> A tiny crop from a low-resolution source may lack the detail needed at its destination.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Keep the original.</strong> An untouched file makes future crops easier.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Review the exported file.</strong> Inspect the composition and fine detail after JPEG encoding.</p>
+                    </div>
+                </div>
+                <p class="text-secondary small mt-4 mb-0">For technical background on how browser canvases produce downloadable image files, see MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" class="text-primary">Canvas toBlob documentation</a>.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FAQ ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">FAQ</span>
+            <h2 class="text-white fw-bold mb-0">Frequently Asked Questions About Image Cropping</h2>
+        </div>
+
+        <div class="accordion mb-5" id="cropperFaqAccordion">
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqOne">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Is XConvertifire's image cropper free?
+                    </button>
+                </h3>
+                <div id="cfaqOne" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. The image cropper is offered as a free online tool for selecting and downloading cropped portions of supported images.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqTwo">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Which formats can I upload?
+                    </button>
+                </h3>
+                <div id="cfaqTwo" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        JPG/JPEG, PNG, WebP, and GIF files up to 50 MB per image. The downloaded output is JPEG.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqThree">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I crop a picture into a square?
+                    </button>
+                </h3>
+                <div id="cfaqThree" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Select 1:1 and position the crop box around the subject.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqFour">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I use 16:9 or 9:16?
+                    </button>
+                </h3>
+                <div id="cfaqFour" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Both are available, alongside Free, 1:1, 4:3, and 3:4 aspect ratios.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqFive">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I rotate the image?
+                    </button>
+                </h3>
+                <div id="cfaqFive" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. The Rotate Left and Rotate Right buttons each turn the image by 90 degrees. For a separate rotation workflow, use the <a href="{{ route('image.rotator') }}" class="text-primary">Image Rotator</a>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqSix">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I set exact crop dimensions?
+                    </button>
+                </h3>
+                <div id="cfaqSix" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        The width and height fields influence the crop selection and its proportions, but the current export does not guarantee exact output pixel dimensions. Use the resizer for that separate task.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqSeven">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Will a cropped PNG keep its transparency?
+                    </button>
+                </h3>
+                <div id="cfaqSeven" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        No. The downloaded result is JPEG, which cannot store transparency.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqEight">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I crop an animated GIF and preserve its animation?
+                    </button>
+                </h3>
+                <div id="cfaqEight" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        No. The current export is a single static JPEG image.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqNine">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Does cropping always reduce the file size?
+                    </button>
+                </h3>
+                <div id="cfaqNine" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        No. File size also depends on dimensions, image content, and JPEG encoding. A smaller file is not guaranteed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaqTen">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Are images sent to a server for cropping?
+                    </button>
+                </h3>
+                <div id="cfaqTen" class="accordion-collapse collapse" data-bs-parent="#cropperFaqAccordion">
+                    <div class="accordion-body small">
+                        The current crop operation uses browser-side Cropper.js and canvas export; it does not require sending the selected file to a server-side cropping endpoint.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <div class="seo-card shadow-lg">
+            <div class="card-body p-4 p-md-5 text-center">
+                <h2 class="text-white fw-bold mb-3">Crop Your Image Online for Free</h2>
+                <p class="text-secondary mb-4">Choose a supported image, select the composition you want, and inspect the resulting JPEG before sharing it. Start with the image uploader above.</p>
+                <a href="#heroSection" class="btn btn-primary btn-lg fw-semibold px-4 py-2">
+                    <i class="fas fa-crop-alt me-2"></i>Start Cropping Your Image
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
     </main>
 @endsection
 
@@ -354,6 +837,29 @@
     <!-- Cropper.js CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+
+    <style>
+    .seo-card {
+        background: #151515 !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border-radius: 1rem !important;
+    }
+    .seo-card .accordion-button {
+        background: #151515 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+        font-weight: 600;
+    }
+    .seo-card .accordion-button:not(.collapsed) {
+        background: rgba(59, 130, 246, 0.08) !important;
+        color: #60a5fa !important;
+    }
+    .seo-card .accordion-button::after { filter: invert(1); }
+    .seo-card .accordion-body {
+        background: #151515 !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+</style>
 
     <style>
         /* Image Cropper SEO information only. Never affects crop workspace. */

@@ -238,7 +238,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
             </div>
         </section>
 
-        <section class="compressor-seo-section">
+        {{-- <section class="compressor-seo-section">
             <div class="container">
                 <div class="compressor-seo-wrap">
                     <h2>Free Image Compressor to Reduce Image Size Online</h2>
@@ -370,12 +370,417 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+<section class="py-5">
+    <div class="container" style="max-width: 1080px;">
+
+        <!-- ═══ HERO ═══ -->
+        <div class="seo-card shadow-lg mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">
+                    <i class="fas fa-compress-alt me-1"></i> Image Compression Guide
+                </span>
+                <h2 class="text-white fw-bold mb-3">Free Image Compressor to Reduce Image Size Online</h2>
+                <p class="text-secondary mb-3">Large image files can make websites slower to load and harder to share. XConvertifire's free image compressor helps you reduce image size online with adjustable quality settings and no software installation.</p>
+                <p class="text-secondary mb-3">Choose a JPG, PNG, WebP, SVG or GIF file up to 50 MB, review the available options and download the result. Image processing takes place in your browser, giving you direct control over the selected file and its compression settings.</p>
+                <p class="text-secondary mb-0">Compression results depend on the original image format, content and quality level. Some images become noticeably smaller, while images that are already optimized may show little or no improvement.</p>
+            </div>
+        </div>
+
+        <!-- ═══ STEPS ═══ -->
+        <div class="text-center mb-4">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">How It Works</span>
+            <h2 class="text-white fw-bold mb-2">How to Compress Images Online</h2>
+            <p class="text-secondary mb-0">Use the following steps to reduce the file size of an image:</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Upload Your Image</h3>
+                        <p class="text-secondary small mb-0">Select <strong class="text-white">Choose File</strong> or drag an image into the upload area. The compressor accepts JPG, PNG, WebP, SVG and GIF files with a maximum file size of 50 MB.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Select Your Compression Quality</h3>
+                        <p class="text-secondary small mb-0">Choose High, Recommended, Balanced or Small Size. You can also use the quality slider to select a custom value between 10% and 100%.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                            <i class="fas fa-compress-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Compress and Review the Result</h3>
+                        <p class="text-secondary small mb-0">Click <strong class="text-white">Compress Image</strong>. The tool processes the selected file and displays its original size, output size and calculated savings. Check the resulting file carefully, especially if the image contains text, fine details or transparency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Download the Image</h3>
+                        <p class="text-secondary small mb-0">Click <strong class="text-white">Download</strong> to save the resulting file. If you need to process a different picture, select <strong class="text-white">Compress Another Image</strong> and repeat the process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ QUALITY ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Understanding Image Compression Quality</h2>
+                <p class="text-secondary mb-3">Image compression is about finding a practical balance between file size and visual appearance. Higher-quality settings generally preserve more visual detail, while lower-quality settings may produce smaller files with more noticeable artifacts.</p>
+                <p class="text-secondary mb-3">XConvertifire provides four useful presets:</p>
+                <ul class="text-secondary mb-3 ps-3">
+                    <li class="mb-2"><strong class="text-white">High (90%):</strong> A good starting point when preserving fine details matters.</li>
+                    <li class="mb-2"><strong class="text-white">Recommended (75%):</strong> A practical default for trying to balance image quality and file size.</li>
+                    <li class="mb-2"><strong class="text-white">Balanced (60%):</strong> Worth testing when a smaller download is more important than retaining every detail.</li>
+                    <li class="mb-2"><strong class="text-white">Small Size (40%):</strong> Prioritizes stronger compression for supported lossy formats, but may introduce visible artifacts.</li>
+                </ul>
+                <p class="text-secondary mb-3">These percentages represent encoding quality settings, not guaranteed file-size reductions. Actual results depend on the image and browser. You can adjust the slider and try different settings when the first result does not meet your needs.</p>
+                <p class="text-secondary mb-3">The quality slider affects lossy JPEG and WebP encoding, including PNG images when they are converted to JPEG. It does not control SVG minification, GIF processing, or PNG's lossless encoding.</p>
+                <p class="text-secondary mb-0">For background information on how browsers export compressed images, read the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="noopener noreferrer">MDN guide to canvas image encoding</a>.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FORMATS ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Format Guide</span>
+            <h2 class="text-white fw-bold mb-0">JPG, PNG, WebP, SVG and GIF Compression Explained</h2>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 text-warning mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Compress JPG Images</h3>
+                        <p class="text-secondary small mb-3">JPG and JPEG are common formats for photographs and images with many colors. Re-encoding a JPG at a lower quality setting may reduce its file size, making it easier to upload, download or use on a website.</p>
+                        <p class="text-secondary small mb-0">If the photograph contains small text, sharp outlines or intricate details, check the output at full size before choosing an aggressive compression setting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25 text-info mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Compress PNG Images</h3>
+                        <p class="text-secondary small mb-3">PNG is often used for logos, screenshots, illustrations and images requiring transparency.</p>
+                        <p class="text-secondary small mb-3">An important limitation of this compressor is that PNG inputs can be exported as JPEG files when the selected quality is below 90%. JPEG does not support transparency, so transparent regions may change appearance.</p>
+                        <p class="text-secondary small mb-3">When keeping a PNG output and its transparency is important, use the High preset or a quality value of at least 90%. This still does not guarantee a smaller file.</p>
+                        <p class="text-secondary small mb-0">If you need a different image format instead of compression, use the <a href="{{ route('image.converter') }}">online image converter</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 text-success mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Compress WebP Images</h3>
+                        <p class="text-secondary small mb-3">WebP is useful for many web images because it supports efficient compression and transparency. XConvertifire can re-encode supported WebP images using the selected browser quality setting.</p>
+                        <p class="text-secondary small mb-0">The output may be smaller, but results vary. Review the final image before publishing it, particularly when working with transparent graphics or fine visual details.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-vector-square"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Optimize SVG Files</h3>
+                        <p class="text-secondary small mb-3">SVG files use vector-based markup and are well suited to icons, logos and scalable graphics.</p>
+                        <p class="text-secondary small mb-0">For SVG uploads, this tool performs basic text-level optimization by removing comments and reducing certain unnecessary whitespace. It does not perform advanced SVG restructuring or vector shape optimization. If the optimized version is not smaller, the original file is preserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="seo-card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 text-danger mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">What Happens to GIF Files?</h3>
+                        <p class="text-secondary small mb-3">GIF files are accepted by the uploader, but the current tool returns the original GIF rather than applying GIF-specific compression. Animated GIFs are not optimized by the compression engine.</p>
+                        <p class="text-secondary small mb-0">If you need to reduce an animated GIF's file size, use a dedicated GIF optimization tool rather than expecting savings from this compressor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ USE CASES ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Common Uses</span>
+            <h2 class="text-white fw-bold mb-2">Why Compress Images Before Uploading Them?</h2>
+            <p class="text-secondary mb-0">Reducing image file size can be useful in several everyday situations.</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Website Images and Blog Posts</h3>
+                        <p class="text-secondary small mb-3">Large image downloads can contribute to slow-loading web pages. Appropriately sized and compressed images can reduce the amount of data visitors need to download.</p>
+                        <p class="text-secondary small mb-0">Image format, dimensions and compression settings all matter. See Google's <a href="https://web.dev/learn/performance/image-performance" target="_blank" rel="noopener noreferrer">image performance guidance</a> for more information about efficient web image delivery.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Online Forms and Applications</h3>
+                        <p class="text-secondary small mb-0">Some websites restrict attachment sizes. Compressing a photograph or scanned image may help when an upload exceeds a file-size limit. However, this tool does not promise a specific final size such as 100 KB or 200 KB, so check the downloaded result.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Email and File Sharing</h3>
+                        <p class="text-secondary small mb-0">Smaller images can be easier to send and receive, particularly when sharing several photographs or working with limited connectivity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:44px;height:44px;">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Product Photos and Digital Content</h3>
+                        <p class="text-secondary small mb-0">Online sellers, bloggers and content creators can test compression settings before publishing pictures. Keep the original image available in case the compressed version loses details important to your presentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ TIPS ═══ -->
+        <div class="seo-card shadow-sm mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 mb-3">Best Practices</span>
+                <h2 class="text-white fw-bold h4 mb-4">Tips to Reduce Image Size Without Unnecessary Quality Loss</h2>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Start with the Recommended setting.</strong> Review the resulting image before trying stronger compression.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Keep your original file.</strong> If the output looks blurry or loses important visual details, return to the original and select a higher quality setting.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Choose an appropriate format.</strong> JPG often suits photographs, while PNG may be preferable for graphics that require transparency. WebP can be a useful option for modern websites.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Check image dimensions.</strong> A very large image may still occupy substantial space after compression. If the picture has larger pixel dimensions than you need, try the <a href="{{ route('image.resizer') }}">image resizer</a> before compressing it.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Crop unnecessary areas.</strong> Removing unused parts of an image can help you create a more focused asset. The <a href="{{ route('image.cropper') }}">online image cropper</a> can help with this separate task.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Verify the final download.</strong> Inspect image quality, transparency, file extension and file size before uploading the result to your website or other platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ FAQ ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">FAQ</span>
+            <h2 class="text-white fw-bold mb-0">Frequently Asked Questions About Image Compression</h2>
+        </div>
+
+        <div class="accordion mb-5" id="compressorFaqAccordion">
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Is XConvertifire's image compressor free?
+                    </button>
+                </h3>
+                <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. The online image compressor is available as a free tool, with browser-based image processing and adjustable compression settings.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Which image formats are supported?
+                    </button>
+                </h3>
+                <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        The uploader accepts JPG/JPEG, PNG, WebP, SVG and GIF. Processing behavior differs by format. JPG and WebP can be re-encoded, PNG output may change to JPEG at lower quality settings, SVG receives basic markup optimization, and GIF is returned unchanged.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        What is the maximum upload size?
+                    </button>
+                </h3>
+                <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        The current file-size limit is 50 MB per image. Browser memory and device capabilities may affect the handling of very large images.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Will compression reduce image quality?
+                    </button>
+                </h3>
+                <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        It can. Lossy image encoding may remove image information, especially at lower quality settings. Use higher quality levels when fine details matter and always inspect the output.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Why is my compressed image not smaller?
+                    </button>
+                </h3>
+                <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        Some images have already been efficiently compressed. Others may not become smaller using the selected format and quality setting. When the processed version is not smaller, XConvertifire keeps the original file rather than replacing it with a larger one.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSix">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I compress multiple images at the same time?
+                    </button>
+                </h3>
+                <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        The current Image Compressor processes one selected image at a time. After downloading the result, you can choose another image.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSeven">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I reduce an image to exactly 100 KB or 200 KB?
+                    </button>
+                </h3>
+                <div id="faqSeven" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        The tool provides quality settings rather than a guaranteed target-size feature. You can try different settings and review the resulting file size, but an exact KB target is not guaranteed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqEight">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Are my images uploaded to a server for compression?
+                    </button>
+                </h3>
+                <div id="faqEight" class="accordion-collapse collapse" data-bs-parent="#compressorFaqAccordion">
+                    <div class="accordion-body small">
+                        The current compression workflow uses browser-side file reading, canvas processing and local download generation. The selected image does not need to be sent to a server-side compression endpoint for this workflow.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <div class="seo-card shadow-lg">
+            <div class="card-body p-4 p-md-5 text-center">
+                <h2 class="text-white fw-bold mb-3">Start Compressing Your Images</h2>
+                <p class="text-secondary mb-4 mx-auto" style="max-width: 620px;">Need a smaller JPG, PNG or WebP image? Use XConvertifire's free online image compressor to select an image, adjust quality and review the result before downloading.</p>
+                <a href="#uploadSection" class="btn btn-primary btn-lg fw-semibold px-4 py-2">
+                    <i class="fas fa-compress-alt me-2"></i>Compress Your Image Now
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     </main>
 @endsection
 
 @section('scripts')
+
+<style>
+    .seo-card {
+        background: #151515 !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border-radius: 1rem !important;
+    }
+    .seo-card .accordion-button {
+        background: #151515 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+    }
+    .seo-card .accordion-button:not(.collapsed) {
+        background: rgba(59, 130, 246, 0.08) !important;
+        color: #60a5fa !important;
+    }
+    .seo-card .accordion-button::after { filter: invert(1); }
+    .seo-card .accordion-body {
+        background: #151515 !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+</style>
 
     <style>
         .compressor-seo-section {

@@ -461,7 +461,7 @@
 
         </section>
 
-        <section class="resizer-seo-section">
+        {{-- <section class="resizer-seo-section">
             <div class="container">
                 <div class="resizer-seo-wrap">
                     <h2>Free Image Resizer Online: Resize Photos by Pixels or Percentage</h2>
@@ -710,12 +710,505 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
+        <section class="py-5">
+    <div class="container">
+
+        <!-- ═══ HERO ═══ -->
+        <div class="seo-card shadow-lg mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">
+                    <i class="fas fa-expand-arrows-alt me-1"></i> Image Resize Guide
+                </span>
+                <h2 class="text-white fw-bold mb-3">Free Image Resizer Online: Resize Photos by Pixels or Percentage</h2>
+                <p class="text-secondary mb-3">Need to change the width or height of a photo without installing image-editing software? XConvertifire's free image resizer lets you resize images online using exact pixel dimensions or percentage-based scaling.</p>
+                <p class="text-secondary mb-3">Upload a supported JPG, PNG, WebP, SVG or GIF file, enter your preferred dimensions and download the resized result. The tool processes selected images in your browser and provides an aspect ratio control to help you avoid unwanted stretching.</p>
+                <p class="text-secondary mb-0">Resizing is useful when an image is too large for a website layout, needs different dimensions for a document or must fit an upload requirement. However, changing image dimensions does not guarantee a smaller file size or identical visual quality.</p>
+            </div>
+        </div>
+
+        <!-- ═══ STEPS ═══ -->
+        <div class="text-center mb-4">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">How It Works</span>
+            <h2 class="text-white fw-bold mb-2">How to Resize an Image Online</h2>
+            <p class="text-secondary mb-0">Follow these four steps to resize your image.</p>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Step 1: Upload Your Image</h3>
+                        <p class="text-secondary small mb-2">Click <strong class="text-white">Choose File</strong> or drag an image into the upload area. The tool accepts JPG/JPEG, PNG, WebP, SVG and GIF files up to 50 MB each.</p>
+                        <p class="text-secondary small mb-0">Only one image is processed at a time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Step 2: Choose Pixels or Percentage</h3>
+                        <p class="text-secondary small mb-2">Select <strong class="text-white">Pixels</strong> when you need specific image dimensions. Enter your preferred width and height.</p>
+                        <p class="text-secondary small mb-0">Select <strong class="text-white">Percentage</strong> when you want to scale an image relative to its original dimensions. For example, setting both dimensions to 50% reduces the original width and height by half.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Step 3: Adjust the Aspect Ratio</h3>
+                        <p class="text-secondary small mb-2">The <strong class="text-white">Keep Aspect Ratio</strong> option is enabled by default.</p>
+                        <p class="text-secondary small mb-2">When enabled, changing the width automatically calculates a proportional height, and changing the height calculates a proportional width.</p>
+                        <p class="text-secondary small mb-2">You can unlock the ratio to enter independent dimensions, but doing so may stretch or distort the image.</p>
+                        <p class="text-secondary small mb-0">Click <strong class="text-white">Resize Image</strong> when the settings are ready.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-2">Step 4: Review and Download</h3>
+                        <p class="text-secondary small mb-2">After processing, the tool displays the original dimensions, new dimensions and output file size.</p>
+                        <p class="text-secondary small mb-2">Review the resulting preview and click <strong class="text-white">Download Image</strong>.</p>
+                        <p class="text-secondary small mb-0">Use <strong class="text-white">Resize Another Image</strong> to start again with a different file.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ PIXELS VS PERCENTAGE ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Resize Images by Pixels or Percentage: What's the Difference?</h2>
+                <p class="text-secondary mb-3">Both methods change image dimensions, but they are useful in different situations.</p>
+                <h3 class="text-white fw-semibold h6 mt-4 mb-2">Resize an Image by Pixels</h3>
+                <p class="text-secondary mb-3">Pixel resizing is appropriate when you know the exact dimensions required.</p>
+                <p class="text-secondary mb-3">For example, suppose you have a photograph measuring 1200 × 800 pixels and want a smaller version that maintains the same proportions.</p>
+                <p class="text-secondary mb-3">With the aspect ratio locked, entering a width of 600 pixels calculates a height of approximately 400 pixels.</p>
+                <p class="text-secondary mb-4">This is useful for preparing photos for websites, documents, online forms and other projects with specific dimension requirements.</p>
+
+                <h3 class="text-white fw-semibold h6 mb-2">Resize an Image by Percentage</h3>
+                <p class="text-secondary mb-3">Percentage resizing scales an image relative to its original dimensions.</p>
+                <p class="text-secondary mb-3">For example, a 1600 × 900 pixel image resized to 50% of its original width and height becomes 800 × 450 pixels.</p>
+                <p class="text-secondary mb-3">Percentage resizing is useful when you want a smaller or larger version without calculating new dimensions manually.</p>
+                <p class="text-secondary mb-0">If you need proportional scaling, leave <strong class="text-white">Keep Aspect Ratio</strong> enabled.</p>
+            </div>
+        </div>
+
+        <!-- ═══ ASPECT RATIO ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">How to Maintain Image Aspect Ratio</h2>
+                <p class="text-secondary mb-3">An image's aspect ratio describes the relationship between its width and height.</p>
+                <p class="text-secondary mb-3">A 1200 × 800 pixel image has a 3:2 aspect ratio. When resized proportionally to 600 × 400 pixels, it keeps the same shape.</p>
+                <p class="text-secondary mb-3">If the same image is forced into dimensions of 600 × 600 pixels without cropping, its content may appear stretched or squeezed.</p>
+                <p class="text-secondary mb-3">XConvertifire's aspect ratio lock helps calculate proportional dimensions automatically.</p>
+                <p class="text-secondary mb-3">For an image that must fit a differently shaped space, simply unlocking the ratio is not always the best solution. Cropping may produce a more natural-looking result.</p>
+                <p class="text-secondary mb-0">To remove unwanted edges or change the visible composition, use the <a href="{{ route('image.cropper') }}" class="text-primary">online image cropper</a>.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FORMATS ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Format Guide</span>
+            <h2 class="text-white fw-bold mb-0">Resize JPG, PNG, WebP, SVG and GIF Images</h2>
+        </div>
+
+        <p class="text-secondary text-center mb-4">Different image formats behave differently when resized. Understanding those differences helps you select the right workflow.</p>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 text-warning mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Resize JPG and JPEG Photos</h3>
+                        <p class="text-secondary small mb-3">JPG and JPEG are widely used for photographs.</p>
+                        <p class="text-secondary small mb-3">The resizer can scale a JPG image to new pixel dimensions and export the result as a JPG file.</p>
+                        <p class="text-secondary small mb-3">Downscaling may produce a smaller file, but the output depends on the original photograph and image encoding. Very small output dimensions can make details or text difficult to see.</p>
+                        <p class="text-secondary small mb-0">Enlarging a JPG cannot restore detail that was not present in the original.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25 text-info mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Resize PNG Images</h3>
+                        <p class="text-secondary small mb-3">PNG is commonly used for screenshots, illustrations, logos and graphics that require transparency.</p>
+                        <p class="text-secondary small mb-3">When a PNG is resized through this tool, it is exported as PNG in the normal raster resizing workflow.</p>
+                        <p class="text-secondary small mb-3">Keep the aspect ratio locked when the original proportions matter. Review thin lines and small text after reducing the dimensions.</p>
+                        <p class="text-secondary small mb-0">If you need to change the file format rather than its dimensions, use the <a href="{{ route('image.converter') }}" class="text-primary">online image converter</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 text-success mb-3">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Resize WebP Images</h3>
+                        <p class="text-secondary small mb-3">WebP is a useful image format for many modern websites.</p>
+                        <p class="text-secondary small mb-3">The resizer can adjust the pixel dimensions of supported WebP images and export the result as WebP when browser encoding supports it.</p>
+                        <p class="text-secondary small mb-0">Review the downloaded file and its quality before publishing. Resizing and re-encoding can affect the appearance and file size.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-vector-square"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Resize SVG Graphics</h3>
+                        <p class="text-secondary small mb-3">SVG is a vector-based format often used for logos, icons and scalable illustrations.</p>
+                        <p class="text-secondary small mb-3">For SVG inputs, XConvertifire updates the width and height attributes in the SVG markup rather than applying the same canvas-resizing process used for raster images.</p>
+                        <p class="text-secondary small mb-0">SVG rendering also depends on its internal markup and viewBox configuration. If the result looks unexpected, inspect the output before using it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="seo-card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 text-danger mb-3">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">What Happens When You Resize a GIF?</h3>
+                        <p class="text-secondary small mb-3">GIF uploads are supported, but animated GIF resizing has an important limitation.</p>
+                        <p class="text-secondary small mb-3">The current tool processes GIF input through a browser canvas and exports a PNG still image.</p>
+                        <p class="text-secondary small mb-3">This means an animated GIF's animation is not preserved.</p>
+                        <p class="text-secondary small mb-0">Use a dedicated animated GIF editor when your goal is to resize an animation while retaining its frames.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ RESIZE VS CROP VS COMPRESS ═══ -->
+        <div class="seo-card shadow-sm mb-4">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="text-white fw-bold h4 mb-3">Resize, Crop or Compress: Which Tool Should You Use?</h2>
+                <p class="text-secondary mb-4">These three image-editing tasks solve different problems.</p>
+
+                <h3 class="text-white fw-semibold h6 mb-2">Resize an Image</h3>
+                <p class="text-secondary mb-3">Resizing changes an image's width and height in pixels.</p>
+                <p class="text-secondary mb-4">Use it when an image needs different dimensions for a layout, document or online form.</p>
+
+                <h3 class="text-white fw-semibold h6 mb-2">Crop an Image</h3>
+                <p class="text-secondary mb-3">Cropping removes part of an image to change its visible composition.</p>
+                <p class="text-secondary mb-4">Use cropping when you need to remove unwanted areas or prepare an image for a different shape without stretching the subject.</p>
+
+                <h3 class="text-white fw-semibold h6 mb-2">Compress an Image</h3>
+                <p class="text-secondary mb-3">Compression focuses on reducing file size, often by changing encoding settings.</p>
+                <p class="text-secondary mb-3">An image can have the correct pixel dimensions but still be too large in KB or MB.</p>
+                <p class="text-secondary mb-3">If your dimensions are already correct and you want to reduce the download size, try the <a href="{{ route('image.compressor') }}" class="text-primary">free image compressor</a>.</p>
+                <p class="text-secondary mb-0">Resizing and compression can be used together, but neither guarantees a particular final file size.</p>
+            </div>
+        </div>
+
+        <!-- ═══ WHY RESIZE ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Common Uses</span>
+            <h2 class="text-white fw-bold mb-0">Common Reasons to Resize Images</h2>
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Website and Blog Images</h3>
+                        <p class="text-secondary small mb-3">Large images are not always necessary for smaller page components.</p>
+                        <p class="text-secondary small mb-3">Preparing images at suitable pixel dimensions can help avoid unnecessarily large assets.</p>
+                        <p class="text-secondary small mb-0">For responsive websites, developers should also consider how different image sizes are delivered to different devices. Google's <a href="https://web.dev/learn/images/responsive-images" target="_blank" rel="noopener noreferrer" class="text-primary">responsive images guide</a> explains this in more detail.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Profile Pictures and Social Media</h3>
+                        <p class="text-secondary small mb-3">Profile photographs, thumbnails and social images often need particular dimensions or aspect ratios.</p>
+                        <p class="text-secondary small mb-3">Check the current requirements of the platform where the image will be used.</p>
+                        <p class="text-secondary small mb-0">If an image needs a different shape rather than proportional scaling, cropping may be more appropriate than stretching.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Online Applications and Forms</h3>
+                        <p class="text-secondary small mb-3">Forms may impose limits on pixel dimensions, file type or file size.</p>
+                        <p class="text-secondary small mb-3">The resizer can help with width and height requirements. It does not guarantee a specific file size such as 100 KB or 200 KB.</p>
+                        <p class="text-secondary small mb-0">Always review the downloaded file before submitting it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="seo-card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="h6 text-white fw-semibold mb-3">Documents, Presentations and Email</h3>
+                        <p class="text-secondary small mb-3">Oversized images can be inconvenient when added to documents or shared with other people.</p>
+                        <p class="text-secondary small mb-3">Resizing may help produce an image with more appropriate dimensions for the intended use.</p>
+                        <p class="text-secondary small mb-0">Keep an original copy if you may need the full-resolution image again.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ TIPS ═══ -->
+        <div class="seo-card shadow-sm mb-5">
+            <div class="card-body p-4 p-md-5">
+                <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 mb-3">Best Practices</span>
+                <h2 class="text-white fw-bold h4 mb-4">Tips for Resizing Images Without Unnecessary Quality Loss</h2>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Keep the original proportions.</strong> Leave the aspect ratio lock enabled unless you intentionally need independent dimensions.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Avoid unnecessary enlargement.</strong> Upscaling adds pixels through interpolation rather than recreating missing detail.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Check text and fine details.</strong> Screenshots, diagrams and images containing small text can become difficult to read after strong downscaling.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Choose dimensions for the final use.</strong> Start with the actual requirements of your website, form, document or destination platform.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Understand the difference between dimensions and file size.</strong> An image's pixel dimensions and its KB/MB file size are different measurements.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                        <p class="text-secondary small mb-0"><strong class="text-white">Preserve your original.</strong> Keep the full-resolution file so you can create another version if necessary.</p>
+                    </div>
+                </div>
+                <p class="text-secondary small mt-4 mb-0">For more technical background on image scaling, read the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank" rel="noopener noreferrer" class="text-primary">MDN guide to canvas image drawing</a>.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FAQ ═══ -->
+        <div class="text-center mb-4 mt-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">FAQ</span>
+            <h2 class="text-white fw-bold mb-0">Frequently Asked Questions About Image Resizing</h2>
+        </div>
+
+        <div class="accordion mb-5" id="resizerFaqAccordion">
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqOne">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Is XConvertifire's image resizer free?
+                    </button>
+                </h3>
+                <div id="rfaqOne" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. XConvertifire provides a free browser-based image resizing tool for supported image formats.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqTwo">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I resize an image to exact pixel dimensions?
+                    </button>
+                </h3>
+                <div id="rfaqTwo" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Select Pixels and enter the new width and height. Keep the aspect ratio locked if proportional scaling is important.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqThree">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I resize an image by percentage?
+                    </button>
+                </h3>
+                <div id="rfaqThree" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Select Percentage and enter the desired scaling values. A 50% setting for both dimensions produces an image with half the original width and height.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqFour">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Will resizing make my image blurry?
+                    </button>
+                </h3>
+                <div id="rfaqFour" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        It can. Strong downscaling removes image detail, while enlarging can make images look softer or pixelated. Results depend on the original image and the target dimensions.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqFive">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I resize images without stretching them?
+                    </button>
+                </h3>
+                <div id="rfaqFive" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        Yes. Leave Keep Aspect Ratio enabled to automatically calculate proportional dimensions. If your destination requires a different shape, consider cropping rather than stretching.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqSix">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Does resizing always reduce file size?
+                    </button>
+                </h3>
+                <div id="rfaqSix" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        No. Changing pixel dimensions may affect file size, but the final result also depends on the format and encoding. A larger image may require more storage, and a smaller image is not guaranteed to meet a specific KB target.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqSeven">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        What is the maximum supported file size?
+                    </button>
+                </h3>
+                <div id="rfaqSeven" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        The uploader accepts supported images up to 50 MB each. Browser memory and device limitations may affect processing of very large images.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqEight">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I resize multiple images at once?
+                    </button>
+                </h3>
+                <div id="rfaqEight" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        The current resizer processes one image at a time. After downloading one result, you can upload another image.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card mb-2 overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqNine">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Can I resize an animated GIF without losing its animation?
+                    </button>
+                </h3>
+                <div id="rfaqNine" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        Not with the current resizer. GIF input is exported as a static PNG image, so the animation is not preserved.
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-card overflow-hidden">
+                <h3 class="accordion-header m-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rfaqTen">
+                        <i class="fas fa-question-circle text-primary me-2"></i>
+                        Are my images sent to a server for resizing?
+                    </button>
+                </h3>
+                <div id="rfaqTen" class="accordion-collapse collapse" data-bs-parent="#resizerFaqAccordion">
+                    <div class="accordion-body small">
+                        The current image-resizing workflow reads and processes selected image files in the browser and creates the downloadable result locally. It does not require a server-side resizing request.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <div class="seo-card shadow-lg">
+            <div class="card-body p-4 p-md-5 text-center">
+                <h2 class="text-white fw-bold mb-3">Resize Your Image Online for Free</h2>
+                <p class="text-secondary mb-3">Whether you need a smaller JPG photo, different PNG dimensions or a proportionally scaled WebP image, XConvertifire helps you resize supported images using pixels or percentages.</p>
+                <p class="text-secondary mb-4">Select your image, choose the dimensions, keep the proportions you need and review the output before downloading.</p>
+                <a href="#resizeUploadSection" class="btn btn-primary btn-lg fw-semibold px-4 py-2">
+                    <i class="fas fa-expand-arrows-alt me-2"></i>Resize Your Image Now
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
     </main>
 @endsection
 
 @section('scripts')
+<style>
+    .seo-card {
+        background: #151515 !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border-radius: 1rem !important;
+    }
+    .seo-card .accordion-button {
+        background: #151515 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+        font-weight: 600;
+    }
+    .seo-card .accordion-button:not(.collapsed) {
+        background: rgba(59, 130, 246, 0.08) !important;
+        color: #60a5fa !important;
+    }
+    .seo-card .accordion-button::after { filter: invert(1); }
+    .seo-card .accordion-body {
+        background: #151515 !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+</style>
+
     <style>
         .resizer-seo-section {
             padding: 24px 0 72px;
