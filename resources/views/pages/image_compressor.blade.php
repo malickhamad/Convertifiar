@@ -873,6 +873,17 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
             let quality = 0.75;
             const MAX_FILE_SIZE = 50 * 1024 * 1024;
 
+            function resetToCompressState() {
+                if (!compressedBlob) return;
+                compressedBlob = null;
+                compressedFileName = '';
+                $('#compressionResult').hide();
+                $('#downloadButton').hide();
+                $('#compressAnotherButton').hide();
+                $('#compressButton').show().prop('disabled', false)
+                    .html('<i class="fas fa-compress-alt"></i> Compress Image');
+            }
+
             /* =========================================================
                FILE INPUT
             ========================================================== */
@@ -978,6 +989,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
                 quality = value / 100;
                 $('#compressionQuality').val(value);
                 $('#qualityValue').text(value);
+                    resetToCompressState();
             });
 
             /* =========================================================
@@ -988,6 +1000,7 @@ Lower the percentage to reduce file size. Minimum file sizes may reduce image qu
                 quality = value / 100;
                 $('#qualityValue').text(value);
                 $('.compressor-quality-btn').removeClass('active');
+                resetToCompressState();
             });
 
             /* =========================================================
