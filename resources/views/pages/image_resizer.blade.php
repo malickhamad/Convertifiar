@@ -1286,7 +1286,19 @@
 
             const MAX_FILE_SIZE = 50 * 1024 * 1024;
 
+            function resetToResizeState() {
+                if (!resizedBlob) return;
+                resizedBlob = null;
+                resizedFileName = '';
+                $('#resizeResult').hide();
+                $('#resizeDownloadButton').hide();
+                $('#resizeAnotherButton').hide();
+                $('#resizeButton').show().prop('disabled', false)
+                    .html('<i class="fas fa-expand-arrows-alt"></i> Resize Image');
+            }
 
+            $('#resizeWidth, #resizeHeight, #resizeUnit').on('input change', resetToResizeState);
+            $('#resizeRatioLock').on('click', resetToResizeState);
 
             /* =========================================================
                FILE INPUT
