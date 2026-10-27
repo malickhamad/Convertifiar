@@ -2,10 +2,12 @@
 
 @section('meta')
     <title>FREE Image Resizer: Resize Photos Online | XConvertifire</title>
-    <meta name="description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely." />
+    <meta name="description"
+        content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely." />
 
     <meta property="og:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
-    <meta property="og:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
+    <meta property="og:description"
+        content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ route('image.resizer') }}">
     <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
@@ -14,7 +16,8 @@
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="FREE Image Resizer: Resize Photos Online | XConvertifire">
-    <meta name="twitter:description" content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
+    <meta name="twitter:description"
+        content="Resize images online for FREE with XConvertifire. Easily resize JPG, PNG, SVG, GIF, and WebP images for FREE while maintaining quality, quickly and securely.">
     <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
     <meta name="twitter:image:alt" content="XConvertifire logo">
 @endsection
@@ -23,8 +26,8 @@
     <main class="crop-page">
 
         <!-- =========================================================
-             BREADCRUMB
-        ========================================================== -->
+                 BREADCRUMB
+            ========================================================== -->
         <section class="crop-breadcrumb-section">
             <div class="container">
 
@@ -48,8 +51,8 @@
 
 
         <!-- =========================================================
-             HERO / UPLOAD SECTION (hidden after upload)
-        ========================================================== -->
+                 HERO / UPLOAD SECTION (hidden after upload)
+            ========================================================== -->
         <section class="crop-hero-section" id="resizeUploadSection">
 
             <div class="container">
@@ -75,10 +78,11 @@
 
 
                 <!-- =================================================
-                     UPLOAD BOX
-                ================================================== -->
+                         UPLOAD BOX
+                    ================================================== -->
 
-                <div class="crop-upload-box cursor-pointer" id="resizeUploadBox" onclick="document.getElementById('resizeImageInput').click()">
+                <div class="crop-upload-box cursor-pointer" id="resizeUploadBox"
+                    onclick="document.getElementById('resizeImageInput').click()">
 
                     <div class="crop-upload-icon">
                         <i class="fas fa-cloud-upload-alt"></i>
@@ -121,8 +125,8 @@
 
 
         <!-- =========================================================
-             RESIZE WORKSPACE SECTION (hidden initially)
-        ========================================================== -->
+                 RESIZE WORKSPACE SECTION (hidden initially)
+            ========================================================== -->
         <section class="resizer-workspace-section" id="resizeWorkspaceSection" style="display: none;">
 
             <div class="container">
@@ -142,14 +146,14 @@
                 <div class="resizer-main-grid">
 
                     <!-- =================================================
-                         LEFT: IMAGE PREVIEW
-                    ================================================== -->
+                             LEFT: IMAGE PREVIEW
+                        ================================================== -->
                     <div class="resizer-image-panel">
 
                         <div class="resizer-image-container">
 
                             <img id="resizeImagePreview"
-                                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+                                src=""
                                 alt="Image Resize Preview">
 
                         </div>
@@ -159,14 +163,14 @@
 
 
                     <!-- =================================================
-                         RIGHT: CONTROLS
-                    ================================================== -->
+                             RIGHT: CONTROLS
+                        ================================================== -->
                     <div class="resizer-controls-panel">
 
 
                         <!-- =================================================
-                             FILE INFORMATION
-                        ================================================== -->
+                                 FILE INFORMATION
+                            ================================================== -->
                         <div class="resizer-file-info">
 
                             <div class="resizer-file-info-card">
@@ -189,8 +193,8 @@
 
 
                         <!-- =================================================
-                             RESIZE DIMENSIONS
-                        ================================================== -->
+                                 RESIZE DIMENSIONS
+                            ================================================== -->
                         <div class="resizer-control-group">
 
                             <label class="resizer-control-label">Resize Dimensions</label>
@@ -209,13 +213,15 @@
                                 <!-- Width -->
                                 <div class="resizer-field">
                                     <label class="resizer-field-label">Width</label>
-                                    <input type="number" id="resizeWidth" class="resizer-input" min="1" placeholder="Width">
+                                    <input type="number" id="resizeWidth" class="resizer-input" min="1"
+                                        placeholder="Width">
                                 </div>
 
                                 <!-- Height -->
                                 <div class="resizer-field">
                                     <label class="resizer-field-label">Height</label>
-                                    <input type="number" id="resizeHeight" class="resizer-input" min="1" placeholder="Height">
+                                    <input type="number" id="resizeHeight" class="resizer-input" min="1"
+                                        placeholder="Height">
                                 </div>
 
                             </div>
@@ -232,8 +238,8 @@
 
 
                         <!-- =================================================
-                             ORIGINAL / NEW DIMENSIONS
-                        ================================================== -->
+                                 ORIGINAL / NEW DIMENSIONS
+                            ================================================== -->
                         {{-- <div class="resizer-control-group">
 
                             <label class="resizer-control-label">Dimensions Preview</label>
@@ -257,8 +263,8 @@
 
 
                         <!-- =================================================
-                             RESULT (hidden initially)
-                        ================================================== -->
+                                 RESULT (hidden initially)
+                            ================================================== -->
                         <div class="resizer-control-group" id="resizeResult" style="display: none;">
 
                             <label class="resizer-control-label">Resize Result</label>
@@ -287,8 +293,8 @@
 
 
                         <!-- =================================================
-                             ACTION BUTTONS
-                        ================================================== -->
+                                 ACTION BUTTONS
+                            ================================================== -->
                         <div class="resizer-action-buttons">
 
                             <button type="button" class="resizer-action-btn resizer-resize-btn" id="resizeButton">
@@ -296,7 +302,8 @@
                                 Resize Image
                             </button>
 
-                            <button type="button" class="resizer-action-btn resizer-download-btn" id="resizeDownloadButton" style="display: none;">
+                            <button type="button" class="resizer-action-btn resizer-download-btn"
+                                id="resizeDownloadButton" style="display: none;">
                                 <i class="fas fa-download"></i>
                                 Download Image
                             </button>
@@ -306,8 +313,8 @@
 
 
                         <!-- =================================================
-                             HINT
-                        ================================================== -->
+                                 HINT
+                            ================================================== -->
                         <div class="resizer-hint">
                             <i class="fas fa-info-circle"></i>
                             <span>Use pixels for exact dimensions or percentage to scale proportionally.</span>
@@ -316,9 +323,10 @@
 
 
                         <!-- =================================================
-                             RESET BUTTON
-                        ================================================== -->
-                        <button type="button" class="resizer-reset-btn" id="resizeAnotherButton" style="display: none;">
+                                 RESET BUTTON
+                            ================================================== -->
+                        <button type="button" class="resizer-reset-btn" id="resizeAnotherButton"
+                            style="display: none;">
                             <i class="fas fa-redo"></i>
                             Resize Another Image
                         </button>
@@ -334,8 +342,8 @@
 
 
         <!-- =========================================================
-             BENEFITS
-        ========================================================== -->
+                 BENEFITS
+            ========================================================== -->
         <section class="crop-benefits-section">
 
             <div class="container">
@@ -457,9 +465,15 @@
             <div class="container">
                 <div class="resizer-seo-wrap">
                     <h2>Free Image Resizer Online: Resize Photos by Pixels or Percentage</h2>
-                    <p>Need to change the width or height of a photo without installing image-editing software? XConvertifire's free image resizer lets you resize images online using exact pixel dimensions or percentage-based scaling.</p>
-                    <p>Upload a supported JPG, PNG, WebP, SVG or GIF file, enter your preferred dimensions and download the resized result. The tool processes selected images in your browser and provides an aspect ratio control to help you avoid unwanted stretching.</p>
-                    <p>Resizing is useful when an image is too large for a website layout, needs different dimensions for a document or must fit an upload requirement. However, changing image dimensions does not guarantee a smaller file size or identical visual quality.</p>
+                    <p>Need to change the width or height of a photo without installing image-editing software?
+                        XConvertifire's free image resizer lets you resize images online using exact pixel dimensions or
+                        percentage-based scaling.</p>
+                    <p>Upload a supported JPG, PNG, WebP, SVG or GIF file, enter your preferred dimensions and download the
+                        resized result. The tool processes selected images in your browser and provides an aspect ratio
+                        control to help you avoid unwanted stretching.</p>
+                    <p>Resizing is useful when an image is too large for a website layout, needs different dimensions for a
+                        document or must fit an upload requirement. However, changing image dimensions does not guarantee a
+                        smaller file size or identical visual quality.</p>
 
                     <h2>How to Resize an Image Online</h2>
                     <p>Follow these four steps to resize your image.</p>
@@ -468,30 +482,37 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="resizer-seo-step">
                                 <h3>Step 1: Upload Your Image</h3>
-                                <p>Click <strong>Choose File</strong> or drag an image into the upload area. The tool accepts JPG/JPEG, PNG, WebP, SVG and GIF files up to 50 MB each.</p>
+                                <p>Click <strong>Choose File</strong> or drag an image into the upload area. The tool
+                                    accepts JPG/JPEG, PNG, WebP, SVG and GIF files up to 50 MB each.</p>
                                 <p>Only one image is processed at a time.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="resizer-seo-step">
                                 <h3>Step 2: Choose Pixels or Percentage</h3>
-                                <p>Select <strong>Pixels</strong> when you need specific image dimensions. Enter your preferred width and height.</p>
-                                <p>Select <strong>Percentage</strong> when you want to scale an image relative to its original dimensions. For example, setting both dimensions to 50% reduces the original width and height by half.</p>
+                                <p>Select <strong>Pixels</strong> when you need specific image dimensions. Enter your
+                                    preferred width and height.</p>
+                                <p>Select <strong>Percentage</strong> when you want to scale an image relative to its
+                                    original dimensions. For example, setting both dimensions to 50% reduces the original
+                                    width and height by half.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="resizer-seo-step">
                                 <h3>Step 3: Adjust the Aspect Ratio</h3>
                                 <p>The <strong>Keep Aspect Ratio</strong> option is enabled by default.</p>
-                                <p>When enabled, changing the width automatically calculates a proportional height, and changing the height calculates a proportional width.</p>
-                                <p>You can unlock the ratio to enter independent dimensions, but doing so may stretch or distort the image.</p>
+                                <p>When enabled, changing the width automatically calculates a proportional height, and
+                                    changing the height calculates a proportional width.</p>
+                                <p>You can unlock the ratio to enter independent dimensions, but doing so may stretch or
+                                    distort the image.</p>
                                 <p>Click <strong>Resize Image</strong> when the settings are ready.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="resizer-seo-step">
                                 <h3>Step 4: Review and Download</h3>
-                                <p>After processing, the tool displays the original dimensions, new dimensions and output file size.</p>
+                                <p>After processing, the tool displays the original dimensions, new dimensions and output
+                                    file size.</p>
                                 <p>Review the resulting preview and click <strong>Download Image</strong>.</p>
                                 <p>Use <strong>Resize Another Image</strong> to start again with a different file.</p>
                             </div>
@@ -503,54 +524,74 @@
 
                     <h3>Resize an Image by Pixels</h3>
                     <p>Pixel resizing is appropriate when you know the exact dimensions required.</p>
-                    <p>For example, suppose you have a photograph measuring 1200 × 800 pixels and want a smaller version that maintains the same proportions.</p>
-                    <p>With the aspect ratio locked, entering a width of 600 pixels calculates a height of approximately 400 pixels.</p>
-                    <p>This is useful for preparing photos for websites, documents, online forms and other projects with specific dimension requirements.</p>
+                    <p>For example, suppose you have a photograph measuring 1200 × 800 pixels and want a smaller version
+                        that maintains the same proportions.</p>
+                    <p>With the aspect ratio locked, entering a width of 600 pixels calculates a height of approximately 400
+                        pixels.</p>
+                    <p>This is useful for preparing photos for websites, documents, online forms and other projects with
+                        specific dimension requirements.</p>
 
                     <h3>Resize an Image by Percentage</h3>
                     <p>Percentage resizing scales an image relative to its original dimensions.</p>
-                    <p>For example, a 1600 × 900 pixel image resized to 50% of its original width and height becomes 800 × 450 pixels.</p>
-                    <p>Percentage resizing is useful when you want a smaller or larger version without calculating new dimensions manually.</p>
+                    <p>For example, a 1600 × 900 pixel image resized to 50% of its original width and height becomes 800 ×
+                        450 pixels.</p>
+                    <p>Percentage resizing is useful when you want a smaller or larger version without calculating new
+                        dimensions manually.</p>
                     <p>If you need proportional scaling, leave <strong>Keep Aspect Ratio</strong> enabled.</p>
 
                     <h2>How to Maintain Image Aspect Ratio</h2>
                     <p>An image's aspect ratio describes the relationship between its width and height.</p>
-                    <p>A 1200 × 800 pixel image has a 3:2 aspect ratio. When resized proportionally to 600 × 400 pixels, it keeps the same shape.</p>
-                    <p>If the same image is forced into dimensions of 600 × 600 pixels without cropping, its content may appear stretched or squeezed.</p>
+                    <p>A 1200 × 800 pixel image has a 3:2 aspect ratio. When resized proportionally to 600 × 400 pixels, it
+                        keeps the same shape.</p>
+                    <p>If the same image is forced into dimensions of 600 × 600 pixels without cropping, its content may
+                        appear stretched or squeezed.</p>
                     <p>XConvertifire's aspect ratio lock helps calculate proportional dimensions automatically.</p>
-                    <p>For an image that must fit a differently shaped space, simply unlocking the ratio is not always the best solution. Cropping may produce a more natural-looking result.</p>
-                    <p>To remove unwanted edges or change the visible composition, use the <a href="{{ route('image.cropper') }}">online image cropper</a>.</p>
+                    <p>For an image that must fit a differently shaped space, simply unlocking the ratio is not always the
+                        best solution. Cropping may produce a more natural-looking result.</p>
+                    <p>To remove unwanted edges or change the visible composition, use the <a
+                            href="{{ route('image.cropper') }}">online image cropper</a>.</p>
 
                     <h2>Resize JPG, PNG, WebP, SVG and GIF Images</h2>
-                    <p>Different image formats behave differently when resized. Understanding those differences helps you select the right workflow.</p>
+                    <p>Different image formats behave differently when resized. Understanding those differences helps you
+                        select the right workflow.</p>
 
                     <h3>Resize JPG and JPEG Photos</h3>
                     <p>JPG and JPEG are widely used for photographs.</p>
                     <p>The resizer can scale a JPG image to new pixel dimensions and export the result as a JPG file.</p>
-                    <p>Downscaling may produce a smaller file, but the output depends on the original photograph and image encoding. Very small output dimensions can make details or text difficult to see.</p>
+                    <p>Downscaling may produce a smaller file, but the output depends on the original photograph and image
+                        encoding. Very small output dimensions can make details or text difficult to see.</p>
                     <p>Enlarging a JPG cannot restore detail that was not present in the original.</p>
 
                     <h3>Resize PNG Images</h3>
-                    <p>PNG is commonly used for screenshots, illustrations, logos and graphics that require transparency.</p>
-                    <p>When a PNG is resized through this tool, it is exported as PNG in the normal raster resizing workflow.</p>
-                    <p>Keep the aspect ratio locked when the original proportions matter. Review thin lines and small text after reducing the dimensions.</p>
-                    <p>If you need to change the file format rather than its dimensions, use the <a href="{{ route('image.converter') }}">online image converter</a>.</p>
+                    <p>PNG is commonly used for screenshots, illustrations, logos and graphics that require transparency.
+                    </p>
+                    <p>When a PNG is resized through this tool, it is exported as PNG in the normal raster resizing
+                        workflow.</p>
+                    <p>Keep the aspect ratio locked when the original proportions matter. Review thin lines and small text
+                        after reducing the dimensions.</p>
+                    <p>If you need to change the file format rather than its dimensions, use the <a
+                            href="{{ route('image.converter') }}">online image converter</a>.</p>
 
                     <h3>Resize WebP Images</h3>
                     <p>WebP is a useful image format for many modern websites.</p>
-                    <p>The resizer can adjust the pixel dimensions of supported WebP images and export the result as WebP when browser encoding supports it.</p>
-                    <p>Review the downloaded file and its quality before publishing. Resizing and re-encoding can affect the appearance and file size.</p>
+                    <p>The resizer can adjust the pixel dimensions of supported WebP images and export the result as WebP
+                        when browser encoding supports it.</p>
+                    <p>Review the downloaded file and its quality before publishing. Resizing and re-encoding can affect the
+                        appearance and file size.</p>
 
                     <h3>Resize SVG Graphics</h3>
                     <p>SVG is a vector-based format often used for logos, icons and scalable illustrations.</p>
-                    <p>For SVG inputs, XConvertifire updates the width and height attributes in the SVG markup rather than applying the same canvas-resizing process used for raster images.</p>
-                    <p>SVG rendering also depends on its internal markup and viewBox configuration. If the result looks unexpected, inspect the output before using it.</p>
+                    <p>For SVG inputs, XConvertifire updates the width and height attributes in the SVG markup rather than
+                        applying the same canvas-resizing process used for raster images.</p>
+                    <p>SVG rendering also depends on its internal markup and viewBox configuration. If the result looks
+                        unexpected, inspect the output before using it.</p>
 
                     <h3>What Happens When You Resize a GIF?</h3>
                     <p>GIF uploads are supported, but animated GIF resizing has an important limitation.</p>
                     <p>The current tool processes GIF input through a browser canvas and exports a PNG still image.</p>
                     <p>This means an animated GIF's animation is not preserved.</p>
-                    <p>Use a dedicated animated GIF editor when your goal is to resize an animation while retaining its frames.</p>
+                    <p>Use a dedicated animated GIF editor when your goal is to resize an animation while retaining its
+                        frames.</p>
 
                     <h2>Resize, Crop or Compress: Which Tool Should You Use?</h2>
                     <p>These three image-editing tasks solve different problems.</p>
@@ -561,29 +602,38 @@
 
                     <h3>Crop an Image</h3>
                     <p>Cropping removes part of an image to change its visible composition.</p>
-                    <p>Use cropping when you need to remove unwanted areas or prepare an image for a different shape without stretching the subject.</p>
+                    <p>Use cropping when you need to remove unwanted areas or prepare an image for a different shape without
+                        stretching the subject.</p>
 
                     <h3>Compress an Image</h3>
                     <p>Compression focuses on reducing file size, often by changing encoding settings.</p>
                     <p>An image can have the correct pixel dimensions but still be too large in KB or MB.</p>
-                    <p>If your dimensions are already correct and you want to reduce the download size, try the <a href="{{ route('image.compressor') }}">free image compressor</a>.</p>
-                    <p>Resizing and compression can be used together, but neither guarantees a particular final file size.</p>
+                    <p>If your dimensions are already correct and you want to reduce the download size, try the <a
+                            href="{{ route('image.compressor') }}">free image compressor</a>.</p>
+                    <p>Resizing and compression can be used together, but neither guarantees a particular final file size.
+                    </p>
 
                     <h2>Common Reasons to Resize Images</h2>
 
                     <h3>Website and Blog Images</h3>
                     <p>Large images are not always necessary for smaller page components.</p>
                     <p>Preparing images at suitable pixel dimensions can help avoid unnecessarily large assets.</p>
-                    <p>For responsive websites, developers should also consider how different image sizes are delivered to different devices. Google's <a href="https://web.dev/learn/images/responsive-images" target="_blank" rel="noopener noreferrer">responsive images guide</a> explains this in more detail.</p>
+                    <p>For responsive websites, developers should also consider how different image sizes are delivered to
+                        different devices. Google's <a href="https://web.dev/learn/images/responsive-images"
+                            target="_blank" rel="noopener noreferrer">responsive images guide</a> explains this in more
+                        detail.</p>
 
                     <h3>Profile Pictures and Social Media</h3>
-                    <p>Profile photographs, thumbnails and social images often need particular dimensions or aspect ratios.</p>
+                    <p>Profile photographs, thumbnails and social images often need particular dimensions or aspect ratios.
+                    </p>
                     <p>Check the current requirements of the platform where the image will be used.</p>
-                    <p>If an image needs a different shape rather than proportional scaling, cropping may be more appropriate than stretching.</p>
+                    <p>If an image needs a different shape rather than proportional scaling, cropping may be more
+                        appropriate than stretching.</p>
 
                     <h3>Online Applications and Forms</h3>
                     <p>Forms may impose limits on pixel dimensions, file type or file size.</p>
-                    <p>The resizer can help with width and height requirements. It does not guarantee a specific file size such as 100 KB or 200 KB.</p>
+                    <p>The resizer can help with width and height requirements. It does not guarantee a specific file size
+                        such as 100 KB or 200 KB.</p>
                     <p>Always review the downloaded file before submitting it.</p>
 
                     <h3>Documents, Presentations and Email</h3>
@@ -592,13 +642,21 @@
                     <p>Keep an original copy if you may need the full-resolution image again.</p>
 
                     <h2>Tips for Resizing Images Without Unnecessary Quality Loss</h2>
-                    <p><strong>Keep the original proportions.</strong> Leave the aspect ratio lock enabled unless you intentionally need independent dimensions.</p>
-                    <p><strong>Avoid unnecessary enlargement.</strong> Upscaling adds pixels through interpolation rather than recreating missing detail.</p>
-                    <p><strong>Check text and fine details.</strong> Screenshots, diagrams and images containing small text can become difficult to read after strong downscaling.</p>
-                    <p><strong>Choose dimensions for the final use.</strong> Start with the actual requirements of your website, form, document or destination platform.</p>
-                    <p><strong>Understand the difference between dimensions and file size.</strong> An image's pixel dimensions and its KB/MB file size are different measurements.</p>
-                    <p><strong>Preserve your original.</strong> Keep the full-resolution file so you can create another version if necessary.</p>
-                    <p>For more technical background on image scaling, read the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank" rel="noopener noreferrer">MDN guide to canvas image drawing</a>.</p>
+                    <p><strong>Keep the original proportions.</strong> Leave the aspect ratio lock enabled unless you
+                        intentionally need independent dimensions.</p>
+                    <p><strong>Avoid unnecessary enlargement.</strong> Upscaling adds pixels through interpolation rather
+                        than recreating missing detail.</p>
+                    <p><strong>Check text and fine details.</strong> Screenshots, diagrams and images containing small text
+                        can become difficult to read after strong downscaling.</p>
+                    <p><strong>Choose dimensions for the final use.</strong> Start with the actual requirements of your
+                        website, form, document or destination platform.</p>
+                    <p><strong>Understand the difference between dimensions and file size.</strong> An image's pixel
+                        dimensions and its KB/MB file size are different measurements.</p>
+                    <p><strong>Preserve your original.</strong> Keep the full-resolution file so you can create another
+                        version if necessary.</p>
+                    <p>For more technical background on image scaling, read the <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage"
+                            target="_blank" rel="noopener noreferrer">MDN guide to canvas image drawing</a>.</p>
 
                     <h2>Frequently Asked Questions About Image Resizing</h2>
 
@@ -606,36 +664,48 @@
                     <p>Yes. XConvertifire provides a free browser-based image resizing tool for supported image formats.</p>
 
                     <h3>Can I resize an image to exact pixel dimensions?</h3>
-                    <p>Yes. Select Pixels and enter the new width and height. Keep the aspect ratio locked if proportional scaling is important.</p>
+                    <p>Yes. Select Pixels and enter the new width and height. Keep the aspect ratio locked if proportional
+                        scaling is important.</p>
 
                     <h3>Can I resize an image by percentage?</h3>
-                    <p>Yes. Select Percentage and enter the desired scaling values. A 50% setting for both dimensions produces an image with half the original width and height.</p>
+                    <p>Yes. Select Percentage and enter the desired scaling values. A 50% setting for both dimensions
+                        produces an image with half the original width and height.</p>
 
                     <h3>Will resizing make my image blurry?</h3>
-                    <p>It can. Strong downscaling removes image detail, while enlarging can make images look softer or pixelated. Results depend on the original image and the target dimensions.</p>
+                    <p>It can. Strong downscaling removes image detail, while enlarging can make images look softer or
+                        pixelated. Results depend on the original image and the target dimensions.</p>
 
                     <h3>Can I resize images without stretching them?</h3>
-                    <p>Yes. Leave Keep Aspect Ratio enabled to automatically calculate proportional dimensions. If your destination requires a different shape, consider cropping rather than stretching.</p>
+                    <p>Yes. Leave Keep Aspect Ratio enabled to automatically calculate proportional dimensions. If your
+                        destination requires a different shape, consider cropping rather than stretching.</p>
 
                     <h3>Does resizing always reduce file size?</h3>
-                    <p>No. Changing pixel dimensions may affect file size, but the final result also depends on the format and encoding. A larger image may require more storage, and a smaller image is not guaranteed to meet a specific KB target.</p>
+                    <p>No. Changing pixel dimensions may affect file size, but the final result also depends on the format
+                        and encoding. A larger image may require more storage, and a smaller image is not guaranteed to meet
+                        a specific KB target.</p>
 
                     <h3>What is the maximum supported file size?</h3>
-                    <p>The uploader accepts supported images up to 50 MB each. Browser memory and device limitations may affect processing of very large images.</p>
+                    <p>The uploader accepts supported images up to 50 MB each. Browser memory and device limitations may
+                        affect processing of very large images.</p>
 
                     <h3>Can I resize multiple images at once?</h3>
-                    <p>The current resizer processes one image at a time. After downloading one result, you can upload another image.</p>
+                    <p>The current resizer processes one image at a time. After downloading one result, you can upload
+                        another image.</p>
 
                     <h3>Can I resize an animated GIF without losing its animation?</h3>
-                    <p>Not with the current resizer. GIF input is exported as a static PNG image, so the animation is not preserved.</p>
+                    <p>Not with the current resizer. GIF input is exported as a static PNG image, so the animation is not
+                        preserved.</p>
 
                     <h3>Are my images sent to a server for resizing?</h3>
-                    <p>The current image-resizing workflow reads and processes selected image files in the browser and creates the downloadable result locally. It does not require a server-side resizing request.</p>
+                    <p>The current image-resizing workflow reads and processes selected image files in the browser and
+                        creates the downloadable result locally. It does not require a server-side resizing request.</p>
 
                     <div class="resizer-seo-cta">
                         <h2>Resize Your Image Online for Free</h2>
-                        <p>Whether you need a smaller JPG photo, different PNG dimensions or a proportionally scaled WebP image, XConvertifire helps you resize supported images using pixels or percentages.</p>
-                        <p>Select your image, choose the dimensions, keep the proportions you need and review the output before downloading.</p>
+                        <p>Whether you need a smaller JPG photo, different PNG dimensions or a proportionally scaled WebP
+                            image, XConvertifire helps you resize supported images using pixels or percentages.</p>
+                        <p>Select your image, choose the dimensions, keep the proportions you need and review the output
+                            before downloading.</p>
                         <a href="#resizeUploadSection" class="resizer-seo-cta-link">Resize Your Image Now</a>
                     </div>
                 </div>
@@ -656,7 +726,7 @@
             margin: 0 auto;
         }
 
-        .resizer-seo-wrap > h2:not(:first-child) {
+        .resizer-seo-wrap>h2:not(:first-child) {
             margin-top: 42px;
         }
 
@@ -756,7 +826,7 @@
                 padding-top: 14px;
             }
 
-            .resizer-seo-wrap > h2:not(:first-child) {
+            .resizer-seo-wrap>h2:not(:first-child) {
                 margin-top: 32px;
             }
 
@@ -775,9 +845,9 @@
         }
 
         /* =========================================
-           RESIZER WORKSPACE STYLES
-           (Matching compressor design)
-        ========================================= */
+               RESIZER WORKSPACE STYLES
+               (Matching compressor design)
+            ========================================= */
 
         .resizer-workspace-section {
             padding: 30px 0 60px;
@@ -2495,7 +2565,7 @@
                 $('#resizeImagePreview')
                     .attr(
                         'src',
-                        'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85'
+                        ''
                     );
 
 
