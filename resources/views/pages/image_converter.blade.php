@@ -20,149 +20,26 @@
     <link rel="stylesheet" href="{{ asset('css/image-converter.css') }}">
 
     <style>
-    .seo-card {
-        background: #151515 !important;
-        border: 1px solid rgba(255, 255, 255, 0.25) !important;
-        border-radius: 1rem !important;
-    }
-    .seo-card .accordion-button {
-        background: #151515 !important;
-        color: #fff !important;
-        box-shadow: none !important;
-        font-weight: 600;
-    }
-    .seo-card .accordion-button:not(.collapsed) {
-        background: rgba(59, 130, 246, 0.08) !important;
-        color: #60a5fa !important;
-    }
-    .seo-card .accordion-button::after { filter: invert(1); }
-    .seo-card .accordion-body {
-        background: #151515 !important;
-        color: rgba(255, 255, 255, 0.7) !important;
-    }
-</style>
-
-    <style>
-        .converter-seo-section {
-            padding: 24px 0 72px;
+        /* ---------- SEO cards (unchanged) ---------- */
+        .seo-card {
+            background: #151515 !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            border-radius: 1rem !important;
         }
-
-        .converter-seo-wrap {
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .converter-seo-wrap > h2:not(:first-child) {
-            margin-top: 42px;
-        }
-
-        .converter-seo-section h2 {
-            color: #fff;
-            font-size: clamp(2rem, 3vw, 2.7rem);
-            line-height: 1.2;
-            margin: 0 0 18px;
-            letter-spacing: -0.03em;
-        }
-
-        .converter-seo-section h3 {
-            color: #fff;
-            font-size: 1.25rem;
-            margin: 28px 0 12px;
-        }
-
-        .converter-seo-section p,
-        .converter-seo-section li {
-            color: rgba(255, 255, 255, 0.76);
-            font-size: 1.03rem;
-            line-height: 1.75;
-            margin: 0 0 16px;
-        }
-
-        .converter-seo-section a:not(.converter-seo-cta) {
-            color: #60a5fa;
-            text-decoration: underline;
-            text-underline-offset: 0.18em;
-        }
-
-        .converter-seo-section a:not(.converter-seo-cta):hover,
-        .converter-seo-section a:not(.converter-seo-cta):focus-visible {
-            color: #93c5fd;
-        }
-
-        .converter-seo-steps {
-            margin: 8px 0 24px;
-        }
-
-        .converter-seo-card {
-            height: 100%;
-            padding: 22px 18px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            border-radius: 18px;
-        }
-
-        .converter-seo-card h3 {
-            margin-top: 0;
-            font-size: 1.05rem;
-        }
-
-        .converter-seo-card p {
-            margin-bottom: 0;
-            font-size: 0.98rem;
-        }
-
-        .converter-seo-list {
-            margin: 0 0 20px;
-            padding-left: 1.4rem;
-        }
-
-        .converter-seo-faq h3 {
-            padding-top: 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .converter-seo-final {
-            margin-top: 40px;
-            padding: 28px 24px;
-            text-align: center;
-            background: rgba(59, 130, 246, 0.08);
-            border: 1px solid rgba(96, 165, 250, 0.28);
-            border-radius: 18px;
-        }
-
-        .converter-seo-final h2 {
-            margin-bottom: 14px;
-        }
-
-        .converter-seo-final p {
-            max-width: 720px;
-            margin: 0 auto 20px;
-        }
-
-        .converter-seo-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 100%;
-            padding: 12px 18px;
-            border: 1px solid #2563eb;
-            border-radius: 10px;
-            background: #2563eb;
-            color: #fff;
+        .seo-card .accordion-button {
+            background: #151515 !important;
+            color: #fff !important;
+            box-shadow: none !important;
             font-weight: 600;
-            text-decoration: none;
         }
-
-        .converter-seo-cta:hover,
-        .converter-seo-cta:focus-visible {
-            background: #1d4ed8;
-            border-color: #1d4ed8;
-            color: #fff;
+        .seo-card .accordion-button:not(.collapsed) {
+            background: rgba(59, 130, 246, 0.08) !important;
+            color: #60a5fa !important;
         }
-
-        .converter-seo-cta:focus-visible {
-            outline: 2px solid #93c5fd;
-            outline-offset: 3px;
+        .seo-card .accordion-button::after { filter: invert(1); }
+        .seo-card .accordion-body {
+            background: #151515 !important;
+            color: rgba(255, 255, 255, 0.7) !important;
         }
 
         .converter-format-note {
@@ -172,30 +49,347 @@
             border-radius: 6px;
             background: rgba(255, 255, 255, 0.035);
             color: rgba(255, 255, 255, 0.76);
-            font-size: 0.94rem;
-            line-height: 1.65;
+            font-size: 0.8rem;
+            line-height: 1.6;
         }
 
-        @media (max-width: 767px) {
-            .converter-seo-section {
-                padding-top: 14px;
+        /* =========================================================
+           CONVERTER EDITOR  (same look as Image Resizer editor)
+           Scoped under .cv-editor so it overrides image-converter.css
+        ========================================================== */
+        .cv-editor {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            cursor: default;
+            text-align: left;
+        }
+
+        .cv-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+
+        .cv-title {
+            margin: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+            letter-spacing: -0.02em;
+        }
+
+        .cv-title span {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cv-head-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cv-editor .cv-add,
+        .cv-editor .cv-cancel {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.4;
+            cursor: pointer;
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .cv-editor .cv-add {
+            border: 1px solid rgba(96, 165, 250, 0.4);
+            background: rgba(59, 130, 246, 0.12);
+            color: #60a5fa;
+        }
+
+        .cv-editor .cv-add:hover {
+            background: rgba(59, 130, 246, 0.22);
+        }
+
+        .cv-editor .cv-cancel {
+            border: 0;
+            background: #f87171;
+            color: #fff;
+        }
+
+        .cv-editor .cv-cancel:hover {
+            background: #ef4444;
+        }
+
+        .cv-editor .cv-add:focus-visible,
+        .cv-editor .cv-cancel:focus-visible,
+        .cv-editor .format-btn:focus-visible,
+        .cv-editor .converter-convert-btn:focus-visible {
+            outline: 2px solid #93c5fd;
+            outline-offset: 2px;
+        }
+
+        /* ---------- Left: files preview ---------- */
+        .cv-preview {
+            height: 100%;
+            min-height: 480px;
+            max-height: 640px;
+            padding: 20px;
+            overflow-y: auto;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background-color: #0b0b0c;
+            background-image:
+                linear-gradient(45deg, #141414 25%, transparent 25%),
+                linear-gradient(-45deg, #141414 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #141414 75%),
+                linear-gradient(-45deg, transparent 75%, #141414 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+        }
+
+        .cv-editor .converter-file-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+            gap: 14px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: 0 !important;
+        }
+
+        .cv-editor .converter-file-card {
+            position: relative;
+            padding: 10px !important;
+            border-radius: 16px !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            background: rgba(16, 16, 17, 0.92) !important;
+            overflow: hidden;
+        }
+
+        .cv-editor .converter-thumb {
+            position: relative;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 1 / 1;
+            border-radius: 12px !important;
+            overflow: hidden;
+            background: #0b0b0c !important;
+        }
+
+        .cv-editor .converter-thumb img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block;
+        }
+
+        .cv-editor .remove-file {
+            position: absolute !important;
+            top: 6px !important;
+            right: 6px !important;
+            width: 26px !important;
+            height: 26px !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+            border: 0 !important;
+            border-radius: 50% !important;
+            background: #f87171 !important;
+            color: #fff !important;
+            font-size: 0.7rem;
+            cursor: pointer;
+        }
+
+        .cv-editor .remove-file:hover {
+            background: #ef4444 !important;
+        }
+
+        .cv-editor .converter-file-name {
+            margin-top: 10px;
+            color: #fff !important;
+            font-size: 0.78rem !important;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cv-editor .converter-file-meta {
+            margin-top: 2px;
+            color: rgba(255, 255, 255, 0.5) !important;
+            font-size: 0.7rem !important;
+        }
+
+        /* ---------- Right: panel ---------- */
+        .cv-panel {
+            padding: 22px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #101011;
+        }
+
+        .cv-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #161617;
+        }
+
+        .cv-label {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .cv-value {
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .cv-section-label {
+            display: block;
+            margin: 22px 0 10px;
+        }
+
+        .cv-editor .format-buttons {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cv-editor .format-btn {
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2px;
+            width: 100% !important;
+            min-height: 62px;
+            padding: 10px 12px !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            background: #161617 !important;
+            color: #fff !important;
+            text-align: left;
+            cursor: pointer;
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .cv-editor .format-btn strong {
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .cv-editor .format-btn span {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.68rem;
+            line-height: 1.3;
+        }
+
+        .cv-editor .format-btn:hover {
+            background: #1d1d1f !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .cv-editor .format-btn.active {
+            background: rgba(59, 130, 246, 0.14) !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .cv-editor .format-btn.active strong {
+            color: #60a5fa;
+        }
+
+        .cv-editor .converter-convert-btn {
+            display: flex !important;
+            align-items: center;
+            justify-content: space-between;
+            width: 100% !important;
+            height: 50px;
+            margin-top: 18px !important;
+            padding: 0 20px !important;
+            border: 0 !important;
+            border-radius: 14px !important;
+            background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+            color: #fff !important;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .cv-editor .converter-convert-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 28px rgba(37, 99, 235, 0.4);
+        }
+
+        .cv-editor .converter-convert-btn i {
+            margin-right: 6px;
+        }
+
+        .cv-editor .converter-convert-btn > i {
+            margin-right: 0;
+        }
+
+        @media (max-width: 991px) {
+            .cv-preview {
+                min-height: 320px;
+                max-height: 480px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .cv-preview {
+                padding: 14px;
+                border-radius: 18px;
             }
 
-            .converter-seo-wrap > h2:not(:first-child) {
-                margin-top: 32px;
+            .cv-panel {
+                padding: 16px;
+                border-radius: 18px;
             }
 
-            .converter-seo-section h2 {
-                font-size: 1.9rem;
+            .cv-head-actions,
+            .cv-editor .cv-add,
+            .cv-editor .cv-cancel {
+                width: 100%;
+                justify-content: center;
             }
 
-            .converter-seo-section p,
-            .converter-seo-section li {
-                font-size: 0.98rem;
+            .cv-editor .converter-file-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
             }
+        }
 
-            .converter-seo-final {
-                padding: 22px 18px;
+        @media (prefers-reduced-motion: reduce) {
+            .cv-editor * {
+                transition: none !important;
             }
         }
     </style>
@@ -221,7 +415,7 @@
 
             <div class="container">
 
-                <div class="converter-heading" data-aos="fade-up">
+                <div class="converter-heading" id="converterHeading" data-aos="fade-up">
 
                     <span class="converter-badge">
                         <i class="fas fa-shuffle"></i> IMAGE CONVERTER
@@ -242,6 +436,7 @@
 
                     <input type="file" id="converterFileInput" accept="image/*" multiple hidden>
 
+                    {{-- ================= UPLOAD BOX (unchanged) ================= --}}
                     <div class="crop-upload-box converter-upload" id="converterUpload"
                         onclick="document.getElementById('converterFileInput').click()">
 
@@ -270,129 +465,135 @@
 
                     </div>
 
-                    <div class="converter-files-panel d-none" id="converterFilesPanel">
+                    {{-- ================= EDITOR (resizer-style) ================= --}}
+                    <div class="cv-editor d-none" id="converterFilesPanel">
 
-                        <div class="converter-panel-top">
+                        <div class="cv-head">
+                            <h2 class="cv-title">Convert Your <span>Images</span></h2>
 
-                            <div>
-
-                                <span class="converter-mini-label">
-                                    READY TO CONVERT
-                                </span>
-
-                                <h2>
-                                    <span id="imageCount">0</span>
-                                    images selected
-                                </h2>
-
-                            </div>
-
-                            <div class="converter-panel-actions">
-
-                                <button type="button" class="converter-add-btn" id="addMoreBtn">
-
+                            <div class="cv-head-actions">
+                                <button type="button" class="cv-add" id="addMoreBtn">
                                     <i class="fas fa-plus"></i>
                                     Add More
-
                                 </button>
 
-                                <button type="button" class="converter-clear-btn btn btn-danger btn-sm" id="clearAllBtn">
-
-                                    <i class="fas fa-trash-can"></i>
+                                <button type="button" class="cv-cancel" id="clearAllBtn">
+                                    <i class="fas fa-xmark"></i>
                                     Clear All
-
                                 </button>
-
                             </div>
-
                         </div>
 
-                        <div class="converter-file-grid" id="fileGrid">
-                        </div>
+                        <div class="row g-4">
 
-                        <div class="converter-controls">
-
-                            <div class="format-buttons" id="formatButtons">
-
-                                <button type="button" class="format-btn active" data-format="jpeg">
-
-                                    <strong>JPEG</strong>
-
-                                    <span>
-                                        Best compatibility
-                                    </span>
-
-                                </button>
-
-                                <button type="button" class="format-btn" data-format="jpg">
-
-                                    <strong>JPG</strong>
-
-                                    <span>
-                                        Compact photo
-                                    </span>
-
-                                </button>
-
-                                <button type="button" class="format-btn" data-format="png">
-
-                                    <strong>PNG</strong>
-
-                                    <span>
-                                        Transparent quality
-                                    </span>
-
-                                </button>
-
-                                <button type="button" class="format-btn" data-format="webp">
-
-                                    <strong>WEBP</strong>
-
-                                    <span>
-                                        Modern & lightweight
-                                    </span>
-
-                                </button>
-
-                                <button type="button" class="format-btn" data-format="gif">
-
-                                    <strong>GIF</strong>
-
-                                    <span>
-                                        Web-friendly image
-                                    </span>
-
-                                </button>
-
-                                <button type="button" class="format-btn" data-format="pdf">
-
-                                    <strong>PDF</strong>
-
-                                    <span>
-                                        Document format
-                                    </span>
-
-                                </button>
-
+                            {{-- LEFT: selected images --}}
+                            <div class="col-lg-8">
+                                <div class="cv-preview">
+                                    <div class="converter-file-grid" id="fileGrid">
+                                    </div>
+                                </div>
                             </div>
 
-                            <button type="button" class="converter-convert-btn" id="convertBtn">
+                            {{-- RIGHT: settings panel --}}
+                            <div class="col-lg-4">
+                                <div class="cv-panel">
 
-                                <span>
-                                    <i class="fas fa-wand-magic-sparkles"></i>
-                                    Convert Images
-                                </span>
+                                    <div class="cv-info">
+                                        <span class="cv-label">Selected</span>
+                                        <span class="cv-value"><span id="imageCount">0</span> images</span>
+                                    </div>
 
-                                <i class="fas fa-arrow-right"></i>
+                                    <div class="cv-info">
+                                        <span class="cv-label">Total Size</span>
+                                        <span class="cv-value" id="totalSize">0 B</span>
+                                    </div>
 
-                            </button>
+                                    <span class="cv-label cv-section-label">Output Format</span>
 
-                            <p class="converter-format-note">
-                                JPG and JPEG use the same image encoding. GIF export is not reliably
-                                supported by browser canvas encoding, so an unsupported GIF export may
-                                contain PNG data despite a <code>.gif</code> filename. WebP export
-                                depends on browser support.
-                            </p>
+                                    <div class="format-buttons" id="formatButtons">
+
+                                        <button type="button" class="format-btn active" data-format="jpeg">
+
+                                            <strong>JPEG</strong>
+
+                                            <span>
+                                                Best compatibility
+                                            </span>
+
+                                        </button>
+
+                                        <button type="button" class="format-btn" data-format="jpg">
+
+                                            <strong>JPG</strong>
+
+                                            <span>
+                                                Compact photo
+                                            </span>
+
+                                        </button>
+
+                                        <button type="button" class="format-btn" data-format="png">
+
+                                            <strong>PNG</strong>
+
+                                            <span>
+                                                Transparent quality
+                                            </span>
+
+                                        </button>
+
+                                        <button type="button" class="format-btn" data-format="webp">
+
+                                            <strong>WEBP</strong>
+
+                                            <span>
+                                                Modern &amp; lightweight
+                                            </span>
+
+                                        </button>
+
+                                        <button type="button" class="format-btn" data-format="gif">
+
+                                            <strong>GIF</strong>
+
+                                            <span>
+                                                Web-friendly image
+                                            </span>
+
+                                        </button>
+
+                                        <button type="button" class="format-btn" data-format="pdf">
+
+                                            <strong>PDF</strong>
+
+                                            <span>
+                                                Document format
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                    <button type="button" class="converter-convert-btn" id="convertBtn">
+
+                                        <span>
+                                            <i class="fas fa-wand-magic-sparkles"></i>
+                                            Convert Images
+                                        </span>
+
+                                        <i class="fas fa-arrow-right"></i>
+
+                                    </button>
+
+                                    <p class="converter-format-note">
+                                        JPG and JPEG use the same image encoding. GIF export is not reliably
+                                        supported by browser canvas encoding, so an unsupported GIF export may
+                                        contain PNG data despite a <code>.gif</code> filename. WebP export
+                                        depends on browser support.
+                                    </p>
+
+                                </div>
+                            </div>
 
                         </div>
 
@@ -483,175 +684,9 @@
 
         </section>
 
-        {{-- <section class="converter-seo-section">
-            <div class="container">
-                <div class="converter-seo-wrap">
-                    <h2>Free Online Image Converter</h2>
-                    <p>An image converter online changes a file's format for use in a website, document or app. XConvertifire's free image converter lets you convert images in your browser to JPG, JPEG, PNG, WebP, GIF or PDF. GIF output depends on browser canvas encoding; when GIF encoding is unsupported, the result may contain PNG data even if its filename ends in <code>.gif</code>.</p>
-                    <p>JPG and JPEG refer to the same widely supported image encoding and are often used for photographs. PNG is useful for graphics and images that need transparency. WebP can provide a modern web image format, although browser support affects encoding. PDF output collects selected images into a document. The best choice depends on what you are making and where the file will be used.</p>
-                    <p>Select browser-decodable image files, choose one output option and start conversion. Results depend on the source and browser.</p>
-
-                    <h2>How to Convert Images Online</h2>
-                    <p>The converter follows a short workflow from choosing files to saving the result.</p>
-                    <div class="row g-4 converter-seo-steps">
-                        <div class="col-lg-3 col-md-6">
-                            <article class="converter-seo-card">
-                                <h3>1. Select Your Images</h3>
-                                <p>Select or drop one or more supported images. Add more files before converting if needed.</p>
-                            </article>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <article class="converter-seo-card">
-                                <h3>2. Choose an Output</h3>
-                                <p>Select one format for the selected images: JPEG, JPG, PNG, WebP, GIF or PDF. The six controls include JPG and JPEG options for the same encoding format.</p>
-                            </article>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <article class="converter-seo-card">
-                                <h3>3. Convert the Files</h3>
-                                <p>Start conversion and follow its progress. All selected images use the same output choice.</p>
-                            </article>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <article class="converter-seo-card">
-                                <h3>4. Download the Result</h3>
-                                <p>Download the result when ready. A single non-PDF output is a file; multiple non-PDF outputs are packaged in a ZIP.</p>
-                            </article>
-                        </div>
-                    </div>
-
-                    <h2>Convert JPG, PNG, WebP and GIF Images</h2>
-                    <p>Input depends on browser decoding, so every file with an image extension is not guaranteed to convert.</p>
-
-                    <h3>Convert JPG and JPEG Images</h3>
-                    <p>JPG and JPEG are extensions for the same encoding, widely used for photographs. JPEG encoding can be lossy, changing detail or file size. Repeated conversions can accumulate quality changes, so start from the original when practical.</p>
-
-                    <h3>Convert PNG Images</h3>
-                    <p>PNG suits screenshots, illustrations and graphics with transparent areas. Transparency may be retained when supported by the source and browser. For JPEG output, the canvas background is white because JPEG cannot store transparency.</p>
-
-                    <h3>Convert WebP Images</h3>
-                    <p>WebP may suit websites that support it. The browser must support WebP encoding; otherwise canvas may return PNG data. Check the download rather than assuming its format or size reduction.</p>
-
-                    <h3>Convert GIF Input Images</h3>
-                    <p>A browser may decode GIF input as an image frame, so this conversion workflow does not preserve animated GIF playback. Do not rely on the GIF output option to create an animated GIF.</p>
-
-                    <h2>Convert Multiple Images Online</h2>
-                    <p>Add or remove selected images, or clear the selection. One output format applies to the whole batch; process separate groups if they need different formats.</p>
-                    <p>Multiple non-PDF outputs are packaged into a ZIP. No fixed batch-count or upload-size limit is published; practical capacity depends on the browser, device and files.</p>
-                    <p>A single image downloads as a file. PDF uses its own document-generation workflow.</p>
-
-                    <h2>Convert Images to PDF</h2>
-                    <p>Select image files, choose PDF and convert them into a document containing the selected images. Download the generated PDF when processing finishes.</p>
-                    <p>This creates PDFs from images. It does not accept existing PDF documents and convert their pages to images. Review the result before printing or sharing.</p>
-
-                    <h2>JPG vs PNG vs WebP: Which Format Should You Choose?</h2>
-                    <p>Choose an output based on image content, transparency, intended use and compatibility. Results vary by image and browser.</p>
-
-                    <h3>JPG for Photographs</h3>
-                    <p>JPG/JPEG suits many photographs and is broadly supported, but its lossy encoding cannot retain transparency. Transparent canvas areas are filled white. Inspect details and edges after export.</p>
-
-                    <h3>PNG for Graphics and Transparency</h3>
-                    <p>PNG often suits screenshots, diagrams, text-heavy graphics and transparent artwork. It may retain source transparency where supported, but is not guaranteed to be smaller than JPEG or WebP.</p>
-
-                    <h3>WebP for Modern Web Images</h3>
-                    <p>WebP may suit modern web use, but destination compatibility varies and browser support determines whether encoding succeeds. Check format and appearance before publishing.</p>
-
-                    <h2>Image Conversion, Transparency and Quality</h2>
-                    <p>Conversion changes encoding, unlike resizing dimensions or compressing file data. It may alter visual quality and does not guarantee a smaller file or unchanged pixels.</p>
-                    <ul class="converter-seo-list">
-                        <li>JPEG does not support transparent pixels. This converter uses a white canvas background for JPEG output.</li>
-                        <li>PNG can retain transparency when the input and browser-based export support it.</li>
-                        <li>WebP output depends on browser encoding support and does not promise a specific reduction percentage.</li>
-                        <li>Review the downloaded file, including its format, transparency, dimensions and fine details.</li>
-                    </ul>
-                    <p>If your next step is to reduce file size, use the <a href="{{ route('image.compressor') }}">image compressor</a>. For changing pixel dimensions, the <a href="{{ route('image.resizer') }}">image resizer</a> is more appropriate. To remove unwanted edges, use the <a href="{{ route('image.cropper') }}">image cropper</a>. If an image needs a different orientation, try the <a href="{{ route('image.rotator') }}">image rotator</a>.</p>
-
-                    <h2>Common Reasons to Convert Images</h2>
-
-                    <h3>Prepare Website Images</h3>
-                    <p>If a website requests a particular format, convert a copy and test it there. Requirements vary; no format is accepted everywhere.</p>
-
-                    <h3>Share Photos in Compatible Formats</h3>
-                    <p>Convert a photo when a recipient expects JPEG or PNG. Choose based on compatibility, transparency and graphic detail.</p>
-
-                    <h3>Use Graphics in Documents</h3>
-                    <p>For documents or presentations, PNG may suit transparent artwork and text-heavy visuals; JPEG may suit photos without transparency.</p>
-
-                    <h3>Create Image-Based PDFs</h3>
-                    <p>Use PDF output to combine selected images into a document, then check its pages and image placement.</p>
-
-                    <h3>Convert a Batch for a Project</h3>
-                    <p>Convert several assets to one format and download the ZIP. Separate groups that need different formats.</p>
-
-                    <h3>Prepare Files for Online Uploads</h3>
-                    <p>Forms and marketplaces may specify formats. Convert a copy and check the platform's file, dimension and size rules.</p>
-
-                    <h2>Tips for Better Image Conversion Results</h2>
-                    <ul class="converter-seo-list">
-                        <li><strong>Choose for the image.</strong> Consider detail, transparency and destination compatibility.</li>
-                        <li><strong>Check transparency before choosing JPEG.</strong> The converter places transparent canvas areas on white for JPEG output.</li>
-                        <li><strong>Review fine details.</strong> Re-encoding may affect small text and sharp lines.</li>
-                        <li><strong>Check dimensions and file size.</strong> Conversion is not a resizing operation and does not promise a smaller file.</li>
-                        <li><strong>Account for browser support.</strong> WebP and GIF encoding may not yield the requested format.</li>
-                        <li><strong>Avoid repeated lossy conversions.</strong> Keep the original for making other versions.</li>
-                        <li><strong>Test before publishing.</strong> Open the output and check it in the destination workflow.</li>
-                    </ul>
-                    <p>For technical detail, see MDN's guides to <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types" target="_blank" rel="noopener noreferrer">web image formats</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="noopener noreferrer">canvas image encoding</a>.</p>
-
-                    <h2>Frequently Asked Questions About Image Conversion</h2>
-                    <div class="converter-seo-faq">
-                        <h3>Is XConvertifire's Image Converter free?</h3>
-                        <p>Yes. The Image Converter is available online for converting supported image files to one of the provided output options.</p>
-
-                        <h3>Which image formats can I upload?</h3>
-                        <p>The file input accepts image files, and conversion requires the browser to decode them. JPG, JPEG, PNG, WebP and GIF are common supported image types; not every image format is guaranteed to work in every browser.</p>
-
-                        <h3>Can I convert JPG to PNG?</h3>
-                        <p>Yes. Select a JPG/JPEG image and choose PNG. Check the result because encoding and appearance depend on the source and browser.</p>
-
-                        <h3>Can I convert PNG to JPG?</h3>
-                        <p>Yes. Choose JPG or JPEG output. The converter fills the JPEG canvas background with white because JPEG cannot keep transparency.</p>
-
-                        <h3>Can I convert images to WebP?</h3>
-                        <p>You can select WebP output. Successful WebP encoding depends on the browser, so verify the resulting file format.</p>
-
-                        <h3>Can I convert multiple images at once?</h3>
-                        <p>Yes. Select or add multiple images and apply one output format to the selection. Different formats must be handled in separate conversions.</p>
-
-                        <h3>How do I download multiple converted images?</h3>
-                        <p>For multiple non-PDF images, the converter packages the results into one ZIP archive. PDF output creates a PDF document containing the selected images.</p>
-
-                        <h3>Can I convert images into a PDF?</h3>
-                        <p>Yes. Select image files, choose PDF and convert them into a generated image-based PDF document.</p>
-
-                        <h3>Can I convert a PDF into an image?</h3>
-                        <p>No. This converter creates PDFs from images; it does not accept PDF files and convert their pages into images.</p>
-
-                        <h3>Will converting an image reduce its file size?</h3>
-                        <p>Not necessarily. Output size depends on the source, selected format and browser encoding. A smaller file or specific reduction is not guaranteed.</p>
-
-                        <h3>Does JPG support transparent backgrounds?</h3>
-                        <p>No. JPEG does not support transparency. The converter uses a white background for JPEG output.</p>
-
-                        <h3>Can I convert animated GIFs without losing animation?</h3>
-                        <p>No. The browser canvas workflow does not preserve animated GIF frames; GIF input may be decoded as a static image.</p>
-
-                        <h3>Does the GIF output option work in every browser?</h3>
-                        <p>No. Canvas GIF encoding is not reliably supported. An unsupported request may produce PNG data even if the output filename ends in <code>.gif</code>.</p>
-
-                        <h3>Are selected images processed in the browser?</h3>
-                        <p>The converter's image decoding and conversion use browser-side image and canvas processing. This describes the conversion workflow, not a blanket statement about all website activity.</p>
-                    </div>
-
-                    <div class="converter-seo-final">
-                        <h2>Convert Your Images Online for Free</h2>
-                        <p>Upload your images, choose a supported output format and download the converted result using XConvertifire's free online Image Converter.</p>
-                        <a href="#converterUpload" class="converter-seo-cta" id="converterSeoCta">Convert Your Images Now</a>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
+        {{-- =========================================================
+        SEO CONTENT (unchanged)
+    ========================================================== --}}
         <section class="py-5">
     <div class="container">
 
@@ -1179,7 +1214,7 @@
             <div class="card-body p-4 p-md-5 text-center">
                 <h2 class="text-white fw-bold mb-3">Convert Your Images Online for Free</h2>
                 <p class="text-secondary mb-4">Upload your images, choose a supported output format and download the converted result using XConvertifire's free online Image Converter.</p>
-                <a href="#converterUpload" class="btn btn-primary btn-lg fw-semibold px-4 py-2">
+                <a href="#converterUpload" id="converterSeoCta" class="btn btn-primary btn-lg fw-semibold px-4 py-2">
                     <i class="fas fa-shuffle me-2"></i>Convert Your Images Now
                 </a>
             </div>
@@ -1247,11 +1282,6 @@
                 Download
 
             </button>
-            {{-- 
-            <button type="button" id="closeConversionBtn" class="btn btn-outline-secondary d-none mt-3">
-                <i class="fas fa-xmark me-1"></i>
-                Close
-            </button> --}}
 
         </div>
 
@@ -1273,57 +1303,13 @@
         });
 
 
-        // const navbar = document.getElementById('morphNavbar');
-
-        // window.addEventListener('scroll', () =>
-        //     navbar.classList.toggle('scrolled', scrollY > 50)
-        // );
-
-
-        // const toggle = document.getElementById('mobileToggleBtn'),
-        //     links = document.getElementById('navLinksWrapper');
-
-
-        // toggle.addEventListener('click', () => {
-
-        //     links.classList.toggle('mobile-open');
-
-        //     const i = toggle.querySelector('i');
-
-        //     i.classList.toggle('fa-bars');
-        //     i.classList.toggle('fa-times');
-
-        // });
-
-
-        // document.querySelectorAll('.nav-item-dropdown').forEach(d =>
-        //     d.querySelector('.dropdown-trigger').addEventListener('click', e => {
-
-        //         if (innerWidth < 992) {
-
-        //             e.preventDefault();
-
-        //             document.querySelectorAll('.nav-item-dropdown').forEach(x => {
-
-        //                 if (x !== d) {
-        //                     x.classList.remove('open');
-        //                 }
-
-        //             });
-
-        //             d.classList.toggle('open');
-
-        //         }
-
-        //     })
-        // );
-
-
         const input = document.getElementById('converterFileInput'),
             upload = document.getElementById('converterUpload'),
             panel = document.getElementById('converterFilesPanel'),
             grid = document.getElementById('fileGrid'),
-            count = document.getElementById('imageCount');
+            count = document.getElementById('imageCount'),
+            totalSizeEl = document.getElementById('totalSize'),
+            heroHeading = document.getElementById('converterHeading');
 
 
         let files = [],
@@ -1427,12 +1413,19 @@
 
             count.textContent = files.length;
 
+            totalSizeEl.textContent =
+                bytes(files.reduce((sum, f) => sum + f.size, 0));
+
 
             if (!files.length) {
 
                 panel.classList.add('d-none');
 
                 upload.classList.remove('d-none');
+
+                if (heroHeading) {
+                    heroHeading.classList.remove('d-none');
+                }
 
                 return;
 
@@ -1442,6 +1435,10 @@
             upload.classList.add('d-none');
 
             panel.classList.remove('d-none');
+
+            if (heroHeading) {
+                heroHeading.classList.add('d-none');
+            }
 
 
             files.forEach((f, i) => {
@@ -1460,7 +1457,7 @@
 
                         <img src="${u}" alt="">
 
-                        <button class="remove-file">
+                        <button type="button" class="remove-file">
 
                             <i class="fas fa-xmark"></i>
 

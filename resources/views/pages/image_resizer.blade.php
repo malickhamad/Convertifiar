@@ -1372,10 +1372,10 @@
             align-items: center;
             gap: 8px;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.04);
+            background: #f87171 !important;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            color: #a1a1aa;
+            color: white;
             font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
@@ -1386,7 +1386,7 @@
         .resizer-cancel-btn:hover {
             background: rgba(239, 68, 68, 0.12);
             border-color: rgba(239, 68, 68, 0.35);
-            color: #f87171;
+            color: white;
             transform: translateY(-1px);
             box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);
         }
