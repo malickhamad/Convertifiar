@@ -18,6 +18,29 @@
     <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
+
+<style>
+    .seo-card {
+    background: #151515 !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 1rem !important;
+}
+.seo-card .accordion-button {
+    background: #151515 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+.seo-card .accordion-button:not(.collapsed) {
+    background: rgba(59, 130, 246, 0.08) !important;
+    color: #60a5fa !important;
+}
+.seo-card .accordion-button::after { filter: invert(1); }
+.seo-card .accordion-body {
+    background: #151515 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+</style>
+
     <main class="bg-black" style="margin-top:90px;">
         {{-- =========================================================
             FIRST SECTION
@@ -360,7 +383,7 @@
                 </div>
             </div>
         </div>
-        <section class="pdf-editor-seo-section">
+        <!-- <section class="pdf-editor-seo-section">
             <div class="container">
                 <div class="pdf-editor-seo-wrap">
                     <h2>Free Online PDF Editor</h2>
@@ -505,7 +528,434 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <section class="py-5">
+            <div class="container" style="max-width: 1080px;">
+
+                <!-- ═══ HERO ═══ -->
+                <div class="seo-card shadow-lg mb-5">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">
+                            <i class="fas fa-file-pdf me-1"></i> PDF Editing Guide
+                        </span>
+                        <h2 class="text-white fw-bold mb-3">Free Online PDF Editor</h2>
+                        <p class="text-secondary mb-3">An online PDF editor helps you make focused text changes without first rebuilding a document in another application. XConvertifire lets you edit PDF online by selecting text the page can extract, adding new text boxes, applying the available formatting controls, and downloading an updated PDF.</p>
+                        <p class="text-secondary mb-0">This free PDF editor online works with extractable text and new text overlays on a rendered view of each page. It is useful for small corrections, labels, or notes, but it is not a complete document reconstruction system. What you can change depends on how a PDF was created and how its content is encoded.</p>
+                    </div>
+                </div>
+
+                <!-- ═══ STEPS ═══ -->
+                <div class="text-center mb-4">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">How It Works</span>
+                    <h2 class="text-white fw-bold mb-2">How to Edit a PDF Online</h2>
+                    <p class="text-secondary mb-0">Use the upload area and editor controls to make changes, then inspect the result before saving it.</p>
+                </div>
+
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-2">1. Upload Your PDF</h3>
+                                <p class="text-secondary small mb-0">Choose a PDF from your device or drag it into the upload area. Files up to 50 MB are accepted. The page loads the document into its editor and displays its pages for review. A password-protected, damaged, unusually structured, or otherwise unsupported file may not load as expected.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-2">2. Select or Add Text</h3>
+                                <p class="text-secondary small mb-0">Click text that the editor can identify to work with an existing text element. To add content that is not already on the page, choose <strong class="text-white">Add Text</strong> to create a new text box. A scanned page is an image, so its printed words are not selectable text in this editor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                                    <i class="fas fa-sliders-h"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-2">3. Adjust Your Changes</h3>
+                                <p class="text-secondary small mb-0">Use the font, size, color, bold, italic, and underline controls for supported text. Position added text with the editor's existing controls. Check alignment, line breaks, and nearby content as you work, because replacement text may not fit the same space as the original.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary mb-3" style="width:48px;height:48px;">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-2">4. Download the Edited PDF</h3>
+                                <p class="text-secondary small mb-0">Review the edited pages in the workspace, including pages you did not change, before choosing <strong class="text-white">Download PDF</strong>. Open the downloaded file in a PDF reader and inspect it again. For more extensive text editing, you may find it useful to <a href="{{ route('pdf.to.word') }}">convert a PDF to Word</a>, then use <a href="{{ route('word.pdf.index') }}">Word to PDF</a> when you are ready to export.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ EDIT EXISTING TEXT ═══ -->
+                <div class="seo-card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="text-white fw-bold h4 mb-3">Edit Existing PDF Text</h2>
+                        <p class="text-secondary mb-3">When the editor can extract text from a PDF page, selecting a text element lets you change its content and apply the available formatting. The page is rendered as a visual reference, while editable text elements are reconstructed over that rendered view for interaction and export. This process does not fully reconstruct the PDF's original text structure or every relationship between its text, fonts, and layout.</p>
+                        <p class="text-secondary mb-0">PDFs vary in how they store text. A file may use unusual character mappings, embedded fonts, separate glyphs, or layout instructions that make extraction incomplete. In those cases, some words may not be selectable, or a change may not align exactly with the original. If the selected text does not behave as expected, keep the source file and avoid relying on the edited copy without a careful review.</p>
+                    </div>
+                </div>
+
+                <!-- ═══ ADD NEW TEXT & FORMATTING ═══ -->
+                <div class="row g-3 mb-5">
+                    <div class="col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 text-success mb-3" style="width:44px;height:44px;">
+                                    <i class="fas fa-plus-square"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-3">Add New Text to a PDF</h3>
+                                <p class="text-secondary small mb-3">The <strong class="text-white">Add Text</strong> control creates a text box that can be used for a short label, a note, or additional information. Enter the wording, then position the new text using the editor's existing controls. Use a concise amount of text and check its placement against the page content, since a new box may overlap other material or extend beyond the intended area.</p>
+                                <p class="text-secondary small mb-0">New text is not the same as changing the PDF's underlying page design. This editor provides text editing and text-box overlays; it does not offer general-purpose insertion of images, signatures, shapes, or other objects. If your document needs those kinds of changes, choose an application designed for that work.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 text-warning mb-3" style="width:44px;height:44px;">
+                                    <i class="fas fa-font"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-3">Change PDF Text Fonts, Sizes and Colors</h3>
+                                <p class="text-secondary small mb-3">For a selected or added text element, the toolbar provides font selection, font-size choices, and a text-color control. Bold, italic, and underline options are also available. These controls can help make a small correction or added note clearer, but they do not guarantee that the edited text will look identical to the original PDF.</p>
+                                <p class="text-secondary small mb-0">The available output fonts may differ from fonts embedded in the source document. A replacement font can have different character widths and shapes, which may change line breaks or spacing. Preview each change at a useful zoom level, and check the exported page because the final appearance can differ from the editing view.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ UNDO / NAVIGATE ═══ -->
+                <div class="seo-card shadow-sm mb-5">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2 mb-3">Navigation & Review</span>
+                        <h2 class="text-white fw-bold h4 mb-3">Undo, Redo and Navigate PDF Pages</h2>
+                        <p class="text-secondary mb-3">Use Undo and Redo to move through supported editing actions. The zoom controls help you inspect small text and page details, while the page thumbnails provide previews for moving through a multi-page document. These are navigation and review aids, not controls for rearranging or rebuilding the pages.</p>
+                        <p class="text-secondary mb-0">Before downloading, revisit pages with edits and scan the remaining pages for unexpected display issues. Undo or redo a change if needed, then inspect the downloaded PDF separately. Keeping the original gives you a way back if an edit or export does not meet your needs.</p>
+                    </div>
+                </div>
+
+                <!-- ═══ SCANNED DOCS vs TEXT + REDACTION ═══ -->
+                <div class="text-center mb-4 mt-5">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Limitations & Safety</span>
+                    <h2 class="text-white fw-bold mb-0">Scanned Documents and Redaction</h2>
+                </div>
+
+                <div class="row g-3 mb-5">
+                    <div class="col-md-6">
+                        <div class="seo-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25 text-info mb-3" style="width:44px;height:44px;">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-3">PDF Text Editing vs Scanned Documents</h3>
+                                <p class="text-secondary small mb-3">A PDF with extractable text contains characters the editor can identify and select. A scanned PDF often contains a page-sized image instead. Although both files may look like pages of text, selecting and changing text requires the content to be available as text rather than only as pixels.</p>
+                                <p class="text-secondary small mb-0">This editor does not provide optical character recognition (OCR). It cannot turn words embedded in a scanned image into editable text by itself. If a scan needs text recognition, first use a suitable OCR tool to create a text-enabled PDF, then check the recognized text for errors before editing it here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="seo-card h-100 shadow-sm" style="border-color: rgba(239, 68, 68, 0.35) !important;">
+                            <div class="card-body p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 text-danger mb-3" style="width:44px;height:44px;">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h3 class="h6 text-white fw-semibold mb-3">Understanding PDF Text Removal and Redaction</h3>
+                                <p class="text-secondary small mb-3">The <strong class="text-white">Delete Text</strong> control can visually remove a selected text element in the edited view. For changed or deleted text, export may place a white mask over the original content and draw replacement text where applicable. A white mask changes what is visible on the page; it does not necessarily remove the original text or other underlying PDF data.</p>
+                                <p class="text-secondary small mb-0"><strong class="text-danger">Do not rely on this editor to securely redact passwords, identity numbers, financial details, or other confidential information.</strong> Visually covering text is not secure redaction, and underlying content may remain recoverable. For sensitive material, use a suitable redaction tool that actually removes the underlying information and provides a way to verify that the removal is complete. When appropriate, obtain qualified guidance before sharing the document.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ PRESERVING FORMATTING ═══ -->
+                <div class="seo-card shadow-sm mb-5">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="text-white fw-bold h4 mb-3">How to Preserve PDF Formatting When Editing</h2>
+                        <p class="text-secondary mb-3">PDFs can contain carefully positioned text, embedded fonts, and complex page layouts. Editing one text element does not rebuild the entire composition. Replacement text may use a different font, wrap onto another line, or shift relative to nearby content. The available export fonts may not include the original embedded font, and unsupported characters may be omitted during export.</p>
+                        <p class="text-secondary mb-0">Non-Latin scripts, including Urdu and Arabic, and complex text shaping may be limited by the current export process. Do not assume full Unicode support. Test important characters on a copy, download the result, and inspect every page in a PDF reader before using or sharing it.</p>
+                    </div>
+                </div>
+
+                <!-- ═══ TIPS ═══ -->
+                <div class="seo-card shadow-sm mb-5">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 mb-3">Best Practices</span>
+                        <h2 class="text-white fw-bold h4 mb-4">Tips for Editing PDF Documents Online</h2>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex gap-3">
+                                <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                                <p class="text-secondary small mb-0">Start with a PDF that contains selectable text for edits to existing wording.</p>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                                <p class="text-secondary small mb-0">Keep an unchanged copy of the original before you make edits.</p>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                                <p class="text-secondary small mb-0">Choose a suitable font size and check line breaks and spacing near each change.</p>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                                <p class="text-secondary small mb-0">Review every edited page and open the downloaded PDF in a separate reader.</p>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                                <p class="text-secondary small mb-0">Test special characters on a copy before relying on them in the final document.</p>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <i class="fas fa-check-circle text-success mt-1 flex-shrink-0"></i>
+                                <p class="text-secondary small mb-0">Do not use visual text masking for confidential or security-sensitive redaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ FAQ ═══ -->
+                <div class="text-center mb-4 mt-5">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">FAQ</span>
+                    <h2 class="text-white fw-bold mb-0">Frequently Asked Questions About PDF Editing</h2>
+                </div>
+
+                <div class="accordion mb-5" id="pdfEditorFaqAccordion">
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqOne">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Is XConvertifire's PDF Editor free?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqOne" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                The editor is presented as a free online tool. Upload limits and document compatibility still apply, and you should review the result before relying on it.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqTwo">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I edit PDF text online?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqTwo" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                You can edit text that the editor can extract, add text boxes, apply available formatting, and download an updated PDF. Not every PDF stores its text in a form that can be edited accurately.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqThree">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                How do I add new text to a PDF?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqThree" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                Upload the PDF, choose <strong>Add Text</strong>, enter your content, position the new text box with the existing controls, and review the page before downloading.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqFour">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I change the font or color of PDF text?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqFour" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                The toolbar includes font, size, color, bold, italic, and underline controls for supported text. Available fonts may not match the source PDF's embedded fonts, so exact visual matching is not guaranteed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqFive">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I delete text from a PDF?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqFive" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                The Delete Text control can visually remove selected text in the edited output. It should not be treated as secure removal of the underlying PDF content.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqSix">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Does deleting text permanently remove it from the PDF?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqSix" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                Not necessarily. The export may cover original content with a white mask, which can leave underlying information in the PDF. Do not use this method as secure redaction.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqSeven">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I securely redact confidential information?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqSeven" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                No. Use a dedicated redaction tool that removes sensitive data from the underlying document and lets you verify the result. Do not rely on this editor to redact confidential information.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqEight">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I edit a scanned PDF?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqEight" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                This editor does not include OCR. Text that appears only inside a scanned page image is not selectable for editing here. Use an OCR tool first if you need recognized text, then check its accuracy.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqNine">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                What is the maximum PDF upload size?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqNine" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                The upload interface lists a maximum file size of 50 MB.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqTen">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I undo and redo edits?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqTen" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                Yes. The editor has Undo and Redo controls for supported editing actions. Review the page after undoing or reapplying a change.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqEleven">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Does the editor support multi-page PDFs?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqEleven" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                The editor displays PDF page previews and thumbnails for navigating the document. How a particular file loads can depend on its structure and compatibility.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqTwelve">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Will the original PDF formatting be preserved?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqTwelve" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                Exact preservation is not guaranteed. Different fonts, text widths, line wrapping, complex layouts, or export limitations can change the appearance. Inspect the downloaded file page by page.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqThirteen">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Can I edit Urdu or other non-Latin text?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqThirteen" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                Support is not guaranteed. The current export process may omit unsupported characters or fail to handle complex text shaping. Test a copy and verify the downloaded result before depending on it.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card mb-2 overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqFourteen">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                How do I download an edited PDF?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqFourteen" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                Review the pages in the editor, then select <strong>Download PDF</strong>. Open the downloaded file in a PDF reader and check that the content and layout are as expected.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seo-card overflow-hidden">
+                        <h3 class="accordion-header m-0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdfFaqFifteen">
+                                <i class="fas fa-question-circle text-primary me-2"></i>
+                                Is PDF editing performed in the browser?
+                            </button>
+                        </h3>
+                        <div id="pdfFaqFifteen" class="accordion-collapse collapse" data-bs-parent="#pdfEditorFaqAccordion">
+                            <div class="accordion-body small">
+                                This page renders and edits the selected document through browser-loaded PDF.js and pdf-lib libraries. Their project pages explain <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener noreferrer">PDF.js rendering</a> and <a href="https://pdf-lib.js.org/" target="_blank" rel="noopener noreferrer">PDF document creation and modification</a>. This description is not a privacy or security guarantee; consider the document's sensitivity before uploading it.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ═══ FINAL CTA ═══ -->
+                <div class="seo-card shadow-lg">
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <h2 class="text-white fw-bold mb-3">Edit Your PDF Online for Free</h2>
+                        <p class="text-secondary mb-4 mx-auto" style="max-width: 620px;">Upload your PDF, update selectable text, add new text and download your edited document with XConvertifire.</p>
+                        <a href="#pdfUploadSection" class="btn btn-primary btn-lg fw-semibold px-4 py-2" id="pdfEditorSeoCta">
+                            <i class="fas fa-file-pdf me-2"></i>Edit Your PDF Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </section>
+
     </main>
 @endsection
 @section('scripts')
@@ -1733,1705 +2183,1695 @@
             }
         }
     </style>
-    <script>
-        $(function() {
-            /* =====================================================
-               PDF.JS
-            ====================================================== */
-            pdfjsLib.GlobalWorkerOptions.workerSrc =
-                'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-            const {
-                PDFDocument,
-                StandardFonts,
-                rgb
-            } = PDFLib;
-            /* =====================================================
-               GLOBAL STATE
-            ====================================================== */
-            let pdfDocument = null;
-            let originalPdfBytes = null;
-            let originalFileName = 'document.pdf';
-            let pages = [];
-            let selectedTextId = null;
-            let selectedElement = null;
-            let zoom = 1;
-            let history = [];
-            let historyIndex = -1;
-            let historyTimer = null;
-            let isRendering = false;
-            /* =====================================================
-               HELPERS
-            ====================================================== */
-            function showLoading(text) {
-                $('#pdfLoadingText').text(text || 'Preparing PDF...');
-                $('#pdfLoadingOverlay').removeClass('d-none');
-            }
+<style>
+    /* ---------- PDF editor refinements ---------- */
+    .pdf-pages-container { position: relative; }
 
-            function hideLoading() {
-                $('#pdfLoadingOverlay').addClass('d-none');
-            }
+    .pdf-page-wrapper { background: #fff; flex-shrink: 0; }
 
-            function uid(prefix = 'text') {
-                return prefix + '_' +
-                    Date.now().toString(36) +
-                    '_' +
-                    Math.random().toString(36).substring(2, 8);
-            }
+    .pdf-page-placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        color: #9aa0a6;
+    }
 
-            function escapeHtml(value) {
-                return $('<div>')
-                    .text(value || '')
-                    .html();
-            }
+    .pdf-text-layer { overflow: visible; }
 
-            function getPlainText(element) {
-                return $(element)
-                    .text()
-                    .replace(/\u00a0/g, ' ')
-                    .replace(/\r/g, '')
-                    .trimEnd();
-            }
+    /* The white mask only appears while text is focused or modified */
+    .pdf-text-mask { display: none; }
 
-            function hexToRgb(hex) {
-                hex = String(hex || '#111111')
-                    .replace('#', '');
-                if (hex.length === 3) {
-                    hex = hex.split('')
-                        .map(x => x + x)
-                        .join('');
+    .pdf-editable-text {
+        white-space: pre;
+        line-height: 1;
+        width: max-content;
+        max-width: none;
+        caret-color: #0d6efd;
+        border-radius: 2px;
+        transition: none;
+        -webkit-text-size-adjust: none;
+    }
+
+    .pdf-editable-text:hover {
+        background: rgba(13, 110, 253, .10);
+        outline: 1px solid rgba(13, 110, 253, .35);
+        outline-offset: 1px;
+    }
+
+    .pdf-editable-text:focus {
+        background: transparent;
+        outline: 2px solid rgba(13, 110, 253, .65);
+        outline-offset: 2px;
+    }
+
+    .pdf-selection-highlight {
+        outline: 2px solid rgba(13, 110, 253, .7) !important;
+        outline-offset: 2px;
+    }
+
+    /* Added text boxes */
+    .pdf-added-box {
+        position: absolute;
+        z-index: 30;
+        pointer-events: auto;
+    }
+
+    .pdf-added-box .pdf-added-text {
+        position: relative;
+        left: auto;
+        top: auto;
+        border: 0;
+        padding: 0 !important;
+        resize: none;
+        overflow: visible;
+        cursor: text;
+        min-width: 40px;
+        min-height: 1em;
+        background: transparent;
+        box-shadow: none;
+        line-height: 1.2;
+    }
+
+    .pdf-added-box:hover .pdf-added-text,
+    .pdf-added-box.selected .pdf-added-text {
+        outline: 1px dashed rgba(13, 110, 253, .85);
+        outline-offset: 3px;
+        background: transparent;
+    }
+
+    .pdf-drag-handle {
+        position: absolute;
+        left: -2px;
+        top: -22px;
+        height: 22px;
+        min-width: 28px;
+        padding: 0 8px;
+        border-radius: 6px 6px 6px 0;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 11px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+        touch-action: none;
+        user-select: none;
+        z-index: 2;
+    }
+
+    .pdf-drag-handle:active { cursor: grabbing; }
+
+    .pdf-added-box:hover .pdf-drag-handle,
+    .pdf-added-box.selected .pdf-drag-handle,
+    .pdf-added-box:focus-within .pdf-drag-handle {
+        display: flex;
+    }
+</style>
+
+<script>
+    $(function () {
+        'use strict';
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const { PDFDocument, StandardFonts, rgb, degrees } = PDFLib;
+
+        /* =====================================================
+           CONSTANTS
+        ====================================================== */
+        const ZOOM_STEPS = [0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3];
+        const MAX_CANVAS_PIXELS = 16000000;
+        const DEFAULT_COLOR = '#111111';
+
+        const FONT_STACKS = {
+            'Helvetica': '"Helvetica Neue", Helvetica, Arial, sans-serif',
+            'Times-Roman': '"Times New Roman", Times, serif',
+            'Courier': '"Courier New", Courier, monospace'
+        };
+
+        // ascent and descent ratios, used to place the baseline exactly on screen
+        const FONT_METRICS = {
+            'Helvetica': { a: 0.905, d: 0.212 },
+            'Times-Roman': { a: 0.891, d: 0.216 },
+            'Courier': { a: 0.833, d: 0.300 }
+        };
+
+        // order: regular, bold, italic, bold italic
+        const STD_FONTS = {
+            'Helvetica': ['Helvetica', 'HelveticaBold', 'HelveticaOblique', 'HelveticaBoldOblique'],
+            'Times-Roman': ['TimesRoman', 'TimesRomanBold', 'TimesRomanItalic', 'TimesRomanBoldItalic'],
+            'Courier': ['Courier', 'CourierBold', 'CourierOblique', 'CourierBoldOblique']
+        };
+
+        const NORMALIZE_MAP = {
+            '\u00a0': ' ', '\u2009': ' ', '\u202f': ' ', '\u2002': ' ', '\u2003': ' ',
+            '\u2212': '-', '\u2010': '-', '\u2011': '-',
+            '\ufb00': 'ff', '\ufb01': 'fi', '\ufb02': 'fl', '\ufb03': 'ffi', '\ufb04': 'ffl'
+        };
+
+        const PLAINTEXT_ONLY = (function () {
+            try {
+                const el = document.createElement('div');
+                el.contentEditable = 'plaintext-only';
+                return el.contentEditable === 'plaintext-only';
+            } catch (e) {
+                return false;
+            }
+        })();
+
+        /* =====================================================
+           STATE
+        ====================================================== */
+        let pdfDocument = null;
+        let originalPdfBytes = null;
+        let originalFileName = 'document.pdf';
+
+        let pages = [];
+        let pdfPages = [];
+        let pageState = {};
+        let dom = {};
+        const colorCache = {};
+        const sampledPages = new Set();
+
+        let selectedTextId = null;
+        let focusedId = null;
+
+        let zoom = 1;
+        let renderEpoch = 0;
+        let observer = null;
+        let zoomTimer = null;
+        let thumbEpoch = 0;
+        let scrollTick = false;
+        let exporting = false;
+
+        let history = [];
+        let historyIndex = -1;
+        let historyTimer = null;
+
+        let supportedSet = null;
+
+        /* =====================================================
+           SMALL HELPERS
+        ====================================================== */
+        function showLoading(text) {
+            $('#pdfLoadingText').text(text || 'Preparing PDF...');
+            $('#pdfLoadingOverlay').removeClass('d-none');
+        }
+
+        function hideLoading() {
+            $('#pdfLoadingOverlay').addClass('d-none');
+        }
+
+        function setStatus(text) {
+            $('#editorStatus').text(text);
+        }
+
+        function uid(prefix) {
+            return (prefix || 'id') + '_' + Date.now().toString(36) + '_' +
+                Math.random().toString(36).substring(2, 8);
+        }
+
+        function clamp(v, min, max) {
+            return Math.min(max, Math.max(min, v));
+        }
+
+        function round2(v) {
+            return Math.round(v * 100) / 100;
+        }
+
+        function hexToRgb(hex) {
+            hex = String(hex || DEFAULT_COLOR).replace('#', '');
+            if (hex.length === 3) {
+                hex = hex.split('').map(function (x) { return x + x; }).join('');
+            }
+            return {
+                r: parseInt(hex.substring(0, 2), 16) / 255,
+                g: parseInt(hex.substring(2, 4), 16) / 255,
+                b: parseInt(hex.substring(4, 6), 16) / 255
+            };
+        }
+
+        function toHex(r, g, b) {
+            return '#' + [r, g, b].map(function (x) {
+                return clamp(Math.round(x), 0, 255).toString(16).padStart(2, '0');
+            }).join('');
+        }
+
+        function normalizeText(str) {
+            return String(str || '').replace(/[\u00a0\u2009\u202f\u2002\u2003\u2212\u2010\u2011\ufb00-\ufb04]/g,
+                function (ch) { return NORMALIZE_MAP[ch] || ch; });
+        }
+
+        function getPlainText(el) {
+            return (el.innerText || el.textContent || '')
+                .replace(/\u00a0/g, ' ')
+                .replace(/\r/g, '')
+                .replace(/\n$/, '');
+        }
+
+        function pageWrapper(pageId) {
+            return $('.pdf-page-wrapper[data-page-id="' + pageId + '"]');
+        }
+
+        function baselineOffset(family, lineHeight) {
+            const m = FONT_METRICS[family] || FONT_METRICS.Helvetica;
+            return (lineHeight - (m.a + m.d)) / 2 + m.a;
+        }
+
+        function getPixelRatio(w, h) {
+            let r = Math.min(window.devicePixelRatio || 1, 2);
+            if (w * h * r * r > MAX_CANVAS_PIXELS) {
+                r = Math.sqrt(MAX_CANVAS_PIXELS / (w * h));
+            }
+            return Math.max(r, 0.5);
+        }
+
+        /* =====================================================
+           SUPPORTED CHARACTERS (standard PDF fonts)
+        ====================================================== */
+        async function ensureSupportedSet() {
+            if (supportedSet) {
+                return;
+            }
+            try {
+                const tmp = await PDFDocument.create();
+                const font = await tmp.embedFont(StandardFonts.Helvetica);
+                supportedSet = new Set(font.getCharacterSet());
+            } catch (e) {
+                supportedSet = new Set();
+                for (let i = 32; i <= 126; i++) { supportedSet.add(i); }
+                for (let i = 160; i <= 255; i++) { supportedSet.add(i); }
+                [0x20AC, 0x2018, 0x2019, 0x201C, 0x201D, 0x2013, 0x2014, 0x2022, 0x2026, 0x2122,
+                    0x2020, 0x2021, 0x2030, 0x0152, 0x0153, 0x0160, 0x0161, 0x0178, 0x017D,
+                    0x017E, 0x2039, 0x203A, 0x201A, 0x201E, 0x0192, 0x02C6, 0x02DC
+                ].forEach(function (c) { supportedSet.add(c); });
+            }
+        }
+
+        function isSupportedString(str) {
+            const clean = normalizeText(str);
+            for (const ch of clean) {
+                const cp = ch.codePointAt(0);
+                if (cp < 32 || ch === '\n' || ch === '\t') { continue; }
+                if (!supportedSet.has(cp)) { return false; }
+            }
+            return true;
+        }
+
+        function sanitizeForExport(str, dropped) {
+            let out = '';
+            for (const ch of normalizeText(str)) {
+                const cp = ch.codePointAt(0);
+                if (ch === '\n') { out += ch; continue; }
+                if (ch === '\t') { out += '    '; continue; }
+                if (cp < 32 || cp === 127) { continue; }
+                if (/[\u200B-\u200D\uFEFF]/.test(ch)) { continue; }
+                if (supportedSet.has(cp)) {
+                    out += ch;
+                } else {
+                    dropped.add(ch);
                 }
-                return {
-                    r: parseInt(hex.substring(0, 2), 16) / 255,
-                    g: parseInt(hex.substring(2, 4), 16) / 255,
-                    b: parseInt(hex.substring(4, 6), 16) / 255
-                };
             }
+            return out;
+        }
 
-            function rgbToHex(color) {
-                if (!color) {
-                    return '#111111';
-                }
-                const r = Math.max(
-                    0,
-                    Math.min(255, Math.round(color.r * 255))
-                );
-                const g = Math.max(
-                    0,
-                    Math.min(255, Math.round(color.g * 255))
-                );
-                const b = Math.max(
-                    0,
-                    Math.min(255, Math.round(color.b * 255))
-                );
-                return '#' + [r, g, b]
-                    .map(x => x.toString(16).padStart(2, '0'))
-                    .join('');
-            }
+        /* =====================================================
+           TEXT MODEL
+        ====================================================== */
+        function isModified(t) {
+            if (t.added || t.deleted) { return true; }
+            const o = t.orig;
+            return t.text !== o.text ||
+                t.fontFamily !== o.fontFamily ||
+                t.fontSize !== o.fontSize ||
+                t.bold !== o.bold ||
+                t.italic !== o.italic ||
+                t.underline !== o.underline ||
+                t.color !== o.color;
+        }
 
-            function normalizeColor(color) {
-                if (!color) {
-                    return '#111111';
-                }
-                if (typeof color === 'string') {
-                    return color;
-                }
-                if (color.startsWith) {
-                    return color;
-                }
-                return '#111111';
-            }
-            /* =====================================================
-               HISTORY
-            ====================================================== */
-            function createSnapshot() {
-                return JSON.stringify(pages);
-            }
+        function resetToOrig(t) {
+            const o = t.orig;
+            t.text = o.text;
+            t.fontFamily = o.fontFamily;
+            t.fontSize = o.fontSize;
+            t.bold = o.bold;
+            t.italic = o.italic;
+            t.underline = o.underline;
+            t.color = o.color;
+            t.deleted = false;
+        }
 
-            function restoreSnapshot(snapshot) {
-                try {
-                    pages = JSON.parse(snapshot);
-                    selectedTextId = null;
-                    selectedElement = null;
-                    renderAllPages();
-                } catch (error) {
-                    console.error(error);
-                }
-            }
+        function pickState(t) {
+            return {
+                id: t.id, pageId: t.pageId, added: t.added, deleted: t.deleted,
+                text: t.text, fontFamily: t.fontFamily, fontSize: t.fontSize,
+                bold: t.bold, italic: t.italic, underline: t.underline,
+                color: t.color, x: t.x, baseline: t.baseline, width: t.width
+            };
+        }
 
-            function saveHistory() {
-                clearTimeout(historyTimer);
-                historyTimer = setTimeout(function() {
-                    const snapshot = createSnapshot();
-                    if (
-                        history.length &&
-                        history[historyIndex] === snapshot
-                    ) {
-                        return;
+        function textColor(t) {
+            const c = colorCache[t.id];
+            return t.color || (c && c.color) || DEFAULT_COLOR;
+        }
+
+        function bgColor(t) {
+            const c = colorCache[t.id];
+            return (c && c.bg) || '#ffffff';
+        }
+
+        // area of the original text that must be covered when text is changed
+        function maskRect(t) {
+            const o = t.added ? t : t.orig;
+            return {
+                left: o.x - 0.5,
+                top: o.baseline - o.fontSize * 0.9,
+                width: o.width + 2,
+                height: o.fontSize * 1.15
+            };
+        }
+
+        function findText(id) {
+            for (const p of pages) {
+                const found = p.texts.find(function (t) { return t.id === id; });
+                if (found) { return found; }
+            }
+            return null;
+        }
+
+        function getSelectedText() {
+            return selectedTextId ? findText(selectedTextId) : null;
+        }
+
+        /* =====================================================
+           HISTORY
+        ====================================================== */
+        function createSnapshot() {
+            const out = [];
+            pages.forEach(function (p) {
+                p.texts.forEach(function (t) {
+                    if (t.added || t.deleted || isModified(t)) {
+                        out.push(pickState(t));
                     }
-                    history =
-                        history.slice(0, historyIndex + 1);
-                    history.push(snapshot);
-                    historyIndex = history.length - 1;
-                    if (history.length > 80) {
-                        history.shift();
-                        historyIndex--;
-                    }
-                    updateHistoryButtons();
-                }, 300);
-            }
+                });
+            });
+            return JSON.stringify(out);
+        }
 
-            function saveHistoryImmediately() {
-                clearTimeout(historyTimer);
-                const snapshot = createSnapshot();
-                if (
-                    history.length &&
-                    history[historyIndex] === snapshot
-                ) {
-                    return;
-                }
-                history =
-                    history.slice(0, historyIndex + 1);
-                history.push(snapshot);
-                historyIndex = history.length - 1;
+        function restoreSnapshot(snapshot) {
+            const list = JSON.parse(snapshot);
+            const byId = {};
+            list.forEach(function (e) { byId[e.id] = e; });
+
+            pages.forEach(function (p) {
+                p.texts = p.texts.filter(function (t) { return !t.added; });
+                p.texts.forEach(function (t) {
+                    resetToOrig(t);
+                    if (byId[t.id]) { Object.assign(t, byId[t.id]); }
+                });
+                list.forEach(function (e) {
+                    if (e.added && e.pageId === p.id) {
+                        p.texts.push(Object.assign({ orig: null, locked: false }, e));
+                    }
+                });
+            });
+
+            if (selectedTextId && !findText(selectedTextId)) { selectedTextId = null; }
+            focusedId = null;
+            if (document.activeElement && document.activeElement.blur &&
+                $(document.activeElement).hasClass('pdf-editable-text')) {
+                document.activeElement.blur();
+            }
+            pages.forEach(function (p) {
+                const st = pageState[p.id];
+                if (st && st.rendered) { buildTextLayer(p); }
+            });
+        }
+
+        function commitSnapshot() {
+            const snap = createSnapshot();
+            if (history[historyIndex] === snap) {
                 updateHistoryButtons();
+                return;
+            }
+            history = history.slice(0, historyIndex + 1);
+            history.push(snap);
+            historyIndex = history.length - 1;
+            if (history.length > 100) {
+                history.shift();
+                historyIndex--;
+            }
+            updateHistoryButtons();
+        }
+
+        function saveHistory() {
+            clearTimeout(historyTimer);
+            $('#undoBtn').prop('disabled', false);
+            historyTimer = setTimeout(function () {
+                historyTimer = null;
+                commitSnapshot();
+            }, 350);
+        }
+
+        function saveHistoryImmediately() {
+            clearTimeout(historyTimer);
+            historyTimer = null;
+            commitSnapshot();
+        }
+
+        function flushHistory() {
+            if (historyTimer) {
+                clearTimeout(historyTimer);
+                historyTimer = null;
+                commitSnapshot();
+            }
+        }
+
+        function updateHistoryButtons() {
+            $('#undoBtn').prop('disabled', historyIndex <= 0);
+            $('#redoBtn').prop('disabled', historyIndex >= history.length - 1);
+        }
+
+        function undo() {
+            flushHistory();
+            if (historyIndex <= 0) { return; }
+            historyIndex--;
+            restoreSnapshot(history[historyIndex]);
+            updateHistoryButtons();
+        }
+
+        function redo() {
+            flushHistory();
+            if (historyIndex >= history.length - 1) { return; }
+            historyIndex++;
+            restoreSnapshot(history[historyIndex]);
+            updateHistoryButtons();
+        }
+
+        $('#undoBtn').on('click', undo);
+        $('#redoBtn').on('click', redo);
+
+        /* =====================================================
+           FILE UPLOAD
+        ====================================================== */
+        $('#pdfFileInput').on('change', function () {
+            const file = this.files[0];
+            this.value = '';
+            if (file) { loadPdf(file); }
+        });
+
+        $('#uploadArea').on('dragover', function (e) {
+            e.preventDefault();
+            $(this).addClass('border-primary');
+        });
+
+        $('#uploadArea').on('dragleave', function () {
+            $(this).removeClass('border-primary');
+        });
+
+        $('#uploadArea').on('drop', function (e) {
+            e.preventDefault();
+            $(this).removeClass('border-primary');
+            const file = e.originalEvent.dataTransfer.files[0];
+            if (file) { loadPdf(file); }
+        });
+
+        // a missed drop should not navigate away from the page
+        $(window).on('dragover drop', function (e) { e.preventDefault(); });
+
+        function detectFont(page, item, styles) {
+            let name = '';
+            let bold = false;
+            let italic = false;
+            try {
+                if (page.commonObjs.has(item.fontName)) {
+                    const f = page.commonObjs.get(item.fontName);
+                    name = String(f.name || '');
+                    bold = !!f.bold;
+                    italic = !!f.italic;
+                }
+            } catch (e) { /* font info is optional */ }
+
+            const n = name.replace(/^[A-Z]{6}\+/, '').toLowerCase();
+            if (/bold|black|heavy|semibold|demi/.test(n)) { bold = true; }
+            if (/italic|oblique/.test(n)) { italic = true; }
+
+            const generic = ((styles[item.fontName] || {}).fontFamily || '').toLowerCase();
+            let family = 'Helvetica';
+            if (/courier|mono|consol|typewriter/.test(n) || generic === 'monospace') {
+                family = 'Courier';
+            } else if (/times|serif|georgia|garamond|palatino|cambria|minion/.test(n) && !/sans/.test(n)) {
+                family = 'Times-Roman';
+            } else if (generic === 'serif' && !/arial|helvet|sans|calibri|verdana|tahoma/.test(n)) {
+                family = 'Times-Roman';
+            }
+            return { family: family, bold: bold, italic: italic };
+        }
+
+        async function extractTexts(page, pd, viewport) {
+            try { await page.getOperatorList(); } catch (e) { /* loads fonts, optional */ }
+            const content = await page.getTextContent();
+            const styles = content.styles || {};
+            const runs = [];
+            let cur = null;
+
+            function flush() {
+                if (cur) { runs.push(cur); cur = null; }
             }
 
-            function updateHistoryButtons() {
-                $('#undoBtn').prop(
-                    'disabled',
-                    historyIndex <= 0
-                );
-                $('#redoBtn').prop(
-                    'disabled',
-                    historyIndex >= history.length - 1
-                );
-            }
-            /* =====================================================
-               FILE UPLOAD
-            ====================================================== */
-            $('#pdfFileInput').on('change', function() {
-                const file = this.files[0];
-                if (file) {
-                    loadPdf(file);
-                }
-            });
-            $('#uploadArea').on('dragover', function(e) {
-                e.preventDefault();
-                $(this).addClass('border-primary');
-            });
-            $('#uploadArea').on('dragleave', function() {
-                $(this).removeClass('border-primary');
-            });
-            $('#uploadArea').on('drop', function(e) {
-                e.preventDefault();
-                $(this).removeClass('border-primary');
-                const file =
-                    e.originalEvent.dataTransfer.files[0];
-                if (
-                    file &&
-                    (
-                        file.type === 'application/pdf' ||
-                        file.name.toLowerCase().endsWith('.pdf')
-                    )
-                ) {
-                    loadPdf(file);
-                } else {
-                    alert('Please select a PDF file.');
-                }
-            });
-            async function loadPdf(file) {
-                if (file.size > 50 * 1024 * 1024) {
-                    alert('Maximum PDF size is 50MB.');
-                    return;
-                }
-                try {
-                    showLoading('Reading PDF...');
-                    originalFileName = file.name;
-                    const fileBuffer =
-                        await file.arrayBuffer();
-                    originalPdfBytes =
-                        new Uint8Array(fileBuffer.slice(0));
-                    const pdfJsBytes =
-                        new Uint8Array(
-                            originalPdfBytes.slice(0)
-                        );
-                    pdfDocument =
-                        await pdfjsLib.getDocument({
-                            data: pdfJsBytes
-                        }).promise;
-                    pages = [];
-                    for (
-                        let pageNumber = 1; pageNumber <= pdfDocument.numPages; pageNumber++
-                    ) {
-                        $('#pdfLoadingText').text(
-                            `Reading page ${pageNumber} of ${pdfDocument.numPages}...`
-                        );
-                        const page =
-                            await pdfDocument.getPage(pageNumber);
-                        const viewport =
-                            page.getViewport({
-                                scale: 1
-                            });
-                        const textContent =
-                            await page.getTextContent();
-                        const pageData = {
-                            id: uid('page'),
-                            pageNumber,
-                            width: viewport.width,
-                            height: viewport.height,
-                            rotation: viewport.rotation || 0,
-                            texts: []
-                        };
-                        textContent.items.forEach(function(item, index) {
-                            if (!item.str) {
-                                return;
-                            }
-                            const transform = item.transform || [];
-                            const fontSize =
-                                Math.max(
-                                    5,
-                                    Math.abs(transform[3] || transform[0] || 12)
-                                );
-                            const x =
-                                Number(transform[4] || 0);
-                            const y =
-                                pageData.height -
-                                Number(transform[5] || 0) -
-                                fontSize;
-                            const width =
-                                Math.max(
-                                    Number(item.width || 0),
-                                    3
-                                );
-                            const height =
-                                Math.max(
-                                    Number(item.height || fontSize),
-                                    fontSize * 1.15
-                                );
-                            pageData.texts.push({
-                                id: uid('text'),
-                                pageId: pageData.id,
-                                sourceText: item.str,
-                                originalText: item.str,
-                                text: item.str,
-                                x,
-                                y,
-                                width,
-                                height,
-                                fontSize,
-                                fontFamily: 'Helvetica',
-                                color: '#111111',
-                                bold: false,
-                                italic: false,
-                                underline: false,
-                                deleted: false,
-                                added: false,
-                                changed: false
-                            });
-                        });
-                        pages.push(pageData);
-                    }
-                    $('#pdfUploadSection')
-                        .addClass('d-none');
-                    $('#pdfEditorSection')
-                        .removeClass('d-none');
-                    history = [];
-                    historyIndex = -1;
-                    saveHistoryImmediately();
-                    await renderAllPages();
-                    hideLoading();
-                    $('#editorStatus').text(
-                        'PDF loaded. Click any text to edit'
-                    );
-                } catch (error) {
-                    console.error(error);
-                    hideLoading();
-                    alert(
-                        'Unable to open this PDF.\n\n' +
-                        (error.message || error)
-                    );
-                }
-            }
-            /* =====================================================
-               RENDER ALL
-            ====================================================== */
-            // async function renderAllPages() {
-            //     if (!pdfDocument || isRendering) {
-            //         return;
-            //     }
-            //     isRendering = true;
-            //     $('#pdfPagesContainer').empty();
-            //     $('#pdfThumbnails').empty();
-            //     for (const pageData of pages) {
-            //         await renderPage(pageData);
-            //     }
-            //     isRendering = false;
-            // }
+            content.items.forEach(function (item) {
+                if (typeof item.str !== 'string' || !item.str.length) { return; }
 
+                const m = pdfjsLib.Util.transform(viewport.transform, item.transform);
+                const fs = Math.hypot(m[2], m[3]);
+                if (!isFinite(fs) || fs < 1) { return; }
+                // only upright, left to right text is editable
+                if (!(m[0] > 0 && m[3] < 0 && Math.abs(m[1]) < fs * 0.02)) { return; }
 
-                        async function renderAllPages() {
-                if (!pdfDocument || isRendering) {
-                    return;
-                }
-                isRendering = true;
-                const existing = $('#pdfPagesContainer .pdf-page-wrapper');
-                if (existing.length !== pages.length) {
-                    $('#pdfPagesContainer').empty();
-                    $('#pdfThumbnails').empty();
-                    for (const pageData of pages) {
-                        await renderPage(pageData);
-                    }
-                } else {
-                    for (const pageData of pages) {
-                        const wrapper = $('[data-page-id="' + pageData.id + '"]');
-                        if (!wrapper.length) continue;
-                        const layer = wrapper.find('.pdf-text-layer');
-                        layer.empty();
-                        renderTextElements(pageData, layer, {
-                            width: pageData.width * zoom,
-                            height: pageData.height * zoom
-                        });
-                    }
-                }
-                isRendering = false;
-            }
+                const f = detectFont(page, item, styles);
+                const str = normalizeText(item.str);
+                const x = m[4];
+                const base = m[5];
+                const w = Math.max(Number(item.width) || 0, 0);
 
-
-            
-            async function renderPage(pageData) {
-                const page =
-                    await pdfDocument.getPage(
-                        pageData.pageNumber
-                    );
-                const viewport =
-                    page.getViewport({
-                        scale: zoom
-                    });
-                const wrapper =
-                    $('<div class="pdf-page-wrapper"></div>')
-                    .attr('data-page-id', pageData.id)
-                    .css({
-                        width: viewport.width + 'px',
-                        height: viewport.height + 'px'
-                    });
-                const canvas =
-                    $('<canvas class="pdf-page-canvas"></canvas>');
-                canvas.attr('width', viewport.width);
-                canvas.attr('height', viewport.height);
-                canvas.css({
-                    width: viewport.width + 'px',
-                    height: viewport.height + 'px'
-                });
-                const textLayer =
-                    $('<div class="pdf-text-layer"></div>');
-                wrapper.append(canvas);
-                wrapper.append(textLayer);
-                $('#pdfPagesContainer')
-                    .append(wrapper);
-                const context =
-                    canvas[0].getContext('2d', {
-                        alpha: false
-                    });
-                await page.render({
-                    canvasContext: context,
-                    viewport: viewport
-                }).promise;
-                renderTextElements(
-                    pageData,
-                    textLayer,
-                    viewport
-                );
-                createThumbnail(
-                    pageData,
-                    page
-                );
-            }
-            /* =====================================================
-               RENDER TEXT
-            ====================================================== */
-            function renderTextElements(
-                pageData,
-                layer,
-                viewport
-            ) {
-                pageData.texts.forEach(function(text) {
-                    if (text.deleted) {
+                if (cur &&
+                    cur.family === f.family && cur.bold === f.bold && cur.italic === f.italic &&
+                    Math.abs(cur.fontSize - fs) < Math.max(0.4, fs * 0.04) &&
+                    Math.abs(cur.baseline - base) < fs * 0.2) {
+                    const gap = x - (cur.x + cur.width);
+                    if (gap > -fs * 0.5 && gap < fs * 0.8) {
+                        let sep = '';
+                        if (gap > fs * 0.12 && !/\s$/.test(cur.text) && !/^\s/.test(str)) {
+                            sep = ' '.repeat(Math.min(3, Math.max(1, Math.round(gap / (fs * 0.28)))));
+                        }
+                        cur.text += sep + str;
+                        cur.width = Math.max(cur.width, x + w - cur.x);
                         return;
                     }
-                    const scale =
-                        zoom;
-                    const left =
-                        text.x * scale;
-                    const top =
-                        text.y * scale;
-                    const width =
-                        Math.max(
-                            text.width * scale,
-                            4
-                        );
-                    const height =
-                        Math.max(
-                            text.height * scale,
-                            text.fontSize * scale * 1.15
-                        );
-                    if (!text.added) {
-                        const mask =
-                            $('<div class="pdf-text-mask"></div>');
-                        mask.css({
-                            left: left + 'px',
-                            top: top + 'px',
-                            width: Math.max(
-                                width + 5,
-                                5
-                            ) + 'px',
-                            height: Math.max(
-                                height + 4,
-                                5
-                            ) + 'px'
-                        });
-                        layer.append(mask);
-                    }
-                    const editor =
-                        $('<div></div>');
-                    editor
-                        .addClass('pdf-editable-text')
-                        .attr('contenteditable', 'true')
-                        .attr('spellcheck', 'false')
-                        .attr('data-text-id', text.id)
-                        .html(
-                            escapeHtml(text.text)
-                            .replace(/\n/g, '<br>')
-                        );
-                    let fontFamily =
-                        text.fontFamily ||
-                        'Helvetica';
-                    editor.css({
-                        left: left + 'px',
-                        top: top + 'px',
-                        minWidth: Math.max(width, 3) + 'px',
-                        minHeight: Math.max(height, 5) + 'px',
-                        fontSize: (text.fontSize * scale) + 'px',
-                        fontFamily: fontFamily === 'Times-Roman' ?
-                            'Times New Roman' : fontFamily,
-                        fontWeight: text.bold ?
-                            '700' : '400',
-                        fontStyle: text.italic ?
-                            'italic' : 'normal',
-                        textDecoration: text.underline ?
-                            'underline' : 'none',
-                        color: text.color || '#111111'
-                    });
-                    if (text.added) {
-                        editor.addClass(
-                            'pdf-added-text'
-                        );
-                        editor.css({
-                            minWidth: Math.max(width, 120) + 'px',
-                            minHeight: Math.max(height, 35) + 'px'
-                        });
-                    }
-                    editor.on('mousedown', function() {
-                        selectText(text.id, this);
-                    });
-                    editor.on('focus', function() {
-                        selectText(text.id, this);
-                    });
-                    editor.on('input', function() {
-                        const current =
-                            findText(text.id);
-                        if (!current) {
-                            return;
-                        }
-                        current.text =
-                            getPlainText(this);
-                        current.changed =
-                            current.text !==
-                            current.originalText;
-                        if (current.added) {
-                            current.width =
-                                Math.max(
-                                    $(this).outerWidth() / zoom,
-                                    80
-                                );
-                            current.height =
-                                Math.max(
-                                    $(this).outerHeight() / zoom,
-                                    25
-                                );
-                        }
-                        saveHistory();
-                    });
-                    editor.on('paste', function(e) {
-                        e.preventDefault();
-                        const clipboard =
-                            e.originalEvent.clipboardData;
-                        if (!clipboard) {
-                            return;
-                        }
-                        const textData =
-                            clipboard.getData(
-                                'text/plain'
-                            );
-                        insertPlainText(
-                            textData
-                        );
-                    });
-                    editor.on('keydown', function(e) {
-                        if (
-                            (e.ctrlKey || e.metaKey) &&
-                            e.key.toLowerCase() === 'z'
-                        ) {
-                            e.preventDefault();
-                            undo();
-                            return;
-                        }
-                        if (
-                            (e.ctrlKey || e.metaKey) &&
-                            (
-                                e.key.toLowerCase() === 'y' ||
-                                (
-                                    e.shiftKey &&
-                                    e.key.toLowerCase() === 'z'
-                                )
-                            )
-                        ) {
-                            e.preventDefault();
-                            redo();
-                            return;
-                        }
-                        if (
-                            e.key === 'Escape' &&
-                            text.added
-                        ) {
-                            selectText(
-                                text.id,
-                                this
-                            );
-                        }
-                    });
-                    if (text.added) {
-                        enableDrag(
-                            editor,
-                            text,
-                            pageData,
-                            layer
-                        );
-                    }
-                    layer.append(editor);
+                }
+
+                flush();
+                cur = {
+                    text: str, x: x, baseline: base, width: w, fontSize: fs,
+                    family: f.family, bold: f.bold, italic: f.italic
+                };
+            });
+            flush();
+
+            let lockedCount = 0;
+            runs.forEach(function (r) {
+                if (!r.text.trim()) { return; }
+                // skip duplicated overprint text (fake bold)
+                const dup = pd.texts.some(function (t) {
+                    return t.text === r.text && Math.abs(t.x - r.x) < 1 && Math.abs(t.baseline - r.baseline) < 1;
                 });
+                if (dup) { return; }
+
+                const locked = !isSupportedString(r.text);
+                if (locked) { lockedCount++; }
+                const base = {
+                    text: r.text,
+                    fontFamily: r.family,
+                    fontSize: round2(r.fontSize),
+                    bold: r.bold,
+                    italic: r.italic,
+                    underline: false,
+                    color: null,
+                    x: round2(r.x),
+                    baseline: round2(r.baseline),
+                    width: round2(Math.max(r.width, 3))
+                };
+                pd.texts.push({
+                    id: uid('t'),
+                    pageId: pd.id,
+                    text: base.text,
+                    x: base.x,
+                    baseline: base.baseline,
+                    width: base.width,
+                    fontSize: base.fontSize,
+                    fontFamily: base.fontFamily,
+                    bold: base.bold,
+                    italic: base.italic,
+                    underline: false,
+                    color: null,
+                    deleted: false,
+                    added: false,
+                    locked: locked,
+                    orig: base
+                });
+            });
+            return lockedCount;
+        }
+
+        async function loadPdf(file) {
+            if (!file) { return; }
+            if (!(file.type === 'application/pdf' || /\.pdf$/i.test(file.name))) {
+                alert('Please select a PDF file.');
+                return;
             }
-            /* =====================================================
-               SELECT TEXT
-            ====================================================== */
-            function selectText(
-                textId,
-                element
-            ) {
-                if (
-                    selectedElement &&
-                    selectedElement !== element
-                ) {
-                    $(selectedElement)
-                        .removeClass(
-                            'pdf-selection-highlight'
-                        );
-                }
-                selectedTextId = textId;
-                selectedElement = element;
-                $(element)
-                    .addClass(
-                        'pdf-selection-highlight'
-                    );
-                const text =
-                    findText(textId);
-                if (!text) {
-                    return;
-                }
-                updateToolbarFromText(text);
-                $('#editorStatus').text(
-                    text.added ?
-                    'Added text selected. Drag it to move' :
-                    'Text selected. Type to edit'
-                );
+            if (file.size > 50 * 1024 * 1024) {
+                alert('Maximum PDF size is 50MB.');
+                return;
             }
 
-            function findText(textId) {
-                for (const page of pages) {
-                    const found =
-                        page.texts.find(
-                            t => t.id === textId
-                        );
-                    if (found) {
-                        return found;
+            showLoading('Reading PDF...');
+            try {
+                await ensureSupportedSet();
+                originalFileName = file.name;
+                originalPdfBytes = new Uint8Array(await file.arrayBuffer());
+
+                $('#pdfLoadingText').text('Checking PDF...');
+                let probe;
+                try {
+                    probe = await PDFDocument.load(originalPdfBytes.slice(0), {
+                        ignoreEncryption: true,
+                        updateMetadata: false
+                    });
+                } catch (e) {
+                    throw new Error('This PDF has a structure the editor cannot save safely.');
+                }
+                if (probe.isEncrypted) {
+                    throw new Error('This PDF is encrypted, so it cannot be edited and saved here.');
+                }
+                probe = null;
+
+                try {
+                    pdfDocument = await pdfjsLib.getDocument({ data: originalPdfBytes.slice(0) }).promise;
+                } catch (e) {
+                    if (e && e.name === 'PasswordException') {
+                        throw new Error('This PDF is password protected.');
+                    }
+                    throw e;
+                }
+
+                // reset state
+                if (observer) { observer.disconnect(); }
+                pages = [];
+                pdfPages = [];
+                pageState = {};
+                dom = {};
+                Object.keys(colorCache).forEach(function (k) { delete colorCache[k]; });
+                sampledPages.clear();
+                selectedTextId = null;
+                focusedId = null;
+                renderEpoch++;
+
+                let totalTexts = 0;
+                let lockedTotal = 0;
+
+                for (let n = 1; n <= pdfDocument.numPages; n++) {
+                    $('#pdfLoadingText').text('Reading page ' + n + ' of ' + pdfDocument.numPages + '...');
+                    const page = await pdfDocument.getPage(n);
+                    const viewport = page.getViewport({ scale: 1 });
+                    const pd = {
+                        id: uid('page'),
+                        pageNumber: n,
+                        width: viewport.width,
+                        height: viewport.height,
+                        rotation: (((page.rotate || 0) % 360) + 360) % 360,
+                        view: page.view,
+                        texts: []
+                    };
+                    lockedTotal += await extractTexts(page, pd, viewport);
+                    totalTexts += pd.texts.length;
+                    pdfPages.push(page);
+                    pages.push(pd);
+                }
+
+                $('#pdfUploadSection').addClass('d-none');
+                $('#pdfEditorSection').removeClass('d-none');
+
+                // fit the first page to the available width
+                const container = $('#pdfPagesContainer')[0];
+                const cs = window.getComputedStyle(container);
+                const pad = (parseFloat(cs.paddingLeft) || 0) + (parseFloat(cs.paddingRight) || 0);
+                const maxW = Math.max.apply(null, pages.map(function (p) { return p.width; }));
+                zoom = clamp(round2((container.clientWidth - pad) / maxW), 0.5, 1.25);
+                $('#zoomValue').text(Math.round(zoom * 100) + '%');
+
+                setupObserver();
+                buildPageShells();
+
+                history = [];
+                historyIndex = -1;
+                commitSnapshot();
+
+                setTimeout(buildThumbnails, 600);
+                hideLoading();
+
+                if (totalTexts === 0) {
+                    setStatus('No selectable text found. Use Add Text to place new text');
+                    alert('No selectable text was found. This PDF looks like a scan, so you can only add new text boxes.');
+                } else if (lockedTotal > 0) {
+                    setStatus('PDF loaded. ' + lockedTotal + ' text block(s) in unsupported scripts are locked');
+                } else {
+                    setStatus('PDF loaded. Click any text to edit');
+                }
+            } catch (error) {
+                console.error(error);
+                hideLoading();
+                alert('Unable to open this PDF.\n\n' + (error.message || error));
+            }
+        }
+
+        /* =====================================================
+           PAGE SHELLS AND LAZY RENDERING
+        ====================================================== */
+        function setupObserver() {
+            observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    const id = entry.target.getAttribute('data-page-id');
+                    const pd = pages.find(function (p) { return p.id === id; });
+                    const st = pd && pageState[pd.id];
+                    if (!pd || !st) { return; }
+                    st.visible = entry.isIntersecting;
+                    if (entry.isIntersecting) {
+                        renderPage(pd);
+                    } else {
+                        unrenderPage(pd);
+                    }
+                });
+            }, {
+                root: $('#pdfPagesContainer')[0],
+                rootMargin: '1500px 0px'
+            });
+        }
+
+        function buildPageShells() {
+            const container = $('#pdfPagesContainer').empty();
+            pages.forEach(function (pd) {
+                pageState[pd.id] = { rendered: false, busy: false, again: false, visible: false, task: null };
+                const wrapper = $('<div class="pdf-page-wrapper"></div>')
+                    .attr('data-page-id', pd.id)
+                    .css({ width: pd.width * zoom + 'px', height: pd.height * zoom + 'px' });
+                wrapper.append('<div class="pdf-page-placeholder"><div class="spinner-border spinner-border-sm"></div></div>');
+                wrapper.append('<div class="pdf-text-layer"></div>');
+                container.append(wrapper);
+                observer.observe(wrapper[0]);
+            });
+        }
+
+        async function renderPage(pd) {
+            const st = pageState[pd.id];
+            if (!st) { return; }
+            if (st.busy) { st.again = true; return; }
+            st.busy = true;
+            const epoch = renderEpoch;
+
+            try {
+                const page = pdfPages[pd.pageNumber - 1];
+                const cssW = pd.width * zoom;
+                const cssH = pd.height * zoom;
+                const ratio = getPixelRatio(cssW, cssH);
+                const renderViewport = page.getViewport({ scale: zoom * ratio });
+
+                const canvas = document.createElement('canvas');
+                canvas.className = 'pdf-page-canvas';
+                canvas.width = Math.floor(renderViewport.width);
+                canvas.height = Math.floor(renderViewport.height);
+                canvas.style.width = cssW + 'px';
+                canvas.style.height = cssH + 'px';
+                const ctx = canvas.getContext('2d', { alpha: false });
+
+                st.task = page.render({ canvasContext: ctx, viewport: renderViewport });
+                await st.task.promise;
+                st.task = null;
+
+                const wrapper = pageWrapper(pd.id);
+                if (epoch !== renderEpoch) { st.again = true; return; }
+                if (!wrapper.length || !st.visible) { return; }
+
+                wrapper.find('.pdf-page-canvas').remove();
+                wrapper.find('.pdf-page-placeholder').remove();
+                wrapper.css({ width: cssW + 'px', height: cssH + 'px' }).prepend(canvas);
+
+                if (!sampledPages.has(pd.id)) {
+                    sampledPages.add(pd.id);
+                    sampleColors(pd, ctx, canvas, renderViewport.scale);
+                }
+
+                buildTextLayer(pd);
+                st.rendered = true;
+            } catch (err) {
+                st.task = null;
+                if (!(err && err.name === 'RenderingCancelledException')) {
+                    console.error(err);
+                }
+            } finally {
+                st.busy = false;
+                if (st.again) {
+                    st.again = false;
+                    if (st.visible) { renderPage(pd); }
+                }
+            }
+        }
+
+        function unrenderPage(pd) {
+            const st = pageState[pd.id];
+            if (!st || !st.rendered || st.busy) { return; }
+            const sel = getSelectedText();
+            if (sel && sel.pageId === pd.id) { return; }
+
+            const wrapper = pageWrapper(pd.id);
+            wrapper.find('.pdf-page-canvas').remove();
+            wrapper.find('.pdf-text-layer').empty();
+            if (!wrapper.find('.pdf-page-placeholder').length) {
+                wrapper.prepend('<div class="pdf-page-placeholder"><div class="spinner-border spinner-border-sm"></div></div>');
+            }
+            Object.keys(dom).forEach(function (k) {
+                if (dom[k].pageId === pd.id) { delete dom[k]; }
+            });
+            try { pdfPages[pd.pageNumber - 1].cleanup(); } catch (e) { /* ignore */ }
+            st.rendered = false;
+        }
+
+        /* =====================================================
+           COLOR SAMPLING (background and text color of originals)
+        ====================================================== */
+        function sampleColors(pd, ctx, canvas, scale) {
+            let img;
+            try {
+                img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            } catch (e) {
+                return;
+            }
+            const data = img.data;
+            const W = canvas.width;
+            const H = canvas.height;
+
+            pd.texts.forEach(function (t) {
+                if (t.added || t.locked || colorCache[t.id]) { return; }
+
+                const r = maskRect(t);
+                const x0 = Math.max(0, Math.floor(r.left * scale));
+                const y0 = Math.max(0, Math.floor(r.top * scale));
+                const x1 = Math.min(W, Math.ceil((r.left + r.width) * scale));
+                const y1 = Math.min(H, Math.ceil((r.top + r.height) * scale));
+                if (x1 <= x0 || y1 <= y0) { return; }
+
+                const stepX = Math.max(1, Math.floor((x1 - x0) / 220));
+                const stepY = Math.max(1, Math.floor((y1 - y0) / 40));
+
+                const bins = {};
+                let best = null;
+                for (let y = y0; y < y1; y += stepY) {
+                    for (let x = x0; x < x1; x += stepX) {
+                        const i = (y * W + x) * 4;
+                        const key = ((data[i] >> 4) << 8) | ((data[i + 1] >> 4) << 4) | (data[i + 2] >> 4);
+                        const b = bins[key] || (bins[key] = { n: 0, r: 0, g: 0, b: 0 });
+                        b.n++; b.r += data[i]; b.g += data[i + 1]; b.b += data[i + 2];
+                        if (!best || b.n > best.n) { best = b; }
                     }
                 }
+                if (!best) { return; }
+
+                const bg = { r: best.r / best.n, g: best.g / best.n, b: best.b / best.n };
+                let maxDist = 0;
+                for (let y = y0; y < y1; y += stepY) {
+                    for (let x = x0; x < x1; x += stepX) {
+                        const i = (y * W + x) * 4;
+                        const d = Math.pow(data[i] - bg.r, 2) + Math.pow(data[i + 1] - bg.g, 2) + Math.pow(data[i + 2] - bg.b, 2);
+                        if (d > maxDist) { maxDist = d; }
+                    }
+                }
+
+                let color = null;
+                if (maxDist > 2500) {
+                    let sr = 0, sg = 0, sb = 0, n = 0;
+                    const limit = maxDist * 0.8;
+                    for (let y = y0; y < y1; y += stepY) {
+                        for (let x = x0; x < x1; x += stepX) {
+                            const i = (y * W + x) * 4;
+                            const d = Math.pow(data[i] - bg.r, 2) + Math.pow(data[i + 1] - bg.g, 2) + Math.pow(data[i + 2] - bg.b, 2);
+                            if (d >= limit) { sr += data[i]; sg += data[i + 1]; sb += data[i + 2]; n++; }
+                        }
+                    }
+                    if (n) { color = toHex(sr / n, sg / n, sb / n); }
+                }
+                colorCache[t.id] = { bg: toHex(bg.r, bg.g, bg.b), color: color };
+            });
+        }
+
+        /* =====================================================
+           TEXT LAYER
+        ====================================================== */
+        function buildTextLayer(pd) {
+            const layer = pageWrapper(pd.id).find('.pdf-text-layer').empty();
+            Object.keys(dom).forEach(function (k) {
+                if (dom[k].pageId === pd.id) { delete dom[k]; }
+            });
+            const focusedText = focusedId && findText(focusedId);
+            if (focusedText && focusedText.pageId === pd.id) { focusedId = null; }
+
+            pd.texts.forEach(function (t) { createTextNodes(pd, t, layer); });
+        }
+
+        function createTextNodes(pd, t, layer) {
+            if (t.locked) { return; }
+            const id = t.id;
+            const refs = { pageId: pd.id };
+
+            if (!t.added) {
+                refs.mask = $('<div class="pdf-text-mask"></div>');
+                layer.append(refs.mask);
+            }
+            dom[id] = refs;
+
+            if (t.deleted) {
+                applyVisual(t);
+                return;
+            }
+
+            const editor = $('<div class="pdf-editable-text"></div>')
+                .attr('contenteditable', PLAINTEXT_ONLY ? 'plaintext-only' : 'true')
+                .attr('spellcheck', 'false')
+                .attr('data-text-id', id)
+                .text(t.text);
+            refs.editor = editor;
+
+            editor.on('focus', function () {
+                focusedId = id;
+                selectText(id);
+                const cur = findText(id);
+                if (cur) { applyVisual(cur); }
+            });
+
+            editor.on('blur', function () {
+                if (focusedId === id) { focusedId = null; }
+                const cur = findText(id);
+                if (cur) { applyVisual(cur); }
+            });
+
+            editor.on('input', function () {
+                const cur = findText(id);
+                if (!cur) { return; }
+                let value = getPlainText(this);
+                if (!cur.added) { value = value.replace(/\n/g, ' '); }
+                cur.text = value;
+                applyVisual(cur);
+                saveHistory();
+                if (!isSupportedString(value)) {
+                    setStatus('Some characters are not supported by PDF standard fonts and will be left out');
+                }
+            });
+
+            editor.on('keydown', function (e) {
+                const cur = findText(id);
+                if (!cur) { return; }
+                if (e.key === 'Enter') {
+                    if (!cur.added) {
+                        e.preventDefault();
+                        this.blur();
+                    } else if (!PLAINTEXT_ONLY) {
+                        e.preventDefault();
+                        document.execCommand('insertLineBreak');
+                    }
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && !e.altKey) {
+                    const k = e.key.toLowerCase();
+                    if (k === 'b') { e.preventDefault(); toggleFormat('bold'); }
+                    if (k === 'i') { e.preventDefault(); toggleFormat('italic'); }
+                    if (k === 'u') { e.preventDefault(); toggleFormat('underline'); }
+                }
+            });
+
+            editor.on('paste', function (e) {
+                e.preventDefault();
+                const cb = (e.originalEvent || e).clipboardData;
+                if (!cb) { return; }
+                const cur = findText(id);
+                let s = cb.getData('text/plain') || '';
+                s = cur && cur.added ? s.replace(/\r/g, '') : s.replace(/\s*[\r\n]+\s*/g, ' ');
+                document.execCommand('insertText', false, s);
+            });
+
+            editor.on('drop', function (e) { e.preventDefault(); });
+
+            if (t.added) {
+                const box = $('<div class="pdf-added-box"></div>');
+                const handle = $('<div class="pdf-drag-handle" contenteditable="false" title="Drag to move"><i class="fas fa-arrows-alt"></i></div>');
+                box.append(handle, editor);
+                layer.append(box);
+                refs.box = box;
+                editor.addClass('pdf-added-text');
+                enableDrag(handle[0], id);
+            } else {
+                layer.append(editor);
+            }
+
+            if (selectedTextId === id) {
+                editor.addClass('pdf-selection-highlight');
+                if (refs.box) { refs.box.addClass('selected'); }
+            }
+            applyVisual(t);
+        }
+
+        function applyVisual(t) {
+            const r = dom[t.id];
+            if (!r) { return; }
+            const modified = isModified(t);
+            const focused = focusedId === t.id;
+
+            if (r.mask) {
+                const m = maskRect(t);
+                r.mask.css({
+                    left: m.left * zoom + 'px',
+                    top: m.top * zoom + 'px',
+                    width: m.width * zoom + 'px',
+                    height: m.height * zoom + 'px',
+                    background: bgColor(t),
+                    display: (modified || focused) ? 'block' : 'none'
+                });
+            }
+
+            if (!r.editor) { return; }
+            const lh = t.added ? 1.2 : 1;
+            const left = t.x * zoom;
+            const top = (t.baseline - baselineOffset(t.fontFamily, lh) * t.fontSize) * zoom;
+            const visible = t.added || modified || focused;
+
+            const css = {
+                fontSize: t.fontSize * zoom + 'px',
+                fontFamily: FONT_STACKS[t.fontFamily] || FONT_STACKS.Helvetica,
+                fontWeight: t.bold ? '700' : '400',
+                fontStyle: t.italic ? 'italic' : 'normal',
+                textDecoration: t.underline ? 'underline' : 'none',
+                color: visible ? textColor(t) : 'transparent',
+                lineHeight: String(lh)
+            };
+
+            if (t.added) {
+                r.box.css({ left: left + 'px', top: top + 'px' });
+            } else {
+                css.left = left + 'px';
+                css.top = top + 'px';
+                css.minWidth = Math.max(t.orig.width, 4) * zoom + 'px';
+                css.minHeight = t.fontSize * zoom + 'px';
+            }
+            r.editor.css(css);
+        }
+
+        /* =====================================================
+           SELECTION
+        ====================================================== */
+        function selectText(id) {
+            if (selectedTextId && selectedTextId !== id) {
+                const prev = dom[selectedTextId];
+                if (prev) {
+                    if (prev.editor) { prev.editor.removeClass('pdf-selection-highlight'); }
+                    if (prev.box) { prev.box.removeClass('selected'); }
+                }
+            }
+            selectedTextId = id;
+            const r = dom[id];
+            if (r) {
+                if (r.editor) { r.editor.addClass('pdf-selection-highlight'); }
+                if (r.box) { r.box.addClass('selected'); }
+            }
+            const t = findText(id);
+            if (!t) { return; }
+            updateToolbar(t);
+            setStatus(t.added ? 'Added text selected. Use the blue handle to move it'
+                : 'Editing text. Press Enter when you are done');
+        }
+
+        function deselect() {
+            if (!selectedTextId) { return; }
+            const r = dom[selectedTextId];
+            if (r) {
+                if (r.editor) { r.editor.removeClass('pdf-selection-highlight'); }
+                if (r.box) { r.box.removeClass('selected'); }
+            }
+            selectedTextId = null;
+            setStatus('Click any PDF text to edit');
+        }
+
+        $(document).on('pointerdown', function (e) {
+            if ($('#pdfEditorSection').hasClass('d-none')) { return; }
+            if ($(e.target).closest('.pdf-editable-text, .pdf-added-box, .pdf-editor-toolbar, #pdfLoadingOverlay').length) {
+                return;
+            }
+            deselect();
+        });
+
+        /* =====================================================
+           TOOLBAR
+        ====================================================== */
+        $('#fontFamilySelect').html(
+            '<option value="Helvetica">Helvetica / Arial</option>' +
+            '<option value="Times-Roman">Times New Roman</option>' +
+            '<option value="Courier">Courier</option>'
+        );
+
+        // keep the caret in the text box when a toolbar button is pressed
+        $('.pdf-editor-toolbar').on('mousedown', 'button', function (e) {
+            e.preventDefault();
+        });
+
+        function updateToolbar(t) {
+            if (!t) { return; }
+            $('#fontFamilySelect').val(t.fontFamily || 'Helvetica');
+
+            const size = Math.round(t.fontSize * 2) / 2;
+            const select = $('#fontSizeSelect');
+            const exists = select.find('option').filter(function () {
+                return parseFloat(this.value) === size;
+            }).length;
+            if (!exists) {
+                const next = select.find('option').filter(function () {
+                    return parseFloat(this.value) > size;
+                }).first();
+                const opt = $('<option></option>').val(size).text(size);
+                if (next.length) { opt.insertBefore(next); } else { select.append(opt); }
+            }
+            select.val(String(size));
+
+            $('#boldBtn').toggleClass('active', !!t.bold);
+            $('#italicBtn').toggleClass('active', !!t.italic);
+            $('#underlineBtn').toggleClass('active', !!t.underline);
+
+            const color = textColor(t);
+            $('#currentColorBar').css('background', color);
+            $('#textColorPicker').val(/^#[0-9a-f]{6}$/i.test(color) ? color : DEFAULT_COLOR);
+        }
+
+        function refocus(t) {
+            const r = dom[t.id];
+            if (r && r.editor) { r.editor[0].focus({ preventScroll: true }); }
+        }
+
+        function mutateSelected(fn, debounced) {
+            const t = getSelectedText();
+            if (!t) {
+                setStatus('Click a piece of text first');
                 return null;
             }
+            fn(t);
+            applyVisual(t);
+            updateToolbar(t);
+            if (debounced) { saveHistory(); } else { saveHistoryImmediately(); }
+            return t;
+        }
 
-            function getSelectedText() {
-                if (!selectedTextId) {
-                    return null;
-                }
-                return findText(selectedTextId);
-            }
-            /* =====================================================
-               TOOLBAR STATE
-            ====================================================== */
-            function updateToolbarFromText(text) {
-                if (!text) {
-                    return;
-                }
-                $('#fontFamilySelect')
-                    .val(text.fontFamily || 'Helvetica');
-                $('#fontSizeSelect')
-                    .val(
-                        Math.round(
-                            text.fontSize || 12
-                        )
-                    );
-                $('#boldBtn')
-                    .toggleClass(
-                        'active',
-                        !!text.bold
-                    );
-                $('#italicBtn')
-                    .toggleClass(
-                        'active',
-                        !!text.italic
-                    );
-                $('#underlineBtn')
-                    .toggleClass(
-                        'active',
-                        !!text.underline
-                    );
-                const color =
-                    text.color || '#111111';
-                $('#currentColorBar')
-                    .css('background', color);
-                $('#textColorPicker')
-                    .val(
-                        /^#[0-9a-f]{6}$/i.test(color) ?
-                        color :
-                        '#111111'
-                    );
-            }
-            /* =====================================================
-               FONT FAMILY
-            ====================================================== */
-            $('#fontFamilySelect').on(
-                'change',
-                function() {
-                    const text =
-                        getSelectedText();
-                    if (!text) {
-                        return;
-                    }
-                    text.fontFamily =
-                        $(this).val();
-                    text.changed = true;
-                    saveHistoryImmediately();
-                    renderAllPages();
-                }
-            );
-            /* =====================================================
-               FONT SIZE
-            ====================================================== */
-            $('#fontSizeSelect').on(
-                'change',
-                function() {
-                    const text =
-                        getSelectedText();
-                    if (!text) {
-                        return;
-                    }
-                    text.fontSize =
-                        parseFloat(
-                            $(this).val()
-                        );
-                    text.changed = true;
-                    saveHistoryImmediately();
-                    renderAllPages();
-                }
-            );
-            /* =====================================================
-               BOLD / ITALIC / UNDERLINE
-            ====================================================== */
-            $('.pdf-format-btn').on(
-                'click',
-                function() {
-                    const text =
-                        getSelectedText();
-                    if (!text) {
-                        return;
-                    }
-                    const format =
-                        $(this).data('format');
-                    if (format === 'bold') {
-                        text.bold = !text.bold;
-                    }
-                    if (format === 'italic') {
-                        text.italic = !text.italic;
-                    }
-                    if (format === 'underline') {
-                        text.underline = !text.underline;
-                    }
-                    text.changed = true;
-                    saveHistoryImmediately();
-                    renderAllPages();
-                }
-            );
-            /* =====================================================
-               COLOR
-            ====================================================== */
-            $('#textColorButton').on(
-                'click',
-                function() {
-                    $('#textColorPicker')[0].click();
-                }
-            );
-            $('#textColorPicker').on(
-                'input change',
-                function() {
-                    const color =
-                        $(this).val();
-                    $('#currentColorBar')
-                        .css(
-                            'background',
-                            color
-                        );
-                    const text =
-                        getSelectedText();
-                    if (!text) {
-                        return;
-                    }
-                    text.color = color;
-                    text.changed = true;
-                    saveHistory();
-                    if (selectedElement) {
-                        $(selectedElement)
-                            .css(
-                                'color',
-                                color
-                            );
-                    }
-                }
-            );
-            /* =====================================================
-               ADD TEXT
-            ====================================================== */
-            $('#addTextBtn').on(
-                'click',
-                function() {
-                    const pageData =
-                        getCurrentPageForAddingText();
-                    if (!pageData) {
-                        return;
-                    }
-                    const newText = {
-                        id: uid('added'),
-                        pageId: pageData.id,
-                        sourceText: '',
-                        originalText: '',
-                        text: 'Type here',
-                        x: Math.max(
-                            30 / zoom,
-                            20
-                        ),
-                        y: Math.max(
-                            50 / zoom,
-                            20
-                        ),
-                        width: 150,
-                        height: 35,
-                        fontSize: 16,
-                        fontFamily: $('#fontFamilySelect').val() ||
-                            'Helvetica',
-                        color: $('#textColorPicker').val() ||
-                            '#111111',
-                        bold: false,
-                        italic: false,
-                        underline: false,
-                        deleted: false,
-                        added: true,
-                        changed: true
-                    };
-                    pageData.texts.push(
-                        newText
-                    );
-                    saveHistoryImmediately();
-                    renderAllPages();
-                    setTimeout(function() {
-                        const el =
-                            $(
-                                '[data-text-id="' +
-                                newText.id +
-                                '"]'
-                            )[0];
-                        if (el) {
-                            selectText(
-                                newText.id,
-                                el
-                            );
-                            $(el).focus();
-                            placeCaretAtEnd(
-                                el
-                            );
-                        }
-                    }, 100);
-                }
-            );
+        function toggleFormat(fmt) {
+            mutateSelected(function (t) { t[fmt] = !t[fmt]; });
+        }
 
-            function getCurrentPageForAddingText() {
-                if (selectedTextId) {
-                    const selected =
-                        findText(
-                            selectedTextId
-                        );
-                    if (selected) {
-                        return pages.find(
-                            p =>
-                            p.id ===
-                            selected.pageId
-                        );
-                    }
-                }
-                return pages[0] || null;
-            }
-
-            function placeCaretAtEnd(element) {
-                try {
-                    const range =
-                        document.createRange();
-                    const selection =
-                        window.getSelection();
-                    range.selectNodeContents(
-                        element
-                    );
-                    range.collapse(false);
-                    selection.removeAllRanges();
-                    selection.addRange(range);
-                } catch (e) {
-                    console.warn(e);
-                }
-            }
-            /* =====================================================
-               DRAG ADDED TEXT
-            ====================================================== */
-            function enableDrag(
-                editor,
-                text,
-                pageData,
-                layer
-            ) {
-                let dragging = false;
-                let startX = 0;
-                let startY = 0;
-                let originalX = 0;
-                let originalY = 0;
-                editor.on(
-                    'mousedown',
-                    function(e) {
-                        if (
-                            e.target === this &&
-                            (
-                                window.getSelection()
-                                .toString()
-                                .length > 0
-                            )
-                        ) {
-                            return;
-                        }
-                        if (
-                            e.offsetX < 8 ||
-                            e.offsetY < 8 ||
-                            e.offsetX >
-                            $(this).outerWidth() - 8 ||
-                            e.offsetY >
-                            $(this).outerHeight() - 8 ||
-                            e.shiftKey
-                        ) {
-                            e.preventDefault();
-                            dragging = true;
-                            startX =
-                                e.clientX;
-                            startY =
-                                e.clientY;
-                            originalX =
-                                text.x;
-                            originalY =
-                                text.y;
-                            selectText(
-                                text.id,
-                                this
-                            );
-                            $(document).on(
-                                'mousemove.pdfDrag',
-                                function(moveEvent) {
-                                    if (!dragging) {
-                                        return;
-                                    }
-                                    const dx =
-                                        (
-                                            moveEvent.clientX -
-                                            startX
-                                        ) / zoom;
-                                    const dy =
-                                        (
-                                            moveEvent.clientY -
-                                            startY
-                                        ) / zoom;
-                                    text.x =
-                                        Math.max(
-                                            0,
-                                            originalX + dx
-                                        );
-                                    text.y =
-                                        Math.max(
-                                            0,
-                                            originalY + dy
-                                        );
-                                    editor.css({
-                                        left: text.x *
-                                            zoom,
-                                        top: text.y *
-                                            zoom
-                                    });
-                                }
-                            );
-                            $(document).on(
-                                'mouseup.pdfDrag',
-                                function() {
-                                    if (!dragging) {
-                                        return;
-                                    }
-                                    dragging = false;
-                                    $(document)
-                                        .off(
-                                            '.pdfDrag'
-                                        );
-                                    saveHistoryImmediately();
-                                }
-                            );
-                        }
-                    }
-                );
-            }
-            /* =====================================================
-               DELETE TEXT
-            ====================================================== */
-            $('#deleteTextBtn').on(
-                'click',
-                function() {
-                    const text =
-                        getSelectedText();
-                    if (!text) {
-                        alert(
-                            'Please select some text first.'
-                        );
-                        return;
-                    }
-                    if (text.added) {
-                        const page =
-                            pages.find(
-                                p =>
-                                p.id ===
-                                text.pageId
-                            );
-                        if (page) {
-                            page.texts =
-                                page.texts.filter(
-                                    t =>
-                                    t.id !==
-                                    text.id
-                                );
-                        }
-                    } else {
-                        text.text = '';
-                        text.deleted = true;
-                        text.changed = true;
-                    }
-                    selectedTextId = null;
-                    selectedElement = null;
-                    saveHistoryImmediately();
-                    renderAllPages();
-                    $('#editorStatus').text(
-                        'Text deleted'
-                    );
-                }
-            );
-            /* =====================================================
-               PLAIN TEXT INSERT
-            ====================================================== */
-            function insertPlainText(value) {
-                if (!selectedElement) {
-                    return;
-                }
-                const selection =
-                    window.getSelection();
-                if (!selection.rangeCount) {
-                    selectedElement.innerText +=
-                        value;
-                    return;
-                }
-                const range =
-                    selection.getRangeAt(0);
-                range.deleteContents();
-                const textNode =
-                    document.createTextNode(
-                        value
-                    );
-                range.insertNode(
-                    textNode
-                );
-                range.setStartAfter(
-                    textNode
-                );
-                range.collapse(true);
-                selection.removeAllRanges();
-                selection.addRange(range);
-                $(selectedElement)
-                    .trigger('input');
-            }
-            /* =====================================================
-               UNDO
-            ====================================================== */
-            $('#undoBtn').on(
-                'click',
-                function() {
-                    undo();
-                }
-            );
-
-            function undo() {
-                clearTimeout(historyTimer);
-                if (historyIndex <= 0) {
-                    return;
-                }
-                historyIndex--;
-                restoreSnapshot(
-                    history[historyIndex]
-                );
-                updateHistoryButtons();
-            }
-            /* =====================================================
-               REDO
-            ====================================================== */
-            $('#redoBtn').on(
-                'click',
-                function() {
-                    redo();
-                }
-            );
-
-            function redo() {
-                clearTimeout(historyTimer);
-                if (
-                    historyIndex >=
-                    history.length - 1
-                ) {
-                    return;
-                }
-                historyIndex++;
-                restoreSnapshot(
-                    history[historyIndex]
-                );
-                updateHistoryButtons();
-            }
-            /* =====================================================
-               ZOOM
-            ====================================================== */
-            $('#zoomInBtn').on(
-                'click',
-                async function() {
-                    if (zoom >= 2) {
-                        return;
-                    }
-                    zoom =
-                        Math.min(
-                            2,
-                            zoom + .1
-                        );
-                    updateZoom();
-                    await renderAllPages();
-                }
-            );
-            $('#zoomOutBtn').on(
-                'click',
-                async function() {
-                    if (zoom <= .5) {
-                        return;
-                    }
-                    zoom =
-                        Math.max(
-                            .5,
-                            zoom - .1
-                        );
-                    updateZoom();
-                    await renderAllPages();
-                }
-            );
-
-            function updateZoom() {
-                $('#zoomValue').text(
-                    Math.round(zoom * 100) + '%'
-                );
-            }
-            /* =====================================================
-               THUMBNAILS
-            ====================================================== */
-            async function createThumbnail(
-                pageData,
-                page
-            ) {
-                const thumbViewport =
-                    page.getViewport({
-                        scale: .18
-                    });
-                const wrapper =
-                    $('<div class="pdf-thumbnail"></div>')
-                    .attr(
-                        'data-page-id',
-                        pageData.id
-                    );
-                const canvas =
-                    $('<canvas></canvas>');
-                canvas.attr(
-                    'width',
-                    thumbViewport.width
-                );
-                canvas.attr(
-                    'height',
-                    thumbViewport.height
-                );
-                wrapper.append(canvas);
-                wrapper.append(
-                    $('<div class="pdf-thumb-number"></div>')
-                    .text(
-                        'Page ' +
-                        pageData.pageNumber
-                    )
-                );
-                $('#pdfThumbnails')
-                    .append(wrapper);
-                await page.render({
-                    canvasContext: canvas[0]
-                        .getContext('2d'),
-                    viewport: thumbViewport
-                }).promise;
-                wrapper.on(
-                    'click',
-                    function() {
-                        const target =
-                            $(
-                                '[data-page-id="' +
-                                pageData.id +
-                                '"]'
-                            );
-                        if (!target.length) {
-                            return;
-                        }
-                        $('.pdf-thumbnail')
-                            .removeClass(
-                                'active'
-                            );
-                        $(this)
-                            .addClass(
-                                'active'
-                            );
-                        const container =
-                            $('#pdfPagesContainer')[0];
-                        container.scrollTo({
-                            top: target[0].offsetTop -
-                                20,
-                            behavior: 'smooth'
-                        });
-                    }
-                );
-            }
-            /* =====================================================
-               KEYBOARD SHORTCUTS
-            ====================================================== */
-            $(document).on(
-                'keydown',
-                function(e) {
-                    if (
-                        !(e.ctrlKey || e.metaKey)
-                    ) {
-                        return;
-                    }
-                    const key =
-                        e.key.toLowerCase();
-                    if (
-                        key === 's'
-                    ) {
-                        e.preventDefault();
-                        $('#downloadPdfBtn')
-                            .trigger('click');
-                    }
-                }
-            );
-            /* =====================================================
-               SAFE PDF TEXT
-            ====================================================== */
-            function safePdfText(value) {
-                return String(value || '')
-                    .replace(
-                        /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,
-                        ''
-                    )
-                    .replace(
-                        /[\u200B-\u200D\uFEFF]/g,
-                        '');
-            }
-
-            function safeStandardFontText(value) {
-                return safePdfText(value)
-                    .split('')
-                    .filter(function(char) {
-                        const code =
-                            char.charCodeAt(0);
-                        return (
-                            code >= 32 &&
-                            code <= 255
-                        );
-                    })
-                    .join('');
-            }
-            /* =====================================================
-               PDF EXPORT
-            ====================================================== */
-            $('#downloadPdfBtn').on(
-                'click',
-                async function() {
-                    if (!originalPdfBytes) {
-                        alert(
-                            'Please upload a PDF first.'
-                        );
-                        return;
-                    }
-                    const button =
-                        $(this);
-                    button.prop(
-                        'disabled',
-                        true
-                    );
-                    showLoading(
-                        'Creating your edited PDF...'
-                    );
-                    try {
-                        const exportBytes =
-                            new Uint8Array(
-                                originalPdfBytes.length
-                            );
-                        exportBytes.set(
-                            originalPdfBytes
-                        );
-                        const pdfDoc =
-                            await PDFDocument.load(
-                                exportBytes, {
-                                    ignoreEncryption: true,
-                                    updateMetadata: false
-                                }
-                            );
-                        const fonts = {
-                            Helvetica: await pdfDoc.embedFont(
-                                StandardFonts.Helvetica
-                            ),
-                            HelveticaBold: await pdfDoc.embedFont(
-                                StandardFonts.HelveticaBold
-                            ),
-                            HelveticaOblique: await pdfDoc.embedFont(
-                                StandardFonts.HelveticaOblique
-                            ),
-                            HelveticaBoldOblique: await pdfDoc.embedFont(
-                                StandardFonts.HelveticaBoldOblique
-                            ),
-                            TimesRoman: await pdfDoc.embedFont(
-                                StandardFonts.TimesRoman
-                            ),
-                            TimesRomanBold: await pdfDoc.embedFont(
-                                StandardFonts.TimesRomanBold
-                            ),
-                            Courier: await pdfDoc.embedFont(
-                                StandardFonts.Courier
-                            )
-                        };
-                        for (
-                            let pageIndex = 0; pageIndex < pages.length; pageIndex++
-                        ) {
-                            $('#pdfLoadingText').text(
-                                `Writing page ${pageIndex + 1} of ${pages.length}...`
-                            );
-                            const pageData =
-                                pages[pageIndex];
-                            const pdfPage =
-                                pdfDoc.getPage(
-                                    pageIndex
-                                );
-                            const pageWidth =
-                                pdfPage.getWidth();
-                            const pageHeight =
-                                pdfPage.getHeight();
-                            const scaleX =
-                                pageWidth /
-                                pageData.width;
-                            const scaleY =
-                                pageHeight /
-                                pageData.height;
-                            for (
-                                const text of pageData.texts
-                            ) {
-                                if (
-                                    text.deleted &&
-                                    !text.added
-                                ) {
-                                    drawMask(
-                                        pdfPage,
-                                        text,
-                                        scaleX,
-                                        scaleY,
-                                        pageHeight
-                                    );
-                                    continue;
-                                }
-                                if (
-                                    !text.added &&
-                                    text.text ===
-                                    text.originalText &&
-                                    !text.changed
-                                ) {
-                                    continue;
-                                }
-                                if (!text.added) {
-                                    drawMask(
-                                        pdfPage,
-                                        text,
-                                        scaleX,
-                                        scaleY,
-                                        pageHeight
-                                    );
-                                }
-                                const cleanText =
-                                    safeStandardFontText(
-                                        text.text
-                                    );
-                                if (!cleanText) {
-                                    continue;
-                                }
-                                const font =
-                                    choosePdfFont(
-                                        fonts,
-                                        text
-                                    );
-                                const fontSize =
-                                    Math.max(
-                                        5,
-                                        (
-                                            text.fontSize ||
-                                            12
-                                        ) * scaleY
-                                    );
-                                const color =
-                                    hexToRgb(
-                                        text.color ||
-                                        '#111111'
-                                    );
-                                const x =
-                                    text.x *
-                                    scaleX;
-                                let y =
-                                    pageHeight -
-                                    (
-                                        (
-                                            text.y +
-                                            (
-                                                text.fontSize ||
-                                                12
-                                            )
-                                        ) *
-                                        scaleY
-                                    );
-                                const lines =
-                                    cleanText
-                                    .split(/\r?\n/);
-                                const lineHeight =
-                                    fontSize *
-                                    1.2;
-                                for (
-                                    let lineIndex = 0; lineIndex < lines.length; lineIndex++
-                                ) {
-                                    const line =
-                                        lines[lineIndex];
-                                    if (!line) {
-                                        continue;
-                                    }
-                                    try {
-                                        pdfPage.drawText(
-                                            line, {
-                                                x,
-                                                y: y -
-                                                    (
-                                                        lineIndex *
-                                                        lineHeight
-                                                    ),
-                                                size: fontSize,
-                                                font,
-                                                color: rgb(
-                                                    color.r,
-                                                    color.g,
-                                                    color.b
-                                                ),
-                                                opacity: 1
-                                            }
-                                        );
-                                    } catch (drawError) {
-                                        console.warn(
-                                            'Text drawing failed:',
-                                            drawError
-                                        );
-                                        const fallback =
-                                            line
-                                            .split('')
-                                            .filter(
-                                                c =>
-                                                c.charCodeAt(0) >= 32 &&
-                                                c.charCodeAt(0) <= 255
-                                            )
-                                            .join('');
-                                        if (fallback) {
-                                            pdfPage.drawText(
-                                                fallback, {
-                                                    x,
-                                                    y: y -
-                                                        (
-                                                            lineIndex *
-                                                            lineHeight
-                                                        ),
-                                                    size: fontSize,
-                                                    font,
-                                                    color: rgb(
-                                                        color.r,
-                                                        color.g,
-                                                        color.b
-                                                    )
-                                                }
-                                            );
-                                        }
-                                    }
-                                }
-                                if (
-                                    text.underline
-                                ) {
-                                    const firstLine =
-                                        safeStandardFontText(
-                                            text.text
-                                        ).split(/\r?\n/)[0];
-                                    if (firstLine) {
-                                        let textWidth = 0;
-                                        try {
-                                            textWidth =
-                                                font.widthOfTextAtSize(
-                                                    firstLine,
-                                                    fontSize
-                                                );
-                                        } catch (e) {
-                                            textWidth =
-                                                text.width *
-                                                scaleX;
-                                        }
-                                        pdfPage.drawLine({
-                                            start: {
-                                                x,
-                                                y: y -
-                                                    2
-                                            },
-                                            end: {
-                                                x: x +
-                                                    textWidth,
-                                                y: y -
-                                                    2
-                                            },
-                                            thickness: Math.max(
-                                                0.5,
-                                                fontSize *
-                                                .05
-                                            ),
-                                            color: rgb(
-                                                color.r,
-                                                color.g,
-                                                color.b
-                                            )
-                                        });
-                                    }
-                                }
-                            }
-                        }
-                        $('#pdfLoadingText').text(
-                            'Finalizing PDF...'
-                        );
-                        const finalBytes =
-                            await pdfDoc.save({
-                                useObjectStreams: false
-                            });
-                        const downloadBytes =
-                            new Uint8Array(
-                                finalBytes.length
-                            );
-                        downloadBytes.set(
-                            finalBytes
-                        );
-                        const blob =
-                            new Blob(
-                                [downloadBytes], {
-                                    type: 'application/pdf'
-                                }
-                            );
-                        const url =
-                            URL.createObjectURL(
-                                blob
-                            );
-                        const link =
-                            document.createElement(
-                                'a'
-                            );
-                        link.href = url;
-                        link.download =
-                            originalFileName
-                            .replace(
-                                /\.pdf$/i,
-                                ''
-                            ) +
-                            '-edited.pdf';
-                        document.body.appendChild(
-                            link
-                        );
-                        link.click();
-                        link.remove();
-                        setTimeout(function() {
-                            URL.revokeObjectURL(
-                                url
-                            );
-                        }, 2000);
-                        hideLoading();
-                        button.prop(
-                            'disabled',
-                            false
-                        );
-                        $('#editorStatus').text(
-                            'PDF downloaded successfully'
-                        );
-                    } catch (error) {
-                        console.error(
-                            'PDF EXPORT ERROR:',
-                            error
-                        );
-                        hideLoading();
-                        button.prop(
-                            'disabled',
-                            false
-                        );
-                        alert(
-                            'Unable to create the edited PDF.\n\n' +
-                            (
-                                error &&
-                                error.message ?
-                                error.message :
-                                error
-                            )
-                        );
-                    }
-                }
-            );
-            /* =====================================================
-               WHITE MASK
-            ====================================================== */
-            function drawMask(
-                pdfPage,
-                text,
-                scaleX,
-                scaleY,
-                pageHeight
-            ) {
-                const x =
-                    text.x *
-                    scaleX;
-                const width =
-                    Math.max(
-                        text.width *
-                        scaleX +
-                        4,
-                        4
-                    );
-                const height =
-                    Math.max(
-                        text.height *
-                        scaleY +
-                        4,
-                        5
-                    );
-                const y =
-                    pageHeight -
-                    (
-                        (
-                            text.y +
-                            text.height
-                        ) *
-                        scaleY
-                    );
-                pdfPage.drawRectangle({
-                    x,
-                    y,
-                    width,
-                    height,
-                    color: rgb(
-                        1,
-                        1,
-                        1
-                    ),
-                    opacity: 1
-                });
-            }
-            /* =====================================================
-               PDF FONT
-            ====================================================== */
-            function choosePdfFont(
-                fonts,
-                text
-            ) {
-                if (
-                    text.fontFamily ===
-                    'Times-Roman'
-                ) {
-                    return text.bold ?
-                        fonts.TimesRomanBold :
-                        fonts.TimesRoman;
-                }
-                if (
-                    text.fontFamily ===
-                    'Courier'
-                ) {
-                    return fonts.Courier;
-                }
-                if (
-                    text.bold &&
-                    text.italic
-                ) {
-                    return fonts.HelveticaBoldOblique;
-                }
-                if (text.bold) {
-                    return fonts.HelveticaBold;
-                }
-                if (text.italic) {
-                    return fonts.HelveticaOblique;
-                }
-                return fonts.Helvetica;
-            }
-            /* =====================================================
-               INITIAL BUTTON STATE
-            ====================================================== */
-            updateHistoryButtons();
+        $('#fontFamilySelect').on('change', function () {
+            const value = $(this).val();
+            const t = mutateSelected(function (t) { t.fontFamily = value; });
+            if (t) { refocus(t); }
         });
-    </script>
+
+        $('#fontSizeSelect').on('change', function () {
+            const value = parseFloat($(this).val());
+            const t = mutateSelected(function (t) { t.fontSize = value; });
+            if (t) { refocus(t); }
+        });
+
+        $('.pdf-format-btn').on('click', function () {
+            toggleFormat($(this).data('format'));
+        });
+
+        $('#textColorButton').on('click', function () {
+            $('#textColorPicker')[0].click();
+        });
+
+        $('#textColorPicker').on('input change', function () {
+            const color = $(this).val();
+            $('#currentColorBar').css('background', color);
+            mutateSelected(function (t) { t.color = color; }, true);
+        });
+
+        /* =====================================================
+           ADD TEXT
+        ====================================================== */
+        function getCurrentPage() {
+            const container = $('#pdfPagesContainer')[0];
+            const cr = container.getBoundingClientRect();
+            const mid = cr.top + cr.height * 0.35;
+            let best = null;
+            let bestDist = Infinity;
+            pages.forEach(function (pd) {
+                const el = pageWrapper(pd.id)[0];
+                if (!el) { return; }
+                const r = el.getBoundingClientRect();
+                if (r.top <= mid && r.bottom >= mid) {
+                    best = pd;
+                    bestDist = -1;
+                } else if (bestDist >= 0) {
+                    const d = Math.min(Math.abs(r.top - mid), Math.abs(r.bottom - mid));
+                    if (d < bestDist) { bestDist = d; best = pd; }
+                }
+            });
+            return best || pages[0] || null;
+        }
+
+        $('#addTextBtn').on('click', function () {
+            const pd = getCurrentPage();
+            if (!pd) { return; }
+
+            const container = $('#pdfPagesContainer')[0];
+            const wrapperEl = pageWrapper(pd.id)[0];
+            const cr = container.getBoundingClientRect();
+            const wr = wrapperEl.getBoundingClientRect();
+
+            const fs = parseFloat($('#fontSizeSelect').val()) || 14;
+            let x = (cr.left + cr.width / 2 - wr.left) / zoom - 40;
+            let base = (cr.top + cr.height / 2 - wr.top) / zoom;
+            x = clamp(x, 20, Math.max(20, pd.width - 160));
+            base = clamp(base, fs + 20, Math.max(fs + 20, pd.height - 20));
+
+            const nt = {
+                id: uid('added'),
+                pageId: pd.id,
+                text: 'Type here',
+                x: round2(x),
+                baseline: round2(base),
+                width: 120,
+                fontSize: fs,
+                fontFamily: $('#fontFamilySelect').val() || 'Helvetica',
+                bold: false,
+                italic: false,
+                underline: false,
+                color: $('#textColorPicker').val() || DEFAULT_COLOR,
+                deleted: false,
+                added: true,
+                locked: false,
+                orig: null
+            };
+            pd.texts.push(nt);
+            saveHistoryImmediately();
+            buildTextLayer(pd);
+
+            const r = dom[nt.id];
+            if (r && r.editor) {
+                const el = r.editor[0];
+                el.focus();
+                try {
+                    const range = document.createRange();
+                    range.selectNodeContents(el);
+                    const sel = window.getSelection();
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                } catch (e) { /* ignore */ }
+            }
+        });
+
+        function enableDrag(handleEl, id) {
+            handleEl.addEventListener('pointerdown', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const t = findText(id);
+                if (!t) { return; }
+                const pd = pages.find(function (p) { return p.id === t.pageId; });
+                const startX = e.clientX;
+                const startY = e.clientY;
+                const ox = t.x;
+                const ob = t.baseline;
+                selectText(id);
+                try { handleEl.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+
+                function move(ev) {
+                    const cur = findText(id);
+                    if (!cur) { return; }
+                    cur.x = clamp(ox + (ev.clientX - startX) / zoom, 0, pd.width - 10);
+                    cur.baseline = clamp(ob + (ev.clientY - startY) / zoom, 5, pd.height);
+                    applyVisual(cur);
+                }
+
+                function up() {
+                    handleEl.removeEventListener('pointermove', move);
+                    handleEl.removeEventListener('pointerup', up);
+                    handleEl.removeEventListener('pointercancel', up);
+                    const cur = findText(id);
+                    if (cur) {
+                        cur.x = round2(cur.x);
+                        cur.baseline = round2(cur.baseline);
+                    }
+                    saveHistoryImmediately();
+                }
+
+                handleEl.addEventListener('pointermove', move);
+                handleEl.addEventListener('pointerup', up);
+                handleEl.addEventListener('pointercancel', up);
+            });
+        }
+
+        /* =====================================================
+           DELETE
+        ====================================================== */
+        function deleteSelected() {
+            const t = getSelectedText();
+            if (!t) {
+                setStatus('Click a piece of text first');
+                return;
+            }
+            const pd = pages.find(function (p) { return p.id === t.pageId; });
+            if (t.added) {
+                pd.texts = pd.texts.filter(function (x) { return x.id !== t.id; });
+            } else {
+                t.deleted = true;
+                t.text = '';
+            }
+            selectedTextId = null;
+            focusedId = null;
+            if (document.activeElement && document.activeElement.blur) { document.activeElement.blur(); }
+            saveHistoryImmediately();
+            buildTextLayer(pd);
+            setStatus('Text deleted');
+        }
+
+        $('#deleteTextBtn').on('click', deleteSelected);
+
+        /* =====================================================
+           ZOOM
+        ====================================================== */
+        function setZoom(value) {
+            value = round2(clamp(value, 0.5, 3));
+            if (value === zoom || !pages.length) { return; }
+
+            const container = $('#pdfPagesContainer')[0];
+            const centerRatio = (container.scrollTop + container.clientHeight / 2) /
+                Math.max(1, container.scrollHeight);
+
+            zoom = value;
+            renderEpoch++;
+            $('#zoomValue').text(Math.round(zoom * 100) + '%');
+
+            pages.forEach(function (pd) {
+                const w = pageWrapper(pd.id);
+                const size = { width: pd.width * zoom + 'px', height: pd.height * zoom + 'px' };
+                w.css(size);
+                w.find('.pdf-page-canvas').css(size);
+                w.find('.pdf-text-layer').empty();
+            });
+            dom = {};
+            focusedId = null;
+
+            container.scrollTop = centerRatio * container.scrollHeight - container.clientHeight / 2;
+
+            clearTimeout(zoomTimer);
+            zoomTimer = setTimeout(function () {
+                pages.forEach(function (pd) {
+                    const st = pageState[pd.id];
+                    if (st && st.visible) { renderPage(pd); }
+                });
+            }, 150);
+        }
+
+        $('#zoomInBtn').on('click', function () {
+            const next = ZOOM_STEPS.find(function (z) { return z > zoom + 0.001; });
+            if (next) { setZoom(next); }
+        });
+
+        $('#zoomOutBtn').on('click', function () {
+            const prev = ZOOM_STEPS.slice().reverse().find(function (z) { return z < zoom - 0.001; });
+            if (prev) { setZoom(prev); }
+        });
+
+        let wheelLock = 0;
+        $('#pdfPagesContainer')[0].addEventListener('wheel', function (e) {
+            if (!(e.ctrlKey || e.metaKey)) { return; }
+            e.preventDefault();
+            const now = Date.now();
+            if (now - wheelLock < 120) { return; }
+            wheelLock = now;
+            $(e.deltaY < 0 ? '#zoomInBtn' : '#zoomOutBtn').trigger('click');
+        }, { passive: false });
+
+        /* =====================================================
+           THUMBNAILS
+        ====================================================== */
+        async function buildThumbnails() {
+            const epoch = ++thumbEpoch;
+            const list = $('#pdfThumbnails').empty();
+
+            pages.forEach(function (pd) {
+                const item = $('<div class="pdf-thumbnail"></div>').attr('data-page-id', pd.id);
+                item.append('<canvas></canvas>');
+                item.append($('<div class="pdf-thumb-number"></div>').text('Page ' + pd.pageNumber));
+                item.on('click', function () { scrollToPage(pd.id); });
+                list.append(item);
+            });
+            updateActiveThumbnail();
+
+            for (const pd of pages) {
+                if (epoch !== thumbEpoch) { return; }
+                const page = pdfPages[pd.pageNumber - 1];
+                const canvas = list.find('.pdf-thumbnail[data-page-id="' + pd.id + '"] canvas')[0];
+                if (!page || !canvas) { continue; }
+                const vp = page.getViewport({ scale: 220 / pd.width });
+                canvas.width = Math.floor(vp.width);
+                canvas.height = Math.floor(vp.height);
+                try {
+                    await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+                } catch (e) { /* ignore thumbnail errors */ }
+                await new Promise(function (resolve) { setTimeout(resolve, 0); });
+            }
+        }
+
+        function scrollToPage(pageId) {
+            const el = pageWrapper(pageId)[0];
+            const container = $('#pdfPagesContainer')[0];
+            if (!el) { return; }
+            const top = container.scrollTop + (el.getBoundingClientRect().top - container.getBoundingClientRect().top) - 20;
+            container.scrollTo({ top: top, behavior: 'smooth' });
+        }
+
+        function updateActiveThumbnail() {
+            const pd = getCurrentPage();
+            if (!pd) { return; }
+            const list = $('#pdfThumbnails');
+            const thumbs = list.find('.pdf-thumbnail');
+            thumbs.removeClass('active');
+            const active = thumbs.filter('[data-page-id="' + pd.id + '"]').addClass('active')[0];
+            if (active) {
+                const lr = list[0].getBoundingClientRect();
+                const ar = active.getBoundingClientRect();
+                if (ar.top < lr.top) {
+                    list[0].scrollTop -= (lr.top - ar.top) + 8;
+                } else if (ar.bottom > lr.bottom) {
+                    list[0].scrollTop += (ar.bottom - lr.bottom) + 8;
+                }
+            }
+        }
+
+        $('#pdfPagesContainer').on('scroll', function () {
+            if (scrollTick) { return; }
+            scrollTick = true;
+            requestAnimationFrame(function () {
+                scrollTick = false;
+                updateActiveThumbnail();
+            });
+        });
+
+        /* =====================================================
+           KEYBOARD
+        ====================================================== */
+        $(document).on('keydown', function (e) {
+            if ($('#pdfEditorSection').hasClass('d-none')) { return; }
+            const mod = e.ctrlKey || e.metaKey;
+            const key = (e.key || '').toLowerCase();
+
+            if (mod && key === 's') {
+                e.preventDefault();
+                exportPdf();
+                return;
+            }
+            if (mod && key === 'z' && !e.shiftKey) {
+                e.preventDefault();
+                undo();
+                return;
+            }
+            if (mod && (key === 'y' || (key === 'z' && e.shiftKey))) {
+                e.preventDefault();
+                redo();
+                return;
+            }
+            if (key === 'escape') {
+                if (document.activeElement && document.activeElement.blur) { document.activeElement.blur(); }
+                deselect();
+                return;
+            }
+            if (key === 'delete' && selectedTextId) {
+                const a = document.activeElement;
+                const typing = a && (a.isContentEditable || /^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName));
+                if (!typing) {
+                    e.preventDefault();
+                    deleteSelected();
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', function (e) {
+            if (historyIndex > 0 || historyTimer) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+
+        /* =====================================================
+           EXPORT
+        ====================================================== */
+        // viewport point (scale 1) to PDF user space, including page rotation
+        function toUser(pd, vx, vy) {
+            const x0 = pd.view[0];
+            const y0 = pd.view[1];
+            const W = pd.view[2] - x0;
+            const H = pd.view[3] - y0;
+            let ux, uy;
+            switch (pd.rotation) {
+                case 90: ux = vy; uy = vx; break;
+                case 180: ux = W - vx; uy = vy; break;
+                case 270: ux = W - vy; uy = H - vx; break;
+                default: ux = vx; uy = H - vy;
+            }
+            return { x: x0 + ux, y: y0 + uy };
+        }
+
+        function drawMask(page, pd, t) {
+            const m = maskRect(t);
+            const a = toUser(pd, m.left, m.top);
+            const b = toUser(pd, m.left + m.width, m.top + m.height);
+            const c = hexToRgb(bgColor(t));
+            page.drawRectangle({
+                x: Math.min(a.x, b.x),
+                y: Math.min(a.y, b.y),
+                width: Math.abs(a.x - b.x),
+                height: Math.abs(a.y - b.y),
+                color: rgb(c.r, c.g, c.b),
+                borderWidth: 0
+            });
+        }
+
+        function drawTextBlock(page, pd, t, clean, font) {
+            const fs = t.fontSize;
+            const lineHeight = fs * 1.2;
+            const c = hexToRgb(textColor(t));
+            const rotation = degrees(pd.rotation);
+
+            clean.split('\n').forEach(function (line, i) {
+                if (!line) { return; }
+                const base = t.baseline + i * lineHeight;
+                const p = toUser(pd, t.x, base);
+                page.drawText(line, {
+                    x: p.x,
+                    y: p.y,
+                    size: fs,
+                    font: font,
+                    color: rgb(c.r, c.g, c.b),
+                    rotate: rotation
+                });
+                if (t.underline) {
+                    const w = font.widthOfTextAtSize(line, fs);
+                    const u1 = toUser(pd, t.x, base + fs * 0.12);
+                    const u2 = toUser(pd, t.x + w, base + fs * 0.12);
+                    page.drawLine({
+                        start: u1,
+                        end: u2,
+                        thickness: Math.max(0.5, fs * 0.05),
+                        color: rgb(c.r, c.g, c.b)
+                    });
+                }
+            });
+        }
+
+        async function exportPdf() {
+            if (!originalPdfBytes) {
+                alert('Please upload a PDF first.');
+                return;
+            }
+            if (exporting) { return; }
+            exporting = true;
+            flushHistory();
+
+            const button = $('#downloadPdfBtn').prop('disabled', true);
+            showLoading('Creating your edited PDF...');
+            const dropped = new Set();
+
+            try {
+                const pdfDoc = await PDFDocument.load(originalPdfBytes.slice(0), {
+                    ignoreEncryption: true,
+                    updateMetadata: false
+                });
+                if (pdfDoc.getPageCount() !== pages.length) {
+                    throw new Error('The page count of the saved file does not match the editor.');
+                }
+
+                const fontCache = {};
+                async function getFont(t) {
+                    const list = STD_FONTS[t.fontFamily] || STD_FONTS.Helvetica;
+                    const name = list[(t.bold ? 1 : 0) + (t.italic ? 2 : 0)];
+                    if (!fontCache[name]) {
+                        fontCache[name] = await pdfDoc.embedFont(StandardFonts[name]);
+                    }
+                    return fontCache[name];
+                }
+
+                for (let i = 0; i < pages.length; i++) {
+                    const pd = pages[i];
+                    const edits = pd.texts.filter(function (t) {
+                        return !t.locked && (t.added || t.deleted || isModified(t));
+                    });
+                    if (!edits.length) { continue; }
+
+                    $('#pdfLoadingText').text('Writing page ' + (i + 1) + ' of ' + pages.length + '...');
+                    const page = pdfDoc.getPage(i);
+
+                    // all masks first so a mask never covers new text
+                    edits.forEach(function (t) {
+                        if (!t.added) { drawMask(page, pd, t); }
+                    });
+
+                    for (const t of edits) {
+                        if (t.deleted) { continue; }
+                        const clean = sanitizeForExport(t.text, dropped);
+                        if (!clean.trim()) { continue; }
+                        drawTextBlock(page, pd, t, clean, await getFont(t));
+                    }
+                }
+
+                $('#pdfLoadingText').text('Finalizing PDF...');
+                const bytes = await pdfDoc.save({ useObjectStreams: false });
+                const blob = new Blob([bytes], { type: 'application/pdf' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = originalFileName.replace(/\.pdf$/i, '') + '-edited.pdf';
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+                setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+
+                setStatus('PDF downloaded successfully');
+                hideLoading();
+
+                if (dropped.size) {
+                    alert('Your PDF was downloaded.\n\nThese characters are not supported by the standard PDF fonts and were left out:\n' +
+                        Array.from(dropped).slice(0, 30).join(' '));
+                }
+            } catch (error) {
+                console.error('PDF EXPORT ERROR:', error);
+                hideLoading();
+                alert('Unable to create the edited PDF.\n\n' + (error && error.message ? error.message : error));
+            } finally {
+                exporting = false;
+                button.prop('disabled', false);
+            }
+        }
+
+        $('#downloadPdfBtn').on('click', exportPdf);
+
+        updateHistoryButtons();
+    });
+</script>
     <script>
         const pdfEditorSeoCta = document.getElementById('pdfEditorSeoCta');
 
