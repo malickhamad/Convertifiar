@@ -8,6 +8,8 @@
 <meta name="description"
     content="Read the Terms & Conditions of Convertifire to understand the rules and conditions for using our online tools and services.">
 
+
+    
 <meta property="og:title" content="Terms & Conditions | Convertifire">
 
 <meta property="og:description"
